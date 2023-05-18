@@ -1,0 +1,380 @@
+================================================================================
+breseq 0.35.0     http://barricklab.org/breseq
+
+Active Developers: Barrick JE, Deatherage DE
+Contact:           <jeffrey.e.barrick@gmail.com>
+
+breseq is free software; you can redistribute it and/or modify it under the
+terms the GNU General Public License as published by the Free Software 
+Foundation; either version 2, or (at your option) any later version.
+
+Copyright (c) 2008-2010 Michigan State University
+Copyright (c) 2011-2017 The University of Texas at Austin
+
+If you use breseq in your research, please cite:
+
+  Deatherage, D.E., Barrick, J.E. (2014) Identification of mutations
+  in laboratory-evolved microbes from next-generation sequencing
+  data using breseq. Methods Mol. Biol. 1151: 165–188.
+
+If you use structural variation (junction) predictions, please cite:
+
+  Barrick, J.E., Colburn, G., Deatherage D.E., Traverse, C.C.,
+  Strand, M.D., Borges, J.J., Knoester, D.B., Reba, A., Meyer, A.G. 
+  (2014) Identifying structural variation in haploid microbial genomes 
+  from short-read resequencing data using breseq. BMC Genomics 15:1039.
+================================================================================
+---> bowtie2  :: version 2.4.5 [/workspace/home/nasirja/covid-19-signal/.snakemake/conda/1f267c8dfdaa0356ebaad13adc66d00a/bin/bowtie2]
+---> R        :: version 3.5.1 [/workspace/home/nasirja/covid-19-signal/.snakemake/conda/1f267c8dfdaa0356ebaad13adc66d00a/bin/R]
++++   NOW PROCESSING Read and reference sequence file input
+  READ FILE::SC2202_R1
+    Converting/filtering FASTQ file...
+    Original base quality format: SANGER New format: SANGER
+    Original reads: 575048 bases: 142976419
+    Filtered reads: none
+    Analyzed reads: 575048 bases: 142976419
+  READ FILE::SC2202_R2
+    Converting/filtering FASTQ file...
+    Original base quality format: SANGER New format: SANGER
+    Original reads: 575048 bases: 142764700
+    Filtered reads: none
+    Analyzed reads: 575048 bases: 142764700
+  ::TOTAL::
+    Original reads: 1150096 bases: 285741119
+    Analyzed reads: 1150096 bases: 285741119
+[samtools] faidx SC2202/breseq/data/reference.fasta
+  REFERENCE: MN908947
+  LENGTH: 29903
++++   NOW PROCESSING Read alignment to reference genome
+[system] bowtie2-build -q SC2202/breseq/data/reference.fasta SC2202/breseq/02_reference_alignment/reference
+Renaming SC2202/breseq/02_reference_alignment/reference.3.bt2.tmp to SC2202/breseq/02_reference_alignment/reference.3.bt2
+Renaming SC2202/breseq/02_reference_alignment/reference.4.bt2.tmp to SC2202/breseq/02_reference_alignment/reference.4.bt2
+Renaming SC2202/breseq/02_reference_alignment/reference.1.bt2.tmp to SC2202/breseq/02_reference_alignment/reference.1.bt2
+Renaming SC2202/breseq/02_reference_alignment/reference.2.bt2.tmp to SC2202/breseq/02_reference_alignment/reference.2.bt2
+Renaming SC2202/breseq/02_reference_alignment/reference.rev.1.bt2.tmp to SC2202/breseq/02_reference_alignment/reference.rev.1.bt2
+Renaming SC2202/breseq/02_reference_alignment/reference.rev.2.bt2.tmp to SC2202/breseq/02_reference_alignment/reference.rev.2.bt2
+[system] bowtie2 -t --no-unal -p 4 -L 31 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,1,0.9 -k 2000 --reorder -x SC2202/breseq/02_reference_alignment/reference -U SC2202/breseq/01_sequence_conversion/SC2202_R1.converted.fastq -S SC2202/breseq/02_reference_alignment/SC2202_R1.stage1.sam --un SC2202/breseq/02_reference_alignment/SC2202_R1.stage1.unmatched.fastq
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:34
+575048 reads; of these:
+  575048 (100.00%) were unpaired; of these:
+    14651 (2.55%) aligned 0 times
+    560397 (97.45%) aligned exactly 1 time
+    0 (0.00%) aligned >1 times
+97.45% overall alignment rate
+Time searching: 00:00:34
+Overall time: 00:00:34
+[system] bowtie2 -t --no-unal -p 4 -L 29 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,6,0.2 -k 2000 --reorder -x SC2202/breseq/02_reference_alignment/reference -U SC2202/breseq/02_reference_alignment/SC2202_R1.stage1.unmatched.fastq -S SC2202/breseq/02_reference_alignment/SC2202_R1.stage2.matched.sam
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:02
+14651 reads; of these:
+  14651 (100.00%) were unpaired; of these:
+    83 (0.57%) aligned 0 times
+    8987 (61.34%) aligned exactly 1 time
+    5581 (38.09%) aligned >1 times
+99.43% overall alignment rate
+Time searching: 00:00:02
+Overall time: 00:00:02
+[system] bowtie2 -t --no-unal -p 4 -L 31 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,1,0.9 -k 2000 --reorder -x SC2202/breseq/02_reference_alignment/reference -U SC2202/breseq/01_sequence_conversion/SC2202_R2.converted.fastq -S SC2202/breseq/02_reference_alignment/SC2202_R2.stage1.sam --un SC2202/breseq/02_reference_alignment/SC2202_R2.stage1.unmatched.fastq
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:36
+575048 reads; of these:
+  575048 (100.00%) were unpaired; of these:
+    17996 (3.13%) aligned 0 times
+    557052 (96.87%) aligned exactly 1 time
+    0 (0.00%) aligned >1 times
+96.87% overall alignment rate
+Time searching: 00:00:36
+Overall time: 00:00:36
+[system] bowtie2 -t --no-unal -p 4 -L 29 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,6,0.2 -k 2000 --reorder -x SC2202/breseq/02_reference_alignment/reference -U SC2202/breseq/02_reference_alignment/SC2202_R2.stage1.unmatched.fastq -S SC2202/breseq/02_reference_alignment/SC2202_R2.stage2.matched.sam
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:02
+17996 reads; of these:
+  17996 (100.00%) were unpaired; of these:
+    45 (0.25%) aligned 0 times
+    12525 (69.60%) aligned exactly 1 time
+    5426 (30.15%) aligned >1 times
+99.75% overall alignment rate
+Time searching: 00:00:02
+Overall time: 00:00:02
+[system] rm -f SC2202/breseq/02_reference_alignment/reference*
+[system] rm -f SC2202/breseq/02_reference_alignment/SC2202_R1.stage1.unmatched.fastq
+[system] rm -f SC2202/breseq/02_reference_alignment/SC2202_R1.stage1.sam
+[system] rm -f SC2202/breseq/02_reference_alignment/SC2202_R1.stage2.matched.sam
+[system] rm -f SC2202/breseq/02_reference_alignment/SC2202_R2.stage1.unmatched.fastq
+[system] rm -f SC2202/breseq/02_reference_alignment/SC2202_R2.stage1.sam
+[system] rm -f SC2202/breseq/02_reference_alignment/SC2202_R2.stage2.matched.sam
++++   NOW PROCESSING Preprocessing alignments for candidate junction identification
+Preprocessing alignments.
+  READ FILE::SC2202_R1
+    ALIGNED READ:100000
+    ALIGNED READ:200000
+    ALIGNED READ:300000
+    ALIGNED READ:400000
+    ALIGNED READ:500000
+  READ FILE::SC2202_R2
+    ALIGNED READ:600000
+    ALIGNED READ:700000
+    ALIGNED READ:800000
+    ALIGNED READ:900000
+    ALIGNED READ:1000000
+    ALIGNED READ:1100000
+  Summary... 
+  Aligned reads:                              1149968
+  Read alignments:                            1161808
+  Alignments split on indels:                    2527
+  Reads with alignments split on indels:         2527
+  Split alignments:                             27815
+  Reads with split alignments:                  13452
++++   NOW PROCESSING Preliminary analysis of coverage distribution
+[samtools] import SC2202/breseq/data/reference.fasta.fai SC2202/breseq/03_candidate_junctions/best.sam SC2202/breseq/03_candidate_junctions/best.unsorted.bam
+[samtools] sort --threads 4 -o SC2202/breseq/03_candidate_junctions/best.bam -T SC2202/breseq/03_candidate_junctions/best.bam SC2202/breseq/03_candidate_junctions/best.unsorted.bam
+[samtools] index SC2202/breseq/03_candidate_junctions/best.bam SC2202/breseq/03_candidate_junctions/best.bam.bai
+  REFERENCE: MN908947
+  LENGTH: 29903
+    POSITION:10000
+    POSITION:20000
+[system] R --vanilla < /workspace/home/nasirja/covid-19-signal/.snakemake/conda/1f267c8dfdaa0356ebaad13adc66d00a/bin/../share/breseq/coverage_distribution.r > SC2202/breseq/03_candidate_junctions/0.unique_only_coverage_distribution.tab.r.log distribution_file=SC2202/breseq/03_candidate_junctions/0.unique_only_coverage_distribution.tab plot_file=SC2202/breseq/03_candidate_junctions/0.coverage.pdf deletion_propagation_pr_cutoff=0.000289143
+[system] rm -f SC2202/breseq/03_candidate_junctions/best.unsorted.bam
+[system] rm -f SC2202/breseq/03_candidate_junctions/best.sam
+[system] rm -f SC2202/breseq/03_candidate_junctions/best.bam
+[system] rm -f SC2202/breseq/03_candidate_junctions/best.bam.bai
+[system] rm -f SC2202/breseq/03_candidate_junctions/0.coverage.pdf
+[system] rm -f SC2202/breseq/03_candidate_junctions/0.unique_only_coverage_distribution.tab
+[system] rm -f SC2202/breseq/03_candidate_junctions/0.unique_only_coverage_distribution.tab.r.log
++++   NOW PROCESSING Identifying junction candidates
+  READ FILE::SC2202_R1
+  READ FILE::SC2202_R2
+    ALIGNED READ:10000 CANDIDATE JUNCTIONS:3807
+  Passed alignment pairs examined: 9619
+  Taking top candidate junctions...
+  Minimum number to keep:     100 
+  Maximum number to keep:    5000 
+  Maximum length to keep:    2990 bases
+    Initial: Number = 1635, Cumulative Length = 827757 bases
+      Testing Pos Hash Score =   12, Num =      1, Length =    327
+      Testing Pos Hash Score =    8, Num =      1, Length =    503
+      Testing Pos Hash Score =    6, Num =      6, Length =   2673
+      Testing Pos Hash Score =    5, Num =     12, Length =   6042
+      Testing Pos Hash Score =    4, Num =     28, Length =  14130 [Omitted Similar =      2]
+      Testing Pos Hash Score =    3, Num =    103, Length =  51971 [Omitted Similar =      3]
+    Accepted: Number = 48, Pos Hash Score >= 4, Cumulative Length = 23675 bases
+[samtools] faidx SC2202/breseq/03_candidate_junctions/candidate_junction.fasta
+[system] rm -f SC2202/breseq/03_candidate_junctions/SC2202_R1.split.sam
+[system] rm -f SC2202/breseq/03_candidate_junctions/SC2202_R2.split.sam
++++   NOW PROCESSING Re-alignment to junction candidates
+[system] bowtie2-build -q SC2202/breseq/03_candidate_junctions/candidate_junction.fasta SC2202/breseq/04_candidate_junction_alignment/candidate_junction
+Renaming SC2202/breseq/04_candidate_junction_alignment/candidate_junction.3.bt2.tmp to SC2202/breseq/04_candidate_junction_alignment/candidate_junction.3.bt2
+Renaming SC2202/breseq/04_candidate_junction_alignment/candidate_junction.4.bt2.tmp to SC2202/breseq/04_candidate_junction_alignment/candidate_junction.4.bt2
+Renaming SC2202/breseq/04_candidate_junction_alignment/candidate_junction.1.bt2.tmp to SC2202/breseq/04_candidate_junction_alignment/candidate_junction.1.bt2
+Renaming SC2202/breseq/04_candidate_junction_alignment/candidate_junction.2.bt2.tmp to SC2202/breseq/04_candidate_junction_alignment/candidate_junction.2.bt2
+Renaming SC2202/breseq/04_candidate_junction_alignment/candidate_junction.rev.1.bt2.tmp to SC2202/breseq/04_candidate_junction_alignment/candidate_junction.rev.1.bt2
+Renaming SC2202/breseq/04_candidate_junction_alignment/candidate_junction.rev.2.bt2.tmp to SC2202/breseq/04_candidate_junction_alignment/candidate_junction.rev.2.bt2
+[system] bowtie2 -t --no-unal -p 4 --local  -L 31 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,1,0.70 -k 2000 --reorder -x SC2202/breseq/04_candidate_junction_alignment/candidate_junction -U SC2202/breseq/01_sequence_conversion/SC2202_R1.converted.fastq -S SC2202/breseq/04_candidate_junction_alignment/SC2202_R1.candidate_junction.sam
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:28
+575048 reads; of these:
+  575048 (100.00%) were unpaired; of these:
+    447311 (77.79%) aligned 0 times
+    75967 (13.21%) aligned exactly 1 time
+    51770 (9.00%) aligned >1 times
+22.21% overall alignment rate
+Time searching: 00:00:28
+Overall time: 00:00:28
+[system] bowtie2 -t --no-unal -p 4 --local  -L 31 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,1,0.70 -k 2000 --reorder -x SC2202/breseq/04_candidate_junction_alignment/candidate_junction -U SC2202/breseq/01_sequence_conversion/SC2202_R2.converted.fastq -S SC2202/breseq/04_candidate_junction_alignment/SC2202_R2.candidate_junction.sam
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:28
+575048 reads; of these:
+  575048 (100.00%) were unpaired; of these:
+    447821 (77.88%) aligned 0 times
+    75263 (13.09%) aligned exactly 1 time
+    51964 (9.04%) aligned >1 times
+22.12% overall alignment rate
+Time searching: 00:00:28
+Overall time: 00:00:28
+[system] rm -f SC2202/breseq/04_candidate_junction_alignment/candidate_junction*
++++   NOW PROCESSING Resolving best read alignments
+  READ FILE:SC2202_R1
+    READS:10000
+    READS:20000
+    READS:30000
+    READS:40000
+    READS:50000
+    READS:60000
+    READS:70000
+    READS:80000
+    READS:90000
+    READS:100000
+    READS:110000
+    READS:120000
+    READS:130000
+    READS:140000
+    READS:150000
+    READS:160000
+    READS:170000
+    READS:180000
+    READS:190000
+    READS:200000
+    READS:210000
+    READS:220000
+    READS:230000
+    READS:240000
+    READS:250000
+    READS:260000
+    READS:270000
+    READS:280000
+    READS:290000
+    READS:300000
+    READS:310000
+    READS:320000
+    READS:330000
+    READS:340000
+    READS:350000
+    READS:360000
+    READS:370000
+    READS:380000
+    READS:390000
+    READS:400000
+    READS:410000
+    READS:420000
+    READS:430000
+    READS:440000
+    READS:450000
+    READS:460000
+    READS:470000
+    READS:480000
+    READS:490000
+    READS:500000
+    READS:510000
+    READS:520000
+    READS:530000
+    READS:540000
+    READS:550000
+    READS:560000
+    READS:570000
+  READ FILE:SC2202_R2
+    READS:580000
+    READS:590000
+    READS:600000
+    READS:610000
+    READS:620000
+    READS:630000
+    READS:640000
+    READS:650000
+    READS:660000
+    READS:670000
+    READS:680000
+    READS:690000
+    READS:700000
+    READS:710000
+    READS:720000
+    READS:730000
+    READS:740000
+    READS:750000
+    READS:760000
+    READS:770000
+    READS:780000
+    READS:790000
+    READS:800000
+    READS:810000
+    READS:820000
+    READS:830000
+    READS:840000
+    READS:850000
+    READS:860000
+    READS:870000
+    READS:880000
+    READS:890000
+    READS:900000
+    READS:910000
+    READS:920000
+    READS:930000
+    READS:940000
+    READS:950000
+    READS:960000
+    READS:970000
+    READS:980000
+    READS:990000
+    READS:1000000
+    READS:1010000
+    READS:1020000
+    READS:1030000
+    READS:1040000
+    READS:1050000
+    READS:1060000
+    READS:1070000
+    READS:1080000
+    READS:1090000
+    READS:1100000
+    READS:1110000
+    READS:1120000
+    READS:1130000
+    READS:1140000
+    READS:1150000
+[system] rm -f SC2202/breseq/01_sequence_conversion/SC2202_R1.converted.fastq
+[system] rm -f SC2202/breseq/01_sequence_conversion/SC2202_R2.converted.fastq
+[system] rm -f SC2202/breseq/02_reference_alignment/SC2202_R1.reference.sam
+[system] rm -f SC2202/breseq/02_reference_alignment/SC2202_R2.reference.sam
+[system] rm -f SC2202/breseq/04_candidate_junction_alignment/SC2202_R1.candidate_junction.sam*
+[system] rm -f SC2202/breseq/04_candidate_junction_alignment/SC2202_R2.candidate_junction.sam*
++++   NOW PROCESSING Creating BAM files
+[samtools] import SC2202/breseq/03_candidate_junctions/candidate_junction.fasta.fai SC2202/breseq/05_alignment_correction/junction.sam SC2202/breseq/06_bam/junction.unsorted.bam
+[samtools] sort --threads 4 -o SC2202/breseq/06_bam/junction.bam -T SC2202/breseq/06_bam/junction.bam SC2202/breseq/06_bam/junction.unsorted.bam
+[system] rm -f SC2202/breseq/06_bam/junction.unsorted.bam
+[samtools] index SC2202/breseq/06_bam/junction.bam SC2202/breseq/06_bam/junction.bam.bai
+[samtools] import SC2202/breseq/data/reference.fasta.fai SC2202/breseq/05_alignment_correction/reference.sam SC2202/breseq/06_bam/reference.unsorted.bam
+[samtools] sort --threads 4 -o SC2202/breseq/data/reference.bam -T SC2202/breseq/data/reference.bam SC2202/breseq/06_bam/reference.unsorted.bam
+[system] rm -f SC2202/breseq/06_bam/reference.unsorted.bam
+[samtools] index SC2202/breseq/data/reference.bam SC2202/breseq/data/reference.bam.bai
+[system] rm -f SC2202/breseq/05_alignment_correction/reference.sam
+[system] rm -f SC2202/breseq/05_alignment_correction/junction.sam
++++   NOW PROCESSING Tabulating error counts
+  REFERENCE: MN908947
+  LENGTH: 29903
+    POSITION:10000
+    POSITION:20000
++++   NOW PROCESSING Re-calibrating base error rates
+[system] R --vanilla < /workspace/home/nasirja/covid-19-signal/.snakemake/conda/1f267c8dfdaa0356ebaad13adc66d00a/bin/../share/breseq/coverage_distribution.r > SC2202/breseq/07_error_calibration/0.unique_only_coverage_distribution.tab.r.log distribution_file=SC2202/breseq/07_error_calibration/0.unique_only_coverage_distribution.tab plot_file=SC2202/breseq/output/calibration/0.unique_coverage.pdf deletion_propagation_pr_cutoff=0.000289143
+[system] R --vanilla in_file=SC2202/breseq/07_error_calibration/base_qual_error_prob.SC2202_R1.tab out_file=SC2202/breseq/output/calibration/SC2202_R1.error_rates.pdf < /workspace/home/nasirja/covid-19-signal/.snakemake/conda/1f267c8dfdaa0356ebaad13adc66d00a/bin/../share/breseq/plot_error_rate.r > SC2202/breseq/07_error_calibration/SC2202_R1.plot_error_rate.log
+[system] R --vanilla in_file=SC2202/breseq/07_error_calibration/base_qual_error_prob.SC2202_R2.tab out_file=SC2202/breseq/output/calibration/SC2202_R2.error_rates.pdf < /workspace/home/nasirja/covid-19-signal/.snakemake/conda/1f267c8dfdaa0356ebaad13adc66d00a/bin/../share/breseq/plot_error_rate.r > SC2202/breseq/07_error_calibration/SC2202_R2.plot_error_rate.log
++++   NOW PROCESSING Examining read alignment evidence
+  REFERENCE: MN908947
+  LENGTH: 29903
+    POSITION:10000
+    POSITION:20000
++++   NOW PROCESSING Polymorphism statistics
+[system] R --vanilla total_length=29903 in_file=SC2202/breseq/08_mutation_identification/polymorphism_statistics_input.tab out_file=SC2202/breseq/08_mutation_identification/polymorphism_statistics_output.tab qual_file=SC2202/breseq/08_mutation_identification/error_counts.tab < /workspace/home/nasirja/covid-19-signal/.snakemake/conda/1f267c8dfdaa0356ebaad13adc66d00a/bin/../share/breseq/polymorphism_statistics.r > SC2202/breseq/08_mutation_identification/polymorphism_statistics_output.log
++++   NOW PROCESSING Output
+Creating merged genome diff evidence file...
+Predicting mutations from evidence...
+  Preparing junctions...
+  Predicting mobile element insertions...
+  Predicting large deletions...
+  Predicting small indels and substitutions from junctions...
+  Predicting small indels and substitutions from alignments...
+  Making final adjustments to mutations...
+  Writing final GD file...
+  Writing final VCF file...
+Annotating mutations...
+Drawing coverage plots...
+Creating coverage plot for region: MN908947:1-29903
+Creating index HTML table...
+[system] rm -f SC2202/breseq/01_sequence_conversion/*.trims
+[system] rm -f SC2202/breseq/03_candidate_junctions/candidate_junction.fasta
+[system] rm -f SC2202/breseq/03_candidate_junctions/candidate_junction.fasta.fai
+[system] rm -f SC2202/breseq/05_alignment_correction/jc_evidence.gd
+[system] rm -f SC2202/breseq/06_bam/junction.bam
+[system] rm -f SC2202/breseq/06_bam/junction.bam.bai
++++   SUCCESSFULLY COMPLETED

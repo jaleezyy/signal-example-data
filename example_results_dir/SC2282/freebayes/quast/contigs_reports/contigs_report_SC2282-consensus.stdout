@@ -1,0 +1,45 @@
+Aligning contigs to reference...
+	Aligning contigs to the reference
+Filtering alignments...
+Parsing coords...
+Loading reference...
+	Loaded [MN908947.3]
+	Total Regions: 1
+	Total Region Length: 29903
+Analyzing contigs...
+CONTIG: SC2282 (29903bp)
+Best alignment score: 29825.1 (LEN: 29843, IDY: 99.94), Total number of alignments: 1
+		One align captures most of this contig: 13 29855 | 13 29855 | 29843 29843 | 99.94 | MN908947.3 SC2282
+
+Analyzing coverage...
+Writing SNPs into /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2282/freebayes/quast/contigs_reports/minimap_output/SC2282-consensus.used_snps.gz
+
+Analysis is finished!
+Founded SNPs were written into /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2282/freebayes/quast/contigs_reports/minimap_output/SC2282-consensus.used_snps.gz
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Scaffold gap extensive misassemblies: 0
+	Scaffold gap local misassemblies: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Unaligned Contigs: 0 + 0 part
+Half Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 0
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Extra Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each of these contigs was used.
+
+	Covered Bases: 29843
+
+	SNPs: 19
+	Insertions: 0
+	Deletions: 0
+

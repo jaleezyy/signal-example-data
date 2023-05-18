@@ -1,0 +1,688 @@
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 4.1
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 2 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2261/adapter_trimmed/
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> SC2261/host_removal/SC2261_R1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	8521	AGATCGGAAGAGC	449038	1.90
+Nextera	0	CTGTCTCTTATA	449038	0.00
+smallRNA	0	TGGAATTCTCGG	449038	0.00
+Using Illumina adapter for trimming (count: 8521). Second best hit was Nextera (count: 0)
+
+Writing report to '/workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2261/adapter_trimmed/SC2261_R1.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: SC2261/host_removal/SC2261_R1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.1
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.1). Setting -j 2
+Writing final adapter and quality trimmed output to SC2261_R1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file SC2261/host_removal/SC2261_R1.fastq.gz <<< 
+This is cutadapt 4.1 with Python 3.9.13
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC SC2261/host_removal/SC2261_R1.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 19.75 s (44 µs/read; 1.36 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 449,038
+Reads with adapters:                   156,896 (34.9%)
+Reads written (passing filters):       449,038 (100.0%)
+
+Total basepairs processed:   112,708,538 bp
+Quality-trimmed:                 851,497 bp (0.8%)
+Total written (filtered):    110,774,266 bp (98.3%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 156896 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 32.4%
+  C: 22.2%
+  G: 13.6%
+  T: 30.7%
+  none/other: 1.1%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	98833	112259.5	0	98833
+2	38868	28064.9	0	38868
+3	4908	7016.2	0	4908
+4	1693	1754.1	0	1693
+5	75	438.5	0	75
+6	86	109.6	0	86
+7	1530	27.4	0	1530
+8	78	6.9	0	78
+9	128	1.7	0	127 1
+10	98	0.4	1	96 2
+11	55	0.1	1	52 3
+12	130	0.0	1	125 5
+13	65	0.0	1	61 4
+14	50	0.0	1	47 3
+15	76	0.0	1	75 1
+16	36	0.0	1	33 3
+17	56	0.0	1	50 6
+18	54	0.0	1	51 3
+19	37	0.0	1	35 2
+20	55	0.0	1	51 4
+21	40	0.0	1	37 3
+22	70	0.0	1	67 3
+23	45	0.0	1	43 2
+24	280	0.0	1	273 7
+25	119	0.0	1	114 5
+26	35	0.0	1	34 1
+27	58	0.0	1	52 6
+28	109	0.0	1	102 7
+29	29	0.0	1	24 5
+30	67	0.0	1	62 5
+31	56	0.0	1	53 3
+32	51	0.0	1	50 1
+33	55	0.0	1	51 4
+34	65	0.0	1	61 4
+35	41	0.0	1	37 4
+36	51	0.0	1	46 5
+37	99	0.0	1	93 6
+38	33	0.0	1	32 1
+39	71	0.0	1	67 4
+40	25	0.0	1	21 4
+41	102	0.0	1	94 8
+42	143	0.0	1	140 3
+43	210	0.0	1	205 5
+44	87	0.0	1	84 3
+45	46	0.0	1	43 3
+46	25	0.0	1	22 3
+47	54	0.0	1	49 5
+48	26	0.0	1	25 1
+49	58	0.0	1	56 2
+50	28	0.0	1	27 1
+51	74	0.0	1	72 2
+52	44	0.0	1	42 2
+53	49	0.0	1	46 3
+54	77	0.0	1	70 7
+55	48	0.0	1	45 3
+56	24	0.0	1	19 5
+57	52	0.0	1	48 4
+58	30	0.0	1	26 4
+59	54	0.0	1	53 1
+60	30	0.0	1	30
+61	41	0.0	1	37 4
+62	26	0.0	1	25 1
+63	37	0.0	1	34 3
+64	21	0.0	1	19 2
+65	38	0.0	1	36 2
+66	42	0.0	1	37 5
+67	16	0.0	1	10 6
+68	35	0.0	1	31 4
+69	45	0.0	1	42 3
+70	40	0.0	1	36 4
+71	54	0.0	1	49 5
+72	86	0.0	1	72 14
+73	107	0.0	1	82 25
+74	191	0.0	1	146 45
+75	414	0.0	1	294 120
+76	992	0.0	1	857 135
+77	869	0.0	1	740 129
+78	538	0.0	1	444 94
+79	323	0.0	1	266 57
+80	216	0.0	1	173 43
+81	163	0.0	1	124 39
+82	119	0.0	1	97 22
+83	91	0.0	1	65 26
+84	75	0.0	1	58 17
+85	63	0.0	1	50 13
+86	55	0.0	1	43 12
+87	53	0.0	1	39 14
+88	46	0.0	1	36 10
+89	42	0.0	1	36 6
+90	40	0.0	1	28 12
+91	37	0.0	1	29 8
+92	28	0.0	1	22 6
+93	55	0.0	1	44 11
+94	164	0.0	1	153 11
+95	62	0.0	1	53 9
+96	45	0.0	1	40 5
+97	69	0.0	1	64 5
+98	30	0.0	1	23 7
+99	14	0.0	1	11 3
+100	14	0.0	1	10 4
+101	22	0.0	1	15 7
+102	18	0.0	1	14 4
+103	18	0.0	1	13 5
+104	10	0.0	1	9 1
+105	35	0.0	1	29 6
+106	13	0.0	1	7 6
+107	14	0.0	1	10 4
+108	9	0.0	1	7 2
+109	11	0.0	1	8 3
+110	10	0.0	1	6 4
+111	11	0.0	1	8 3
+112	10	0.0	1	8 2
+113	17	0.0	1	10 7
+114	18	0.0	1	14 4
+115	16	0.0	1	10 6
+116	15	0.0	1	12 3
+117	29	0.0	1	21 8
+118	9	0.0	1	6 3
+119	12	0.0	1	6 6
+120	6	0.0	1	4 2
+121	19	0.0	1	8 11
+122	5	0.0	1	3 2
+123	22	0.0	1	16 6
+124	10	0.0	1	5 5
+125	10	0.0	1	5 5
+126	8	0.0	1	6 2
+127	24	0.0	1	14 10
+128	10	0.0	1	3 7
+129	6	0.0	1	0 6
+130	11	0.0	1	4 7
+131	17	0.0	1	7 10
+132	10	0.0	1	3 7
+133	11	0.0	1	4 7
+134	10	0.0	1	5 5
+135	8	0.0	1	3 5
+136	14	0.0	1	7 7
+137	11	0.0	1	3 8
+138	6	0.0	1	3 3
+139	4	0.0	1	0 4
+140	7	0.0	1	4 3
+141	36	0.0	1	35 1
+142	7	0.0	1	3 4
+143	11	0.0	1	5 6
+144	3	0.0	1	2 1
+145	15	0.0	1	8 7
+146	15	0.0	1	12 3
+147	23	0.0	1	19 4
+148	13	0.0	1	7 6
+149	10	0.0	1	3 7
+150	9	0.0	1	6 3
+151	20	0.0	1	12 8
+152	6	0.0	1	1 5
+153	15	0.0	1	8 7
+154	24	0.0	1	18 6
+155	9	0.0	1	6 3
+156	26	0.0	1	23 3
+157	20	0.0	1	14 6
+158	33	0.0	1	33
+159	23	0.0	1	14 9
+160	46	0.0	1	39 7
+161	31	0.0	1	29 2
+162	28	0.0	1	25 3
+163	21	0.0	1	18 3
+164	14	0.0	1	9 5
+165	21	0.0	1	16 5
+166	23	0.0	1	21 2
+167	31	0.0	1	28 3
+168	19	0.0	1	12 7
+169	18	0.0	1	15 3
+170	32	0.0	1	26 6
+171	11	0.0	1	7 4
+172	26	0.0	1	21 5
+173	23	0.0	1	18 5
+174	8	0.0	1	6 2
+175	22	0.0	1	14 8
+176	16	0.0	1	13 3
+177	5	0.0	1	4 1
+178	8	0.0	1	6 2
+179	12	0.0	1	6 6
+180	16	0.0	1	11 5
+181	20	0.0	1	16 4
+182	5	0.0	1	2 3
+183	2	0.0	1	2
+184	8	0.0	1	6 2
+185	33	0.0	1	30 3
+186	4	0.0	1	3 1
+187	7	0.0	1	5 2
+188	2	0.0	1	0 2
+189	1	0.0	1	1
+190	8	0.0	1	6 2
+191	4	0.0	1	3 1
+192	10	0.0	1	6 4
+193	11	0.0	1	7 4
+194	5	0.0	1	1 4
+195	7	0.0	1	5 2
+196	3	0.0	1	1 2
+197	6	0.0	1	4 2
+198	5	0.0	1	3 2
+199	3	0.0	1	3
+200	5	0.0	1	4 1
+201	3	0.0	1	0 3
+202	4	0.0	1	1 3
+203	1	0.0	1	1
+206	2	0.0	1	1 1
+208	2	0.0	1	1 1
+209	3	0.0	1	1 2
+210	2	0.0	1	2
+211	1	0.0	1	1
+213	4	0.0	1	1 3
+214	3	0.0	1	2 1
+215	2	0.0	1	1 1
+216	2	0.0	1	2
+217	2	0.0	1	0 2
+220	2	0.0	1	2
+221	2	0.0	1	2
+222	3	0.0	1	3
+224	1	0.0	1	1
+225	1	0.0	1	1
+226	2	0.0	1	2
+227	2	0.0	1	2
+228	1	0.0	1	0 1
+229	4	0.0	1	4
+230	3	0.0	1	3
+231	2	0.0	1	2
+232	5	0.0	1	5
+233	2	0.0	1	2
+234	2	0.0	1	1 1
+235	3	0.0	1	3
+236	2	0.0	1	1 1
+237	2	0.0	1	0 2
+238	1	0.0	1	1
+239	1	0.0	1	1
+240	2	0.0	1	1 1
+241	2	0.0	1	1 1
+242	2	0.0	1	1 1
+243	2	0.0	1	1 1
+244	2	0.0	1	1 1
+245	3	0.0	1	0 3
+246	1	0.0	1	0 1
+247	1	0.0	1	0 1
+248	3	0.0	1	0 3
+249	6	0.0	1	2 4
+250	21	0.0	1	0 21
+251	388	0.0	1	0 388
+
+RUN STATISTICS FOR INPUT FILE: SC2261/host_removal/SC2261_R1.fastq.gz
+=============================================
+449038 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to '/workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2261/adapter_trimmed/SC2261_R2.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: SC2261/host_removal/SC2261_R2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.1
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.1). Setting -j -j 2
+Writing final adapter and quality trimmed output to SC2261_R2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file SC2261/host_removal/SC2261_R2.fastq.gz <<< 
+This is cutadapt 4.1 with Python 3.9.13
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC SC2261/host_removal/SC2261_R2.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 20.94 s (47 µs/read; 1.29 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 449,038
+Reads with adapters:                   154,495 (34.4%)
+Reads written (passing filters):       449,038 (100.0%)
+
+Total basepairs processed:   112,708,538 bp
+Quality-trimmed:               1,717,013 bp (1.5%)
+Total written (filtered):    110,037,971 bp (97.6%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 154495 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 36.2%
+  C: 20.8%
+  G: 12.6%
+  T: 29.1%
+  none/other: 1.3%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	100657	112259.5	0	100657
+2	34604	28064.9	0	34604
+3	5258	7016.2	0	5258
+4	1547	1754.1	0	1547
+5	56	438.5	0	56
+6	76	109.6	0	76
+7	1513	27.4	0	1513
+8	57	6.9	0	57
+9	142	1.7	0	142
+10	114	0.4	1	106 8
+11	34	0.1	1	30 4
+12	132	0.0	1	131 1
+13	23	0.0	1	21 2
+14	121	0.0	1	112 9
+15	37	0.0	1	35 2
+16	43	0.0	1	40 3
+17	76	0.0	1	71 5
+18	26	0.0	1	23 3
+19	46	0.0	1	43 3
+20	42	0.0	1	42
+21	9	0.0	1	8 1
+22	62	0.0	1	61 1
+23	43	0.0	1	42 1
+24	376	0.0	1	361 15
+25	16	0.0	1	15 1
+26	80	0.0	1	72 8
+27	80	0.0	1	77 3
+28	108	0.0	1	102 6
+29	24	0.0	1	21 3
+30	120	0.0	1	117 3
+31	35	0.0	1	34 1
+32	89	0.0	1	81 8
+33	75	0.0	1	70 5
+34	86	0.0	1	83 3
+35	46	0.0	1	43 3
+36	68	0.0	1	61 7
+37	133	0.0	1	127 6
+38	91	0.0	1	85 6
+39	236	0.0	1	227 9
+40	114	0.0	1	100 14
+41	266	0.0	1	249 17
+42	240	0.0	1	215 25
+43	298	0.0	1	287 11
+44	229	0.0	1	216 13
+45	381	0.0	1	361 20
+46	136	0.0	1	127 9
+47	141	0.0	1	136 5
+48	100	0.0	1	97 3
+49	72	0.0	1	70 2
+50	53	0.0	1	51 2
+51	63	0.0	1	54 9
+52	42	0.0	1	38 4
+53	77	0.0	1	71 6
+54	166	0.0	1	159 7
+55	38	0.0	1	32 6
+56	111	0.0	1	99 12
+57	277	0.0	1	265 12
+58	109	0.0	1	104 5
+59	26	0.0	1	21 5
+60	58	0.0	1	56 2
+61	24	0.0	1	16 8
+62	27	0.0	1	25 2
+63	30	0.0	1	30
+64	14	0.0	1	13 1
+65	8	0.0	1	8
+66	9	0.0	1	9
+67	7	0.0	1	5 2
+68	8	0.0	1	8
+69	10	0.0	1	9 1
+70	16	0.0	1	15 1
+71	10	0.0	1	8 2
+72	13	0.0	1	12 1
+73	16	0.0	1	15 1
+74	20	0.0	1	16 4
+75	42	0.0	1	32 10
+76	52	0.0	1	43 9
+77	133	0.0	1	93 40
+78	198	0.0	1	128 70
+79	413	0.0	1	260 153
+80	650	0.0	1	446 204
+81	634	0.0	1	422 212
+82	377	0.0	1	231 146
+83	254	0.0	1	170 84
+84	157	0.0	1	94 63
+85	86	0.0	1	43 43
+86	59	0.0	1	33 26
+87	54	0.0	1	26 28
+88	55	0.0	1	28 27
+89	32	0.0	1	19 13
+90	34	0.0	1	21 13
+91	34	0.0	1	19 15
+92	31	0.0	1	10 21
+93	26	0.0	1	14 12
+94	125	0.0	1	113 12
+95	40	0.0	1	29 11
+96	29	0.0	1	20 9
+97	31	0.0	1	25 6
+98	22	0.0	1	14 8
+99	21	0.0	1	12 9
+100	9	0.0	1	4 5
+101	11	0.0	1	9 2
+102	6	0.0	1	2 4
+103	8	0.0	1	4 4
+104	11	0.0	1	5 6
+105	21	0.0	1	15 6
+106	10	0.0	1	5 5
+107	7	0.0	1	4 3
+108	9	0.0	1	5 4
+109	11	0.0	1	8 3
+110	8	0.0	1	1 7
+111	7	0.0	1	3 4
+112	9	0.0	1	5 4
+113	4	0.0	1	1 3
+114	13	0.0	1	6 7
+115	9	0.0	1	7 2
+116	14	0.0	1	7 7
+117	19	0.0	1	12 7
+118	8	0.0	1	4 4
+119	9	0.0	1	4 5
+120	2	0.0	1	1 1
+121	18	0.0	1	8 10
+122	10	0.0	1	2 8
+123	18	0.0	1	14 4
+124	11	0.0	1	5 6
+125	4	0.0	1	1 3
+126	7	0.0	1	1 6
+127	14	0.0	1	7 7
+128	11	0.0	1	4 7
+129	9	0.0	1	4 5
+130	4	0.0	1	0 4
+131	9	0.0	1	8 1
+132	8	0.0	1	3 5
+133	3	0.0	1	1 2
+134	8	0.0	1	4 4
+135	6	0.0	1	2 4
+136	5	0.0	1	1 4
+137	6	0.0	1	1 5
+138	6	0.0	1	1 5
+139	8	0.0	1	2 6
+140	7	0.0	1	4 3
+141	23	0.0	1	18 5
+142	8	0.0	1	6 2
+143	4	0.0	1	2 2
+144	6	0.0	1	1 5
+145	9	0.0	1	5 4
+146	8	0.0	1	5 3
+147	11	0.0	1	6 5
+148	6	0.0	1	3 3
+149	5	0.0	1	2 3
+150	3	0.0	1	1 2
+151	9	0.0	1	6 3
+152	2	0.0	1	0 2
+153	10	0.0	1	8 2
+154	13	0.0	1	12 1
+155	9	0.0	1	4 5
+156	19	0.0	1	17 2
+157	18	0.0	1	12 6
+158	27	0.0	1	22 5
+159	12	0.0	1	10 2
+160	33	0.0	1	30 3
+161	20	0.0	1	17 3
+162	26	0.0	1	24 2
+163	13	0.0	1	10 3
+164	15	0.0	1	12 3
+165	12	0.0	1	11 1
+166	17	0.0	1	14 3
+167	24	0.0	1	23 1
+168	11	0.0	1	6 5
+169	14	0.0	1	10 4
+170	24	0.0	1	23 1
+171	4	0.0	1	3 1
+172	9	0.0	1	8 1
+173	16	0.0	1	12 4
+174	12	0.0	1	9 3
+175	11	0.0	1	11
+176	5	0.0	1	4 1
+177	3	0.0	1	1 2
+178	2	0.0	1	2
+179	4	0.0	1	3 1
+180	8	0.0	1	7 1
+181	8	0.0	1	8
+183	2	0.0	1	1 1
+184	1	0.0	1	1
+185	22	0.0	1	21 1
+186	2	0.0	1	2
+187	3	0.0	1	3
+190	5	0.0	1	4 1
+191	1	0.0	1	1
+192	3	0.0	1	2 1
+193	3	0.0	1	3
+194	2	0.0	1	0 2
+195	3	0.0	1	3
+196	1	0.0	1	0 1
+197	2	0.0	1	2
+198	1	0.0	1	1
+199	1	0.0	1	1
+200	1	0.0	1	0 1
+201	1	0.0	1	1
+202	1	0.0	1	1
+203	2	0.0	1	1 1
+206	1	0.0	1	1
+207	1	0.0	1	1
+208	1	0.0	1	1
+209	1	0.0	1	0 1
+210	2	0.0	1	2
+212	2	0.0	1	1 1
+214	1	0.0	1	1
+215	2	0.0	1	2
+217	2	0.0	1	1 1
+219	1	0.0	1	1
+221	2	0.0	1	2
+222	1	0.0	1	1
+224	2	0.0	1	2
+226	4	0.0	1	3 1
+227	2	0.0	1	2
+228	1	0.0	1	1
+229	1	0.0	1	1
+230	2	0.0	1	2
+232	2	0.0	1	2
+233	2	0.0	1	2
+234	2	0.0	1	2
+235	4	0.0	1	4
+236	1	0.0	1	0 1
+238	2	0.0	1	2
+239	5	0.0	1	4 1
+240	1	0.0	1	1
+241	1	0.0	1	1
+243	1	0.0	1	0 1
+244	2	0.0	1	1 1
+245	1	0.0	1	0 1
+247	1	0.0	1	0 1
+248	4	0.0	1	1 3
+249	6	0.0	1	1 5
+250	15	0.0	1	0 15
+251	310	0.0	1	0 310
+
+RUN STATISTICS FOR INPUT FILE: SC2261/host_removal/SC2261_R2.fastq.gz
+=============================================
+449038 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files SC2261_R1_trimmed.fq.gz and SC2261_R2_trimmed.fq.gz
+file_1: SC2261_R1_trimmed.fq.gz, file_2: SC2261_R2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: SC2261_R1_trimmed.fq.gz and SC2261_R2_trimmed.fq.gz <<<<<
+Writing validated paired-end Read 1 reads to SC2261_R1_val_1.fq.gz
+Writing validated paired-end Read 2 reads to SC2261_R2_val_2.fq.gz
+
+Total number of sequences analysed: 449038
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 3316 (0.74%)
+
+
+  >>> Now running FastQC on the validated data SC2261_R1_val_1.fq.gz<<<
+
+Started analysis of SC2261_R1_val_1.fq.gz
+Approx 5% complete for SC2261_R1_val_1.fq.gz
+Approx 10% complete for SC2261_R1_val_1.fq.gz
+Approx 15% complete for SC2261_R1_val_1.fq.gz
+Approx 20% complete for SC2261_R1_val_1.fq.gz
+Approx 25% complete for SC2261_R1_val_1.fq.gz
+Approx 30% complete for SC2261_R1_val_1.fq.gz
+Approx 35% complete for SC2261_R1_val_1.fq.gz
+Approx 40% complete for SC2261_R1_val_1.fq.gz
+Approx 45% complete for SC2261_R1_val_1.fq.gz
+Approx 50% complete for SC2261_R1_val_1.fq.gz
+Approx 55% complete for SC2261_R1_val_1.fq.gz
+Approx 60% complete for SC2261_R1_val_1.fq.gz
+Approx 65% complete for SC2261_R1_val_1.fq.gz
+Approx 70% complete for SC2261_R1_val_1.fq.gz
+Approx 75% complete for SC2261_R1_val_1.fq.gz
+Approx 80% complete for SC2261_R1_val_1.fq.gz
+Approx 85% complete for SC2261_R1_val_1.fq.gz
+Approx 90% complete for SC2261_R1_val_1.fq.gz
+Approx 95% complete for SC2261_R1_val_1.fq.gz
+
+  >>> Now running FastQC on the validated data SC2261_R2_val_2.fq.gz<<<
+
+Started analysis of SC2261_R2_val_2.fq.gz
+Approx 5% complete for SC2261_R2_val_2.fq.gz
+Approx 10% complete for SC2261_R2_val_2.fq.gz
+Approx 15% complete for SC2261_R2_val_2.fq.gz
+Approx 20% complete for SC2261_R2_val_2.fq.gz
+Approx 25% complete for SC2261_R2_val_2.fq.gz
+Approx 30% complete for SC2261_R2_val_2.fq.gz
+Approx 35% complete for SC2261_R2_val_2.fq.gz
+Approx 40% complete for SC2261_R2_val_2.fq.gz
+Approx 45% complete for SC2261_R2_val_2.fq.gz
+Approx 50% complete for SC2261_R2_val_2.fq.gz
+Approx 55% complete for SC2261_R2_val_2.fq.gz
+Approx 60% complete for SC2261_R2_val_2.fq.gz
+Approx 65% complete for SC2261_R2_val_2.fq.gz
+Approx 70% complete for SC2261_R2_val_2.fq.gz
+Approx 75% complete for SC2261_R2_val_2.fq.gz
+Approx 80% complete for SC2261_R2_val_2.fq.gz
+Approx 85% complete for SC2261_R2_val_2.fq.gz
+Approx 90% complete for SC2261_R2_val_2.fq.gz
+Approx 95% complete for SC2261_R2_val_2.fq.gz
+Deleting both intermediate output files SC2261_R1_trimmed.fq.gz and SC2261_R2_trimmed.fq.gz
+
+====================================================================================================
+

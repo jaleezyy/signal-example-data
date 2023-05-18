@@ -1,0 +1,16 @@
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 152 sequences (36427 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (0, 67, 2, 0)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (374, 382, 392)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (338, 428)
+[M::mem_pestat] mean and std.dev: (385.04, 11.88)
+[M::mem_pestat] low and high boundaries for proper pairs: (320, 446)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_process_seqs] Processed 152 reads in 0.054 CPU sec, 0.027 real sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa mem -t 2 Plate3BLANK1/core/viral_reference Plate3BLANK1/adapter_trimmed/Plate3BLANK1_R1_val_1_posttrim_filter.fq.gz Plate3BLANK1/adapter_trimmed/Plate3BLANK1_R2_val_2_posttrim_filter.fq.gz
+[main] Real time: 0.033 sec; CPU: 0.059 sec
+[bam_sort_core] merging from 0 files and 2 in-memory blocks...

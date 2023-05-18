@@ -1,0 +1,106 @@
+SARS-CoV-2 Illumina GeNome Assembly Line (SIGNAL), version v1.5.6
+https://github.com/jaleezyy/covid-19-signal
+
+Note: Asterisks (*) indicates a discrepancy between iVar (default) and FreeBayes (if run)
+
+Sample: SC2255
+
+Pangolin Lineage Assignment
+    C.36.1
+
+Nextclade Clade Assignment
+    20D
+
+Data Volume
+    Raw Data (read pairs): 998254
+    Raw Data (base pairs): 501123508
+    Post Primer Removal (read pairs): 998254
+    Post Primer Removal (base pairs): 485516561
+    Post Trim (read pairs): 992813
+
+Quality Control Flags
+    PASS  Genome Fraction greater than 90%
+    WARN  No indels detected (maximum length 85bp)
+    PASS  Depth of coverage >= 2000x
+    WARN  All variants with at least 90% frequency among reads
+    PASS  Frameshifts in SARS-CoV-2 open reading frames
+    PASS  Reads per base sequence quality
+    PASS  Sequencing adapter removed
+    PASS  At least 90% of positions have coverage >= 100x
+    WARN  At least 90% of positions have coverage >= 1000x
+
+FASTQC Flags
+    FAIL  Per tile sequence quality
+    FAIL  Per base sequence content
+    FAIL  Per sequence GC content
+    WARN  Sequence Length Distribution
+
+Kraken2
+    Reads SARS-CoV-2 (%): 89.25
+
+QUAST
+    Genome Length (bp): 29902.0
+    Genome Fraction (%): 99.766
+    N's per 100 kbp: 571.87
+    Genomic Features: 21 + 3 part
+    Mismatches: 26.0
+    Mismatches per 100 kbp: 87.15
+    Indels: 1.0
+    Indels per 100 kbp: 3.35
+    Average Depth of Coverage: 12632.5
+        Fraction with 0 coverage: 0.001
+        Fraction with 1x-10x coverage: 0.005
+        Fraction with 11x-100x coverage: 0.018
+        Fraction with 101x-1000x coverage: 0.086
+        Fraction with 1001x-2000x coverage: 0.067
+        Fraction with 2001x-10000x coverage: 0.309
+        Fraction with > 10000x coverage: 0.513
+    5' Ns: 3
+    3' Ns: 67
+
+Variants in Consensus Genome (iVar)
+    C241T T322-G* C3037T C4002T C9693T G10097A A11433G G12268A C12534T C13536T
+    C14408T C17010T C18508T C19524T G20718A A23403G A23484G G23593T C23731T G26167T
+    C28093T C28253T G28628T C28846T G28881A* G28882A* G28883C* G28908T
+
+Unique Variants in Consensus Genome (FreeBayes)
+    TG322T GGG28881AAC
+
+Nucleotide Differences in Consensus Genomes (FreeBayes as reference)
+
+Variants in Read Alignment (BreSeq)
+    RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+    RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+    RA;	4,002;	C→T;	(100%);	'T1246I (ACT→ATT)';	'orf1ab →'
+    RA;	9,693;	C→T;	(100%);	'A3143V (GCT→GTT)';	'orf1ab →'
+    RA;	9,843;	T→A;	(9.6%);	'L3193* (TTG→TAG)';	'orf1ab →'
+    RA;	10,097;	G→A;	(100%);	'G3278S (GGT→AGT)';	'orf1ab →'
+    RA;	11,433;	A→G;	(100%);	'Y3723C (TAT→TGT)';	'orf1ab →'
+    RA;	12,268;	G→A;	(100%);	'L4001L (TTG→TTA)';	'orf1ab →'
+    RA;	12,534;	C→T;	(100%);	'T4090I (ACT→ATT)';	'orf1ab →'
+    RA;	13,536;	C→T;	(100%);	'Y23Y (TAC→TAT)';	'orf1ab →'
+    RA;	14,408;	C→T;	(100%);	'P314L (CCT→CTT)';	'orf1ab →'
+    RA;	17,010;	C→T;	(100%);	'I1181I (ATC→ATT)';	'orf1ab →'
+    RA;	18,508;	C→T;	(100%);	'L1681F (CTT→TTT)';	'orf1ab →'
+    RA;	19,524;	C→T;	(100%);	'L2019L (CTC→CTT)';	'orf1ab →'
+    RA;	20,718;	G→A;	(100%);	'M2417I (ATG→ATA)';	'orf1ab →'
+    RA;	23,403;	A→G;	(100%);	'D614G (GAT→GGT)';	'S →'
+    RA;	23,484;	A→G;	(100%);	'N641S (AAT→AGT)';	'S →'
+    RA;	23,593;	G→T;	(100%);	'Q677H (CAG→CAT)';	'S →'
+    RA;	23,731;	C→T;	(100%);	'T723T (ACC→ACT)';	'S →'
+    RA;	24,770;	G→T;	(14.0%);	'A1070S (GCA→TCA)';	'S →'
+    RA;	26,167;	G→T;	(42.4%);	'V259L (GTA→TTA)';	'ORF3a →'
+    RA;	27,063;	T→C;	(7.8%);	'L181L (TTG→CTG)';	'M →'
+    RA;	28,093;	C→T;	(61.9%);	'S67F (TCT→TTT)';	'ORF8 →'
+    RA;	28,202;	G→A;	(6.3%);	'S103S (TCG→TCA)';	'ORF8 →'
+    RA;	28,253;	C→T;	(100%);	'F120F (TTC→TTT)';	'ORF8 →'
+    RA;	28,628;	G→T;	(100%);	'A119S (GCT→TCT)';	'N →'
+    RA;	28,846;	C→T;	(100%);	'R191R (CGC→CGT)';	'N →'
+    RA;	28,881;	3 bp→AAC;	(100%);	'coding (608-610/1260nt)';	'N →'
+    RA;	28,908;	G→T;	(100%);	'G212V (GGC→GTC)';	'N →'
+    JC;	29,323;	220 bp x 2;	(7.4%);	'duplication';	'[N]'
+    JC;	29,323;	232 bp x 2;	(7.9%);	'duplication';	'[N]'
+    JC;	29,328;	182 bp x 2;	(8.6%);	'duplication';	'N →'
+    JC;	29,338;	216 bp x 2;	(13.1%);	'duplication';	'[N]'
+    JC;	29,342;	209 bp x 2;	(11.3%);	'duplication';	'[N]'
+

@@ -1,0 +1,276 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html>
+<head>
+<title>BRESEQ :: Marginal Predictions</title>
+<style type = "text/css">
+body {font-family: sans-serif; font-size: 11pt;}
+th {background-color: rgb(0,0,0); color: rgb(255,255,255);}
+table {background-color: rgb(1,0,0); color: rgb(0,0,0);}
+tr {background-color: rgb(255,255,255);}
+.mutation_in_codon {color:red; text-decoration : underline;}
+.snp_type_synonymous{color:green;}
+.snp_type_nonsynonymous{color:blue;}
+.snp_type_nonsense{color:red;}
+.mutation_header_row {background-color: rgb(0,130,0);}
+.read_alignment_header_row {background-color: rgb(255,0,0);}
+.missing_coverage_header_row {background-color: rgb(0,100,100);}
+.new_junction_header_row {background-color: rgb(0,0,155);}
+.copy_number_header_row {background-color: rgb(153,102,0);}
+.alternate_table_row_0 {background-color: rgb(255,255,255);}
+.alternate_table_row_1 {background-color: rgb(235,235,235);}
+.gray_table_row {background-color: rgb(230,230,245);}
+.polymorphism_table_row {background-color: rgb(160,255,160);}
+.highlight_table_row {background-color: rgb(192,255,255);}
+.reject_table_row {background-color: rgb(255,200,165);}
+.user_defined_table_row {background-color: rgb(255,255,0);}
+.information_table_row {background-color: rgb(200,255,255);}
+.junction_repeat {background-color: rgb(255,165,0)}
+.junction_gene {}
+.hidden { display: none; }
+.unhidden { display: block; }
+
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<script type="text/javascript">
+  function hideTog(divID) {
+    var item = document.getElementById(divID);
+    if (item) {
+      item.className=(item.className=='hidden')?'unhidden':'hidden';
+    }
+  }
+  function showTog(butID) {
+    var button = document.getElementById(butID);
+    if (button) {
+      button.value=(button.value=='Show')?'Hide':'Show';
+    }
+  }
+</script>
+
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+<td><a href="http://barricklab.org/breseq"><img src="evidence/breseq_small.png" /></a></td>
+<td width="100%">
+<b><i>breseq</i></b>&nbsp;&nbsp;version 0.35.0&nbsp;&nbsp;
+<br><a href="index.html">mutation predictions</a> | 
+<a href="marginal.html">marginal predictions</a> | 
+<a href="summary.html">summary statistics</a> | 
+<a href="output.gd">genome diff</a> | 
+<a href="log.txt">command line log</a>
+</td></tr></table>
+
+<p>
+<p>
+<table border="0" cellspacing="1" cellpadding="3">
+<tr><th colspan="10" align="left" class="new_junction_header_row">Marginal new junction evidence (lowest skew 10 of 46 shown)</th></tr>
+<!-- Header Lines for New Junction -->
+<tr>
+<th>seq&nbsp;id</th>
+<th>position</th>
+<th>reads&nbsp;(cov)</th>
+<th>reads&nbsp;(cov)</th>
+<th>score</th>
+<th>skew</th>
+<th>freq</th>
+<th>annotation</th>
+<th>gene</th>
+<th width="100%">product</th>
+</tr>
+
+<!-- Item Lines for New Junction -->
+<!-- Side 1 Item Lines for New Junction -->
+<tr class="mutation_table_row_0">
+<td rowspan="1" class="junction_gene">MN908947</td>
+<td align="center" class="junction_gene">29323&nbsp;=</td><td align="center" class="junction_gene">844 (0.090)</td><td rowspan="2" align="center">17 (0.000)</td>
+<td rowspan="2" align="center">4/470</td>
+<td rowspan="2" align="center">NT</td>
+<td rowspan="2" align="center">1.8%</td>
+<td align="center" class="junction_gene">coding&nbsp;(1050/1260&nbsp;nt)</td>
+<td align="center" class="junction_gene"><i>N</i></td>
+<td class="junction_gene">nucleocapsid phosphoprotein</td>
+</tr>
+<!-- Side 2 Item Lines for New Junction -->
+<tr class="mutation_table_row_0">
+<td rowspan="1" class="junction_gene">MN908947</td>
+<td align="center" class="junction_gene">=&nbsp;29554</td>
+<td align="center" class="junction_gene">1055 (0.120)</td><td align="center" class="junction_gene">intergenic&nbsp;(+21/&#8209;4)</td>
+<td align="center" class="junction_gene"><i>N/ORF10</i></td>
+<td class="junction_gene">nucleocapsid phosphoprotein/ORF10 protein</td>
+</tr>
+<!-- Side 1 Item Lines for New Junction -->
+<tr class="mutation_table_row_1">
+<td rowspan="1" class="junction_gene">MN908947</td>
+<td align="center" class="junction_gene">25829&nbsp;=</td><td align="center" class="junction_gene">3420 (0.380)</td><td rowspan="2" align="center">69 (0.010)</td>
+<td rowspan="2" align="center">6/474</td>
+<td rowspan="2" align="center">NT</td>
+<td rowspan="2" align="center">2.5%</td>
+<td align="center" class="junction_gene">coding&nbsp;(437/828&nbsp;nt)</td>
+<td align="center" class="junction_gene"><i>ORF3a</i></td>
+<td class="junction_gene">ORF3a protein</td>
+</tr>
+<!-- Side 2 Item Lines for New Junction -->
+<tr class="mutation_table_row_1">
+<td rowspan="1" class="junction_gene">MN908947</td>
+<td align="center" class="junction_gene">=&nbsp;26283</td>
+<td align="center" class="junction_gene">1979 (0.220)</td><td align="center" class="junction_gene">coding&nbsp;(39/228&nbsp;nt)</td>
+<td align="center" class="junction_gene"><i>E</i></td>
+<td class="junction_gene">envelope protein</td>
+</tr>
+<!-- Side 1 Item Lines for New Junction -->
+<tr class="mutation_table_row_0">
+<td rowspan="1" class="junction_gene">MN908947</td>
+<td align="center" class="junction_gene">22590&nbsp;=</td><td align="center" class="junction_gene">9219 (1.030)</td><td rowspan="2" align="center">109 (0.010)</td>
+<td rowspan="2" align="center">8/472</td>
+<td rowspan="2" align="center">NT</td>
+<td rowspan="2" align="center">1.5%</td>
+<td align="center" class="junction_gene">coding&nbsp;(1028/3822&nbsp;nt)</td>
+<td align="center" class="junction_gene"><i>S</i></td>
+<td class="junction_gene">surface glycoprotein</td>
+</tr>
+<!-- Side 2 Item Lines for New Junction -->
+<tr class="mutation_table_row_0">
+<td rowspan="1" class="junction_gene">MN908947</td>
+<td align="center" class="junction_gene">=&nbsp;22861</td>
+<td align="center" class="junction_gene">5063 (0.570)</td><td align="center" class="junction_gene">coding&nbsp;(1299/3822&nbsp;nt)</td>
+<td align="center" class="junction_gene"><i>S</i></td>
+<td class="junction_gene">surface glycoprotein</td>
+</tr>
+<!-- Side 1 Item Lines for New Junction -->
+<tr class="mutation_table_row_1">
+<td rowspan="1" class="junction_gene">MN908947</td>
+<td align="center" class="junction_gene">22590&nbsp;=</td><td align="center" class="junction_gene">9219 (1.030)</td><td rowspan="2" align="center">20 (0.000)</td>
+<td rowspan="2" align="center">5/474</td>
+<td rowspan="2" align="center">NT</td>
+<td rowspan="2" align="center">0.28%</td>
+<td align="center" class="junction_gene">coding&nbsp;(1028/3822&nbsp;nt)</td>
+<td align="center" class="junction_gene"><i>S</i></td>
+<td class="junction_gene">surface glycoprotein</td>
+</tr>
+<!-- Side 2 Item Lines for New Junction -->
+<tr class="mutation_table_row_1">
+<td rowspan="1" class="junction_gene">MN908947</td>
+<td align="center" class="junction_gene">=&nbsp;22847</td>
+<td align="center" class="junction_gene">5067 (0.560)</td><td align="center" class="junction_gene">coding&nbsp;(1285/3822&nbsp;nt)</td>
+<td align="center" class="junction_gene"><i>S</i></td>
+<td class="junction_gene">surface glycoprotein</td>
+</tr>
+<!-- Side 1 Item Lines for New Junction -->
+<tr class="mutation_table_row_0">
+<td rowspan="1" class="junction_gene">MN908947</td>
+<td align="center" class="junction_gene">22590&nbsp;=</td><td align="center" class="junction_gene">9219 (1.030)</td><td rowspan="2" align="center">46 (0.010)</td>
+<td rowspan="2" align="center">5/472</td>
+<td rowspan="2" align="center">NT</td>
+<td rowspan="2" align="center">0.64%</td>
+<td align="center" class="junction_gene">coding&nbsp;(1028/3822&nbsp;nt)</td>
+<td align="center" class="junction_gene"><i>S</i></td>
+<td class="junction_gene">surface glycoprotein</td>
+</tr>
+<!-- Side 2 Item Lines for New Junction -->
+<tr class="mutation_table_row_0">
+<td rowspan="1" class="junction_gene">MN908947</td>
+<td align="center" class="junction_gene">=&nbsp;22829</td>
+<td align="center" class="junction_gene">5067 (0.570)</td><td align="center" class="junction_gene">coding&nbsp;(1267/3822&nbsp;nt)</td>
+<td align="center" class="junction_gene"><i>S</i></td>
+<td class="junction_gene">surface glycoprotein</td>
+</tr>
+<!-- Side 1 Item Lines for New Junction -->
+<tr class="mutation_table_row_1">
+<td rowspan="1" class="junction_gene">MN908947</td>
+<td align="center" class="junction_gene">22586&nbsp;=</td><td align="center" class="junction_gene">9223 (1.030)</td><td rowspan="2" align="center">22 (0.000)</td>
+<td rowspan="2" align="center">6/468</td>
+<td rowspan="2" align="center">NT</td>
+<td rowspan="2" align="center">0.31%</td>
+<td align="center" class="junction_gene">coding&nbsp;(1024/3822&nbsp;nt)</td>
+<td align="center" class="junction_gene"><i>S</i></td>
+<td class="junction_gene">surface glycoprotein</td>
+</tr>
+<!-- Side 2 Item Lines for New Junction -->
+<tr class="mutation_table_row_1">
+<td rowspan="1" class="junction_gene">MN908947</td>
+<td align="center" class="junction_gene">=&nbsp;22845</td>
+<td align="center" class="junction_gene">5065 (0.570)</td><td align="center" class="junction_gene">coding&nbsp;(1283/3822&nbsp;nt)</td>
+<td align="center" class="junction_gene"><i>S</i></td>
+<td class="junction_gene">surface glycoprotein</td>
+</tr>
+<!-- Side 1 Item Lines for New Junction -->
+<tr class="mutation_table_row_0">
+<td rowspan="1" class="junction_gene">MN908947</td>
+<td align="center" class="junction_gene">22487&nbsp;=</td><td align="center" class="junction_gene">9358 (1.040)</td><td rowspan="2" align="center">50 (0.010)</td>
+<td rowspan="2" align="center">5/474</td>
+<td rowspan="2" align="center">NT</td>
+<td rowspan="2" align="center">0.69%</td>
+<td align="center" class="junction_gene">coding&nbsp;(925/3822&nbsp;nt)</td>
+<td align="center" class="junction_gene"><i>S</i></td>
+<td class="junction_gene">surface glycoprotein</td>
+</tr>
+<!-- Side 2 Item Lines for New Junction -->
+<tr class="mutation_table_row_0">
+<td rowspan="1" class="junction_gene">MN908947</td>
+<td align="center" class="junction_gene">=&nbsp;22861</td>
+<td align="center" class="junction_gene">5063 (0.560)</td><td align="center" class="junction_gene">coding&nbsp;(1299/3822&nbsp;nt)</td>
+<td align="center" class="junction_gene"><i>S</i></td>
+<td class="junction_gene">surface glycoprotein</td>
+</tr>
+<!-- Side 1 Item Lines for New Junction -->
+<tr class="mutation_table_row_1">
+<td rowspan="1" class="junction_gene">MN908947</td>
+<td align="center" class="junction_gene">21717&nbsp;=</td><td align="center" class="junction_gene">17184 (1.910)</td><td rowspan="2" align="center">104 (0.010)</td>
+<td rowspan="2" align="center">13/454</td>
+<td rowspan="2" align="center">NT</td>
+<td rowspan="2" align="center">1.1%</td>
+<td align="center" class="junction_gene">coding&nbsp;(155/3822&nbsp;nt)</td>
+<td align="center" class="junction_gene"><i>S</i></td>
+<td class="junction_gene">surface glycoprotein</td>
+</tr>
+<!-- Side 2 Item Lines for New Junction -->
+<tr class="mutation_table_row_1">
+<td rowspan="1" class="junction_gene">MN908947</td>
+<td align="center" class="junction_gene">25927&nbsp;=</td>
+<td align="center" class="junction_gene">2208 (0.260)</td><td align="center" class="junction_gene">coding&nbsp;(535/828&nbsp;nt)</td>
+<td align="center" class="junction_gene"><i>ORF3a</i></td>
+<td class="junction_gene">ORF3a protein</td>
+</tr>
+<!-- Side 1 Item Lines for New Junction -->
+<tr class="mutation_table_row_0">
+<td rowspan="1" class="junction_gene">MN908947</td>
+<td align="center" class="junction_gene">18819&nbsp;=</td><td align="center" class="junction_gene">15356 (1.710)</td><td rowspan="2" align="center">8 (0.000)</td>
+<td rowspan="2" align="center">5/470</td>
+<td rowspan="2" align="center">NT</td>
+<td rowspan="2" align="center">0.083%</td>
+<td align="center" class="junction_gene">coding&nbsp;(5352/8088&nbsp;nt)</td>
+<td align="center" class="junction_gene"><i>orf1ab</i></td>
+<td class="junction_gene">orf1ab polyprotein</td>
+</tr>
+<!-- Side 2 Item Lines for New Junction -->
+<tr class="mutation_table_row_0">
+<td rowspan="1" class="junction_gene">MN908947</td>
+<td align="center" class="junction_gene">=&nbsp;19343</td>
+<td align="center" class="junction_gene">4007 (0.450)</td><td align="center" class="junction_gene">coding&nbsp;(5876/8088&nbsp;nt)</td>
+<td align="center" class="junction_gene"><i>orf1ab</i></td>
+<td class="junction_gene">orf1ab polyprotein</td>
+</tr>
+<!-- Side 1 Item Lines for New Junction -->
+<tr class="mutation_table_row_1">
+<td rowspan="1" class="junction_gene">MN908947</td>
+<td align="center" class="junction_gene">=&nbsp;14407</td><td align="center" class="junction_gene">2188 (0.240)</td><td rowspan="2" align="center">14 (0.000)</td>
+<td rowspan="2" align="center">4/474</td>
+<td rowspan="2" align="center">NT</td>
+<td rowspan="2" align="center">0.64%</td>
+<td align="center" class="junction_gene">coding&nbsp;(940/8088&nbsp;nt)</td>
+<td align="center" class="junction_gene"><i>orf1ab</i></td>
+<td class="junction_gene">orf1ab polyprotein</td>
+</tr>
+<!-- Side 2 Item Lines for New Junction -->
+<tr class="mutation_table_row_1">
+<td rowspan="1" class="junction_gene">MN908947</td>
+<td align="center" class="junction_gene">14415&nbsp;=</td>
+<td align="center" class="junction_gene">2190 (0.240)</td><td align="center" class="junction_gene">coding&nbsp;(948/8088&nbsp;nt)</td>
+<td align="center" class="junction_gene"><i>orf1ab</i></td>
+<td class="junction_gene">orf1ab polyprotein</td>
+</tr>
+</table>
+</body></html>

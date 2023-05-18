@@ -1,0 +1,31 @@
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 93810 sequences (13875530 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (36, 9508, 12, 32)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (2991, 4061, 4209)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (555, 6645)
+[M::mem_pestat] mean and std.dev: (3579.10, 1278.24)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8692)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (27, 27, 381)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1089)
+[M::mem_pestat] mean and std.dev: (146.48, 172.62)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1443)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (824, 3581, 4822)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 12818)
+[M::mem_pestat] mean and std.dev: (3044.42, 2523.14)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 16816)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (3053, 4061, 4299)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (561, 6791)
+[M::mem_pestat] mean and std.dev: (3546.43, 1116.38)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 8037)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 93810 reads in 6.215 CPU sec, 3.125 real sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa mem -t 2 Plate4BLANK2/core/viral_reference Plate4BLANK2/adapter_trimmed/Plate4BLANK2_R1_val_1_posttrim_filter.fq.gz Plate4BLANK2/adapter_trimmed/Plate4BLANK2_R2_val_2_posttrim_filter.fq.gz
+[main] Real time: 5.414 sec; CPU: 6.614 sec
+[bam_sort_core] merging from 0 files and 2 in-memory blocks...

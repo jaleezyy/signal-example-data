@@ -1,0 +1,654 @@
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 4.1
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 2 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/Plate4BLANK3/adapter_trimmed/
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> Plate4BLANK3/host_removal/Plate4BLANK3_R1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	10518	AGATCGGAAGAGC	44246	23.77
+smallRNA	0	TGGAATTCTCGG	44246	0.00
+Nextera	0	CTGTCTCTTATA	44246	0.00
+Using Illumina adapter for trimming (count: 10518). Second best hit was smallRNA (count: 0)
+
+Writing report to '/workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/Plate4BLANK3/adapter_trimmed/Plate4BLANK3_R1.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: Plate4BLANK3/host_removal/Plate4BLANK3_R1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.1
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.1). Setting -j 2
+Writing final adapter and quality trimmed output to Plate4BLANK3_R1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file Plate4BLANK3/host_removal/Plate4BLANK3_R1.fastq.gz <<< 
+This is cutadapt 4.1 with Python 3.9.13
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC Plate4BLANK3/host_removal/Plate4BLANK3_R1.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 0.71 s (16 µs/read; 3.76 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                  44,246
+Reads with adapters:                    23,210 (52.5%)
+Reads written (passing filters):        44,246 (100.0%)
+
+Total basepairs processed:    11,105,746 bp
+Quality-trimmed:               2,773,391 bp (25.0%)
+Total written (filtered):      7,382,658 bp (66.5%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 23210 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 14.5%
+  C: 33.8%
+  G: 24.2%
+  T: 26.8%
+  none/other: 0.7%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	8203	11061.5	0	8203
+2	1714	2765.4	0	1714
+3	753	691.3	0	753
+4	202	172.8	0	202
+5	44	43.2	0	44
+6	36	10.8	0	36
+7	49	2.7	0	49
+8	26	0.7	0	26
+9	40	0.2	0	40
+10	44	0.0	1	29 15
+11	33	0.0	1	22 11
+12	34	0.0	1	17 17
+13	33	0.0	1	12 21
+14	42	0.0	1	24 18
+15	45	0.0	1	24 21
+16	19	0.0	1	10 9
+17	58	0.0	1	36 22
+18	32	0.0	1	19 13
+19	22	0.0	1	13 9
+20	33	0.0	1	22 11
+21	34	0.0	1	12 22
+22	43	0.0	1	24 19
+23	39	0.0	1	20 19
+24	54	0.0	1	27 27
+25	89	0.0	1	48 41
+26	55	0.0	1	25 30
+27	95	0.0	1	45 50
+28	111	0.0	1	51 60
+29	90	0.0	1	60 30
+30	79	0.0	1	51 28
+31	36	0.0	1	25 11
+32	56	0.0	1	32 24
+33	54	0.0	1	26 28
+34	124	0.0	1	74 50
+35	39	0.0	1	19 20
+36	85	0.0	1	50 35
+37	143	0.0	1	95 48
+38	74	0.0	1	47 27
+39	125	0.0	1	91 34
+40	99	0.0	1	67 32
+41	65	0.0	1	42 23
+42	53	0.0	1	42 11
+43	88	0.0	1	70 18
+44	41	0.0	1	26 15
+45	51	0.0	1	32 19
+46	46	0.0	1	22 24
+47	127	0.0	1	80 47
+48	66	0.0	1	41 25
+49	76	0.0	1	45 31
+50	81	0.0	1	58 23
+51	68	0.0	1	43 25
+52	101	0.0	1	73 28
+53	123	0.0	1	83 40
+54	248	0.0	1	171 77
+55	130	0.0	1	104 26
+56	70	0.0	1	52 18
+57	88	0.0	1	72 16
+58	56	0.0	1	48 8
+59	56	0.0	1	45 11
+60	77	0.0	1	61 16
+61	48	0.0	1	39 9
+62	81	0.0	1	64 17
+63	105	0.0	1	92 13
+64	64	0.0	1	56 8
+65	81	0.0	1	61 20
+66	123	0.0	1	91 32
+67	74	0.0	1	52 22
+68	123	0.0	1	99 24
+69	160	0.0	1	117 43
+70	135	0.0	1	108 27
+71	143	0.0	1	125 18
+72	203	0.0	1	178 25
+73	373	0.0	1	309 64
+74	467	0.0	1	401 66
+75	619	0.0	1	550 69
+76	1110	0.0	1	1054 56
+77	718	0.0	1	687 31
+78	381	0.0	1	363 18
+79	278	0.0	1	267 11
+80	199	0.0	1	193 6
+81	118	0.0	1	116 2
+82	101	0.0	1	99 2
+83	69	0.0	1	64 5
+84	79	0.0	1	76 3
+85	72	0.0	1	66 6
+86	105	0.0	1	91 14
+87	87	0.0	1	81 6
+88	91	0.0	1	71 20
+89	63	0.0	1	57 6
+90	40	0.0	1	38 2
+91	35	0.0	1	28 7
+92	30	0.0	1	28 2
+93	61	0.0	1	43 18
+94	62	0.0	1	53 9
+95	52	0.0	1	41 11
+96	61	0.0	1	50 11
+97	23	0.0	1	21 2
+98	19	0.0	1	18 1
+99	23	0.0	1	19 4
+100	18	0.0	1	16 2
+101	13	0.0	1	13
+102	22	0.0	1	20 2
+103	17	0.0	1	17
+104	9	0.0	1	8 1
+105	21	0.0	1	19 2
+106	39	0.0	1	35 4
+107	54	0.0	1	48 6
+108	31	0.0	1	29 2
+109	46	0.0	1	35 11
+110	19	0.0	1	16 3
+111	15	0.0	1	12 3
+112	29	0.0	1	27 2
+113	37	0.0	1	33 4
+114	52	0.0	1	47 5
+115	40	0.0	1	34 6
+116	46	0.0	1	41 5
+117	11	0.0	1	10 1
+118	18	0.0	1	17 1
+119	14	0.0	1	13 1
+120	12	0.0	1	11 1
+121	11	0.0	1	9 2
+122	6	0.0	1	4 2
+123	9	0.0	1	8 1
+124	8	0.0	1	6 2
+125	12	0.0	1	12
+126	22	0.0	1	20 2
+127	48	0.0	1	44 4
+128	26	0.0	1	23 3
+129	31	0.0	1	30 1
+130	10	0.0	1	9 1
+131	9	0.0	1	9
+132	8	0.0	1	6 2
+133	19	0.0	1	18 1
+134	33	0.0	1	32 1
+135	27	0.0	1	23 4
+136	35	0.0	1	32 3
+137	8	0.0	1	7 1
+138	7	0.0	1	6 1
+139	1	0.0	1	1
+140	4	0.0	1	2 2
+141	4	0.0	1	3 1
+142	4	0.0	1	3 1
+143	3	0.0	1	3
+144	5	0.0	1	5
+145	9	0.0	1	9
+146	9	0.0	1	9
+147	37	0.0	1	32 5
+148	6	0.0	1	5 1
+149	26	0.0	1	25 1
+150	6	0.0	1	6
+151	3	0.0	1	2 1
+152	4	0.0	1	3 1
+153	7	0.0	1	5 2
+154	38	0.0	1	36 2
+155	11	0.0	1	11
+156	32	0.0	1	29 3
+157	9	0.0	1	9
+158	6	0.0	1	5 1
+159	6	0.0	1	5 1
+160	7	0.0	1	7
+161	3	0.0	1	3
+162	1	0.0	1	1
+163	4	0.0	1	3 1
+164	2	0.0	1	2
+165	4	0.0	1	3 1
+166	9	0.0	1	8 1
+167	18	0.0	1	18
+168	16	0.0	1	14 2
+169	11	0.0	1	11
+170	18	0.0	1	17 1
+171	5	0.0	1	5
+172	7	0.0	1	5 2
+173	3	0.0	1	3
+174	13	0.0	1	13
+175	10	0.0	1	10
+176	13	0.0	1	11 2
+177	5	0.0	1	4 1
+178	2	0.0	1	2
+179	3	0.0	1	3
+180	2	0.0	1	2
+181	4	0.0	1	3 1
+182	9	0.0	1	9
+183	3	0.0	1	2 1
+184	6	0.0	1	6
+185	8	0.0	1	8
+186	5	0.0	1	5
+187	10	0.0	1	9 1
+188	11	0.0	1	11
+189	30	0.0	1	30
+190	17	0.0	1	16 1
+191	16	0.0	1	15 1
+192	13	0.0	1	13
+193	14	0.0	1	14
+194	7	0.0	1	7
+195	8	0.0	1	8
+196	15	0.0	1	14 1
+197	11	0.0	1	11
+198	13	0.0	1	12 1
+199	13	0.0	1	12 1
+200	17	0.0	1	17
+201	10	0.0	1	10
+202	9	0.0	1	9
+203	21	0.0	1	19 2
+204	17	0.0	1	17
+205	24	0.0	1	23 1
+206	20	0.0	1	19 1
+207	16	0.0	1	14 2
+208	33	0.0	1	32 1
+209	34	0.0	1	33 1
+210	25	0.0	1	25
+211	17	0.0	1	17
+212	7	0.0	1	7
+213	10	0.0	1	10
+214	10	0.0	1	9 1
+215	14	0.0	1	13 1
+216	1	0.0	1	1
+217	6	0.0	1	6
+219	2	0.0	1	2
+220	1	0.0	1	1
+226	1	0.0	1	1
+227	1	0.0	1	0 1
+234	1	0.0	1	1
+243	1	0.0	1	0 1
+248	1	0.0	1	0 1
+250	3	0.0	1	0 3
+251	44	0.0	1	0 44
+
+RUN STATISTICS FOR INPUT FILE: Plate4BLANK3/host_removal/Plate4BLANK3_R1.fastq.gz
+=============================================
+44246 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to '/workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/Plate4BLANK3/adapter_trimmed/Plate4BLANK3_R2.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: Plate4BLANK3/host_removal/Plate4BLANK3_R2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.1
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.1). Setting -j -j 2
+Writing final adapter and quality trimmed output to Plate4BLANK3_R2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file Plate4BLANK3/host_removal/Plate4BLANK3_R2.fastq.gz <<< 
+This is cutadapt 4.1 with Python 3.9.13
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC Plate4BLANK3/host_removal/Plate4BLANK3_R2.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 0.65 s (15 µs/read; 4.09 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                  44,246
+Reads with adapters:                    18,834 (42.6%)
+Reads written (passing filters):        44,246 (100.0%)
+
+Total basepairs processed:    11,105,746 bp
+Quality-trimmed:               5,653,032 bp (50.9%)
+Total written (filtered):      5,019,584 bp (45.2%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 18834 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 17.9%
+  C: 40.2%
+  G: 25.4%
+  T: 15.4%
+  none/other: 1.1%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	8989	11061.5	0	8989
+2	3609	2765.4	0	3609
+3	1073	691.3	0	1073
+4	164	172.8	0	164
+5	18	43.2	0	18
+6	13	10.8	0	13
+7	16	2.7	0	16
+8	4	0.7	0	4
+9	12	0.2	0	12
+10	24	0.0	1	13 11
+11	15	0.0	1	7 8
+12	40	0.0	1	19 21
+13	21	0.0	1	10 11
+14	11	0.0	1	4 7
+15	12	0.0	1	5 7
+16	14	0.0	1	8 6
+17	17	0.0	1	9 8
+18	3	0.0	1	3
+19	9	0.0	1	6 3
+20	9	0.0	1	8 1
+21	4	0.0	1	2 2
+22	7	0.0	1	2 5
+23	15	0.0	1	7 8
+24	47	0.0	1	19 28
+25	22	0.0	1	12 10
+26	25	0.0	1	16 9
+27	23	0.0	1	17 6
+28	33	0.0	1	17 16
+29	18	0.0	1	6 12
+30	40	0.0	1	22 18
+31	19	0.0	1	10 9
+32	48	0.0	1	30 18
+33	40	0.0	1	23 17
+34	54	0.0	1	36 18
+35	30	0.0	1	14 16
+36	44	0.0	1	32 12
+37	29	0.0	1	18 11
+38	52	0.0	1	36 16
+39	34	0.0	1	24 10
+40	39	0.0	1	32 7
+41	64	0.0	1	46 18
+42	33	0.0	1	28 5
+43	19	0.0	1	12 7
+44	29	0.0	1	21 8
+45	53	0.0	1	41 12
+46	88	0.0	1	66 22
+47	55	0.0	1	46 9
+48	56	0.0	1	46 10
+49	34	0.0	1	28 6
+50	21	0.0	1	13 8
+51	24	0.0	1	17 7
+52	27	0.0	1	21 6
+53	34	0.0	1	27 7
+54	36	0.0	1	33 3
+55	17	0.0	1	14 3
+56	31	0.0	1	27 4
+57	61	0.0	1	51 10
+58	31	0.0	1	27 4
+59	20	0.0	1	19 1
+60	34	0.0	1	30 4
+61	14	0.0	1	13 1
+62	13	0.0	1	10 3
+63	25	0.0	1	22 3
+64	11	0.0	1	9 2
+65	14	0.0	1	13 1
+66	7	0.0	1	6 1
+67	5	0.0	1	4 1
+68	8	0.0	1	8
+69	13	0.0	1	11 2
+70	10	0.0	1	6 4
+71	6	0.0	1	5 1
+72	17	0.0	1	14 3
+73	31	0.0	1	27 4
+74	22	0.0	1	21 1
+75	46	0.0	1	37 9
+76	59	0.0	1	53 6
+77	139	0.0	1	121 18
+78	188	0.0	1	168 20
+79	249	0.0	1	213 36
+80	474	0.0	1	440 34
+81	282	0.0	1	261 21
+82	185	0.0	1	172 13
+83	127	0.0	1	121 6
+84	81	0.0	1	75 6
+85	62	0.0	1	58 4
+86	58	0.0	1	52 6
+87	37	0.0	1	35 2
+88	27	0.0	1	26 1
+89	34	0.0	1	28 6
+90	36	0.0	1	33 3
+91	20	0.0	1	17 3
+92	19	0.0	1	17 2
+93	24	0.0	1	18 6
+94	17	0.0	1	13 4
+95	13	0.0	1	7 6
+96	15	0.0	1	13 2
+97	10	0.0	1	6 4
+98	13	0.0	1	11 2
+99	7	0.0	1	7
+100	7	0.0	1	6 1
+101	7	0.0	1	7
+102	5	0.0	1	4 1
+103	6	0.0	1	5 1
+104	7	0.0	1	4 3
+105	6	0.0	1	4 2
+106	10	0.0	1	7 3
+107	18	0.0	1	10 8
+108	7	0.0	1	5 2
+109	21	0.0	1	13 8
+110	5	0.0	1	4 1
+111	7	0.0	1	4 3
+112	8	0.0	1	4 4
+113	25	0.0	1	12 13
+114	18	0.0	1	12 6
+115	11	0.0	1	6 5
+116	11	0.0	1	6 5
+117	8	0.0	1	7 1
+118	5	0.0	1	2 3
+119	5	0.0	1	3 2
+120	3	0.0	1	2 1
+121	5	0.0	1	2 3
+122	3	0.0	1	3
+123	3	0.0	1	2 1
+124	4	0.0	1	2 2
+125	7	0.0	1	4 3
+126	6	0.0	1	2 4
+127	19	0.0	1	16 3
+128	8	0.0	1	4 4
+129	13	0.0	1	8 5
+130	4	0.0	1	2 2
+131	3	0.0	1	2 1
+132	5	0.0	1	3 2
+133	8	0.0	1	4 4
+134	7	0.0	1	7
+135	11	0.0	1	10 1
+136	14	0.0	1	9 5
+137	5	0.0	1	3 2
+138	3	0.0	1	1 2
+139	1	0.0	1	0 1
+140	2	0.0	1	1 1
+141	6	0.0	1	5 1
+142	1	0.0	1	1
+143	1	0.0	1	1
+145	4	0.0	1	2 2
+146	4	0.0	1	4
+147	22	0.0	1	19 3
+148	4	0.0	1	4
+149	19	0.0	1	16 3
+151	3	0.0	1	3
+152	1	0.0	1	1
+153	4	0.0	1	3 1
+154	16	0.0	1	14 2
+155	6	0.0	1	6
+156	16	0.0	1	14 2
+157	6	0.0	1	6
+158	1	0.0	1	1
+159	3	0.0	1	2 1
+160	2	0.0	1	2
+161	1	0.0	1	1
+162	3	0.0	1	2 1
+163	2	0.0	1	0 2
+164	3	0.0	1	3
+165	3	0.0	1	3
+166	2	0.0	1	2
+167	10	0.0	1	8 2
+168	3	0.0	1	2 1
+169	4	0.0	1	4
+170	7	0.0	1	7
+171	3	0.0	1	2 1
+172	5	0.0	1	4 1
+173	4	0.0	1	3 1
+174	11	0.0	1	11
+175	6	0.0	1	5 1
+176	8	0.0	1	8
+177	1	0.0	1	1
+178	4	0.0	1	3 1
+179	1	0.0	1	1
+180	1	0.0	1	1
+181	2	0.0	1	2
+182	2	0.0	1	2
+184	11	0.0	1	9 2
+185	7	0.0	1	6 1
+186	4	0.0	1	4
+187	11	0.0	1	11
+188	7	0.0	1	7
+189	18	0.0	1	17 1
+190	14	0.0	1	14
+191	10	0.0	1	10
+192	8	0.0	1	8
+193	9	0.0	1	9
+194	6	0.0	1	6
+195	3	0.0	1	3
+196	7	0.0	1	6 1
+197	12	0.0	1	11 1
+198	10	0.0	1	10
+199	6	0.0	1	6
+200	10	0.0	1	9 1
+201	7	0.0	1	6 1
+202	5	0.0	1	5
+203	22	0.0	1	21 1
+204	20	0.0	1	20
+205	17	0.0	1	15 2
+206	18	0.0	1	18
+207	15	0.0	1	15
+208	25	0.0	1	22 3
+209	30	0.0	1	30
+210	14	0.0	1	13 1
+211	12	0.0	1	12
+212	12	0.0	1	11 1
+213	9	0.0	1	9
+214	4	0.0	1	4
+215	10	0.0	1	9 1
+216	2	0.0	1	2
+217	9	0.0	1	9
+218	1	0.0	1	0 1
+221	1	0.0	1	1
+248	1	0.0	1	0 1
+250	1	0.0	1	0 1
+251	29	0.0	1	0 29
+
+RUN STATISTICS FOR INPUT FILE: Plate4BLANK3/host_removal/Plate4BLANK3_R2.fastq.gz
+=============================================
+44246 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files Plate4BLANK3_R1_trimmed.fq.gz and Plate4BLANK3_R2_trimmed.fq.gz
+file_1: Plate4BLANK3_R1_trimmed.fq.gz, file_2: Plate4BLANK3_R2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: Plate4BLANK3_R1_trimmed.fq.gz and Plate4BLANK3_R2_trimmed.fq.gz <<<<<
+Writing validated paired-end Read 1 reads to Plate4BLANK3_R1_val_1.fq.gz
+Writing validated paired-end Read 2 reads to Plate4BLANK3_R2_val_2.fq.gz
+
+Total number of sequences analysed: 44246
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 347 (0.78%)
+
+
+  >>> Now running FastQC on the validated data Plate4BLANK3_R1_val_1.fq.gz<<<
+
+Started analysis of Plate4BLANK3_R1_val_1.fq.gz
+Approx 5% complete for Plate4BLANK3_R1_val_1.fq.gz
+Approx 10% complete for Plate4BLANK3_R1_val_1.fq.gz
+Approx 15% complete for Plate4BLANK3_R1_val_1.fq.gz
+Approx 20% complete for Plate4BLANK3_R1_val_1.fq.gz
+Approx 25% complete for Plate4BLANK3_R1_val_1.fq.gz
+Approx 30% complete for Plate4BLANK3_R1_val_1.fq.gz
+Approx 35% complete for Plate4BLANK3_R1_val_1.fq.gz
+Approx 40% complete for Plate4BLANK3_R1_val_1.fq.gz
+Approx 45% complete for Plate4BLANK3_R1_val_1.fq.gz
+Approx 50% complete for Plate4BLANK3_R1_val_1.fq.gz
+Approx 55% complete for Plate4BLANK3_R1_val_1.fq.gz
+Approx 60% complete for Plate4BLANK3_R1_val_1.fq.gz
+Approx 65% complete for Plate4BLANK3_R1_val_1.fq.gz
+Approx 70% complete for Plate4BLANK3_R1_val_1.fq.gz
+Approx 75% complete for Plate4BLANK3_R1_val_1.fq.gz
+Approx 80% complete for Plate4BLANK3_R1_val_1.fq.gz
+Approx 85% complete for Plate4BLANK3_R1_val_1.fq.gz
+Approx 90% complete for Plate4BLANK3_R1_val_1.fq.gz
+Approx 95% complete for Plate4BLANK3_R1_val_1.fq.gz
+
+  >>> Now running FastQC on the validated data Plate4BLANK3_R2_val_2.fq.gz<<<
+
+Started analysis of Plate4BLANK3_R2_val_2.fq.gz
+Approx 5% complete for Plate4BLANK3_R2_val_2.fq.gz
+Approx 10% complete for Plate4BLANK3_R2_val_2.fq.gz
+Approx 15% complete for Plate4BLANK3_R2_val_2.fq.gz
+Approx 20% complete for Plate4BLANK3_R2_val_2.fq.gz
+Approx 25% complete for Plate4BLANK3_R2_val_2.fq.gz
+Approx 30% complete for Plate4BLANK3_R2_val_2.fq.gz
+Approx 35% complete for Plate4BLANK3_R2_val_2.fq.gz
+Approx 40% complete for Plate4BLANK3_R2_val_2.fq.gz
+Approx 45% complete for Plate4BLANK3_R2_val_2.fq.gz
+Approx 50% complete for Plate4BLANK3_R2_val_2.fq.gz
+Approx 55% complete for Plate4BLANK3_R2_val_2.fq.gz
+Approx 60% complete for Plate4BLANK3_R2_val_2.fq.gz
+Approx 65% complete for Plate4BLANK3_R2_val_2.fq.gz
+Approx 70% complete for Plate4BLANK3_R2_val_2.fq.gz
+Approx 75% complete for Plate4BLANK3_R2_val_2.fq.gz
+Approx 80% complete for Plate4BLANK3_R2_val_2.fq.gz
+Approx 85% complete for Plate4BLANK3_R2_val_2.fq.gz
+Approx 90% complete for Plate4BLANK3_R2_val_2.fq.gz
+Approx 95% complete for Plate4BLANK3_R2_val_2.fq.gz
+Deleting both intermediate output files Plate4BLANK3_R1_trimmed.fq.gz and Plate4BLANK3_R2_trimmed.fq.gz
+
+====================================================================================================
+

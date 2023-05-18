@@ -1,0 +1,31 @@
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 83362 sequences (12064140 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (21, 3757, 12, 31)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (3389, 4061, 9000)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 20222)
+[M::mem_pestat] mean and std.dev: (5414.33, 2821.68)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 25833)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (27, 27, 27)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (27, 27)
+[M::mem_pestat] mean and std.dev: (27.00, 0.00)
+[M::mem_pestat] low and high boundaries for proper pairs: (27, 27)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (985, 2759, 4823)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 12499)
+[M::mem_pestat] mean and std.dev: (2989.83, 2492.16)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 16337)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (3538, 4061, 4061)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (2492, 5107)
+[M::mem_pestat] mean and std.dev: (3921.70, 320.93)
+[M::mem_pestat] low and high boundaries for proper pairs: (1969, 5630)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 83362 reads in 7.289 CPU sec, 3.655 real sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa mem -t 2 Plate3BLANK2/core/viral_reference Plate3BLANK2/adapter_trimmed/Plate3BLANK2_R1_val_1_posttrim_filter.fq.gz Plate3BLANK2/adapter_trimmed/Plate3BLANK2_R2_val_2_posttrim_filter.fq.gz
+[main] Real time: 5.501 sec; CPU: 7.619 sec
+[bam_sort_core] merging from 0 files and 2 in-memory blocks...

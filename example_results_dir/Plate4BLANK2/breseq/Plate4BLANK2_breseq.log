@@ -1,0 +1,206 @@
+================================================================================
+breseq 0.35.0     http://barricklab.org/breseq
+
+Active Developers: Barrick JE, Deatherage DE
+Contact:           <jeffrey.e.barrick@gmail.com>
+
+breseq is free software; you can redistribute it and/or modify it under the
+terms the GNU General Public License as published by the Free Software 
+Foundation; either version 2, or (at your option) any later version.
+
+Copyright (c) 2008-2010 Michigan State University
+Copyright (c) 2011-2017 The University of Texas at Austin
+
+If you use breseq in your research, please cite:
+
+  Deatherage, D.E., Barrick, J.E. (2014) Identification of mutations
+  in laboratory-evolved microbes from next-generation sequencing
+  data using breseq. Methods Mol. Biol. 1151: 165–188.
+
+If you use structural variation (junction) predictions, please cite:
+
+  Barrick, J.E., Colburn, G., Deatherage D.E., Traverse, C.C.,
+  Strand, M.D., Borges, J.J., Knoester, D.B., Reba, A., Meyer, A.G. 
+  (2014) Identifying structural variation in haploid microbial genomes 
+  from short-read resequencing data using breseq. BMC Genomics 15:1039.
+================================================================================
+---> bowtie2  :: version 2.4.5 [/workspace/home/nasirja/covid-19-signal/.snakemake/conda/1f267c8dfdaa0356ebaad13adc66d00a/bin/bowtie2]
+---> R        :: version 3.5.1 [/workspace/home/nasirja/covid-19-signal/.snakemake/conda/1f267c8dfdaa0356ebaad13adc66d00a/bin/R]
++++   NOW PROCESSING Read and reference sequence file input
+  READ FILE::Plate4BLANK2_R1
+    Converting/filtering FASTQ file...
+    Original base quality format: SANGER New format: SANGER
+    Original reads: 2896 bases: 698593
+    Filtered reads: none
+    Analyzed reads: 2896 bases: 698593
+  READ FILE::Plate4BLANK2_R2
+    Converting/filtering FASTQ file...
+    Original base quality format: SANGER New format: SANGER
+    Original reads: 2896 bases: 697077
+    Filtered reads: none
+    Analyzed reads: 2896 bases: 697077
+  ::TOTAL::
+    Original reads: 5792 bases: 1395670
+    Analyzed reads: 5792 bases: 1395670
+[samtools] faidx Plate4BLANK2/breseq/data/reference.fasta
+  REFERENCE: MN908947
+  LENGTH: 29903
++++   NOW PROCESSING Read alignment to reference genome
+[system] bowtie2-build -q Plate4BLANK2/breseq/data/reference.fasta Plate4BLANK2/breseq/02_reference_alignment/reference
+Renaming Plate4BLANK2/breseq/02_reference_alignment/reference.3.bt2.tmp to Plate4BLANK2/breseq/02_reference_alignment/reference.3.bt2
+Renaming Plate4BLANK2/breseq/02_reference_alignment/reference.4.bt2.tmp to Plate4BLANK2/breseq/02_reference_alignment/reference.4.bt2
+Renaming Plate4BLANK2/breseq/02_reference_alignment/reference.1.bt2.tmp to Plate4BLANK2/breseq/02_reference_alignment/reference.1.bt2
+Renaming Plate4BLANK2/breseq/02_reference_alignment/reference.2.bt2.tmp to Plate4BLANK2/breseq/02_reference_alignment/reference.2.bt2
+Renaming Plate4BLANK2/breseq/02_reference_alignment/reference.rev.1.bt2.tmp to Plate4BLANK2/breseq/02_reference_alignment/reference.rev.1.bt2
+Renaming Plate4BLANK2/breseq/02_reference_alignment/reference.rev.2.bt2.tmp to Plate4BLANK2/breseq/02_reference_alignment/reference.rev.2.bt2
+[system] bowtie2 -t --no-unal -p 4 -L 31 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,1,0.9 -k 2000 --reorder -x Plate4BLANK2/breseq/02_reference_alignment/reference -U Plate4BLANK2/breseq/01_sequence_conversion/Plate4BLANK2_R1.converted.fastq -S Plate4BLANK2/breseq/02_reference_alignment/Plate4BLANK2_R1.stage1.sam --un Plate4BLANK2/breseq/02_reference_alignment/Plate4BLANK2_R1.stage1.unmatched.fastq
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:00
+2896 reads; of these:
+  2896 (100.00%) were unpaired; of these:
+    188 (6.49%) aligned 0 times
+    2708 (93.51%) aligned exactly 1 time
+    0 (0.00%) aligned >1 times
+93.51% overall alignment rate
+Time searching: 00:00:00
+Overall time: 00:00:00
+[system] bowtie2 -t --no-unal -p 4 -L 29 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,6,0.2 -k 2000 --reorder -x Plate4BLANK2/breseq/02_reference_alignment/reference -U Plate4BLANK2/breseq/02_reference_alignment/Plate4BLANK2_R1.stage1.unmatched.fastq -S Plate4BLANK2/breseq/02_reference_alignment/Plate4BLANK2_R1.stage2.matched.sam
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:00
+188 reads; of these:
+  188 (100.00%) were unpaired; of these:
+    38 (20.21%) aligned 0 times
+    148 (78.72%) aligned exactly 1 time
+    2 (1.06%) aligned >1 times
+79.79% overall alignment rate
+Time searching: 00:00:00
+Overall time: 00:00:00
+[system] bowtie2 -t --no-unal -p 4 -L 31 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,1,0.9 -k 2000 --reorder -x Plate4BLANK2/breseq/02_reference_alignment/reference -U Plate4BLANK2/breseq/01_sequence_conversion/Plate4BLANK2_R2.converted.fastq -S Plate4BLANK2/breseq/02_reference_alignment/Plate4BLANK2_R2.stage1.sam --un Plate4BLANK2/breseq/02_reference_alignment/Plate4BLANK2_R2.stage1.unmatched.fastq
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:01
+2896 reads; of these:
+  2896 (100.00%) were unpaired; of these:
+    199 (6.87%) aligned 0 times
+    2697 (93.13%) aligned exactly 1 time
+    0 (0.00%) aligned >1 times
+93.13% overall alignment rate
+Time searching: 00:00:01
+Overall time: 00:00:01
+[system] bowtie2 -t --no-unal -p 4 -L 29 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,6,0.2 -k 2000 --reorder -x Plate4BLANK2/breseq/02_reference_alignment/reference -U Plate4BLANK2/breseq/02_reference_alignment/Plate4BLANK2_R2.stage1.unmatched.fastq -S Plate4BLANK2/breseq/02_reference_alignment/Plate4BLANK2_R2.stage2.matched.sam
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:00
+199 reads; of these:
+  199 (100.00%) were unpaired; of these:
+    25 (12.56%) aligned 0 times
+    171 (85.93%) aligned exactly 1 time
+    3 (1.51%) aligned >1 times
+87.44% overall alignment rate
+Time searching: 00:00:00
+Overall time: 00:00:00
+[system] rm -f Plate4BLANK2/breseq/02_reference_alignment/reference*
+[system] rm -f Plate4BLANK2/breseq/02_reference_alignment/Plate4BLANK2_R1.stage1.unmatched.fastq
+[system] rm -f Plate4BLANK2/breseq/02_reference_alignment/Plate4BLANK2_R1.stage1.sam
+[system] rm -f Plate4BLANK2/breseq/02_reference_alignment/Plate4BLANK2_R1.stage2.matched.sam
+[system] rm -f Plate4BLANK2/breseq/02_reference_alignment/Plate4BLANK2_R2.stage1.unmatched.fastq
+[system] rm -f Plate4BLANK2/breseq/02_reference_alignment/Plate4BLANK2_R2.stage1.sam
+[system] rm -f Plate4BLANK2/breseq/02_reference_alignment/Plate4BLANK2_R2.stage2.matched.sam
++++   NOW PROCESSING Preprocessing alignments for candidate junction identification
+Preprocessing alignments.
+  READ FILE::Plate4BLANK2_R1
+  READ FILE::Plate4BLANK2_R2
+  Summary... 
+  Aligned reads:                                 5729
+  Read alignments:                               5734
+  Alignments split on indels:                       7
+  Reads with alignments split on indels:            7
+  Split alignments:                                24
+  Reads with split alignments:                     12
++++   NOW PROCESSING Preliminary analysis of coverage distribution
+[samtools] import Plate4BLANK2/breseq/data/reference.fasta.fai Plate4BLANK2/breseq/03_candidate_junctions/best.sam Plate4BLANK2/breseq/03_candidate_junctions/best.unsorted.bam
+[samtools] sort --threads 4 -o Plate4BLANK2/breseq/03_candidate_junctions/best.bam -T Plate4BLANK2/breseq/03_candidate_junctions/best.bam Plate4BLANK2/breseq/03_candidate_junctions/best.unsorted.bam
+[samtools] index Plate4BLANK2/breseq/03_candidate_junctions/best.bam Plate4BLANK2/breseq/03_candidate_junctions/best.bam.bai
+  REFERENCE: MN908947
+  LENGTH: 29903
+    POSITION:10000
+    POSITION:20000
+[system] R --vanilla < /workspace/home/nasirja/covid-19-signal/.snakemake/conda/1f267c8dfdaa0356ebaad13adc66d00a/bin/../share/breseq/coverage_distribution.r > Plate4BLANK2/breseq/03_candidate_junctions/0.unique_only_coverage_distribution.tab.r.log distribution_file=Plate4BLANK2/breseq/03_candidate_junctions/0.unique_only_coverage_distribution.tab plot_file=Plate4BLANK2/breseq/03_candidate_junctions/0.coverage.pdf deletion_propagation_pr_cutoff=0.000289143
+[system] rm -f Plate4BLANK2/breseq/03_candidate_junctions/best.unsorted.bam
+[system] rm -f Plate4BLANK2/breseq/03_candidate_junctions/best.sam
+[system] rm -f Plate4BLANK2/breseq/03_candidate_junctions/best.bam
+[system] rm -f Plate4BLANK2/breseq/03_candidate_junctions/best.bam.bai
+[system] rm -f Plate4BLANK2/breseq/03_candidate_junctions/0.coverage.pdf
+[system] rm -f Plate4BLANK2/breseq/03_candidate_junctions/0.unique_only_coverage_distribution.tab
+[system] rm -f Plate4BLANK2/breseq/03_candidate_junctions/0.unique_only_coverage_distribution.tab.r.log
++++   NOW PROCESSING Identifying junction candidates
+  READ FILE::Plate4BLANK2_R1
+  READ FILE::Plate4BLANK2_R2
+  Passed alignment pairs examined: 8
+  Taking top candidate junctions...
+  Minimum number to keep:     100 
+  Maximum number to keep:    5000 
+  Maximum length to keep:    2990 bases
+    Initial: Number = 0, Cumulative Length = 0 bases
+    Accepted: Number = 0, Pos Hash Score >= 0, Cumulative Length = 0 bases
+[system] rm -f Plate4BLANK2/breseq/03_candidate_junctions/Plate4BLANK2_R1.split.sam
+[system] rm -f Plate4BLANK2/breseq/03_candidate_junctions/Plate4BLANK2_R2.split.sam
++++   NOW PROCESSING Re-alignment to junction candidates
++++   NOW PROCESSING Resolving best read alignments
+  READ FILE:Plate4BLANK2_R1
+  READ FILE:Plate4BLANK2_R2
+[system] rm -f Plate4BLANK2/breseq/01_sequence_conversion/Plate4BLANK2_R1.converted.fastq
+[system] rm -f Plate4BLANK2/breseq/01_sequence_conversion/Plate4BLANK2_R2.converted.fastq
+[system] rm -f Plate4BLANK2/breseq/02_reference_alignment/Plate4BLANK2_R1.reference.sam
+[system] rm -f Plate4BLANK2/breseq/02_reference_alignment/Plate4BLANK2_R2.reference.sam
++++   NOW PROCESSING Creating BAM files
+[samtools] import Plate4BLANK2/breseq/data/reference.fasta.fai Plate4BLANK2/breseq/05_alignment_correction/reference.sam Plate4BLANK2/breseq/06_bam/reference.unsorted.bam
+[samtools] sort --threads 4 -o Plate4BLANK2/breseq/data/reference.bam -T Plate4BLANK2/breseq/data/reference.bam Plate4BLANK2/breseq/06_bam/reference.unsorted.bam
+[system] rm -f Plate4BLANK2/breseq/06_bam/reference.unsorted.bam
+[samtools] index Plate4BLANK2/breseq/data/reference.bam Plate4BLANK2/breseq/data/reference.bam.bai
+[system] rm -f Plate4BLANK2/breseq/05_alignment_correction/reference.sam
+[system] rm -f Plate4BLANK2/breseq/05_alignment_correction/junction.sam
++++   NOW PROCESSING Tabulating error counts
+  REFERENCE: MN908947
+  LENGTH: 29903
+    POSITION:10000
+    POSITION:20000
++++   NOW PROCESSING Re-calibrating base error rates
+[system] R --vanilla < /workspace/home/nasirja/covid-19-signal/.snakemake/conda/1f267c8dfdaa0356ebaad13adc66d00a/bin/../share/breseq/coverage_distribution.r > Plate4BLANK2/breseq/07_error_calibration/0.unique_only_coverage_distribution.tab.r.log distribution_file=Plate4BLANK2/breseq/07_error_calibration/0.unique_only_coverage_distribution.tab plot_file=Plate4BLANK2/breseq/output/calibration/0.unique_coverage.pdf deletion_propagation_pr_cutoff=0.000289143
+[system] R --vanilla in_file=Plate4BLANK2/breseq/07_error_calibration/base_qual_error_prob.Plate4BLANK2_R1.tab out_file=Plate4BLANK2/breseq/output/calibration/Plate4BLANK2_R1.error_rates.pdf < /workspace/home/nasirja/covid-19-signal/.snakemake/conda/1f267c8dfdaa0356ebaad13adc66d00a/bin/../share/breseq/plot_error_rate.r > Plate4BLANK2/breseq/07_error_calibration/Plate4BLANK2_R1.plot_error_rate.log
+[system] R --vanilla in_file=Plate4BLANK2/breseq/07_error_calibration/base_qual_error_prob.Plate4BLANK2_R2.tab out_file=Plate4BLANK2/breseq/output/calibration/Plate4BLANK2_R2.error_rates.pdf < /workspace/home/nasirja/covid-19-signal/.snakemake/conda/1f267c8dfdaa0356ebaad13adc66d00a/bin/../share/breseq/plot_error_rate.r > Plate4BLANK2/breseq/07_error_calibration/Plate4BLANK2_R2.plot_error_rate.log
++++   NOW PROCESSING Examining read alignment evidence
+  REFERENCE: MN908947
+  LENGTH: 29903
+    POSITION:10000
+    POSITION:20000
++++   NOW PROCESSING Polymorphism statistics
+[system] R --vanilla total_length=29903 in_file=Plate4BLANK2/breseq/08_mutation_identification/polymorphism_statistics_input.tab out_file=Plate4BLANK2/breseq/08_mutation_identification/polymorphism_statistics_output.tab qual_file=Plate4BLANK2/breseq/08_mutation_identification/error_counts.tab < /workspace/home/nasirja/covid-19-signal/.snakemake/conda/1f267c8dfdaa0356ebaad13adc66d00a/bin/../share/breseq/polymorphism_statistics.r > Plate4BLANK2/breseq/08_mutation_identification/polymorphism_statistics_output.log
++++   NOW PROCESSING Output
+Creating merged genome diff evidence file...
+Predicting mutations from evidence...
+  Preparing junctions...
+  Predicting mobile element insertions...
+  Predicting large deletions...
+  Predicting small indels and substitutions from junctions...
+  Predicting small indels and substitutions from alignments...
+  Making final adjustments to mutations...
+  Writing final GD file...
+  Writing final VCF file...
+Annotating mutations...
+Drawing coverage plots...
+Creating coverage plot for region: MN908947:1-29903
+Creating index HTML table...
+[system] rm -f Plate4BLANK2/breseq/01_sequence_conversion/*.trims
+[system] rm -f Plate4BLANK2/breseq/03_candidate_junctions/candidate_junction.fasta
+[system] rm -f Plate4BLANK2/breseq/03_candidate_junctions/candidate_junction.fasta.fai
+[system] rm -f Plate4BLANK2/breseq/05_alignment_correction/jc_evidence.gd
+[system] rm -f Plate4BLANK2/breseq/06_bam/junction.bam
+[system] rm -f Plate4BLANK2/breseq/06_bam/junction.bam.bai
++++   SUCCESSFULLY COMPLETED

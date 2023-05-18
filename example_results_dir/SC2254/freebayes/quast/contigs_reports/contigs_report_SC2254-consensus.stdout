@@ -1,0 +1,88 @@
+Aligning contigs to reference...
+	Aligning contigs to the reference
+Filtering alignments...
+Parsing coords...
+Loading reference...
+	Loaded [MN908947.3]
+	Total Regions: 1
+	Total Region Length: 29903
+Analyzing contigs...
+CONTIG: SC2254 (29900bp)
+Best alignment score: 3628.0 (LEN: 3632, IDY: 99.89), Total number of alignments: 20
+			Looking for the best set of alignments (out of 20 total alignments)
+		This contig has several significant sets of alignments. [An ambiguously mapped contig]
+		Using only the very best set (option --ambiguity-usage is set to "one").
+			The best set is below. Score: 20238.1, number of alignments: 20, unaligned bases: 9551
+		This contig is misassembled.
+			Real Alignment 1: 324 1004 | 323 1003 | 681 681 | 100.0 | MN908947.3 SC2254
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 2: 1596 3507 | 1595 3506 | 1912 1912 | 99.95 | MN908947.3 SC2254
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 3: 3796 4402 | 3795 4401 | 607 607 | 100.0 | MN908947.3 SC2254
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 4: 4659 6528 | 4658 6525 | 1870 1868 | 99.89 | MN908947.3 SC2254
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 5: 6746 7092 | 6743 7089 | 347 347 | 100.0 | MN908947.3 SC2254
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 6: 7333 7997 | 7330 7994 | 665 665 | 99.85 | MN908947.3 SC2254
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 7: 8411 8499 | 8408 8496 | 89 89 | 100.0 | MN908947.3 SC2254
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 8: 9807 10437 | 9804 10435 | 631 632 | 99.53 | MN908947.3 SC2254
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 9: 11023 11139 | 11021 11136 | 117 116 | 99.15 | MN908947.3 SC2254
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 10: 11585 13660 | 11582 13657 | 2076 2076 | 100.0 | MN908947.3 SC2254
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 11: 14571 15538 | 14568 15535 | 968 968 | 100.0 | MN908947.3 SC2254
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 12: 15852 16804 | 15849 16801 | 953 953 | 99.79 | MN908947.3 SC2254
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 13: 17088 18036 | 17085 18033 | 949 949 | 100.0 | MN908947.3 SC2254
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 14: 18276 18650 | 18273 18647 | 375 375 | 100.0 | MN908947.3 SC2254
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 15: 18919 19911 | 18916 19908 | 993 993 | 99.9 | MN908947.3 SC2254
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 16: 20201 20542 | 20198 20539 | 342 342 | 100.0 | MN908947.3 SC2254
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 17: 20814 21716 | 20811 21713 | 903 903 | 100.0 | MN908947.3 SC2254
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 18: 22543 22877 | 22540 22874 | 335 335 | 100.0 | MN908947.3 SC2254
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 19: 23442 25347 | 23439 25344 | 1906 1906 | 99.95 | MN908947.3 SC2254
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 20: 25925 29556 | 25922 29553 | 3632 3632 | 99.89 | MN908947.3 SC2254
+
+Analyzing coverage...
+Writing SNPs into /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2254/freebayes/quast/contigs_reports/minimap_output/SC2254-consensus.used_snps.gz
+
+Analysis is finished!
+Founded SNPs were written into /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2254/freebayes/quast/contigs_reports/minimap_output/SC2254-consensus.used_snps.gz
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Scaffold gap extensive misassemblies: 0
+	Scaffold gap local misassemblies: 19
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Unaligned Contigs: 0 + 0 part
+Half Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 0
+
+Ambiguously Mapped Contigs: 1
+Total Bases in Ambiguously Mapped Contigs: 29900
+Extra Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each of these contigs was used.
+
+	Covered Bases: 20351
+
+	SNPs: 10
+	Insertions: 2
+	Deletions: 4
+

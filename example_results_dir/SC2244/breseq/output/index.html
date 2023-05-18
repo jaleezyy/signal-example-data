@@ -1,0 +1,641 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html>
+<head>
+<title>BRESEQ :: Mutation Predictions</title>
+<style type = "text/css">
+body {font-family: sans-serif; font-size: 11pt;}
+th {background-color: rgb(0,0,0); color: rgb(255,255,255);}
+table {background-color: rgb(1,0,0); color: rgb(0,0,0);}
+tr {background-color: rgb(255,255,255);}
+.mutation_in_codon {color:red; text-decoration : underline;}
+.snp_type_synonymous{color:green;}
+.snp_type_nonsynonymous{color:blue;}
+.snp_type_nonsense{color:red;}
+.mutation_header_row {background-color: rgb(0,130,0);}
+.read_alignment_header_row {background-color: rgb(255,0,0);}
+.missing_coverage_header_row {background-color: rgb(0,100,100);}
+.new_junction_header_row {background-color: rgb(0,0,155);}
+.copy_number_header_row {background-color: rgb(153,102,0);}
+.alternate_table_row_0 {background-color: rgb(255,255,255);}
+.alternate_table_row_1 {background-color: rgb(235,235,235);}
+.gray_table_row {background-color: rgb(230,230,245);}
+.polymorphism_table_row {background-color: rgb(160,255,160);}
+.highlight_table_row {background-color: rgb(192,255,255);}
+.reject_table_row {background-color: rgb(255,200,165);}
+.user_defined_table_row {background-color: rgb(255,255,0);}
+.information_table_row {background-color: rgb(200,255,255);}
+.junction_repeat {background-color: rgb(255,165,0)}
+.junction_gene {}
+.hidden { display: none; }
+.unhidden { display: block; }
+
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<script type="text/javascript">
+  function hideTog(divID) {
+    var item = document.getElementById(divID);
+    if (item) {
+      item.className=(item.className=='hidden')?'unhidden':'hidden';
+    }
+  }
+  function showTog(butID) {
+    var button = document.getElementById(butID);
+    if (button) {
+      button.value=(button.value=='Show')?'Hide':'Show';
+    }
+  }
+</script>
+
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+<td><a href="http://barricklab.org/breseq"><img src="evidence/breseq_small.png" /></a></td>
+<td width="100%">
+<b><i>breseq</i></b>&nbsp;&nbsp;version 0.35.0&nbsp;&nbsp;
+<br><a href="index.html">mutation predictions</a> | 
+<a href="marginal.html">marginal predictions</a> | 
+<a href="summary.html">summary statistics</a> | 
+<a href="output.gd">genome diff</a> | 
+<a href="log.txt">command line log</a>
+</td></tr></table>
+
+<p>
+<!--Mutation Predictions -->
+<p>
+<!--Output Html_Mutation_Table_String-->
+<table border="0" cellspacing="1" cellpadding="3">
+<tr><th colspan="7" align="left" class="mutation_header_row">Predicted mutations</th></tr><tr>
+<th>evidence</th>
+<th>position</th>
+<th>mutation</th>
+<th>freq</th>
+<th>annotation</th>
+<th>gene</th>
+<th width="100%">description</th>
+</tr>
+
+<!-- Item Lines -->
+
+<!-- Print The Table Row -->
+<tr class="normal_table_row">
+<td align="center">RA</td><!-- Evidence -->
+<td align="right">913</td><!-- Position -->
+<td align="center">C&rarr;T</td><!-- Cell Mutation -->
+<td align="right">100%</td>
+<td align="center"><font class="snp_type_synonymous">S216S</font>&nbsp;(TC<font class="mutation_in_codon">C</font>&rarr;TC<font class="mutation_in_codon">T</font>)&nbsp;</td>
+<td align="center"><i>orf1ab</i>&nbsp;&rarr;</td>
+<td align="left">orf1ab polyprotein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="normal_table_row">
+<td align="center">RA</td><!-- Evidence -->
+<td align="right">2,925</td><!-- Position -->
+<td align="center">C&rarr;T</td><!-- Cell Mutation -->
+<td align="right">100%</td>
+<td align="center"><font class="snp_type_nonsynonymous">S887F</font>&nbsp;(T<font class="mutation_in_codon">C</font>T&rarr;T<font class="mutation_in_codon">T</font>T)&nbsp;</td>
+<td align="center"><i>orf1ab</i>&nbsp;&rarr;</td>
+<td align="left">orf1ab polyprotein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="normal_table_row">
+<td align="center">RA</td><!-- Evidence -->
+<td align="right">3,037</td><!-- Position -->
+<td align="center">C&rarr;T</td><!-- Cell Mutation -->
+<td align="right">100%</td>
+<td align="center"><font class="snp_type_synonymous">F924F</font>&nbsp;(TT<font class="mutation_in_codon">C</font>&rarr;TT<font class="mutation_in_codon">T</font>)&nbsp;</td>
+<td align="center"><i>orf1ab</i>&nbsp;&rarr;</td>
+<td align="left">orf1ab polyprotein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="normal_table_row">
+<td align="center">RA</td><!-- Evidence -->
+<td align="right">3,267</td><!-- Position -->
+<td align="center">C&rarr;T</td><!-- Cell Mutation -->
+<td align="right">100%</td>
+<td align="center"><font class="snp_type_nonsynonymous">T1001I</font>&nbsp;(A<font class="mutation_in_codon">C</font>T&rarr;A<font class="mutation_in_codon">T</font>T)&nbsp;</td>
+<td align="center"><i>orf1ab</i>&nbsp;&rarr;</td>
+<td align="left">orf1ab polyprotein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="normal_table_row">
+<td align="center">RA</td><!-- Evidence -->
+<td align="right">5,388</td><!-- Position -->
+<td align="center">C&rarr;A</td><!-- Cell Mutation -->
+<td align="right">100%</td>
+<td align="center"><font class="snp_type_nonsynonymous">A1708D</font>&nbsp;(G<font class="mutation_in_codon">C</font>T&rarr;G<font class="mutation_in_codon">A</font>T)&nbsp;</td>
+<td align="center"><i>orf1ab</i>&nbsp;&rarr;</td>
+<td align="left">orf1ab polyprotein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="normal_table_row">
+<td align="center">RA</td><!-- Evidence -->
+<td align="right">5,986</td><!-- Position -->
+<td align="center">C&rarr;T</td><!-- Cell Mutation -->
+<td align="right">100%</td>
+<td align="center"><font class="snp_type_synonymous">F1907F</font>&nbsp;(TT<font class="mutation_in_codon">C</font>&rarr;TT<font class="mutation_in_codon">T</font>)&nbsp;</td>
+<td align="center"><i>orf1ab</i>&nbsp;&rarr;</td>
+<td align="left">orf1ab polyprotein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="normal_table_row">
+<td align="center">RA</td><!-- Evidence -->
+<td align="right">6,954</td><!-- Position -->
+<td align="center">T&rarr;C</td><!-- Cell Mutation -->
+<td align="right">100%</td>
+<td align="center"><font class="snp_type_nonsynonymous">I2230T</font>&nbsp;(A<font class="mutation_in_codon">T</font>A&rarr;A<font class="mutation_in_codon">C</font>A)&nbsp;</td>
+<td align="center"><i>orf1ab</i>&nbsp;&rarr;</td>
+<td align="left">orf1ab polyprotein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="normal_table_row">
+<td align="center">JC</td><!-- Evidence -->
+<td align="right">11,288</td><!-- Position -->
+<td align="center">&Delta;9&nbsp;bp</td><!-- Cell Mutation -->
+<td align="right">100%</td>
+<td align="center">coding&nbsp;(11023&#8209;11031/13203&nbsp;nt)</td>
+<td align="center"><i>orf1ab</i>&nbsp;&rarr;</td>
+<td align="left">orf1ab polyprotein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="polymorphism_table_row">
+<td align="center">RA</td><!-- Evidence -->
+<td align="right">12,664:1</td><!-- Position -->
+<td align="center">+A</td><!-- Cell Mutation -->
+<td align="right">12.2%</td>
+<td align="center">coding&nbsp;(12399/13203&nbsp;nt)</td>
+<td align="center"><i>orf1ab</i>&nbsp;&rarr;</td>
+<td align="left">orf1ab polyprotein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="normal_table_row">
+<td align="center">RA</td><!-- Evidence -->
+<td align="right">14,408</td><!-- Position -->
+<td align="center">C&rarr;T</td><!-- Cell Mutation -->
+<td align="right">100%</td>
+<td align="center"><font class="snp_type_nonsynonymous">P314L</font>&nbsp;(C<font class="mutation_in_codon">C</font>T&rarr;C<font class="mutation_in_codon">T</font>T)&nbsp;</td>
+<td align="center"><i>orf1ab</i>&nbsp;&rarr;</td>
+<td align="left">orf1ab polyprotein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="normal_table_row">
+<td align="center">RA</td><!-- Evidence -->
+<td align="right">14,676</td><!-- Position -->
+<td align="center">C&rarr;T</td><!-- Cell Mutation -->
+<td align="right">100%</td>
+<td align="center"><font class="snp_type_synonymous">P403P</font>&nbsp;(CC<font class="mutation_in_codon">C</font>&rarr;CC<font class="mutation_in_codon">T</font>)&nbsp;</td>
+<td align="center"><i>orf1ab</i>&nbsp;&rarr;</td>
+<td align="left">orf1ab polyprotein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="normal_table_row">
+<td align="center">RA</td><!-- Evidence -->
+<td align="right">15,279</td><!-- Position -->
+<td align="center">C&rarr;T</td><!-- Cell Mutation -->
+<td align="right">100%</td>
+<td align="center"><font class="snp_type_synonymous">H604H</font>&nbsp;(CA<font class="mutation_in_codon">C</font>&rarr;CA<font class="mutation_in_codon">T</font>)&nbsp;</td>
+<td align="center"><i>orf1ab</i>&nbsp;&rarr;</td>
+<td align="left">orf1ab polyprotein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="normal_table_row">
+<td align="center">RA</td><!-- Evidence -->
+<td align="right">16,176</td><!-- Position -->
+<td align="center">T&rarr;C</td><!-- Cell Mutation -->
+<td align="right">100%</td>
+<td align="center"><font class="snp_type_synonymous">T903T</font>&nbsp;(AC<font class="mutation_in_codon">T</font>&rarr;AC<font class="mutation_in_codon">C</font>)&nbsp;</td>
+<td align="center"><i>orf1ab</i>&nbsp;&rarr;</td>
+<td align="left">orf1ab polyprotein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="polymorphism_table_row">
+<td align="center">JC</td><!-- Evidence -->
+<td align="right">21,766</td><!-- Position -->
+<td align="center">&Delta;6&nbsp;bp</td><!-- Cell Mutation -->
+<td align="right">18.9%</td>
+<td align="center">coding&nbsp;(204&#8209;209/3822&nbsp;nt)</td>
+<td align="center"><i>S</i>&nbsp;&rarr;</td>
+<td align="left">surface glycoprotein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="normal_table_row">
+<td align="center">RA</td><!-- Evidence -->
+<td align="right">23,885</td><!-- Position -->
+<td align="center">&Delta;1&nbsp;bp</td><!-- Cell Mutation -->
+<td align="right">100%</td>
+<td align="center">coding&nbsp;(2323/3822&nbsp;nt)</td>
+<td align="center"><i>S</i>&nbsp;&rarr;</td>
+<td align="left">surface glycoprotein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="normal_table_row">
+<td align="center">RA</td><!-- Evidence -->
+<td align="right">24,914</td><!-- Position -->
+<td align="center">G&rarr;C</td><!-- Cell Mutation -->
+<td align="right">100%</td>
+<td align="center"><font class="snp_type_nonsynonymous">D1118H</font>&nbsp;(<font class="mutation_in_codon">G</font>AC&rarr;<font class="mutation_in_codon">C</font>AC)&nbsp;</td>
+<td align="center"><i>S</i>&nbsp;&rarr;</td>
+<td align="left">surface glycoprotein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="polymorphism_table_row">
+<td align="center">RA</td><!-- Evidence -->
+<td align="right">27,896</td><!-- Position -->
+<td align="center">G&rarr;A</td><!-- Cell Mutation -->
+<td align="right">67.3%</td>
+<td align="center"><font class="snp_type_nonsynonymous">M1I</font>&nbsp;(AT<font class="mutation_in_codon">G</font>&rarr;AT<font class="mutation_in_codon">A</font>)&nbsp;&dagger;</td>
+<td align="center"><i>ORF8</i>&nbsp;&rarr;</td>
+<td align="left">ORF8 protein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="normal_table_row">
+<td align="center">RA</td><!-- Evidence -->
+<td align="right">27,972</td><!-- Position -->
+<td align="center">C&rarr;T</td><!-- Cell Mutation -->
+<td align="right">100%</td>
+<td align="center"><font class="snp_type_nonsense">Q27*</font>&nbsp;(<font class="mutation_in_codon">C</font>AA&rarr;<font class="mutation_in_codon">T</font>AA)&nbsp;</td>
+<td align="center"><i>ORF8</i>&nbsp;&rarr;</td>
+<td align="left">ORF8 protein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="normal_table_row">
+<td align="center">RA</td><!-- Evidence -->
+<td align="right">28,048</td><!-- Position -->
+<td align="center">G&rarr;T</td><!-- Cell Mutation -->
+<td align="right">100%</td>
+<td align="center"><font class="snp_type_nonsynonymous">R52I</font>&nbsp;(A<font class="mutation_in_codon">G</font>A&rarr;A<font class="mutation_in_codon">T</font>A)&nbsp;</td>
+<td align="center"><i>ORF8</i>&nbsp;&rarr;</td>
+<td align="left">ORF8 protein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="normal_table_row">
+<td align="center">RA</td><!-- Evidence -->
+<td align="right">28,111</td><!-- Position -->
+<td align="center">A&rarr;G</td><!-- Cell Mutation -->
+<td align="right">100%</td>
+<td align="center"><font class="snp_type_nonsynonymous">Y73C</font>&nbsp;(T<font class="mutation_in_codon">A</font>C&rarr;T<font class="mutation_in_codon">G</font>C)&nbsp;</td>
+<td align="center"><i>ORF8</i>&nbsp;&rarr;</td>
+<td align="left">ORF8 protein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="polymorphism_table_row">
+<td align="center">JC</td><!-- Evidence -->
+<td align="right">28,192</td><!-- Position -->
+<td align="center">63&nbsp;bp&rarr;8&nbsp;bp</td><!-- Cell Mutation -->
+<td align="right">57.6%</td>
+<td align="center">coding&nbsp;(299&#8209;361/366&nbsp;nt)</td>
+<td align="center"><i>ORF8</i>&nbsp;&rarr;</td>
+<td align="left">ORF8 protein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="normal_table_row">
+<td align="center">RA</td><!-- Evidence -->
+<td align="right">28,271</td><!-- Position -->
+<td align="center">&Delta;1&nbsp;bp</td><!-- Cell Mutation -->
+<td align="right">100%</td>
+<td align="center">intergenic&nbsp;(+12/&#8209;3)</td>
+<td align="center"><i>ORF8</i>&nbsp;&rarr;&nbsp;/&nbsp;&rarr;&nbsp;<i>N</i></td>
+<td align="left">ORF8 protein/nucleocapsid phosphoprotein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="normal_table_row">
+<td align="center">RA</td><!-- Evidence -->
+<td align="right">28,280</td><!-- Position -->
+<td align="center">3&nbsp;bp&rarr;CTA</td><!-- Cell Mutation -->
+<td align="right">100%</td>
+<td align="center">coding&nbsp;(7&#8209;9/1260&nbsp;nt)</td>
+<td align="center"><i>N</i>&nbsp;&rarr;</td>
+<td align="left">nucleocapsid phosphoprotein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="normal_table_row">
+<td align="center">RA</td><!-- Evidence -->
+<td align="right">28,881</td><!-- Position -->
+<td align="center">3&nbsp;bp&rarr;AAC</td><!-- Cell Mutation -->
+<td align="right">100%</td>
+<td align="center">coding&nbsp;(608&#8209;610/1260&nbsp;nt)</td>
+<td align="center"><i>N</i>&nbsp;&rarr;</td>
+<td align="left">nucleocapsid phosphoprotein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="normal_table_row">
+<td align="center">RA</td><!-- Evidence -->
+<td align="right">28,977</td><!-- Position -->
+<td align="center">C&rarr;T</td><!-- Cell Mutation -->
+<td align="right">100%</td>
+<td align="center"><font class="snp_type_nonsynonymous">S235F</font>&nbsp;(T<font class="mutation_in_codon">C</font>T&rarr;T<font class="mutation_in_codon">T</font>T)&nbsp;</td>
+<td align="center"><i>N</i>&nbsp;&rarr;</td>
+<td align="left">nucleocapsid phosphoprotein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="polymorphism_table_row">
+<td align="center">RA</td><!-- Evidence -->
+<td align="right">29,329</td><!-- Position -->
+<td align="center">G&rarr;T</td><!-- Cell Mutation -->
+<td align="right">34.3%</td>
+<td align="center"><font class="snp_type_nonsynonymous">L352F</font>&nbsp;(TT<font class="mutation_in_codon">G</font>&rarr;TT<font class="mutation_in_codon">T</font>)&nbsp;</td>
+<td align="center"><i>N</i>&nbsp;&rarr;</td>
+<td align="left">nucleocapsid phosphoprotein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="polymorphism_table_row">
+<td align="center">RA</td><!-- Evidence -->
+<td align="right">29,330</td><!-- Position -->
+<td align="center">C&rarr;T</td><!-- Cell Mutation -->
+<td align="right">34.3%</td>
+<td align="center"><font class="snp_type_synonymous">L353L</font>&nbsp;(<font class="mutation_in_codon">C</font>TG&rarr;<font class="mutation_in_codon">T</font>TG)&nbsp;</td>
+<td align="center"><i>N</i>&nbsp;&rarr;</td>
+<td align="left">nucleocapsid phosphoprotein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="polymorphism_table_row">
+<td align="center">RA</td><!-- Evidence -->
+<td align="right">29,358</td><!-- Position -->
+<td align="center">C&rarr;T</td><!-- Cell Mutation -->
+<td align="right">34.2%</td>
+<td align="center"><font class="snp_type_nonsynonymous">T362I</font>&nbsp;(A<font class="mutation_in_codon">C</font>A&rarr;A<font class="mutation_in_codon">T</font>A)&nbsp;</td>
+<td align="center"><i>N</i>&nbsp;&rarr;</td>
+<td align="left">nucleocapsid phosphoprotein</td>
+</tr>
+<!-- End Table Row -->
+
+<!-- Print The Table Row -->
+<tr class="polymorphism_table_row">
+<td align="center">RA</td><!-- Evidence -->
+<td align="right">29,503</td><!-- Position -->
+<td align="center">C&rarr;T</td><!-- Cell Mutation -->
+<td align="right">34.4%</td>
+<td align="center"><font class="snp_type_synonymous">S410S</font>&nbsp;(TC<font class="mutation_in_codon">C</font>&rarr;TC<font class="mutation_in_codon">T</font>)&nbsp;</td>
+<td align="center"><i>N</i>&nbsp;&rarr;</td>
+<td align="left">nucleocapsid phosphoprotein</td>
+</tr>
+<!-- End Table Row -->
+</table>
+<p>
+<table border="0" cellspacing="1" cellpadding="3" width="100%">
+<tr><th colspan="8" align="left" class="missing_coverage_header_row">Unassigned missing coverage evidence</th></tr>
+<tr><th>seq&nbsp;id</th>
+<th>start</th>
+<th>end</th>
+<th>size</th>
+<th>&larr;reads</th>
+<th>reads&rarr;</th>
+<th>gene</th>
+<th width="100%">description</th>
+</tr>
+<tr>
+<td>MN908947</td>
+<td align="right">1</td>
+<td align="right">29</td>
+<td align="right">29</td>
+<td align="center">NA&nbsp;[0]</td>
+<td align="center">[0]&nbsp;4</td>
+<td align="center"><i>&#8211;/orf1ab</i></td>
+<td align="left">&#8211;/orf1ab polyprotein</td>
+</tr>
+<tr>
+<td>MN908947</td>
+<td align="right">2270</td>
+<td align="right">2650</td>
+<td align="right">381</td>
+<td align="center">5&nbsp;[0]</td>
+<td align="center">[3]&nbsp;4</td>
+<td align="center"><i>orf1ab</i></td>
+<td align="left">orf1ab polyprotein</td>
+</tr>
+<tr>
+<td>MN908947</td>
+<td align="right">4425</td>
+<td align="right">4636</td>
+<td align="right">212</td>
+<td align="center">887&nbsp;[2]</td>
+<td align="center">[1]&nbsp;256</td>
+<td align="center"><i>orf1ab</i></td>
+<td align="left">orf1ab polyprotein</td>
+</tr>
+<tr>
+<td>MN908947</td>
+<td align="right">7695</td>
+<td align="right">7943</td>
+<td align="right">249</td>
+<td align="center">924&nbsp;[0]</td>
+<td align="center">[0]&nbsp;623</td>
+<td align="center"><i>orf1ab</i></td>
+<td align="left">orf1ab polyprotein</td>
+</tr>
+<tr>
+<td>MN908947</td>
+<td align="right">8342</td>
+<td align="right">8595</td>
+<td align="right">254</td>
+<td align="center">541&nbsp;[0]</td>
+<td align="center">[0]&nbsp;4</td>
+<td align="center"><i>orf1ab</i></td>
+<td align="left">orf1ab polyprotein</td>
+</tr>
+<tr>
+<td>MN908947</td>
+<td align="right">9140</td>
+<td align="right">9477</td>
+<td align="right">338</td>
+<td align="center">4&nbsp;[2]</td>
+<td align="center">[0]&nbsp;4</td>
+<td align="center"><i>orf1ab</i></td>
+<td align="left">orf1ab polyprotein</td>
+</tr>
+<tr>
+<td>MN908947</td>
+<td align="right">12257</td>
+<td align="right">12417</td>
+<td align="right">161</td>
+<td align="center">3483&nbsp;[0]</td>
+<td align="center">[2]&nbsp;2983</td>
+<td align="center"><i>orf1ab</i></td>
+<td align="left">orf1ab polyprotein</td>
+</tr>
+<tr>
+<td>MN908947</td>
+<td align="right">17762</td>
+<td align="right">18595</td>
+<td align="right">834</td>
+<td align="center">5&nbsp;[1]</td>
+<td align="center">[0]&nbsp;7</td>
+<td align="center"><i>orf1ab</i></td>
+<td align="left">orf1ab polyprotein</td>
+</tr>
+<tr>
+<td>MN908947</td>
+<td align="right">18981</td>
+<td align="right">19548</td>
+<td align="right">568</td>
+<td align="center">5&nbsp;[1]</td>
+<td align="center">[1]&nbsp;201</td>
+<td align="center"><i>orf1ab</i></td>
+<td align="left">orf1ab polyprotein</td>
+</tr>
+<tr>
+<td>MN908947</td>
+<td align="right">21456</td>
+<td align="right">21658</td>
+<td align="right">203</td>
+<td align="center">951&nbsp;[0]</td>
+<td align="center">[0]&nbsp;966</td>
+<td align="center"><i>[orf1ab]&#8211;[S]</i></td>
+<td align="left">[orf1ab],[S]</td>
+</tr>
+<tr>
+<td>MN908947</td>
+<td align="right">22039</td>
+<td align="right">22262</td>
+<td align="right">224</td>
+<td align="center">952&nbsp;[0]</td>
+<td align="center">[0]&nbsp;80</td>
+<td align="center"><i>S</i></td>
+<td align="left">surface glycoprotein</td>
+</tr>
+<tr>
+<td>MN908947</td>
+<td align="right">22768</td>
+<td align="right">23789</td>
+<td align="right">1022</td>
+<td align="center">5&nbsp;[3]</td>
+<td align="center">[1]&nbsp;66</td>
+<td align="center"><i>S</i></td>
+<td align="left">surface glycoprotein</td>
+</tr>
+<tr>
+<td>MN908947</td>
+<td align="right">24170</td>
+<td align="right">24696</td>
+<td align="right">527</td>
+<td align="center">70&nbsp;[0]</td>
+<td align="center">[3]&nbsp;8512</td>
+<td align="center"><i>S</i></td>
+<td align="left">surface glycoprotein</td>
+</tr>
+<tr>
+<td>MN908947</td>
+<td align="right">29694</td>
+<td align="right">29903</td>
+<td align="right">210</td>
+<td align="center">1421&nbsp;[0]</td>
+<td align="center">[0]&nbsp;NA</td>
+<td align="center"><i>ORF10/&#8211;</i></td>
+<td align="left">ORF10 protein/&#8211;</td>
+</tr>
+</table>
+<p>
+<table border="0" cellspacing="1" cellpadding="3">
+<tr><th colspan="10" align="left" class="new_junction_header_row">Unassigned new junction evidence</th></tr>
+<!-- Header Lines for New Junction -->
+<tr>
+<th>seq&nbsp;id</th>
+<th>position</th>
+<th>reads&nbsp;(cov)</th>
+<th>reads&nbsp;(cov)</th>
+<th>score</th>
+<th>skew</th>
+<th>freq</th>
+<th>annotation</th>
+<th>gene</th>
+<th width="100%">product</th>
+</tr>
+
+<!-- Item Lines for New Junction -->
+<!-- Side 1 Item Lines for New Junction -->
+<tr class="mutation_table_row_0">
+<td rowspan="1" class="junction_gene">MN908947</td>
+<td align="center" class="junction_gene">=&nbsp;76</td><td align="center" class="junction_gene">2 (0.000)</td><td rowspan="2" align="center">1929 (0.910)</td>
+<td rowspan="2" align="center">10/448</td>
+<td rowspan="2" align="center">NT</td>
+<td rowspan="2" align="center">31.1%</td>
+<td align="center" class="junction_gene">intergenic&nbsp;(&#8211;/&#8209;190)</td>
+<td align="center" class="junction_gene"><i>&#8211;/orf1ab</i></td>
+<td class="junction_gene">&#8211;/orf1ab polyprotein</td>
+</tr>
+<!-- Side 2 Item Lines for New Junction -->
+<tr class="mutation_table_row_0">
+<td rowspan="1" class="junction_gene">MN908947</td>
+<td align="center" class="junction_gene">26480&nbsp;=</td>
+<td align="center" class="junction_gene">8541 (4.040)</td><td align="center" class="junction_gene">intergenic&nbsp;(+8/&#8209;43)</td>
+<td align="center" class="junction_gene"><i>E/M</i></td>
+<td class="junction_gene">envelope protein/membrane glycoprotein</td>
+</tr>
+<!-- Side 1 Item Lines for New Junction -->
+<tr class="mutation_table_row_1">
+<td rowspan="1" class="junction_gene">MN908947</td>
+<td align="center" class="junction_gene">667&nbsp;=</td><td align="center" class="junction_gene">739 (0.330)</td><td rowspan="2" align="center">20060 (9.040)</td>
+<td rowspan="2" align="center">28/470</td>
+<td rowspan="2" align="center">NT</td>
+<td rowspan="2" align="center">81.1%</td>
+<td align="center" class="junction_gene">coding&nbsp;(402/13203&nbsp;nt)</td>
+<td align="center" class="junction_gene"><i>orf1ab</i></td>
+<td class="junction_gene">orf1ab polyprotein</td>
+</tr>
+<!-- Side 2 Item Lines for New Junction -->
+<tr class="mutation_table_row_1">
+<td rowspan="1" class="junction_gene">MN908947</td>
+<td align="center" class="junction_gene">=&nbsp;1116</td>
+<td align="center" class="junction_gene">8612 (3.880)</td><td align="center" class="junction_gene">coding&nbsp;(851/13203&nbsp;nt)</td>
+<td align="center" class="junction_gene"><i>orf1ab</i></td>
+<td class="junction_gene">orf1ab polyprotein</td>
+</tr>
+</table>
+</body></html>

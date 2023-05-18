@@ -1,0 +1,200 @@
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: SC2250/host_removal/SC2250_R1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.1
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Using Illumina adapter for trimming (count: 24). Second best hit was smallRNA (count: 0)
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file will be GZIP compressed
+
+
+This is cutadapt 4.1 with Python 3.9.13
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC SC2250/host_removal/SC2250_R1.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 0.45 s (43 µs/read; 1.38 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                  10,311
+Reads with adapters:                     3,956 (38.4%)
+Reads written (passing filters):        10,311 (100.0%)
+
+Total basepairs processed:     2,588,061 bp
+Quality-trimmed:                  93,025 bp (3.6%)
+Total written (filtered):      2,403,868 bp (92.9%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 3956 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 21.5%
+  C: 19.1%
+  G: 12.6%
+  T: 31.9%
+  none/other: 14.9%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	2096	2577.8	0	2096
+2	1089	644.4	0	1089
+3	92	161.1	0	92
+4	51	40.3	0	51
+7	3	0.6	0	3
+8	3	0.2	0	3
+11	1	0.0	1	0 1
+12	2	0.0	1	2
+15	1	0.0	1	1
+16	1	0.0	1	1
+17	2	0.0	1	2
+19	1	0.0	1	1
+21	1	0.0	1	0 1
+23	1	0.0	1	1
+24	2	0.0	1	2
+25	1	0.0	1	1
+36	1	0.0	1	1
+44	1	0.0	1	0 1
+49	1	0.0	1	0 1
+58	1	0.0	1	1
+62	1	0.0	1	1
+66	2	0.0	1	2
+69	1	0.0	1	1
+70	1	0.0	1	0 1
+71	2	0.0	1	1 1
+72	3	0.0	1	0 3
+73	6	0.0	1	1 5
+74	16	0.0	1	0 16
+75	43	0.0	1	0 43
+76	40	0.0	1	2 38
+77	45	0.0	1	1 44
+78	31	0.0	1	0 31
+79	16	0.0	1	0 16
+80	15	0.0	1	0 15
+81	8	0.0	1	0 8
+82	11	0.0	1	0 11
+83	8	0.0	1	0 8
+84	1	0.0	1	0 1
+85	6	0.0	1	0 6
+86	4	0.0	1	0 4
+87	4	0.0	1	0 4
+88	3	0.0	1	0 3
+89	2	0.0	1	0 2
+90	3	0.0	1	0 3
+91	1	0.0	1	0 1
+92	3	0.0	1	0 3
+93	3	0.0	1	0 3
+94	4	0.0	1	1 3
+95	3	0.0	1	0 3
+96	2	0.0	1	0 2
+97	3	0.0	1	1 2
+98	3	0.0	1	0 3
+99	1	0.0	1	0 1
+101	2	0.0	1	0 2
+102	2	0.0	1	0 2
+103	4	0.0	1	0 4
+106	1	0.0	1	0 1
+108	1	0.0	1	0 1
+109	2	0.0	1	0 2
+110	2	0.0	1	0 2
+111	2	0.0	1	0 2
+112	1	0.0	1	0 1
+113	4	0.0	1	0 4
+115	1	0.0	1	0 1
+117	2	0.0	1	0 2
+118	1	0.0	1	0 1
+119	1	0.0	1	0 1
+120	2	0.0	1	0 2
+122	3	0.0	1	0 3
+124	2	0.0	1	0 2
+125	2	0.0	1	0 2
+126	3	0.0	1	0 3
+127	3	0.0	1	0 3
+128	1	0.0	1	0 1
+130	2	0.0	1	0 2
+131	3	0.0	1	0 3
+133	2	0.0	1	0 2
+135	4	0.0	1	0 4
+136	2	0.0	1	1 1
+137	2	0.0	1	0 2
+138	2	0.0	1	0 2
+141	3	0.0	1	0 3
+142	1	0.0	1	0 1
+143	1	0.0	1	0 1
+144	3	0.0	1	0 3
+145	1	0.0	1	0 1
+147	1	0.0	1	0 1
+148	2	0.0	1	0 2
+149	2	0.0	1	0 2
+150	1	0.0	1	0 1
+151	1	0.0	1	0 1
+152	1	0.0	1	0 1
+153	5	0.0	1	0 5
+155	1	0.0	1	0 1
+157	3	0.0	1	0 3
+158	1	0.0	1	0 1
+159	2	0.0	1	0 2
+160	1	0.0	1	0 1
+161	1	0.0	1	0 1
+163	2	0.0	1	0 2
+164	2	0.0	1	0 2
+165	1	0.0	1	0 1
+167	5	0.0	1	0 5
+168	2	0.0	1	0 2
+169	1	0.0	1	0 1
+170	5	0.0	1	0 5
+171	3	0.0	1	0 3
+172	3	0.0	1	0 3
+173	1	0.0	1	0 1
+174	5	0.0	1	0 5
+175	1	0.0	1	0 1
+176	2	0.0	1	0 2
+177	1	0.0	1	0 1
+178	3	0.0	1	0 3
+179	1	0.0	1	0 1
+180	1	0.0	1	0 1
+182	2	0.0	1	0 2
+185	1	0.0	1	0 1
+186	2	0.0	1	0 2
+187	1	0.0	1	0 1
+188	2	0.0	1	0 2
+191	1	0.0	1	0 1
+193	1	0.0	1	0 1
+195	2	0.0	1	0 2
+196	1	0.0	1	0 1
+197	1	0.0	1	0 1
+201	1	0.0	1	0 1
+204	1	0.0	1	0 1
+209	1	0.0	1	0 1
+210	1	0.0	1	0 1
+215	1	0.0	1	0 1
+217	1	0.0	1	0 1
+220	1	0.0	1	0 1
+225	1	0.0	1	0 1
+226	1	0.0	1	0 1
+238	1	0.0	1	0 1
+245	2	0.0	1	0 2
+246	3	0.0	1	0 3
+247	2	0.0	1	0 2
+248	1	0.0	1	0 1
+249	6	0.0	1	0 6
+250	6	0.0	1	0 6
+251	137	0.0	1	0 137
+
+RUN STATISTICS FOR INPUT FILE: SC2250/host_removal/SC2250_R1.fastq.gz
+=============================================
+10311 sequences processed in total
+

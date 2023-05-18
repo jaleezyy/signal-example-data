@@ -1,0 +1,66 @@
+Aligning contigs to reference...
+	Aligning contigs to the reference
+Filtering alignments...
+Parsing coords...
+Loading reference...
+	Loaded [MN908947.3]
+	Total Regions: 1
+	Total Region Length: 29903
+Analyzing contigs...
+CONTIG: Consensus_SC2285.consensus_threshold_0.75_quality_20 (29904bp)
+Best alignment score: 6712.0 (LEN: 6716, IDY: 99.94), Total number of alignments: 10
+			Looking for the best set of alignments (out of 10 total alignments)
+			The best set is below. Score: 26255.9, number of alignments: 10, unaligned bases: 3575
+		This contig is misassembled.
+			Real Alignment 1: 343 1623 | 343 1623 | 1281 1281 | 99.92 | MN908947.3 Consensus_SC2285.consensus_threshold_0.75_quality_20
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 2: 1891 7092 | 1891 7092 | 5202 5202 | 99.9 | MN908947.3 Consensus_SC2285.consensus_threshold_0.75_quality_20
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 3: 7333 8499 | 7333 8499 | 1167 1167 | 99.91 | MN908947.3 Consensus_SC2285.consensus_threshold_0.75_quality_20
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 4: 8914 9245 | 8914 9245 | 332 332 | 99.7 | MN908947.3 Consensus_SC2285.consensus_threshold_0.75_quality_20
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 5: 9807 10737 | 9807 10737 | 931 931 | 100.0 | MN908947.3 Consensus_SC2285.consensus_threshold_0.75_quality_20
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 6: 11023 17738 | 11023 17738 | 6716 6716 | 99.94 | MN908947.3 Consensus_SC2285.consensus_threshold_0.75_quality_20
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 7: 17994 19591 | 17994 19591 | 1598 1598 | 99.87 | MN908947.3 Consensus_SC2285.consensus_threshold_0.75_quality_20
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 8: 20201 21427 | 20201 21427 | 1227 1227 | 99.92 | MN908947.3 Consensus_SC2285.consensus_threshold_0.75_quality_20
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 9: 21552 22904 | 21552 22904 | 1353 1353 | 99.78 | MN908947.3 Consensus_SC2285.consensus_threshold_0.75_quality_20
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 10: 23145 29665 | 23145 29666 | 6521 6522 | 99.85 | MN908947.3 Consensus_SC2285.consensus_threshold_0.75_quality_20
+
+Analyzing coverage...
+Writing SNPs into /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2285/quast/contigs_reports/minimap_output/SC2285-consensus.used_snps.gz
+
+Analysis is finished!
+Founded SNPs were written into /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2285/quast/contigs_reports/minimap_output/SC2285-consensus.used_snps.gz
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Scaffold gap extensive misassemblies: 0
+	Scaffold gap local misassemblies: 9
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Unaligned Contigs: 0 + 0 part
+Half Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 0
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Extra Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each of these contigs was used.
+
+	Covered Bases: 26328
+
+	SNPs: 26
+	Insertions: 2
+	Deletions: 1
+

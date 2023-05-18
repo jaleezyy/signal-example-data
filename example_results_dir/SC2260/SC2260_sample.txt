@@ -1,0 +1,72 @@
+SARS-CoV-2 Illumina GeNome Assembly Line (SIGNAL), version v1.5.6
+https://github.com/jaleezyy/covid-19-signal
+
+Note: Asterisks (*) indicates a discrepancy between iVar (default) and FreeBayes (if run)
+
+Sample: SC2260
+
+Pangolin Lineage Assignment
+    Unassigned
+
+Nextclade Clade Assignment
+    nan
+
+Data Volume
+    Raw Data (read pairs): 83415
+    Raw Data (base pairs): 41874330
+    Post Primer Removal (read pairs): 83415
+    Post Primer Removal (base pairs): 29791981
+    Post Trim (read pairs): 81985
+
+Quality Control Flags
+    FAIL  Genome Fraction greater than 90%
+    FAIL  No indels detected (maximum length 85bp)
+    FAIL  Depth of coverage >= 2000x
+    WARN  All variants with at least 90% frequency among reads
+    PASS  Frameshifts in SARS-CoV-2 open reading frames
+    WARN  Reads per base sequence quality
+    PASS  Sequencing adapter removed
+    FAIL  At least 90% of positions have coverage >= 100x
+    WARN  At least 90% of positions have coverage >= 1000x
+
+FASTQC Flags
+    FAIL  Per base sequence content
+    FAIL  Per sequence GC content
+    WARN  Per base sequence quality
+    WARN  Per tile sequence quality
+    WARN  Sequence Length Distribution
+
+Kraken2
+    Reads SARS-CoV-2 (%): 0.48
+
+QUAST
+    Genome Length (bp): 29903.0
+    Genome Fraction (%): 0.0
+    N's per 100 kbp: 99354.58
+    Genomic Features: Failure to align to reference
+    Mismatches: Failure to align to reference
+    Mismatches per 100 kbp: Failure to align to reference
+    Indels: Failure to align to reference
+    Indels per 100 kbp: Failure to align to reference
+    Average Depth of Coverage: 1.7
+        Fraction with 0 coverage: 0.485
+        Fraction with 1x-10x coverage: 0.509
+        Fraction with 11x-100x coverage: 0.005
+        Fraction with 101x-1000x coverage: 0.001
+        Fraction with 1001x-2000x coverage: 0.0
+        Fraction with 2001x-10000x coverage: 0.0
+        Fraction with > 10000x coverage: 0.0
+    5' Ns: 1871
+    3' Ns: 11628
+
+Variants in Consensus Genome (iVar)
+    A10171C
+
+Unique Variants in Consensus Genome (FreeBayes)
+
+Nucleotide Differences in Consensus Genomes (FreeBayes as reference)
+    N2905A
+
+Variants in Read Alignment (BreSeq)
+    MC;	1;	Δ29,903 bp;	(100%);	'';	'orf1ab – ORF10'
+

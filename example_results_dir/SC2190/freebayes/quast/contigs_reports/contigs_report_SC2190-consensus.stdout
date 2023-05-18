@@ -1,0 +1,50 @@
+Aligning contigs to reference...
+	Aligning contigs to the reference
+Filtering alignments...
+Parsing coords...
+Loading reference...
+	Loaded [MN908947.3]
+	Total Regions: 1
+	Total Region Length: 29903
+Analyzing contigs...
+CONTIG: SC2190 (29902bp)
+Best alignment score: 20321.8 (LEN: 20334, IDY: 99.94), Total number of alignments: 2
+			Looking for the best set of alignments (out of 2 total alignments)
+			The best set is below. Score: 29534.2, number of alignments: 2, unaligned bases: 346
+		This contig is misassembled.
+			Real Alignment 1: 27 9249 | 27 9248 | 9223 9222 | 99.95 | MN908947.3 SC2190
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = -160 (local)
+			Real Alignment 2: 9503 29836 | 9502 29835 | 20334 20334 | 99.94 | MN908947.3 SC2190
+
+Analyzing coverage...
+Writing SNPs into /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2190/freebayes/quast/contigs_reports/minimap_output/SC2190-consensus.used_snps.gz
+
+Analysis is finished!
+Founded SNPs were written into /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2190/freebayes/quast/contigs_reports/minimap_output/SC2190-consensus.used_snps.gz
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Scaffold gap extensive misassemblies: 0
+	Scaffold gap local misassemblies: 1
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Unaligned Contigs: 0 + 0 part
+Half Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 0
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Extra Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each of these contigs was used.
+
+	Covered Bases: 29557
+
+	SNPs: 16
+	Insertions: 0
+	Deletions: 1
+

@@ -1,0 +1,31 @@
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 98038 sequences (14125190 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (32, 6457, 18, 49)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (1835, 4061, 6816)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 16778)
+[M::mem_pestat] mean and std.dev: (4244.19, 2637.39)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 21759)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (26, 27, 27)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (24, 29)
+[M::mem_pestat] mean and std.dev: (26.62, 1.27)
+[M::mem_pestat] low and high boundaries for proper pairs: (22, 32)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (985, 3362, 6616)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 17878)
+[M::mem_pestat] mean and std.dev: (3753.89, 2925.52)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 23509)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (4061, 4061, 8515)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 17423)
+[M::mem_pestat] mean and std.dev: (5381.86, 2492.70)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 21877)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 98038 reads in 9.155 CPU sec, 4.587 real sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa mem -t 2 SC2246/core/viral_reference SC2246/adapter_trimmed/SC2246_R1_val_1_posttrim_filter.fq.gz SC2246/adapter_trimmed/SC2246_R2_val_2_posttrim_filter.fq.gz
+[main] Real time: 6.916 sec; CPU: 9.572 sec
+[bam_sort_core] merging from 0 files and 2 in-memory blocks...

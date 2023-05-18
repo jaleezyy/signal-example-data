@@ -1,0 +1,4 @@
+Fri Nov 25 12:40:37 2022
+
+breseq --reference /workspace/home/nasirja/covid-19-signal/data/MN908947.3.gbk --num-processors 4 --polymorphism-prediction --brief-html-output --output Plate4BLANK4/breseq Plate4BLANK4/mapped_clean_reads/Plate4BLANK4_R1.fastq.gz Plate4BLANK4/mapped_clean_reads/Plate4BLANK4_R2.fastq.gz
+

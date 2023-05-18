@@ -1,0 +1,109 @@
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##fileDate=20221125
+##source=freeBayes v1.3.2-dirty
+##reference=/workspace/home/nasirja/covid-19-signal/data/MN908947.3.fasta
+##contig=<ID=MN908947.3,length=29903>
+##phasing=none
+##commandline="freebayes -p 1 -f /workspace/home/nasirja/covid-19-signal/data/MN908947.3.fasta -F 0.2 -C 1 --pooled-continuous --min-coverage 10 --gvcf --gvcf-dont-use-chunk true SC2285/core/SC2285_viral_reference.mapping.primertrimmed.sorted.bam"
+##INFO=<ID=NS,Number=1,Type=Integer,Description="Number of samples with data">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Total read depth at the locus">
+##INFO=<ID=DPB,Number=1,Type=Float,Description="Total read depth per bp at the locus; bases in reads overlapping / bases in haplotype">
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Total number of alternate alleles in called genotypes">
+##INFO=<ID=AN,Number=1,Type=Integer,Description="Total number of alleles in called genotypes">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Estimated allele frequency in the range (0,1]">
+##INFO=<ID=RO,Number=1,Type=Integer,Description="Count of full observations of the reference haplotype.">
+##INFO=<ID=AO,Number=A,Type=Integer,Description="Count of full observations of this alternate haplotype.">
+##INFO=<ID=PRO,Number=1,Type=Float,Description="Reference allele observation count, with partial observations recorded fractionally">
+##INFO=<ID=PAO,Number=A,Type=Float,Description="Alternate allele observations, with partial observations recorded fractionally">
+##INFO=<ID=QR,Number=1,Type=Float,Description="Reference allele quality sum in phred">
+##INFO=<ID=QA,Number=A,Type=Integer,Description="Alternate allele quality sum in phred">
+##INFO=<ID=PQR,Number=1,Type=Float,Description="Reference allele quality sum in phred for partial observations">
+##INFO=<ID=PQA,Number=A,Type=Float,Description="Alternate allele quality sum in phred for partial observations">
+##INFO=<ID=SRF,Number=1,Type=Integer,Description="Number of reference observations on the forward strand">
+##INFO=<ID=SRR,Number=1,Type=Integer,Description="Number of reference observations on the reverse strand">
+##INFO=<ID=SAF,Number=A,Type=Integer,Description="Number of alternate observations on the forward strand">
+##INFO=<ID=SAR,Number=A,Type=Integer,Description="Number of alternate observations on the reverse strand">
+##INFO=<ID=SRP,Number=1,Type=Float,Description="Strand balance probability for the reference allele: Phred-scaled upper-bounds estimate of the probability of observing the deviation between SRF and SRR given E(SRF/SRR) ~ 0.5, derived using Hoeffding's inequality">
+##INFO=<ID=SAP,Number=A,Type=Float,Description="Strand balance probability for the alternate allele: Phred-scaled upper-bounds estimate of the probability of observing the deviation between SAF and SAR given E(SAF/SAR) ~ 0.5, derived using Hoeffding's inequality">
+##INFO=<ID=AB,Number=A,Type=Float,Description="Allele balance at heterozygous sites: a number between 0 and 1 representing the ratio of reads showing the reference allele to all reads, considering only reads from individuals called as heterozygous">
+##INFO=<ID=ABP,Number=A,Type=Float,Description="Allele balance probability at heterozygous sites: Phred-scaled upper-bounds estimate of the probability of observing the deviation between ABR and ABA given E(ABR/ABA) ~ 0.5, derived using Hoeffding's inequality">
+##INFO=<ID=RUN,Number=A,Type=Integer,Description="Run length: the number of consecutive repeats of the alternate allele in the reference genome">
+##INFO=<ID=RPP,Number=A,Type=Float,Description="Read Placement Probability: Phred-scaled upper-bounds estimate of the probability of observing the deviation between RPL and RPR given E(RPL/RPR) ~ 0.5, derived using Hoeffding's inequality">
+##INFO=<ID=RPPR,Number=1,Type=Float,Description="Read Placement Probability for reference observations: Phred-scaled upper-bounds estimate of the probability of observing the deviation between RPL and RPR given E(RPL/RPR) ~ 0.5, derived using Hoeffding's inequality">
+##INFO=<ID=RPL,Number=A,Type=Float,Description="Reads Placed Left: number of reads supporting the alternate balanced to the left (5') of the alternate allele">
+##INFO=<ID=RPR,Number=A,Type=Float,Description="Reads Placed Right: number of reads supporting the alternate balanced to the right (3') of the alternate allele">
+##INFO=<ID=EPP,Number=A,Type=Float,Description="End Placement Probability: Phred-scaled upper-bounds estimate of the probability of observing the deviation between EL and ER given E(EL/ER) ~ 0.5, derived using Hoeffding's inequality">
+##INFO=<ID=EPPR,Number=1,Type=Float,Description="End Placement Probability for reference observations: Phred-scaled upper-bounds estimate of the probability of observing the deviation between EL and ER given E(EL/ER) ~ 0.5, derived using Hoeffding's inequality">
+##INFO=<ID=DPRA,Number=A,Type=Float,Description="Alternate allele depth ratio.  Ratio between depth in samples with each called alternate allele and those without.">
+##INFO=<ID=ODDS,Number=1,Type=Float,Description="The log odds ratio of the best genotype combination to the second-best.">
+##INFO=<ID=GTI,Number=1,Type=Integer,Description="Number of genotyping iterations required to reach convergence or bailout.">
+##INFO=<ID=TYPE,Number=A,Type=String,Description="The type of allele, either snp, mnp, ins, del, or complex.">
+##INFO=<ID=CIGAR,Number=A,Type=String,Description="The extended CIGAR representation of each alternate allele, with the exception that '=' is replaced by 'M' to ease VCF parsing.  Note that INDEL alleles do not have the first matched base (which is provided by default, per the spec) referred to by the CIGAR.">
+##INFO=<ID=NUMALT,Number=1,Type=Integer,Description="Number of unique non-reference alleles in called genotypes at this position.">
+##INFO=<ID=MEANALT,Number=A,Type=Float,Description="Mean number of unique non-reference allele observations per sample with the corresponding alternate alleles.">
+##INFO=<ID=LEN,Number=A,Type=Integer,Description="allele length">
+##INFO=<ID=MQM,Number=A,Type=Float,Description="Mean mapping quality of observed alternate alleles">
+##INFO=<ID=MQMR,Number=1,Type=Float,Description="Mean mapping quality of observed reference alleles">
+##INFO=<ID=PAIRED,Number=A,Type=Float,Description="Proportion of observed alternate alleles which are supported by properly paired read fragments">
+##INFO=<ID=PAIREDR,Number=1,Type=Float,Description="Proportion of observed reference alleles which are supported by properly paired read fragments">
+##INFO=<ID=MIN_DP,Number=1,Type=Integer,Description="Minimum depth in gVCF output block.">
+##INFO=<ID=END,Number=1,Type=Integer,Description="Last position (inclusive) in gVCF output record.">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=GQ,Number=1,Type=Float,Description="Genotype Quality, the Phred-scaled marginal (or unconditional) probability of the called genotype">
+##FORMAT=<ID=GL,Number=G,Type=Float,Description="Genotype Likelihood, log10-scaled likelihoods of the data given the called genotype for each possible genotype generated from the reference and alternate alleles given the sample ploidy">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Read Depth">
+##FORMAT=<ID=AD,Number=R,Type=Integer,Description="Number of observation for each allele">
+##FORMAT=<ID=RO,Number=1,Type=Integer,Description="Reference allele observation count">
+##FORMAT=<ID=QR,Number=1,Type=Float,Description="Sum of quality of the reference observations">
+##FORMAT=<ID=AO,Number=A,Type=Integer,Description="Alternate allele observation count">
+##FORMAT=<ID=QA,Number=A,Type=Integer,Description="Sum of quality of the alternate observations">
+##FORMAT=<ID=MIN_DP,Number=1,Type=Integer,Description="Minimum depth in gVCF output block.">
+##INFO=<ID=VAF,Number=A,Type=Float,Description="Variant allele fraction, called from observed reference/alt reads">
+##INFO=<ID=ConsensusTag,Number=1,Type=String,Description="The type of base to be included in the consensus sequence (IUPAC or Fixed)">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	unknown
+MN908947.3	841	.	C	A	.	.	DP=5625;VAF=0.875556;ConsensusTag=fixed	.	.
+MN908947.3	1406	.	G	T	.	.	DP=2431;VAF=0.417112;ConsensusTag=ambiguous	.	.
+MN908947.3	1947	.	T	C	.	.	DP=26;VAF=0.846154;ConsensusTag=fixed	.	.
+MN908947.3	2110	.	C	T	.	.	DP=48;VAF=0.979167;ConsensusTag=fixed	.	.
+MN908947.3	3037	.	C	T	.	.	DP=1367;VAF=0.998537;ConsensusTag=fixed	.	.
+MN908947.3	3140	.	C	T	.	.	DP=738;VAF=1;ConsensusTag=fixed	.	.
+MN908947.3	3981	.	T	C	.	.	DP=20;VAF=0.25;ConsensusTag=ambiguous	.	.
+MN908947.3	6731	.	A	G	.	.	DP=3471;VAF=1;ConsensusTag=fixed	.	.
+MN908947.3	8027	.	G	T	.	.	DP=578;VAF=0.99481;ConsensusTag=fixed	.	.
+MN908947.3	8968	.	A	G	.	.	DP=1009;VAF=0.979187;ConsensusTag=fixed	.	.
+MN908947.3	10446	.	G	T	.	.	DP=791;VAF=0.466498;ConsensusTag=ambiguous	.	.
+MN908947.3	12080	.	G	A	.	.	DP=1073;VAF=0.996272;ConsensusTag=fixed	.	.
+MN908947.3	12710	.	C	G	.	.	DP=493;VAF=0.338742;ConsensusTag=ambiguous	.	.
+MN908947.3	13642	.	TCTTAC	TC	.	.	DP=1330;VAF=0.516541;ConsensusTag=fixed	.	.
+MN908947.3	14408	.	C	T	.	.	DP=122;VAF=1;ConsensusTag=fixed	.	.
+MN908947.3	14866	.	G	T	.	.	DP=622;VAF=0.516077;ConsensusTag=ambiguous	.	.
+MN908947.3	15380	.	G	T	.	.	DP=471;VAF=0.989384;ConsensusTag=fixed	.	.
+MN908947.3	15438	.	G	T	.	.	DP=249;VAF=0.987952;ConsensusTag=fixed	.	.
+MN908947.3	15929	.	C	T	.	.	DP=1640;VAF=0.333537;ConsensusTag=ambiguous	.	.
+MN908947.3	16304	.	C	T	.	.	DP=55;VAF=0.6;ConsensusTag=ambiguous	.	.
+MN908947.3	18877	.	C	T	.	.	DP=10749;VAF=0.999535;ConsensusTag=fixed	.	.
+MN908947.3	18981	.	C	T	.	.	DP=591;VAF=0.979695;ConsensusTag=fixed	.	.
+MN908947.3	19350	.	TAATT	TATT	.	.	DP=29;VAF=0.689655;ConsensusTag=fixed	.	.
+MN908947.3	20812	.	C	T	.	.	DP=33;VAF=1;ConsensusTag=fixed	.	.
+MN908947.3	21785	.	G	C	.	.	DP=1900;VAF=0.999474;ConsensusTag=fixed	.	.
+MN908947.3	21928	.	C	T	.	.	DP=1812;VAF=0.998344;ConsensusTag=fixed	.	.
+MN908947.3	22444	.	C	T	.	.	DP=169;VAF=0.988166;ConsensusTag=fixed	.	.
+MN908947.3	22747	.	C	T	.	.	DP=29009;VAF=0.407494;ConsensusTag=ambiguous	.	.
+MN908947.3	22904	.	A	T	.	.	DP=24;VAF=0.25;ConsensusTag=ambiguous	.	.
+MN908947.3	23403	.	A	G	.	.	DP=2417;VAF=0.998759;ConsensusTag=fixed	.	.
+MN908947.3	24072	.	ATG	AG	.	.	DP=68;VAF=0.970588;ConsensusTag=fixed	.	.
+MN908947.3	24563	.	CTTC	CTTTA	.	.	DP=177;VAF=0.536723;ConsensusTag=fixed	.	.
+MN908947.3	24893	.	G	C	.	.	DP=9706;VAF=0.999485;ConsensusTag=fixed	.	.
+MN908947.3	25207	.	C	T	.	.	DP=129;VAF=1;ConsensusTag=fixed	.	.
+MN908947.3	25357	.	C	A	.	.	DP=12015;VAF=0.548148;ConsensusTag=ambiguous	.	.
+MN908947.3	25563	.	G	T	.	.	DP=11890;VAF=0.999159;ConsensusTag=fixed	.	.
+MN908947.3	25587	.	CAAAAAGAGAT	CAAAAGAGAT	.	.	DP=12038;VAF=0.543944;ConsensusTag=fixed	.	.
+MN908947.3	26020	.	G	T	.	.	DP=79;VAF=0.35443;ConsensusTag=ambiguous	.	.
+MN908947.3	26735	.	C	T	.	.	DP=7913;VAF=0.999874;ConsensusTag=fixed	.	.
+MN908947.3	28093	.	C	T	.	.	DP=2572;VAF=0.997667;ConsensusTag=fixed	.	.
+MN908947.3	28196	.	T	C	.	.	DP=8848;VAF=0.259381;ConsensusTag=ambiguous	.	.
+MN908947.3	28475	.	CGA	CA	.	.	DP=170;VAF=0.511765;ConsensusTag=fixed	.	.
+MN908947.3	28854	.	C	T	.	.	DP=918;VAF=1;ConsensusTag=fixed	.	.
+MN908947.3	29543	.	G	T	.	.	DP=675;VAF=0.312593;ConsensusTag=ambiguous	.	.
+MN908947.3	29555	.	C	T	.	.	DP=678;VAF=0.9941;ConsensusTag=fixed	.	.

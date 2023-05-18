@@ -1,0 +1,102 @@
+SARS-CoV-2 Illumina GeNome Assembly Line (SIGNAL), version v1.5.6
+https://github.com/jaleezyy/covid-19-signal
+
+Note: Asterisks (*) indicates a discrepancy between iVar (default) and FreeBayes (if run)
+
+Sample: SC2213
+
+Pangolin Lineage Assignment
+    B.1.2
+
+Nextclade Clade Assignment
+    20G
+
+Data Volume
+    Raw Data (read pairs): 770078
+    Raw Data (base pairs): 386579156
+    Post Primer Removal (read pairs): 770078
+    Post Primer Removal (base pairs): 380646152
+    Post Trim (read pairs): 767387
+
+Quality Control Flags
+    PASS  Genome Fraction greater than 90%
+    PASS  No indels detected (maximum length 85bp)
+    PASS  Depth of coverage >= 2000x
+    WARN  All variants with at least 90% frequency among reads
+    FAIL  Frameshifts in SARS-CoV-2 open reading frames
+    PASS  Reads per base sequence quality
+    PASS  Sequencing adapter removed
+    PASS  At least 90% of positions have coverage >= 100x
+    PASS  At least 90% of positions have coverage >= 1000x
+
+FASTQC Flags
+    FAIL  Per base sequence content
+    FAIL  Per sequence GC content
+    WARN  Per tile sequence quality
+    WARN  Sequence Length Distribution
+
+Kraken2
+    Reads SARS-CoV-2 (%): 94.29
+
+QUAST
+    Genome Length (bp): 29903.0
+    Genome Fraction (%): 99.776
+    N's per 100 kbp: 230.75
+    Genomic Features: 22 + 2 part
+    Mismatches: 22.0
+    Mismatches per 100 kbp: 73.74
+    Indels: 0.0
+    Indels per 100 kbp: 0.0
+    Average Depth of Coverage: 10224.2
+        Fraction with 0 coverage: 0.0
+        Fraction with 1x-10x coverage: 0.002
+        Fraction with 11x-100x coverage: 0.0
+        Fraction with 101x-1000x coverage: 0.037
+        Fraction with 1001x-2000x coverage: 0.053
+        Fraction with 2001x-10000x coverage: 0.51
+        Fraction with > 10000x coverage: 0.398
+    5' Ns: 0
+    3' Ns: 67
+
+Variants in Consensus Genome (iVar)
+    C241T C1059T C2485T C3037T C4832T C7113T G7756T C10319T C14408T A18424G G21004T
+    C21234T C21304T A21390G A23403G G25563T G25907T C26688T C27964T G28116A C28472T
+    G28817T C28869T C29732G
+
+Unique Variants in Consensus Genome (FreeBayes)
+
+Nucleotide Differences in Consensus Genomes (FreeBayes as reference)
+
+Variants in Read Alignment (BreSeq)
+    RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+    RA;	1,059;	C→T;	(100%);	'T265I (ACC→ATC)';	'orf1ab →'
+    RA;	2,485;	C→T;	(100%);	'I740I (ATC→ATT)';	'orf1ab →'
+    RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+    RA;	4,832;	C→T;	(100%);	'L1523L (CTA→TTA)';	'orf1ab →'
+    RA;	7,113;	C→T;	(68.0%);	'T2283I (ACT→ATT)';	'orf1ab →'
+    RA;	7,388;	G→A;	(8.6%);	'A2375T (GCC→ACC)';	'orf1ab →'
+    RA;	7,756;	G→T;	(26.4%);	'K2497N (AAG→AAT)';	'orf1ab →'
+    RA;	9,843;	T→A;	(7.4%);	'L3193* (TTG→TAG)';	'orf1ab →'
+    RA;	10,319;	C→T;	(100%);	'L3352F (CTT→TTT)';	'orf1ab →'
+    RA;	14,408;	C→T;	(100%);	'P314L (CCT→CTT)';	'orf1ab →'
+    RA;	17,678;	C→T;	(6.7%);	'T1404M (ACG→ATG)';	'orf1ab →'
+    RA;	18,424;	A→G;	(100%);	'N1653D (AAT→GAT)';	'orf1ab →'
+    RA;	20,465;	A→G;	(8.1%);	'D2333G (GAT→GGT)';	'orf1ab →'
+    RA;	21,004;	G→T;	(100%);	'A2513S (GCA→TCA)';	'orf1ab →'
+    RA;	21,234;	C→T;	(100%);	'A2589A (GCC→GCT)';	'orf1ab →'
+    RA;	21,304;	C→T;	(100%);	'R2613C (CGC→TGC)';	'orf1ab →'
+    RA;	21,390;	A→G;	(100%);	'L2641L (TTA→TTG)';	'orf1ab →'
+    RA;	23,403;	A→G;	(100%);	'D614G (GAT→GGT)';	'S →'
+    RA;	25,563;	G→T;	(100%);	'Q57H (CAG→CAT)';	'ORF3a →'
+    RA;	25,907;	G→T;	(94.4%);	'G172V (GGT→GTT)';	'ORF3a →'
+    RA;	26,688;	C→T;	(100%);	'L56L (CTG→TTG)';	'M →'
+    RA;	27,964;	C→T;	(100%);	'S24L (TCA→TTA)';	'ORF8 →'
+    RA;	28,116;	G→A;	(100%);	'D75N (GAT→AAT)';	'ORF8 →'
+    RA;	28,472;	C→T;	(100%);	'P67S (CCT→TCT)';	'N →'
+    RA;	28,817;	G→T;	(100%);	'A182S (GCC→TCC)';	'N →'
+    RA;	28,869;	C→T;	(100%);	'P199L (CCA→CTA)';	'N →'
+    RA;	29,171;	Δ1 bp;	(5.5%);	'coding (898/1260nt)';	'N →'
+    RA;	29,172;	Δ1 bp;	(5.6%);	'coding (899/1260nt)';	'N →'
+    JC;	29,595;	165 bp x 2;	(11.5%);	'duplication';	'[ORF10]'
+    RA;	29,837;	C→T;	(100%);	'intergenic (+163/–)';	'ORF10 →/ –'
+

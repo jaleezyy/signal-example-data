@@ -1,0 +1,81 @@
+/workspace/home/nasirja/covid-19-signal/.snakemake/conda/a8ec38a9ec4fe8274970825bac95d17b/bin/quast SC2246/core/SC2246.consensus.fa -r /workspace/home/nasirja/covid-19-signal/data/MN908947.3.fasta -g /workspace/home/nasirja/covid-19-signal/data/MN908947.3.gff3 --output-dir SC2246/quast --threads 1
+
+Version: 5.0.2
+
+System information:
+  OS: Linux-5.4.0-77-generic-x86_64-with-debian-bullseye-sid (linux_64)
+  Python version: 3.7.12
+  CPUs number: 88
+
+Started: 2022-11-25 03:48:55
+
+Logging to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2246/quast/quast.log
+
+CWD: /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir
+Main parameters: 
+  MODE: default, threads: 1, minimum contig length: 500, minimum alignment length: 65, \
+  ambiguity: one, threshold for extensive misassembly size: 1000
+
+Reference:
+  /workspace/home/nasirja/covid-19-signal/data/MN908947.3.fasta ==> MN908947.3
+
+Contigs:
+  Pre-processing...
+  SC2246/core/SC2246.consensus.fa ==> SC2246.consensus
+
+2022-11-25 03:48:56
+Running Basic statistics processor...
+  Reference genome:
+    MN908947.3.fasta, length = 29903, num fragments = 1, GC % = 37.97
+  Contig files: 
+    SC2246.consensus
+  Calculating N50 and L50...
+    SC2246.consensus, N50 = 29903, L50 = 1, Total length = 29903, GC % = 43.37, # N's per 100 kbp =  99722.44
+  Drawing Nx plot...
+    saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2246/quast/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2246/quast/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2246/quast/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2246/quast/basic_stats/GC_content_plot.pdf
+  Drawing SC2246.consensus GC content plot...
+    saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2246/quast/basic_stats/SC2246.consensus_GC_content_plot.pdf
+Done.
+
+2022-11-25 03:48:56
+Running Contig analyzer...
+  SC2246.consensus
+  Logging to files /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2246/quast/contigs_reports/contigs_report_SC2246-consensus.stdout and contigs_report_SC2246-consensus.stderr...
+  Aligning contigs to the reference
+  /workspace/home/nasirja/covid-19-signal/.snakemake/conda/a8ec38a9ec4fe8274970825bac95d17b/bin/minimap2 \
+  -c -x asm5 -B5 -O4,16 --no-long-join -r 85 -N 50 -s 65 -z 200 --mask-level 0.9 --min-occ \
+  200 -g 2500 --score-N 2 --cs -t 1 SC2246/quast/quast_corrected_input/MN908947.3.fasta \
+  SC2246/quast/quast_corrected_input/SC2246_consensus.fa > SC2246/quast/contigs_reports/minimap_output/SC2246-consensus.coords_tmp \
+  2>> SC2246/quast/contigs_reports/contigs_report_SC2246-consensus.stderr
+  Nothing aligned for 'SC2246.consensus'.
+Failed aligning the contigs for all the assemblies. Only basic stats are going to be evaluated.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2022-11-25 03:48:58
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2022-11-25 03:48:59
+RESULTS:
+  Text versions of total report are saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2246/quast/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2246/quast/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2246/quast/report.html
+  PDF version (tables and plots) is saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2246/quast/report.pdf
+  Icarus (contig browser) is saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2246/quast/icarus.html
+  Log is saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2246/quast/quast.log
+
+Finished: 2022-11-25 03:48:59
+Elapsed time: 0:00:04.040436
+NOTICEs: 1; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!

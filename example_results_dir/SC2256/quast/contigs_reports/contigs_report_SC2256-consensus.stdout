@@ -1,0 +1,56 @@
+Aligning contigs to reference...
+	Aligning contigs to the reference
+Filtering alignments...
+Parsing coords...
+Loading reference...
+	Loaded [MN908947.3]
+	Total Regions: 1
+	Total Region Length: 29903
+Analyzing contigs...
+CONTIG: Consensus_SC2256.consensus_threshold_0.75_quality_20 (29902bp)
+Best alignment score: 11896.5 (LEN: 11906, IDY: 99.92), Total number of alignments: 5
+			Looking for the best set of alignments (out of 5 total alignments)
+			The best set is below. Score: 28513.8, number of alignments: 5, unaligned bases: 1343
+		This contig is misassembled.
+			Real Alignment 1: 324 8664 | 323 8663 | 8341 8341 | 99.92 | MN908947.3 Consensus_SC2256.consensus_threshold_0.75_quality_20
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 2: 8889 9273 | 8888 9272 | 385 385 | 100.0 | MN908947.3 Consensus_SC2256.consensus_threshold_0.75_quality_20
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 3: 9503 10737 | 9502 10736 | 1235 1235 | 99.92 | MN908947.3 Consensus_SC2256.consensus_threshold_0.75_quality_20
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 4: 10999 22904 | 10998 22903 | 11906 11906 | 99.92 | MN908947.3 Consensus_SC2256.consensus_threshold_0.75_quality_20
+			  Incorrectly estimated size of scaffold gap between these two alignments: gap length difference = 0 (local)
+			Real Alignment 5: 23145 29836 | 23144 29835 | 6692 6692 | 99.88 | MN908947.3 Consensus_SC2256.consensus_threshold_0.75_quality_20
+
+Analyzing coverage...
+Writing SNPs into /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2256/quast/contigs_reports/minimap_output/SC2256-consensus.used_snps.gz
+
+Analysis is finished!
+Founded SNPs were written into /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2256/quast/contigs_reports/minimap_output/SC2256-consensus.used_snps.gz
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Scaffold gap extensive misassemblies: 0
+	Scaffold gap local misassemblies: 4
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Unaligned Contigs: 0 + 0 part
+Half Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 0
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Extra Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each of these contigs was used.
+
+	Covered Bases: 28559
+
+	SNPs: 26
+	Insertions: 0
+	Deletions: 0
+

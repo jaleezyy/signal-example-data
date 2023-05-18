@@ -1,0 +1,103 @@
+SARS-CoV-2 Illumina GeNome Assembly Line (SIGNAL), version v1.5.6
+https://github.com/jaleezyy/covid-19-signal
+
+Note: Asterisks (*) indicates a discrepancy between iVar (default) and FreeBayes (if run)
+
+Sample: SC2265
+
+Pangolin Lineage Assignment
+    B.1.2
+
+Nextclade Clade Assignment
+    20G
+
+Data Volume
+    Raw Data (read pairs): 304758
+    Raw Data (base pairs): 152988516
+    Post Primer Removal (read pairs): 304758
+    Post Primer Removal (base pairs): 139126402
+    Post Trim (read pairs): 302465
+
+Quality Control Flags
+    PASS  Genome Fraction greater than 90%
+    PASS  No indels detected (maximum length 85bp)
+    PASS  Depth of coverage >= 2000x
+    WARN  All variants with at least 90% frequency among reads
+    PASS  Frameshifts in SARS-CoV-2 open reading frames
+    PASS  Reads per base sequence quality
+    PASS  Sequencing adapter removed
+    FAIL  At least 90% of positions have coverage >= 100x
+    WARN  At least 90% of positions have coverage >= 1000x
+
+FASTQC Flags
+    FAIL  Per tile sequence quality
+    FAIL  Per base sequence content
+    FAIL  Per sequence GC content
+    WARN  Sequence Length Distribution
+
+Kraken2
+    Reads SARS-CoV-2 (%): 69.46
+
+QUAST
+    Genome Length (bp): 29902.0
+    Genome Fraction (%): 91.255
+    N's per 100 kbp: 9367.27
+    Genomic Features: 12 + 10 part
+    Mismatches: 18.0
+    Mismatches per 100 kbp: 65.96
+    Indels: 0.0
+    Indels per 100 kbp: 0.0
+    Average Depth of Coverage: 2942.8
+        Fraction with 0 coverage: 0.028
+        Fraction with 1x-10x coverage: 0.065
+        Fraction with 11x-100x coverage: 0.182
+        Fraction with 101x-1000x coverage: 0.312
+        Fraction with 1001x-2000x coverage: 0.135
+        Fraction with 2001x-10000x coverage: 0.203
+        Fraction with > 10000x coverage: 0.074
+    5' Ns: 29
+    3' Ns: 238
+
+Variants in Consensus Genome (iVar)
+    T322-G* A685G C1059T C3037T C4829T G8083A* A8085G* C9541T C10319T T10999A
+    C11479T G12128A C14408T C14805T T15762G A18424G C21304T* C21997T G23270T
+    C23367-A* A23403G C24981-T* G25281-C* G25563T C27350T C27964T C28472T C28869T
+    C29409T
+
+Unique Variants in Consensus Genome (FreeBayes)
+    TG322T GGA8083AGG CGC21304TGT,TGC
+
+Nucleotide Differences in Consensus Genomes (FreeBayes as reference)
+    A23367N T24981N C25281N
+
+Variants in Read Alignment (BreSeq)
+    RA;	685;	A→G;	(100%);	'L140L (CTA→CTG)';	'orf1ab →'
+    RA;	1,059;	C→T;	(100%);	'T265I (ACC→ATC)';	'orf1ab →'
+    RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+    RA;	3,633;	A→G;	(8.0%);	'N1123S (AAC→AGC)';	'orf1ab →'
+    RA;	4,829;	C→T;	(32.7%);	'Q1522* (CAA→TAA)';	'orf1ab →'
+    RA;	8,083;	G→A;	(100%);	'M2606I (ATG→ATA)';	'orf1ab →'
+    RA;	8,085;	A→G;	(100%);	'E2607G (GAA→GGA)';	'orf1ab →'
+    RA;	10,188;	C→T;	(21.2%);	'T3308I (ACC→ATC)';	'orf1ab →'
+    RA;	10,319;	C→T;	(100%);	'L3352F (CTT→TTT)';	'orf1ab →'
+    RA;	11,479;	C→T;	(100%);	'I3738I (ATC→ATT)';	'orf1ab →'
+    RA;	12,128;	G→A;	(53.8%);	'A3955T (GCA→ACA)';	'orf1ab →'
+    RA;	12,598;	T→C;	(8.6%);	'L4111L (CTT→CTC)';	'orf1ab →'
+    RA;	14,408;	C→T;	(100%);	'P314L (CCT→CTT)';	'orf1ab →'
+    RA;	14,805;	C→T;	(100%);	'Y446Y (TAC→TAT)';	'orf1ab →'
+    RA;	15,762;	T→G;	(25.7%);	'G765G (GGT→GGG)';	'orf1ab →'
+    RA;	17,822;	C→T;	(21.5%);	'P1452L (CCA→CTA)';	'orf1ab →'
+    RA;	18,424;	A→G;	(100%);	'N1653D (AAT→GAT)';	'orf1ab →'
+    RA;	21,304;	C→T;	(100%);	'R2613C (CGC→TGC)‡';	'orf1ab →'
+    RA;	21,306;	C→T;	(23.4%);	'R2613R (CGC→CGT)‡';	'orf1ab →'
+    RA;	23,270;	G→T;	(27.2%);	'A570S (GCT→TCT)';	'S →'
+    RA;	23,319;	A→T;	(13.4%);	'D586V (GAC→GTC)';	'S →'
+    RA;	23,403;	A→G;	(100%);	'D614G (GAT→GGT)';	'S →'
+    RA;	23,931;	A→T;	(6.9%);	'K790I (AAA→ATA)';	'S →'
+    RA;	25,563;	G→T;	(100%);	'Q57H (CAG→CAT)';	'ORF3a →'
+    RA;	27,350;	C→T;	(41.6%);	'S50F (TCT→TTT)';	'ORF6 →'
+    RA;	27,964;	C→T;	(100%);	'S24L (TCA→TTA)';	'ORF8 →'
+    RA;	28,472;	C→T;	(100%);	'P67S (CCT→TCT)';	'N →'
+    RA;	28,869;	C→T;	(100%);	'P199L (CCA→CTA)';	'N →'
+    RA;	29,409;	C→T;	(100%);	'T379I (ACT→ATT)';	'N →'
+

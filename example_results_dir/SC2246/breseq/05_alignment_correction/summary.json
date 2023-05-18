@@ -1,0 +1,36 @@
+{
+  "accepted_pos_hash_score_distribution": {
+    "3": 1,
+    "4": 2,
+    "5": 1,
+    "6": 1
+  },
+  "max_sam_base_quality_score": 0,
+  "observed_pos_hash_score_distribution": null,
+  "read_file": {
+    "SC2246_R1": {
+      "num_total_bases": 30433,
+      "num_total_reads": 268,
+      "num_unmatched_bases": 5319,
+      "num_unmatched_reads": 53
+    },
+    "SC2246_R2": {
+      "num_total_bases": 30386,
+      "num_total_reads": 268,
+      "num_unmatched_bases": 4444,
+      "num_unmatched_reads": 46
+    }
+  },
+  "reference": [
+    {
+      "bases_mapped_to_reference": 31084.0,
+      "reads_mapped_to_reference": 126.0
+    }
+  ],
+  "total_bases": 60819,
+  "total_bases_mapped_to_references": 31084,
+  "total_reads": 536,
+  "total_reads_mapped_to_references": 126,
+  "total_unmatched_bases": 9763,
+  "total_unmatched_reads": 99
+}

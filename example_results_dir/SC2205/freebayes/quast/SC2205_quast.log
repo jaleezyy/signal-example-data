@@ -1,0 +1,111 @@
+/workspace/home/nasirja/covid-19-signal/.snakemake/conda/a8ec38a9ec4fe8274970825bac95d17b/bin/quast SC2205/freebayes/SC2205.consensus.fasta -r /workspace/home/nasirja/covid-19-signal/data/MN908947.3.fasta -g /workspace/home/nasirja/covid-19-signal/data/MN908947.3.gff3 --output-dir SC2205/freebayes/quast --threads 1
+
+Version: 5.0.2
+
+System information:
+  OS: Linux-5.4.0-77-generic-x86_64-with-debian-bullseye-sid (linux_64)
+  Python version: 3.7.12
+  CPUs number: 88
+
+Started: 2022-11-25 03:32:29
+
+Logging to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2205/freebayes/quast/quast.log
+
+CWD: /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir
+Main parameters: 
+  MODE: default, threads: 1, minimum contig length: 500, minimum alignment length: 65, \
+  ambiguity: one, threshold for extensive misassembly size: 1000
+
+Reference:
+  /workspace/home/nasirja/covid-19-signal/data/MN908947.3.fasta ==> MN908947.3
+
+Contigs:
+  Pre-processing...
+  SC2205/freebayes/SC2205.consensus.fasta ==> SC2205.consensus
+
+2022-11-25 03:32:29
+Running Basic statistics processor...
+  Reference genome:
+    MN908947.3.fasta, length = 29903, num fragments = 1, GC % = 37.97
+  Contig files: 
+    SC2205.consensus
+  Calculating N50 and L50...
+    SC2205.consensus, N50 = 29902, L50 = 1, Total length = 29902, GC % = 37.97, # N's per 100 kbp =  632.06
+  Drawing Nx plot...
+    saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2205/freebayes/quast/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2205/freebayes/quast/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2205/freebayes/quast/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2205/freebayes/quast/basic_stats/GC_content_plot.pdf
+  Drawing SC2205.consensus GC content plot...
+    saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2205/freebayes/quast/basic_stats/SC2205.consensus_GC_content_plot.pdf
+Done.
+
+2022-11-25 03:32:30
+Running Contig analyzer...
+  SC2205.consensus
+  Logging to files /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2205/freebayes/quast/contigs_reports/contigs_report_SC2205-consensus.stdout and contigs_report_SC2205-consensus.stderr...
+  Aligning contigs to the reference
+  Analysis is finished.
+  Creating total report...
+    saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2205/freebayes/quast/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2205/freebayes/quast/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2205/freebayes/quast/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2205/freebayes/quast/contigs_reports/misassemblies_plot.pdf
+  Drawing misassemblies FRCurve plot...
+    saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2205/freebayes/quast/contigs_reports/misassemblies_frcurve_plot.pdf
+Done.
+
+2022-11-25 03:32:30
+Running NA-NGA calculation...
+  SC2205.consensus, Largest alignment = 29684, NA50 = 29684, NGA50 = 29684, LA50 = 1, LGA50 = 1
+  Drawing cumulative plot...
+    saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2205/freebayes/quast/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2205/freebayes/quast/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2205/freebayes/quast/aligned_stats/NGAx_plot.pdf
+Done.
+
+2022-11-25 03:32:31
+Running Genome analyzer...
+  NOTICE: No file with operons were provided. Use the -O option if you want to specify it.
+  Loaded 24 genomic features of type "ANY"
+  SC2205.consensus
+  Analysis is finished.
+  Drawing genomic features cumulative plot...
+    saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2205/freebayes/quast/genome_stats/features_cumulative_plot.pdf
+  Drawing genomic features FRCurve plot...
+    saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2205/freebayes/quast/genome_stats/features_frcurve_plot.pdf
+  Skipping drawing # complete genomic features histogram... (less than 2 columns histogram makes no sense)
+  Skipping drawing Genome fraction, % histogram... (less than 2 columns histogram makes no sense)
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2022-11-25 03:32:31
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2022-11-25 03:32:32
+RESULTS:
+  Text versions of total report are saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2205/freebayes/quast/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2205/freebayes/quast/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2205/freebayes/quast/report.html
+  PDF version (tables and plots) is saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2205/freebayes/quast/report.pdf
+  Icarus (contig browser) is saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2205/freebayes/quast/icarus.html
+  Log is saved to /workspace/home/nasirja/covid-19-signal/subset_viral_7_results_dir/SC2205/freebayes/quast/quast.log
+
+Finished: 2022-11-25 03:32:32
+Elapsed time: 0:00:03.308793
+NOTICEs: 2; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!
