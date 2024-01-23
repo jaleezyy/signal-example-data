@@ -8,7 +8,7 @@ Nasir *et al*. SARS-CoV-2 Illumina GeNome Assembly Line (SIGNAL), a Snakemate wo
 
 ## Data
 
-To demonstrate SIGNAL output and applicability, we re-examined a dataset of 113 Canadian samples from November 6-10, 2020 that underwent ARTIC3 PCR (https://github.com/artic-network/primer-schemes) and Illumina paired-end 250 bp sequencing. All sequencing reads are available in BioProject PRJNA689621. All consensus genome sequences and associated metadata in this dataset are published in GISAID’s EpiCoV database: to view the contributors of each individual sequence with details such as accession number, Virus name, Collection date, Originating Lab and Submitting Lab and the list of Authors, visit DOI:10.55876/gis8.240105tb.
+To demonstrate SIGNAL output and applicability, we re-examined a dataset of 113 Canadian samples from November 6-10, 2020 that underwent ARTIC3 PCR (https://github.com/artic-network/primer-schemes) and Illumina paired-end 250 bp sequencing. All sequencing reads are available in BioProject [PRJNA689621](https://www.ncbi.nlm.nih.gov/search/all/?term=PRJNA689621). All consensus genome sequences and associated metadata in this dataset are published in GISAID’s EpiCoV database: to view the contributors of each individual sequence with details such as accession number, Virus name, Collection date, Originating Lab and Submitting Lab and the list of Authors, visit [DOI:10.55876/gis8.240105tb](https://doi.org/10.55876/gis8.240105tb).
 
 ## Software
 * SARS-CoV-2 Illumina GeNome Assembly Line (SIGNAL), version v1.5.6  
