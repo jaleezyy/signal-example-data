@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 input_bioproject=0
-output_dir=0
+output_dir=$PWD
+filter=0
+list_only=0
 
 HELP="""
 This script will take an NCBI BioProject accession (i.e., PRJNA...) and download the corresponding FASTQs using prefetch into a specified output directory.
@@ -17,13 +19,17 @@ To use the script:
 
 Flags:
     -i  :  BioProject accession (PRJNA...)
-    -o  :  Directory for final FASTQs (default: '${PWD}')
+    -o  :  Directory for final output files and FASTQs (default: '${PWD}')
+    -f  :  Filter term for select sample names (partial phrases accepted)
+    -l  :  List output only (no FASTQs will be downloaded)
 """
 
-while getopts ":i:o:" option; do
+while getopts ":i:o:f:l" option; do
 	case "${option}" in
 		i) input_bioproject=$OPTARG;;
 		o) output_dir=$OPTARG;;
+		f) filter=$OPTARG;;
+		l) list_only=1;;
 	esac
 done
 
@@ -39,7 +45,17 @@ fi
 
 # NOTE: esearch -db sra -query $input_bioproject | esummary | xtract -pattern DocumentSummary -element Experiment@acc,Run@acc,Platform@instrument_model
 
-esearch -db sra -query $input_bioproject | esummary | xtract -pattern DocumentSummary -element Run@acc,LIBRARY_NAME > ${output_dir}/${input_bioproject}.tsv
+if [ $filter != 0 ]; then 
+    esearch -db sra -query $input_bioproject | esummary | xtract -pattern DocumentSummary -element Run@acc,LIBRARY_NAME | awk -v f="$filter" '$2~f {print}' > ${output_dir}/${input_bioproject}.tsv
+else
+    esearch -db sra -query $input_bioproject | esummary | xtract -pattern DocumentSummary -element Run@acc,LIBRARY_NAME > ${output_dir}/${input_bioproject}.tsv
+fi
+
+echo -e "${output_dir}/${input_bioproject}.tsv created!"
+
+if [ $list_only = 1 ]; then
+    exit 0
+fi
 
 while read line; do
     accession=$(echo $line | cut -d' ' -f 1)
@@ -48,7 +64,7 @@ while read line; do
         sample=$accession
     fi
 
-    echo -e "\n  Working on: ${accession}: ${sample}\n\n"
+    echo -e "\n  Working on: ${accession}: ${sample}\n"
 
     # downloading SRA object
     prefetch ${accession} --output-directory ${output_dir}
