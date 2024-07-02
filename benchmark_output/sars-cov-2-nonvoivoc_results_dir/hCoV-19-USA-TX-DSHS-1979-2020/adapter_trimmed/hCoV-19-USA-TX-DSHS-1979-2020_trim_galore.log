@@ -1,0 +1,336 @@
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 4.8
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 2 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-nonvoivoc_results_dir/hCoV-19-USA-TX-DSHS-1979-2020/adapter_trimmed/
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> hCoV-19-USA-TX-DSHS-1979-2020/host_removal/hCoV-19-USA-TX-DSHS-1979-2020_R1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Nextera	31	CTGTCTCTTATA	35441	0.09
+smallRNA	0	TGGAATTCTCGG	35441	0.00
+Illumina	0	AGATCGGAAGAGC	35441	0.00
+Using Nextera adapter for trimming (count: 31). Second best hit was smallRNA (count: 0)
+
+Writing report to '/workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-nonvoivoc_results_dir/hCoV-19-USA-TX-DSHS-1979-2020/adapter_trimmed/hCoV-19-USA-TX-DSHS-1979-2020_R1.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: hCoV-19-USA-TX-DSHS-1979-2020/host_removal/hCoV-19-USA-TX-DSHS-1979-2020_R1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.8
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.8). Setting -j 2
+Writing final adapter and quality trimmed output to hCoV-19-USA-TX-DSHS-1979-2020_R1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file hCoV-19-USA-TX-DSHS-1979-2020/host_removal/hCoV-19-USA-TX-DSHS-1979-2020_R1.fastq.gz <<< 
+This is cutadapt 4.8 with Python 3.12.3
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA hCoV-19-USA-TX-DSHS-1979-2020/host_removal/hCoV-19-USA-TX-DSHS-1979-2020_R1.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 0.919 s (25.925 µs/read; 2.31 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                  35,441
+Reads with adapters:                    15,020 (42.4%)
+Reads written (passing filters):        35,441 (100.0%)
+
+Total basepairs processed:     5,060,802 bp
+Quality-trimmed:                  25,895 bp (0.5%)
+Total written (filtered):      5,010,271 bp (99.0%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 15020 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 46.8%
+  C: 17.2%
+  G: 18.2%
+  T: 17.8%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	13186	8860.2	0	13186
+2	1216	2215.1	0	1216
+3	444	553.8	0	444
+4	90	138.4	0	90
+5	11	34.6	0	11
+6	4	8.7	0	4
+7	1	2.2	0	1
+13	1	0.0	1	0 1
+15	2	0.0	1	2
+16	1	0.0	1	0 1
+17	2	0.0	1	1 1
+29	2	0.0	1	1 1
+45	2	0.0	1	1 1
+51	1	0.0	1	1
+54	1	0.0	1	0 1
+55	1	0.0	1	1
+57	1	0.0	1	1
+59	1	0.0	1	0 1
+69	1	0.0	1	0 1
+73	2	0.0	1	1 1
+75	6	0.0	1	2 4
+76	1	0.0	1	0 1
+77	2	0.0	1	0 2
+78	3	0.0	1	2 1
+79	1	0.0	1	1
+81	1	0.0	1	0 1
+85	1	0.0	1	1
+90	1	0.0	1	0 1
+93	1	0.0	1	0 1
+94	1	0.0	1	1
+97	1	0.0	1	1
+100	1	0.0	1	0 1
+110	1	0.0	1	0 1
+119	1	0.0	1	0 1
+121	2	0.0	1	2
+124	2	0.0	1	1 1
+125	1	0.0	1	1
+130	1	0.0	1	0 1
+139	1	0.0	1	0 1
+142	1	0.0	1	1
+144	1	0.0	1	0 1
+148	1	0.0	1	1
+152	1	0.0	1	1
+155	1	0.0	1	1
+157	2	0.0	1	1 1
+161	1	0.0	1	1
+172	1	0.0	1	0 1
+174	1	0.0	1	0 1
+176	1	0.0	1	1
+188	1	0.0	1	0 1
+190	1	0.0	1	0 1
+191	2	0.0	1	2
+201	1	0.0	1	1
+203	1	0.0	1	0 1
+208	1	0.0	1	0 1
+213	1	0.0	1	0 1
+217	1	0.0	1	0 1
+222	1	0.0	1	0 1
+
+RUN STATISTICS FOR INPUT FILE: hCoV-19-USA-TX-DSHS-1979-2020/host_removal/hCoV-19-USA-TX-DSHS-1979-2020_R1.fastq.gz
+=============================================
+35441 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to '/workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-nonvoivoc_results_dir/hCoV-19-USA-TX-DSHS-1979-2020/adapter_trimmed/hCoV-19-USA-TX-DSHS-1979-2020_R2.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: hCoV-19-USA-TX-DSHS-1979-2020/host_removal/hCoV-19-USA-TX-DSHS-1979-2020_R2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.8
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.8). Setting -j -j 2
+Writing final adapter and quality trimmed output to hCoV-19-USA-TX-DSHS-1979-2020_R2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file hCoV-19-USA-TX-DSHS-1979-2020/host_removal/hCoV-19-USA-TX-DSHS-1979-2020_R2.fastq.gz <<< 
+This is cutadapt 4.8 with Python 3.12.3
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA hCoV-19-USA-TX-DSHS-1979-2020/host_removal/hCoV-19-USA-TX-DSHS-1979-2020_R2.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 0.941 s (26.538 µs/read; 2.26 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                  35,441
+Reads with adapters:                    14,684 (41.4%)
+Reads written (passing filters):        35,441 (100.0%)
+
+Total basepairs processed:     5,067,575 bp
+Quality-trimmed:                  34,101 bp (0.7%)
+Total written (filtered):      5,008,691 bp (98.8%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 14684 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 45.7%
+  C: 17.1%
+  G: 18.4%
+  T: 18.9%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	12790	8860.2	0	12790
+2	1251	2215.1	0	1251
+3	453	553.8	0	453
+4	74	138.4	0	74
+5	24	34.6	0	24
+6	5	8.7	0	5
+8	2	0.5	0	2
+9	2	0.1	0	2
+10	1	0.0	1	0 1
+11	2	0.0	1	1 1
+14	1	0.0	1	0 1
+15	1	0.0	1	1
+18	2	0.0	1	1 1
+19	1	0.0	1	0 1
+20	1	0.0	1	1
+22	1	0.0	1	0 1
+24	1	0.0	1	0 1
+28	1	0.0	1	0 1
+30	1	0.0	1	0 1
+34	1	0.0	1	0 1
+43	1	0.0	1	1
+50	1	0.0	1	0 1
+51	3	0.0	1	2 1
+52	2	0.0	1	0 2
+57	1	0.0	1	1
+58	1	0.0	1	0 1
+63	1	0.0	1	0 1
+65	1	0.0	1	0 1
+68	1	0.0	1	0 1
+70	1	0.0	1	1
+71	1	0.0	1	0 1
+73	1	0.0	1	1
+76	1	0.0	1	1
+78	2	0.0	1	1 1
+79	2	0.0	1	0 2
+80	4	0.0	1	3 1
+81	6	0.0	1	3 3
+82	5	0.0	1	5
+83	2	0.0	1	1 1
+84	1	0.0	1	0 1
+85	2	0.0	1	2
+90	1	0.0	1	1
+98	1	0.0	1	1
+101	1	0.0	1	0 1
+105	1	0.0	1	0 1
+106	1	0.0	1	0 1
+110	1	0.0	1	0 1
+113	1	0.0	1	1
+114	1	0.0	1	0 1
+119	1	0.0	1	1
+120	1	0.0	1	1
+128	1	0.0	1	1
+137	1	0.0	1	0 1
+139	1	0.0	1	0 1
+151	1	0.0	1	1
+157	1	0.0	1	0 1
+169	1	0.0	1	1
+172	1	0.0	1	0 1
+175	1	0.0	1	0 1
+186	1	0.0	1	0 1
+188	1	0.0	1	1
+189	2	0.0	1	1 1
+190	1	0.0	1	1
+197	1	0.0	1	0 1
+198	1	0.0	1	0 1
+200	1	0.0	1	1
+204	1	0.0	1	1
+215	1	0.0	1	0 1
+217	1	0.0	1	0 1
+
+RUN STATISTICS FOR INPUT FILE: hCoV-19-USA-TX-DSHS-1979-2020/host_removal/hCoV-19-USA-TX-DSHS-1979-2020_R2.fastq.gz
+=============================================
+35441 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files hCoV-19-USA-TX-DSHS-1979-2020_R1_trimmed.fq.gz and hCoV-19-USA-TX-DSHS-1979-2020_R2_trimmed.fq.gz
+file_1: hCoV-19-USA-TX-DSHS-1979-2020_R1_trimmed.fq.gz, file_2: hCoV-19-USA-TX-DSHS-1979-2020_R2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: hCoV-19-USA-TX-DSHS-1979-2020_R1_trimmed.fq.gz and hCoV-19-USA-TX-DSHS-1979-2020_R2_trimmed.fq.gz <<<<<
+Writing validated paired-end Read 1 reads to hCoV-19-USA-TX-DSHS-1979-2020_R1_val_1.fq.gz
+Writing validated paired-end Read 2 reads to hCoV-19-USA-TX-DSHS-1979-2020_R2_val_2.fq.gz
+
+Total number of sequences analysed: 35441
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 605 (1.71%)
+
+
+  >>> Now running FastQC on the validated data hCoV-19-USA-TX-DSHS-1979-2020_R1_val_1.fq.gz<<<
+
+Started analysis of hCoV-19-USA-TX-DSHS-1979-2020_R1_val_1.fq.gz
+Approx 5% complete for hCoV-19-USA-TX-DSHS-1979-2020_R1_val_1.fq.gz
+Approx 10% complete for hCoV-19-USA-TX-DSHS-1979-2020_R1_val_1.fq.gz
+Approx 15% complete for hCoV-19-USA-TX-DSHS-1979-2020_R1_val_1.fq.gz
+Approx 20% complete for hCoV-19-USA-TX-DSHS-1979-2020_R1_val_1.fq.gz
+Approx 25% complete for hCoV-19-USA-TX-DSHS-1979-2020_R1_val_1.fq.gz
+Approx 30% complete for hCoV-19-USA-TX-DSHS-1979-2020_R1_val_1.fq.gz
+Approx 35% complete for hCoV-19-USA-TX-DSHS-1979-2020_R1_val_1.fq.gz
+Approx 40% complete for hCoV-19-USA-TX-DSHS-1979-2020_R1_val_1.fq.gz
+Approx 45% complete for hCoV-19-USA-TX-DSHS-1979-2020_R1_val_1.fq.gz
+Approx 50% complete for hCoV-19-USA-TX-DSHS-1979-2020_R1_val_1.fq.gz
+Approx 55% complete for hCoV-19-USA-TX-DSHS-1979-2020_R1_val_1.fq.gz
+Approx 60% complete for hCoV-19-USA-TX-DSHS-1979-2020_R1_val_1.fq.gz
+Approx 65% complete for hCoV-19-USA-TX-DSHS-1979-2020_R1_val_1.fq.gz
+Approx 70% complete for hCoV-19-USA-TX-DSHS-1979-2020_R1_val_1.fq.gz
+Approx 75% complete for hCoV-19-USA-TX-DSHS-1979-2020_R1_val_1.fq.gz
+Approx 80% complete for hCoV-19-USA-TX-DSHS-1979-2020_R1_val_1.fq.gz
+Approx 85% complete for hCoV-19-USA-TX-DSHS-1979-2020_R1_val_1.fq.gz
+Approx 90% complete for hCoV-19-USA-TX-DSHS-1979-2020_R1_val_1.fq.gz
+Approx 95% complete for hCoV-19-USA-TX-DSHS-1979-2020_R1_val_1.fq.gz
+
+  >>> Now running FastQC on the validated data hCoV-19-USA-TX-DSHS-1979-2020_R2_val_2.fq.gz<<<
+
+Started analysis of hCoV-19-USA-TX-DSHS-1979-2020_R2_val_2.fq.gz
+Approx 5% complete for hCoV-19-USA-TX-DSHS-1979-2020_R2_val_2.fq.gz
+Approx 10% complete for hCoV-19-USA-TX-DSHS-1979-2020_R2_val_2.fq.gz
+Approx 15% complete for hCoV-19-USA-TX-DSHS-1979-2020_R2_val_2.fq.gz
+Approx 20% complete for hCoV-19-USA-TX-DSHS-1979-2020_R2_val_2.fq.gz
+Approx 25% complete for hCoV-19-USA-TX-DSHS-1979-2020_R2_val_2.fq.gz
+Approx 30% complete for hCoV-19-USA-TX-DSHS-1979-2020_R2_val_2.fq.gz
+Approx 35% complete for hCoV-19-USA-TX-DSHS-1979-2020_R2_val_2.fq.gz
+Approx 40% complete for hCoV-19-USA-TX-DSHS-1979-2020_R2_val_2.fq.gz
+Approx 45% complete for hCoV-19-USA-TX-DSHS-1979-2020_R2_val_2.fq.gz
+Approx 50% complete for hCoV-19-USA-TX-DSHS-1979-2020_R2_val_2.fq.gz
+Approx 55% complete for hCoV-19-USA-TX-DSHS-1979-2020_R2_val_2.fq.gz
+Approx 60% complete for hCoV-19-USA-TX-DSHS-1979-2020_R2_val_2.fq.gz
+Approx 65% complete for hCoV-19-USA-TX-DSHS-1979-2020_R2_val_2.fq.gz
+Approx 70% complete for hCoV-19-USA-TX-DSHS-1979-2020_R2_val_2.fq.gz
+Approx 75% complete for hCoV-19-USA-TX-DSHS-1979-2020_R2_val_2.fq.gz
+Approx 80% complete for hCoV-19-USA-TX-DSHS-1979-2020_R2_val_2.fq.gz
+Approx 85% complete for hCoV-19-USA-TX-DSHS-1979-2020_R2_val_2.fq.gz
+Approx 90% complete for hCoV-19-USA-TX-DSHS-1979-2020_R2_val_2.fq.gz
+Approx 95% complete for hCoV-19-USA-TX-DSHS-1979-2020_R2_val_2.fq.gz
+Deleting both intermediate output files hCoV-19-USA-TX-DSHS-1979-2020_R1_trimmed.fq.gz and hCoV-19-USA-TX-DSHS-1979-2020_R2_trimmed.fq.gz
+
+====================================================================================================
+

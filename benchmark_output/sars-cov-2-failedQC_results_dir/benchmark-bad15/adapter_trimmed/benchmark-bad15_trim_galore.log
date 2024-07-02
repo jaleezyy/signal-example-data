@@ -1,0 +1,405 @@
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 4.8
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 2 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-failedQC_results_dir/benchmark-bad15/adapter_trimmed/
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> benchmark-bad15/host_removal/benchmark-bad15_R1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Nextera	53	CTGTCTCTTATA	221308	0.02
+Illumina	0	AGATCGGAAGAGC	221308	0.00
+smallRNA	0	TGGAATTCTCGG	221308	0.00
+Using Nextera adapter for trimming (count: 53). Second best hit was Illumina (count: 0)
+
+Writing report to '/workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-failedQC_results_dir/benchmark-bad15/adapter_trimmed/benchmark-bad15_R1.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: benchmark-bad15/host_removal/benchmark-bad15_R1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.8
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.8). Setting -j 2
+Writing final adapter and quality trimmed output to benchmark-bad15_R1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file benchmark-bad15/host_removal/benchmark-bad15_R1.fastq.gz <<< 
+This is cutadapt 4.8 with Python 3.12.3
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA benchmark-bad15/host_removal/benchmark-bad15_R1.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 3.104 s (14.024 µs/read; 4.28 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 221,308
+Reads with adapters:                    65,376 (29.5%)
+Reads written (passing filters):       221,308 (100.0%)
+
+Total basepairs processed:    26,151,078 bp
+Quality-trimmed:                  61,471 bp (0.2%)
+Total written (filtered):     25,997,775 bp (99.4%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 65376 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 44.5%
+  C: 17.0%
+  G: 21.0%
+  T: 17.5%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	56633	55327.0	0	56633
+2	6152	13831.8	0	6152
+3	1919	3457.9	0	1919
+4	279	864.5	0	279
+5	52	216.1	0	52
+6	11	54.0	0	11
+7	5	13.5	0	5
+8	5	3.4	0	5
+9	3	0.8	0	2 1
+11	17	0.1	1	2 15
+12	3	0.0	1	0 3
+13	3	0.0	1	0 3
+14	4	0.0	1	0 4
+15	4	0.0	1	0 4
+16	8	0.0	1	3 5
+17	12	0.0	1	1 11
+18	5	0.0	1	2 3
+19	4	0.0	1	1 3
+20	4	0.0	1	1 3
+21	10	0.0	1	1 9
+22	4	0.0	1	1 3
+23	6	0.0	1	0 6
+24	4	0.0	1	0 4
+25	2	0.0	1	0 2
+26	3	0.0	1	1 2
+27	3	0.0	1	0 3
+28	5	0.0	1	0 5
+29	4	0.0	1	0 4
+30	4	0.0	1	0 4
+31	5	0.0	1	1 4
+32	3	0.0	1	0 3
+33	6	0.0	1	0 6
+34	2	0.0	1	0 2
+35	4	0.0	1	1 3
+36	2	0.0	1	0 2
+37	5	0.0	1	1 4
+38	3	0.0	1	1 2
+40	4	0.0	1	1 3
+41	3	0.0	1	1 2
+42	4	0.0	1	1 3
+43	7	0.0	1	0 7
+44	2	0.0	1	0 2
+45	1	0.0	1	1
+46	2	0.0	1	0 2
+47	2	0.0	1	0 2
+48	3	0.0	1	1 2
+49	2	0.0	1	0 2
+50	5	0.0	1	1 4
+51	4	0.0	1	2 2
+52	3	0.0	1	1 2
+53	5	0.0	1	2 3
+54	5	0.0	1	1 4
+55	6	0.0	1	2 4
+56	2	0.0	1	1 1
+57	3	0.0	1	1 2
+58	5	0.0	1	1 4
+59	1	0.0	1	1
+60	2	0.0	1	0 2
+61	3	0.0	1	0 3
+62	3	0.0	1	0 3
+63	3	0.0	1	0 3
+64	2	0.0	1	0 2
+66	1	0.0	1	0 1
+67	4	0.0	1	0 4
+68	3	0.0	1	0 3
+69	1	0.0	1	0 1
+70	5	0.0	1	2 3
+71	2	0.0	1	0 2
+72	2	0.0	1	0 2
+73	2	0.0	1	1 1
+74	5	0.0	1	1 4
+75	1	0.0	1	0 1
+76	2	0.0	1	1 1
+77	5	0.0	1	1 4
+78	6	0.0	1	1 5
+79	3	0.0	1	0 3
+80	3	0.0	1	1 2
+81	1	0.0	1	0 1
+82	1	0.0	1	0 1
+83	1	0.0	1	0 1
+84	2	0.0	1	0 2
+85	2	0.0	1	0 2
+86	3	0.0	1	0 3
+87	3	0.0	1	0 3
+89	2	0.0	1	0 2
+90	1	0.0	1	0 1
+91	1	0.0	1	0 1
+92	1	0.0	1	0 1
+93	3	0.0	1	1 2
+94	3	0.0	1	2 1
+97	3	0.0	1	1 2
+98	3	0.0	1	0 3
+99	2	0.0	1	0 2
+100	1	0.0	1	0 1
+101	2	0.0	1	1 1
+102	3	0.0	1	1 2
+103	2	0.0	1	0 2
+104	1	0.0	1	1
+107	1	0.0	1	0 1
+108	1	0.0	1	0 1
+111	1	0.0	1	0 1
+114	1	0.0	1	0 1
+115	3	0.0	1	0 3
+116	2	0.0	1	1 1
+118	1	0.0	1	1
+
+RUN STATISTICS FOR INPUT FILE: benchmark-bad15/host_removal/benchmark-bad15_R1.fastq.gz
+=============================================
+221308 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to '/workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-failedQC_results_dir/benchmark-bad15/adapter_trimmed/benchmark-bad15_R2.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: benchmark-bad15/host_removal/benchmark-bad15_R2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.8
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.8). Setting -j -j 2
+Writing final adapter and quality trimmed output to benchmark-bad15_R2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file benchmark-bad15/host_removal/benchmark-bad15_R2.fastq.gz <<< 
+This is cutadapt 4.8 with Python 3.12.3
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA benchmark-bad15/host_removal/benchmark-bad15_R2.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 2.732 s (12.345 µs/read; 4.86 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 221,308
+Reads with adapters:                    65,157 (29.4%)
+Reads written (passing filters):       221,308 (100.0%)
+
+Total basepairs processed:    26,136,116 bp
+Quality-trimmed:                  82,090 bp (0.3%)
+Total written (filtered):     25,963,468 bp (99.3%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 65157 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 43.3%
+  C: 17.5%
+  G: 21.3%
+  T: 17.9%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	56070	55327.0	0	56070
+2	6384	13831.8	0	6384
+3	1918	3457.9	0	1918
+4	298	864.5	0	298
+5	30	216.1	0	30
+6	7	54.0	0	7
+7	3	13.5	0	3
+8	3	3.4	0	3
+9	8	0.8	0	8
+10	18	0.2	1	8 10
+11	10	0.1	1	3 7
+12	10	0.0	1	0 10
+13	8	0.0	1	4 4
+14	11	0.0	1	5 6
+15	11	0.0	1	4 7
+16	71	0.0	1	27 44
+17	21	0.0	1	4 17
+18	12	0.0	1	3 9
+19	5	0.0	1	0 5
+20	5	0.0	1	1 4
+21	3	0.0	1	1 2
+22	18	0.0	1	4 14
+23	24	0.0	1	10 14
+24	6	0.0	1	0 6
+25	7	0.0	1	3 4
+26	7	0.0	1	1 6
+27	7	0.0	1	3 4
+28	3	0.0	1	1 2
+29	3	0.0	1	1 2
+30	5	0.0	1	2 3
+31	2	0.0	1	0 2
+32	8	0.0	1	1 7
+33	9	0.0	1	5 4
+34	11	0.0	1	4 7
+35	6	0.0	1	1 5
+36	5	0.0	1	1 4
+37	7	0.0	1	2 5
+38	6	0.0	1	1 5
+39	1	0.0	1	0 1
+40	5	0.0	1	0 5
+41	7	0.0	1	0 7
+42	5	0.0	1	1 4
+43	3	0.0	1	1 2
+46	4	0.0	1	0 4
+47	4	0.0	1	2 2
+48	8	0.0	1	2 6
+49	4	0.0	1	2 2
+50	2	0.0	1	1 1
+51	6	0.0	1	1 5
+52	2	0.0	1	1 1
+53	2	0.0	1	0 2
+54	1	0.0	1	0 1
+55	1	0.0	1	0 1
+56	2	0.0	1	0 2
+57	1	0.0	1	0 1
+59	2	0.0	1	0 2
+60	3	0.0	1	1 2
+63	3	0.0	1	1 2
+64	1	0.0	1	0 1
+65	2	0.0	1	1 1
+67	2	0.0	1	1 1
+69	1	0.0	1	0 1
+72	2	0.0	1	0 2
+73	1	0.0	1	0 1
+74	1	0.0	1	0 1
+78	1	0.0	1	1
+79	2	0.0	1	0 2
+80	2	0.0	1	0 2
+81	1	0.0	1	0 1
+82	1	0.0	1	0 1
+83	3	0.0	1	1 2
+84	2	0.0	1	0 2
+85	2	0.0	1	0 2
+87	1	0.0	1	0 1
+88	1	0.0	1	0 1
+89	1	0.0	1	0 1
+93	3	0.0	1	1 2
+94	1	0.0	1	1
+95	1	0.0	1	0 1
+96	1	0.0	1	0 1
+97	3	0.0	1	1 2
+99	2	0.0	1	0 2
+105	3	0.0	1	1 2
+106	1	0.0	1	0 1
+108	1	0.0	1	0 1
+113	1	0.0	1	0 1
+116	1	0.0	1	0 1
+118	1	0.0	1	0 1
+122	1	0.0	1	0 1
+123	3	0.0	1	0 3
+124	1	0.0	1	0 1
+
+RUN STATISTICS FOR INPUT FILE: benchmark-bad15/host_removal/benchmark-bad15_R2.fastq.gz
+=============================================
+221308 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files benchmark-bad15_R1_trimmed.fq.gz and benchmark-bad15_R2_trimmed.fq.gz
+file_1: benchmark-bad15_R1_trimmed.fq.gz, file_2: benchmark-bad15_R2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: benchmark-bad15_R1_trimmed.fq.gz and benchmark-bad15_R2_trimmed.fq.gz <<<<<
+Writing validated paired-end Read 1 reads to benchmark-bad15_R1_val_1.fq.gz
+Writing validated paired-end Read 2 reads to benchmark-bad15_R2_val_2.fq.gz
+
+Total number of sequences analysed: 221308
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 117 (0.05%)
+
+
+  >>> Now running FastQC on the validated data benchmark-bad15_R1_val_1.fq.gz<<<
+
+Started analysis of benchmark-bad15_R1_val_1.fq.gz
+Approx 5% complete for benchmark-bad15_R1_val_1.fq.gz
+Approx 10% complete for benchmark-bad15_R1_val_1.fq.gz
+Approx 15% complete for benchmark-bad15_R1_val_1.fq.gz
+Approx 20% complete for benchmark-bad15_R1_val_1.fq.gz
+Approx 25% complete for benchmark-bad15_R1_val_1.fq.gz
+Approx 30% complete for benchmark-bad15_R1_val_1.fq.gz
+Approx 35% complete for benchmark-bad15_R1_val_1.fq.gz
+Approx 40% complete for benchmark-bad15_R1_val_1.fq.gz
+Approx 45% complete for benchmark-bad15_R1_val_1.fq.gz
+Approx 50% complete for benchmark-bad15_R1_val_1.fq.gz
+Approx 55% complete for benchmark-bad15_R1_val_1.fq.gz
+Approx 60% complete for benchmark-bad15_R1_val_1.fq.gz
+Approx 65% complete for benchmark-bad15_R1_val_1.fq.gz
+Approx 70% complete for benchmark-bad15_R1_val_1.fq.gz
+Approx 75% complete for benchmark-bad15_R1_val_1.fq.gz
+Approx 80% complete for benchmark-bad15_R1_val_1.fq.gz
+Approx 85% complete for benchmark-bad15_R1_val_1.fq.gz
+Approx 90% complete for benchmark-bad15_R1_val_1.fq.gz
+Approx 95% complete for benchmark-bad15_R1_val_1.fq.gz
+
+  >>> Now running FastQC on the validated data benchmark-bad15_R2_val_2.fq.gz<<<
+
+Started analysis of benchmark-bad15_R2_val_2.fq.gz
+Approx 5% complete for benchmark-bad15_R2_val_2.fq.gz
+Approx 10% complete for benchmark-bad15_R2_val_2.fq.gz
+Approx 15% complete for benchmark-bad15_R2_val_2.fq.gz
+Approx 20% complete for benchmark-bad15_R2_val_2.fq.gz
+Approx 25% complete for benchmark-bad15_R2_val_2.fq.gz
+Approx 30% complete for benchmark-bad15_R2_val_2.fq.gz
+Approx 35% complete for benchmark-bad15_R2_val_2.fq.gz
+Approx 40% complete for benchmark-bad15_R2_val_2.fq.gz
+Approx 45% complete for benchmark-bad15_R2_val_2.fq.gz
+Approx 50% complete for benchmark-bad15_R2_val_2.fq.gz
+Approx 55% complete for benchmark-bad15_R2_val_2.fq.gz
+Approx 60% complete for benchmark-bad15_R2_val_2.fq.gz
+Approx 65% complete for benchmark-bad15_R2_val_2.fq.gz
+Approx 70% complete for benchmark-bad15_R2_val_2.fq.gz
+Approx 75% complete for benchmark-bad15_R2_val_2.fq.gz
+Approx 80% complete for benchmark-bad15_R2_val_2.fq.gz
+Approx 85% complete for benchmark-bad15_R2_val_2.fq.gz
+Approx 90% complete for benchmark-bad15_R2_val_2.fq.gz
+Approx 95% complete for benchmark-bad15_R2_val_2.fq.gz
+Deleting both intermediate output files benchmark-bad15_R1_trimmed.fq.gz and benchmark-bad15_R2_trimmed.fq.gz
+
+====================================================================================================
+

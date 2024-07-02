@@ -1,0 +1,445 @@
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 4.8
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 2 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-nonvoivoc_results_dir/hCoV-19-USA-CA-CZB-10245-2020/adapter_trimmed/
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> hCoV-19-USA-CA-CZB-10245-2020/host_removal/hCoV-19-USA-CA-CZB-10245-2020_R1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Nextera	725946	CTGTCTCTTATA	1000000	72.59
+Illumina	0	AGATCGGAAGAGC	1000000	0.00
+smallRNA	0	TGGAATTCTCGG	1000000	0.00
+Using Nextera adapter for trimming (count: 725946). Second best hit was Illumina (count: 0)
+
+Writing report to '/workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-nonvoivoc_results_dir/hCoV-19-USA-CA-CZB-10245-2020/adapter_trimmed/hCoV-19-USA-CA-CZB-10245-2020_R1.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: hCoV-19-USA-CA-CZB-10245-2020/host_removal/hCoV-19-USA-CA-CZB-10245-2020_R1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.8
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.8). Setting -j 2
+Writing final adapter and quality trimmed output to hCoV-19-USA-CA-CZB-10245-2020_R1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file hCoV-19-USA-CA-CZB-10245-2020/host_removal/hCoV-19-USA-CA-CZB-10245-2020_R1.fastq.gz <<< 
+This is cutadapt 4.8 with Python 3.12.3
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA hCoV-19-USA-CA-CZB-10245-2020/host_removal/hCoV-19-USA-CA-CZB-10245-2020_R1.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 36.465 s (18.787 µs/read; 3.19 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:               1,940,988
+Reads with adapters:                 1,637,520 (84.4%)
+Reads written (passing filters):     1,940,988 (100.0%)
+
+Total basepairs processed:   283,384,248 bp
+Quality-trimmed:               1,467,630 bp (0.5%)
+Total written (filtered):    186,191,023 bp (65.7%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 1637520 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 15.1%
+  C: 36.0%
+  G: 25.4%
+  T: 23.4%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	91832	485247.0	0	91832
+2	34179	121311.8	0	34179
+3	9142	30327.9	0	9142
+4	6684	7582.0	0	6684
+5	7403	1895.5	0	7403
+6	7402	473.9	0	7402
+7	8975	118.5	0	8975
+8	9885	29.6	0	9885
+9	7348	7.4	0	7338 10
+10	11049	1.9	1	10755 294
+11	3281	0.5	1	3211 70
+12	11744	0.1	1	11476 268
+13	8271	0.1	1	8126 145
+14	6546	0.1	1	6331 215
+15	9334	0.1	1	9171 163
+16	13570	0.1	1	13266 304
+17	6678	0.1	1	6488 190
+18	9761	0.1	1	9578 183
+19	5222	0.1	1	5071 151
+20	9736	0.1	1	9530 206
+21	18084	0.1	1	17709 375
+22	8105	0.1	1	7927 178
+23	7900	0.1	1	7710 190
+24	3689	0.1	1	3621 68
+25	10945	0.1	1	10719 226
+26	9022	0.1	1	8747 275
+27	17398	0.1	1	17090 308
+28	3551	0.1	1	3392 159
+29	21281	0.1	1	20822 459
+30	8181	0.1	1	7974 207
+31	12715	0.1	1	12425 290
+32	7135	0.1	1	7016 119
+33	3716	0.1	1	3551 165
+34	17446	0.1	1	17140 306
+35	4458	0.1	1	4298 160
+36	11881	0.1	1	11657 224
+37	12954	0.1	1	12675 279
+38	20416	0.1	1	20048 368
+39	4628	0.1	1	4449 179
+40	13709	0.1	1	13398 311
+41	23409	0.1	1	23016 393
+42	10561	0.1	1	10385 176
+43	2105	0.1	1	2006 99
+44	13350	0.1	1	13106 244
+45	22915	0.1	1	22498 417
+46	10895	0.1	1	10623 272
+47	20187	0.1	1	19786 401
+48	14543	0.1	1	14304 239
+49	3427	0.1	1	3304 123
+50	11111	0.1	1	10970 141
+51	24769	0.1	1	24464 305
+52	5131	0.1	1	5017 114
+53	14535	0.1	1	14357 178
+54	15644	0.1	1	15303 341
+55	20649	0.1	1	20381 268
+56	6994	0.1	1	6849 145
+57	15687	0.1	1	15464 223
+58	25612	0.1	1	25220 392
+59	8279	0.1	1	8109 170
+60	14199	0.1	1	14003 196
+61	16894	0.1	1	16659 235
+62	15839	0.1	1	15653 186
+63	22552	0.1	1	22245 307
+64	9746	0.1	1	9563 183
+65	22259	0.1	1	21997 262
+66	10942	0.1	1	10775 167
+67	12323	0.1	1	12126 197
+68	17698	0.1	1	17495 203
+69	25959	0.1	1	25654 305
+70	8762	0.1	1	8608 154
+71	9736	0.1	1	9539 197
+72	16463	0.1	1	16259 204
+73	17600	0.1	1	17313 287
+74	17457	0.1	1	17163 294
+75	17284	0.1	1	17008 276
+76	21098	0.1	1	20704 394
+77	24585	0.1	1	24128 457
+78	38499	0.1	1	37820 679
+79	58198	0.1	1	57416 782
+80	26300	0.1	1	25715 585
+81	4858	0.1	1	4613 245
+82	4989	0.1	1	4882 107
+83	4723	0.1	1	4618 105
+84	6891	0.1	1	6791 100
+85	10456	0.1	1	10330 126
+86	14895	0.1	1	14728 167
+87	14935	0.1	1	14739 196
+88	18470	0.1	1	18254 216
+89	17286	0.1	1	17102 184
+90	18783	0.1	1	18550 233
+91	19596	0.1	1	19306 290
+92	19489	0.1	1	19224 265
+93	19832	0.1	1	19567 265
+94	19532	0.1	1	19275 257
+95	19410	0.1	1	19126 284
+96	19177	0.1	1	18904 273
+97	17416	0.1	1	17153 263
+98	18773	0.1	1	18501 272
+99	17153	0.1	1	16926 227
+100	17187	0.1	1	16948 239
+101	17815	0.1	1	17529 286
+102	17463	0.1	1	17221 242
+103	17693	0.1	1	17427 266
+104	15689	0.1	1	15441 248
+105	15367	0.1	1	15137 230
+106	14922	0.1	1	14720 202
+107	12331	0.1	1	12149 182
+108	11191	0.1	1	11022 169
+109	9178	0.1	1	9057 121
+110	6733	0.1	1	6628 105
+111	3691	0.1	1	3646 45
+112	1515	0.1	1	1495 20
+113	533	0.1	1	522 11
+114	91	0.1	1	90 1
+115	3	0.1	1	3
+118	1	0.1	1	0 1
+136	1	0.1	1	0 1
+
+RUN STATISTICS FOR INPUT FILE: hCoV-19-USA-CA-CZB-10245-2020/host_removal/hCoV-19-USA-CA-CZB-10245-2020_R1.fastq.gz
+=============================================
+1940988 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to '/workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-nonvoivoc_results_dir/hCoV-19-USA-CA-CZB-10245-2020/adapter_trimmed/hCoV-19-USA-CA-CZB-10245-2020_R2.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: hCoV-19-USA-CA-CZB-10245-2020/host_removal/hCoV-19-USA-CA-CZB-10245-2020_R2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.8
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.8). Setting -j -j 2
+Writing final adapter and quality trimmed output to hCoV-19-USA-CA-CZB-10245-2020_R2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file hCoV-19-USA-CA-CZB-10245-2020/host_removal/hCoV-19-USA-CA-CZB-10245-2020_R2.fastq.gz <<< 
+This is cutadapt 4.8 with Python 3.12.3
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA hCoV-19-USA-CA-CZB-10245-2020/host_removal/hCoV-19-USA-CA-CZB-10245-2020_R2.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 27.930 s (14.390 µs/read; 4.17 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:               1,940,988
+Reads with adapters:                 1,636,294 (84.3%)
+Reads written (passing filters):     1,940,988 (100.0%)
+
+Total basepairs processed:   283,384,248 bp
+Quality-trimmed:               1,182,442 bp (0.4%)
+Total written (filtered):    186,512,253 bp (65.8%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 1636294 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 15.4%
+  C: 34.9%
+  G: 25.7%
+  T: 24.0%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	95702	485247.0	0	95702
+2	32582	121311.8	0	32582
+3	8487	30327.9	0	8487
+4	9846	7582.0	0	9846
+5	7057	1895.5	0	7057
+6	7530	473.9	0	7530
+7	7541	118.5	0	7541
+8	8300	29.6	0	8300
+9	10820	7.4	0	10815 5
+10	6706	1.9	1	6446 260
+11	7248	0.5	1	7116 132
+12	10513	0.1	1	10229 284
+13	12164	0.1	1	11956 208
+14	3058	0.1	1	2919 139
+15	11368	0.1	1	11106 262
+16	7834	0.1	1	7558 276
+17	8903	0.1	1	8703 200
+18	7935	0.1	1	7738 197
+19	12712	0.1	1	12451 261
+20	10535	0.1	1	10388 147
+21	3234	0.1	1	3123 111
+22	16199	0.1	1	15883 316
+23	1884	0.1	1	1818 66
+24	10439	0.1	1	10141 298
+25	10684	0.1	1	10441 243
+26	8516	0.1	1	8391 125
+27	11729	0.1	1	11461 268
+28	19245	0.1	1	18802 443
+29	10923	0.1	1	10717 206
+30	1656	0.1	1	1576 80
+31	19292	0.1	1	18847 445
+32	6347	0.1	1	6185 162
+33	8172	0.1	1	7948 224
+34	9611	0.1	1	9420 191
+35	11483	0.1	1	11248 235
+36	14534	0.1	1	14247 287
+37	7431	0.1	1	7270 161
+38	13439	0.1	1	13119 320
+39	12734	0.1	1	12489 245
+40	22500	0.1	1	22115 385
+41	5812	0.1	1	5668 144
+42	8017	0.1	1	7851 166
+43	15997	0.1	1	15625 372
+44	10680	0.1	1	10467 213
+45	17061	0.1	1	16699 362
+46	9998	0.1	1	9809 189
+47	16410	0.1	1	16148 262
+48	8982	0.1	1	8820 162
+49	18281	0.1	1	17971 310
+50	20199	0.1	1	19786 413
+51	7657	0.1	1	7490 167
+52	13579	0.1	1	13227 352
+53	19323	0.1	1	19010 313
+54	9780	0.1	1	9619 161
+55	11647	0.1	1	11402 245
+56	20308	0.1	1	19997 311
+57	8830	0.1	1	8669 161
+58	19659	0.1	1	19414 245
+59	12969	0.1	1	12708 261
+60	12741	0.1	1	12526 215
+61	22430	0.1	1	22097 333
+62	11076	0.1	1	10784 292
+63	20740	0.1	1	20448 292
+64	10449	0.1	1	10303 146
+65	14941	0.1	1	14679 262
+66	24304	0.1	1	23844 460
+67	12704	0.1	1	12444 260
+68	14993	0.1	1	14773 220
+69	14333	0.1	1	13962 371
+70	20707	0.1	1	20419 288
+71	11616	0.1	1	11431 185
+72	19545	0.1	1	19118 427
+73	14729	0.1	1	14471 258
+74	28372	0.1	1	27979 393
+75	6201	0.1	1	6001 200
+76	17052	0.1	1	16735 317
+77	16962	0.1	1	16665 297
+78	18303	0.1	1	17952 351
+79	18379	0.1	1	18043 336
+80	19776	0.1	1	19349 427
+81	33246	0.1	1	32445 801
+82	58993	0.1	1	58052 941
+83	28834	0.1	1	28128 706
+84	7659	0.1	1	7241 418
+85	1485	0.1	1	1363 122
+86	4345	0.1	1	4257 88
+87	9777	0.1	1	9673 104
+88	15448	0.1	1	15271 177
+89	16007	0.1	1	15832 175
+90	17993	0.1	1	17737 256
+91	19059	0.1	1	18811 248
+92	19188	0.1	1	18911 277
+93	19584	0.1	1	19298 286
+94	19329	0.1	1	19029 300
+95	19259	0.1	1	18980 279
+96	19033	0.1	1	18738 295
+97	17336	0.1	1	17071 265
+98	18713	0.1	1	18395 318
+99	17211	0.1	1	16923 288
+100	17140	0.1	1	16840 300
+101	17785	0.1	1	17484 301
+102	17449	0.1	1	17149 300
+103	17710	0.1	1	17400 310
+104	15791	0.1	1	15471 320
+105	15324	0.1	1	15064 260
+106	14947	0.1	1	14681 266
+107	12435	0.1	1	12227 208
+108	11128	0.1	1	10961 167
+109	9134	0.1	1	8984 150
+110	6700	0.1	1	6594 106
+111	3686	0.1	1	3616 70
+112	1489	0.1	1	1470 19
+113	545	0.1	1	536 9
+114	88	0.1	1	85 3
+115	4	0.1	1	4
+134	1	0.1	1	0 1
+135	2	0.1	1	0 2
+138	1	0.1	1	0 1
+146	1	0.1	1	0 1
+
+RUN STATISTICS FOR INPUT FILE: hCoV-19-USA-CA-CZB-10245-2020/host_removal/hCoV-19-USA-CA-CZB-10245-2020_R2.fastq.gz
+=============================================
+1940988 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files hCoV-19-USA-CA-CZB-10245-2020_R1_trimmed.fq.gz and hCoV-19-USA-CA-CZB-10245-2020_R2_trimmed.fq.gz
+file_1: hCoV-19-USA-CA-CZB-10245-2020_R1_trimmed.fq.gz, file_2: hCoV-19-USA-CA-CZB-10245-2020_R2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: hCoV-19-USA-CA-CZB-10245-2020_R1_trimmed.fq.gz and hCoV-19-USA-CA-CZB-10245-2020_R2_trimmed.fq.gz <<<<<
+Writing validated paired-end Read 1 reads to hCoV-19-USA-CA-CZB-10245-2020_R1_val_1.fq.gz
+Writing validated paired-end Read 2 reads to hCoV-19-USA-CA-CZB-10245-2020_R2_val_2.fq.gz
+
+Total number of sequences analysed: 1940988
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 907 (0.05%)
+
+
+  >>> Now running FastQC on the validated data hCoV-19-USA-CA-CZB-10245-2020_R1_val_1.fq.gz<<<
+
+Started analysis of hCoV-19-USA-CA-CZB-10245-2020_R1_val_1.fq.gz
+Approx 5% complete for hCoV-19-USA-CA-CZB-10245-2020_R1_val_1.fq.gz
+Approx 10% complete for hCoV-19-USA-CA-CZB-10245-2020_R1_val_1.fq.gz
+Approx 15% complete for hCoV-19-USA-CA-CZB-10245-2020_R1_val_1.fq.gz
+Approx 20% complete for hCoV-19-USA-CA-CZB-10245-2020_R1_val_1.fq.gz
+Approx 25% complete for hCoV-19-USA-CA-CZB-10245-2020_R1_val_1.fq.gz
+Approx 30% complete for hCoV-19-USA-CA-CZB-10245-2020_R1_val_1.fq.gz
+Approx 35% complete for hCoV-19-USA-CA-CZB-10245-2020_R1_val_1.fq.gz
+Approx 40% complete for hCoV-19-USA-CA-CZB-10245-2020_R1_val_1.fq.gz
+Approx 45% complete for hCoV-19-USA-CA-CZB-10245-2020_R1_val_1.fq.gz
+Approx 50% complete for hCoV-19-USA-CA-CZB-10245-2020_R1_val_1.fq.gz
+Approx 55% complete for hCoV-19-USA-CA-CZB-10245-2020_R1_val_1.fq.gz
+Approx 60% complete for hCoV-19-USA-CA-CZB-10245-2020_R1_val_1.fq.gz
+Approx 65% complete for hCoV-19-USA-CA-CZB-10245-2020_R1_val_1.fq.gz
+Approx 70% complete for hCoV-19-USA-CA-CZB-10245-2020_R1_val_1.fq.gz
+Approx 75% complete for hCoV-19-USA-CA-CZB-10245-2020_R1_val_1.fq.gz
+Approx 80% complete for hCoV-19-USA-CA-CZB-10245-2020_R1_val_1.fq.gz
+Approx 85% complete for hCoV-19-USA-CA-CZB-10245-2020_R1_val_1.fq.gz
+Approx 90% complete for hCoV-19-USA-CA-CZB-10245-2020_R1_val_1.fq.gz
+Approx 95% complete for hCoV-19-USA-CA-CZB-10245-2020_R1_val_1.fq.gz
+
+  >>> Now running FastQC on the validated data hCoV-19-USA-CA-CZB-10245-2020_R2_val_2.fq.gz<<<
+
+Started analysis of hCoV-19-USA-CA-CZB-10245-2020_R2_val_2.fq.gz
+Approx 5% complete for hCoV-19-USA-CA-CZB-10245-2020_R2_val_2.fq.gz
+Approx 10% complete for hCoV-19-USA-CA-CZB-10245-2020_R2_val_2.fq.gz
+Approx 15% complete for hCoV-19-USA-CA-CZB-10245-2020_R2_val_2.fq.gz
+Approx 20% complete for hCoV-19-USA-CA-CZB-10245-2020_R2_val_2.fq.gz
+Approx 25% complete for hCoV-19-USA-CA-CZB-10245-2020_R2_val_2.fq.gz
+Approx 30% complete for hCoV-19-USA-CA-CZB-10245-2020_R2_val_2.fq.gz
+Approx 35% complete for hCoV-19-USA-CA-CZB-10245-2020_R2_val_2.fq.gz
+Approx 40% complete for hCoV-19-USA-CA-CZB-10245-2020_R2_val_2.fq.gz
+Approx 45% complete for hCoV-19-USA-CA-CZB-10245-2020_R2_val_2.fq.gz
+Approx 50% complete for hCoV-19-USA-CA-CZB-10245-2020_R2_val_2.fq.gz
+Approx 55% complete for hCoV-19-USA-CA-CZB-10245-2020_R2_val_2.fq.gz
+Approx 60% complete for hCoV-19-USA-CA-CZB-10245-2020_R2_val_2.fq.gz
+Approx 65% complete for hCoV-19-USA-CA-CZB-10245-2020_R2_val_2.fq.gz
+Approx 70% complete for hCoV-19-USA-CA-CZB-10245-2020_R2_val_2.fq.gz
+Approx 75% complete for hCoV-19-USA-CA-CZB-10245-2020_R2_val_2.fq.gz
+Approx 80% complete for hCoV-19-USA-CA-CZB-10245-2020_R2_val_2.fq.gz
+Approx 85% complete for hCoV-19-USA-CA-CZB-10245-2020_R2_val_2.fq.gz
+Approx 90% complete for hCoV-19-USA-CA-CZB-10245-2020_R2_val_2.fq.gz
+Approx 95% complete for hCoV-19-USA-CA-CZB-10245-2020_R2_val_2.fq.gz
+Deleting both intermediate output files hCoV-19-USA-CA-CZB-10245-2020_R1_trimmed.fq.gz and hCoV-19-USA-CA-CZB-10245-2020_R2_trimmed.fq.gz
+
+====================================================================================================
+

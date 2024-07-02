@@ -1,0 +1,386 @@
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 4.8
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 2 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-nonvoivoc_results_dir/hCoV-19-Australia-VIC66-2020/adapter_trimmed/
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> hCoV-19-Australia-VIC66-2020/host_removal/hCoV-19-Australia-VIC66-2020_R1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Nextera	58	CTGTCTCTTATA	604647	0.01
+Illumina	0	AGATCGGAAGAGC	604647	0.00
+smallRNA	0	TGGAATTCTCGG	604647	0.00
+Using Nextera adapter for trimming (count: 58). Second best hit was Illumina (count: 0)
+
+Writing report to '/workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-nonvoivoc_results_dir/hCoV-19-Australia-VIC66-2020/adapter_trimmed/hCoV-19-Australia-VIC66-2020_R1.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: hCoV-19-Australia-VIC66-2020/host_removal/hCoV-19-Australia-VIC66-2020_R1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.8
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.8). Setting -j 2
+Writing final adapter and quality trimmed output to hCoV-19-Australia-VIC66-2020_R1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file hCoV-19-Australia-VIC66-2020/host_removal/hCoV-19-Australia-VIC66-2020_R1.fastq.gz <<< 
+This is cutadapt 4.8 with Python 3.12.3
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA hCoV-19-Australia-VIC66-2020/host_removal/hCoV-19-Australia-VIC66-2020_R1.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 14.104 s (23.326 µs/read; 2.57 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 604,647
+Reads with adapters:                    77,015 (12.7%)
+Reads written (passing filters):       604,647 (100.0%)
+
+Total basepairs processed:    88,669,959 bp
+Quality-trimmed:                 202,474 bp (0.2%)
+Total written (filtered):     88,358,516 bp (99.6%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 77015 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 41.6%
+  C: 17.6%
+  G: 18.3%
+  T: 22.5%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	59993	151161.8	0	59993
+2	12371	37790.4	0	12371
+3	3253	9447.6	0	3253
+4	643	2361.9	0	643
+5	361	590.5	0	361
+6	128	147.6	0	128
+7	17	36.9	0	17
+8	5	9.2	0	5
+10	10	0.6	1	3 7
+11	4	0.1	1	3 1
+12	5	0.0	1	1 4
+13	3	0.0	1	0 3
+14	7	0.0	1	0 7
+15	2	0.0	1	0 2
+16	14	0.0	1	5 9
+17	13	0.0	1	5 8
+18	13	0.0	1	3 10
+19	9	0.0	1	3 6
+20	2	0.0	1	0 2
+21	5	0.0	1	0 5
+23	3	0.0	1	0 3
+24	2	0.0	1	1 1
+25	8	0.0	1	0 8
+26	2	0.0	1	0 2
+27	6	0.0	1	3 3
+28	6	0.0	1	2 4
+29	7	0.0	1	2 5
+30	2	0.0	1	0 2
+31	5	0.0	1	2 3
+32	11	0.0	1	4 7
+33	2	0.0	1	0 2
+34	5	0.0	1	1 4
+35	7	0.0	1	4 3
+36	3	0.0	1	0 3
+37	6	0.0	1	2 4
+38	1	0.0	1	1
+39	4	0.0	1	2 2
+40	4	0.0	1	0 4
+41	7	0.0	1	0 7
+42	4	0.0	1	1 3
+43	2	0.0	1	1 1
+45	1	0.0	1	0 1
+46	1	0.0	1	1
+47	2	0.0	1	0 2
+48	1	0.0	1	0 1
+50	1	0.0	1	0 1
+51	2	0.0	1	1 1
+53	2	0.0	1	0 2
+54	2	0.0	1	0 2
+56	1	0.0	1	1
+57	1	0.0	1	0 1
+60	1	0.0	1	1
+62	1	0.0	1	0 1
+63	1	0.0	1	0 1
+64	1	0.0	1	0 1
+65	2	0.0	1	0 2
+66	1	0.0	1	1
+67	1	0.0	1	0 1
+69	1	0.0	1	0 1
+70	2	0.0	1	0 2
+71	1	0.0	1	0 1
+72	1	0.0	1	1
+73	1	0.0	1	0 1
+74	1	0.0	1	0 1
+75	2	0.0	1	1 1
+76	1	0.0	1	0 1
+77	1	0.0	1	0 1
+79	1	0.0	1	1
+80	3	0.0	1	0 3
+82	3	0.0	1	1 2
+84	1	0.0	1	0 1
+87	1	0.0	1	0 1
+88	2	0.0	1	1 1
+89	3	0.0	1	0 3
+91	2	0.0	1	1 1
+92	1	0.0	1	0 1
+95	1	0.0	1	0 1
+96	1	0.0	1	0 1
+101	1	0.0	1	0 1
+105	1	0.0	1	0 1
+106	1	0.0	1	0 1
+108	1	0.0	1	0 1
+113	1	0.0	1	0 1
+140	1	0.0	1	0 1
+142	1	0.0	1	0 1
+145	1	0.0	1	0 1
+
+RUN STATISTICS FOR INPUT FILE: hCoV-19-Australia-VIC66-2020/host_removal/hCoV-19-Australia-VIC66-2020_R1.fastq.gz
+=============================================
+604647 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to '/workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-nonvoivoc_results_dir/hCoV-19-Australia-VIC66-2020/adapter_trimmed/hCoV-19-Australia-VIC66-2020_R2.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: hCoV-19-Australia-VIC66-2020/host_removal/hCoV-19-Australia-VIC66-2020_R2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.8
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.8). Setting -j -j 2
+Writing final adapter and quality trimmed output to hCoV-19-Australia-VIC66-2020_R2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file hCoV-19-Australia-VIC66-2020/host_removal/hCoV-19-Australia-VIC66-2020_R2.fastq.gz <<< 
+This is cutadapt 4.8 with Python 3.12.3
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA hCoV-19-Australia-VIC66-2020/host_removal/hCoV-19-Australia-VIC66-2020_R2.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 14.207 s (23.496 µs/read; 2.55 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 604,647
+Reads with adapters:                   109,153 (18.1%)
+Reads written (passing filters):       604,647 (100.0%)
+
+Total basepairs processed:    88,772,061 bp
+Quality-trimmed:                 423,757 bp (0.5%)
+Total written (filtered):     88,168,873 bp (99.3%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 109153 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 37.9%
+  C: 15.2%
+  G: 20.8%
+  T: 25.9%
+  none/other: 0.2%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	85654	151161.8	0	85654
+2	14511	37790.4	0	14511
+3	4004	9447.6	0	4004
+4	1089	2361.9	0	1089
+5	964	590.5	0	964
+6	316	147.6	0	316
+7	361	36.9	0	361
+8	69	9.2	0	69
+9	55	2.3	0	44 11
+10	119	0.6	1	41 78
+11	144	0.1	1	63 81
+12	147	0.0	1	51 96
+13	235	0.0	1	58 177
+14	208	0.0	1	116 92
+15	264	0.0	1	173 91
+16	181	0.0	1	163 18
+17	296	0.0	1	281 15
+18	171	0.0	1	157 14
+19	68	0.0	1	59 9
+20	70	0.0	1	69 1
+21	44	0.0	1	36 8
+22	11	0.0	1	6 5
+23	3	0.0	1	0 3
+24	6	0.0	1	2 4
+25	4	0.0	1	2 2
+26	4	0.0	1	1 3
+27	5	0.0	1	0 5
+28	7	0.0	1	0 7
+29	3	0.0	1	1 2
+30	5	0.0	1	1 4
+31	3	0.0	1	0 3
+32	5	0.0	1	2 3
+33	2	0.0	1	0 2
+34	2	0.0	1	1 1
+35	2	0.0	1	2
+36	5	0.0	1	2 3
+37	3	0.0	1	0 3
+38	1	0.0	1	0 1
+39	3	0.0	1	1 2
+40	5	0.0	1	1 4
+41	4	0.0	1	0 4
+42	5	0.0	1	2 3
+43	3	0.0	1	1 2
+44	5	0.0	1	2 3
+45	5	0.0	1	3 2
+46	3	0.0	1	1 2
+47	3	0.0	1	2 1
+48	3	0.0	1	1 2
+49	4	0.0	1	2 2
+50	1	0.0	1	0 1
+52	4	0.0	1	2 2
+53	1	0.0	1	0 1
+54	3	0.0	1	2 1
+55	1	0.0	1	1
+57	3	0.0	1	0 3
+58	2	0.0	1	2
+59	1	0.0	1	0 1
+60	1	0.0	1	1
+61	1	0.0	1	0 1
+62	3	0.0	1	2 1
+63	2	0.0	1	0 2
+64	2	0.0	1	1 1
+65	3	0.0	1	3
+66	1	0.0	1	1
+67	1	0.0	1	1
+68	1	0.0	1	1
+69	4	0.0	1	1 3
+71	1	0.0	1	0 1
+73	3	0.0	1	2 1
+74	1	0.0	1	1
+75	2	0.0	1	1 1
+76	2	0.0	1	0 2
+77	1	0.0	1	1
+78	3	0.0	1	1 2
+79	2	0.0	1	1 1
+82	1	0.0	1	1
+83	1	0.0	1	0 1
+85	2	0.0	1	2
+86	1	0.0	1	0 1
+88	1	0.0	1	0 1
+90	1	0.0	1	0 1
+91	2	0.0	1	0 2
+92	1	0.0	1	1
+94	1	0.0	1	0 1
+96	1	0.0	1	0 1
+103	1	0.0	1	0 1
+105	1	0.0	1	0 1
+106	2	0.0	1	1 1
+113	1	0.0	1	1
+133	1	0.0	1	0 1
+142	1	0.0	1	0 1
+
+RUN STATISTICS FOR INPUT FILE: hCoV-19-Australia-VIC66-2020/host_removal/hCoV-19-Australia-VIC66-2020_R2.fastq.gz
+=============================================
+604647 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files hCoV-19-Australia-VIC66-2020_R1_trimmed.fq.gz and hCoV-19-Australia-VIC66-2020_R2_trimmed.fq.gz
+file_1: hCoV-19-Australia-VIC66-2020_R1_trimmed.fq.gz, file_2: hCoV-19-Australia-VIC66-2020_R2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: hCoV-19-Australia-VIC66-2020_R1_trimmed.fq.gz and hCoV-19-Australia-VIC66-2020_R2_trimmed.fq.gz <<<<<
+Writing validated paired-end Read 1 reads to hCoV-19-Australia-VIC66-2020_R1_val_1.fq.gz
+Writing validated paired-end Read 2 reads to hCoV-19-Australia-VIC66-2020_R2_val_2.fq.gz
+
+Total number of sequences analysed: 604647
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 257 (0.04%)
+
+
+  >>> Now running FastQC on the validated data hCoV-19-Australia-VIC66-2020_R1_val_1.fq.gz<<<
+
+Started analysis of hCoV-19-Australia-VIC66-2020_R1_val_1.fq.gz
+Approx 5% complete for hCoV-19-Australia-VIC66-2020_R1_val_1.fq.gz
+Approx 10% complete for hCoV-19-Australia-VIC66-2020_R1_val_1.fq.gz
+Approx 15% complete for hCoV-19-Australia-VIC66-2020_R1_val_1.fq.gz
+Approx 20% complete for hCoV-19-Australia-VIC66-2020_R1_val_1.fq.gz
+Approx 25% complete for hCoV-19-Australia-VIC66-2020_R1_val_1.fq.gz
+Approx 30% complete for hCoV-19-Australia-VIC66-2020_R1_val_1.fq.gz
+Approx 35% complete for hCoV-19-Australia-VIC66-2020_R1_val_1.fq.gz
+Approx 40% complete for hCoV-19-Australia-VIC66-2020_R1_val_1.fq.gz
+Approx 45% complete for hCoV-19-Australia-VIC66-2020_R1_val_1.fq.gz
+Approx 50% complete for hCoV-19-Australia-VIC66-2020_R1_val_1.fq.gz
+Approx 55% complete for hCoV-19-Australia-VIC66-2020_R1_val_1.fq.gz
+Approx 60% complete for hCoV-19-Australia-VIC66-2020_R1_val_1.fq.gz
+Approx 65% complete for hCoV-19-Australia-VIC66-2020_R1_val_1.fq.gz
+Approx 70% complete for hCoV-19-Australia-VIC66-2020_R1_val_1.fq.gz
+Approx 75% complete for hCoV-19-Australia-VIC66-2020_R1_val_1.fq.gz
+Approx 80% complete for hCoV-19-Australia-VIC66-2020_R1_val_1.fq.gz
+Approx 85% complete for hCoV-19-Australia-VIC66-2020_R1_val_1.fq.gz
+Approx 90% complete for hCoV-19-Australia-VIC66-2020_R1_val_1.fq.gz
+Approx 95% complete for hCoV-19-Australia-VIC66-2020_R1_val_1.fq.gz
+
+  >>> Now running FastQC on the validated data hCoV-19-Australia-VIC66-2020_R2_val_2.fq.gz<<<
+
+Started analysis of hCoV-19-Australia-VIC66-2020_R2_val_2.fq.gz
+Approx 5% complete for hCoV-19-Australia-VIC66-2020_R2_val_2.fq.gz
+Approx 10% complete for hCoV-19-Australia-VIC66-2020_R2_val_2.fq.gz
+Approx 15% complete for hCoV-19-Australia-VIC66-2020_R2_val_2.fq.gz
+Approx 20% complete for hCoV-19-Australia-VIC66-2020_R2_val_2.fq.gz
+Approx 25% complete for hCoV-19-Australia-VIC66-2020_R2_val_2.fq.gz
+Approx 30% complete for hCoV-19-Australia-VIC66-2020_R2_val_2.fq.gz
+Approx 35% complete for hCoV-19-Australia-VIC66-2020_R2_val_2.fq.gz
+Approx 40% complete for hCoV-19-Australia-VIC66-2020_R2_val_2.fq.gz
+Approx 45% complete for hCoV-19-Australia-VIC66-2020_R2_val_2.fq.gz
+Approx 50% complete for hCoV-19-Australia-VIC66-2020_R2_val_2.fq.gz
+Approx 55% complete for hCoV-19-Australia-VIC66-2020_R2_val_2.fq.gz
+Approx 60% complete for hCoV-19-Australia-VIC66-2020_R2_val_2.fq.gz
+Approx 65% complete for hCoV-19-Australia-VIC66-2020_R2_val_2.fq.gz
+Approx 70% complete for hCoV-19-Australia-VIC66-2020_R2_val_2.fq.gz
+Approx 75% complete for hCoV-19-Australia-VIC66-2020_R2_val_2.fq.gz
+Approx 80% complete for hCoV-19-Australia-VIC66-2020_R2_val_2.fq.gz
+Approx 85% complete for hCoV-19-Australia-VIC66-2020_R2_val_2.fq.gz
+Approx 90% complete for hCoV-19-Australia-VIC66-2020_R2_val_2.fq.gz
+Approx 95% complete for hCoV-19-Australia-VIC66-2020_R2_val_2.fq.gz
+Deleting both intermediate output files hCoV-19-Australia-VIC66-2020_R1_trimmed.fq.gz and hCoV-19-Australia-VIC66-2020_R2_trimmed.fq.gz
+
+====================================================================================================
+

@@ -1,0 +1,65 @@
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 81058 sequences (20000247 bp)...
+[M::process] read 80980 sequences (20000037 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (13, 38358, 21, 9)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (2820, 3978, 6599)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 14157)
+[M::mem_pestat] mean and std.dev: (4511.62, 2212.52)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 17936)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (380, 386, 393)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (354, 419)
+[M::mem_pestat] mean and std.dev: (389.12, 11.58)
+[M::mem_pestat] low and high boundaries for proper pairs: (341, 435)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (762, 1494, 5992)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 16452)
+[M::mem_pestat] mean and std.dev: (3222.81, 3125.58)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 21682)
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_process_seqs] Processed 81058 reads in 27.002 CPU sec, 13.908 real sec
+[M::process] read 22176 sequences (5482332 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (17, 38567, 22, 14)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (1779, 2664, 6117)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 14793)
+[M::mem_pestat] mean and std.dev: (3542.24, 2280.30)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 19131)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (380, 386, 393)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (354, 419)
+[M::mem_pestat] mean and std.dev: (389.30, 11.60)
+[M::mem_pestat] low and high boundaries for proper pairs: (341, 436)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (850, 2048, 5104)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 13612)
+[M::mem_pestat] mean and std.dev: (3381.73, 3157.05)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 17866)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (2398, 7018, 8039)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 19321)
+[M::mem_pestat] mean and std.dev: (5569.21, 2828.45)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 24962)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 80980 reads in 20.938 CPU sec, 10.361 real sec
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (6, 10578, 8, 3)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (380, 386, 393)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (354, 419)
+[M::mem_pestat] mean and std.dev: (388.86, 11.64)
+[M::mem_pestat] low and high boundaries for proper pairs: (341, 435)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_process_seqs] Processed 22176 reads in 5.609 CPU sec, 2.730 real sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa mem -t 2 /workspace/lab/mcarthurlab/nasirja/covid-19-signal/data/composite_human_viral_reference.fna hCoV-19-USA-NV-QDX-4024-2021/raw_fastq/hCoV-19-USA-NV-QDX-4024-2021_R1.fastq.gz hCoV-19-USA-NV-QDX-4024-2021/raw_fastq/hCoV-19-USA-NV-QDX-4024-2021_R2.fastq.gz
+[main] Real time: 33.757 sec; CPU: 59.677 sec
+viral read count = 175600 (95.32%)
+human read count = 30 (0.02%) 
+unmapped read count = 8584 (4.66%)

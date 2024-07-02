@@ -1,0 +1,31 @@
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 73122 sequences (7385322 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (1452, 14158, 62, 1358)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (74, 119, 207)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 473)
+[M::mem_pestat] mean and std.dev: (110.89, 59.54)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 606)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (141, 185, 245)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 453)
+[M::mem_pestat] mean and std.dev: (172.40, 65.01)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 557)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (103, 798, 2484)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 7246)
+[M::mem_pestat] mean and std.dev: (1366.26, 1821.83)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 9627)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (72, 116, 187)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 417)
+[M::mem_pestat] mean and std.dev: (111.72, 60.90)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 532)
+[M::mem_pestat] skip orientation RF
+[M::mem_process_seqs] Processed 73122 reads in 22.339 CPU sec, 11.187 real sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa mem -t 2 /workspace/lab/mcarthurlab/nasirja/covid-19-signal/data/composite_human_viral_reference.fna MA-MGH-00270/raw_fastq/MA-MGH-00270_R1.fastq.gz MA-MGH-00270/raw_fastq/MA-MGH-00270_R2.fastq.gz
+[main] Real time: 17.987 sec; CPU: 28.329 sec
+viral read count = 29435 (40.25%)
+human read count = 10929 (14.95%) 
+unmapped read count = 32758 (44.80%)

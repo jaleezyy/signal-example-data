@@ -1,0 +1,226 @@
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 4.8
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 2 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-coronahit-routine_results_dir/NORW-EC35C-CoronaHiT-Illumina/adapter_trimmed/
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> NORW-EC35C-CoronaHiT-Illumina/host_removal/NORW-EC35C-CoronaHiT-Illumina_R1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Nextera	0	CTGTCTCTTATA	505648	0.00
+smallRNA	0	TGGAATTCTCGG	505648	0.00
+Illumina	0	AGATCGGAAGAGC	505648	0.00
+Unable to auto-detect most prominent adapter from the first specified file (count Nextera: 0, count smallRNA: 0, count Illumina: 0)
+Defaulting to Illumina universal adapter ( AGATCGGAAGAGC ). Specify -a SEQUENCE to avoid this behavior).
+
+Writing report to '/workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-coronahit-routine_results_dir/NORW-EC35C-CoronaHiT-Illumina/adapter_trimmed/NORW-EC35C-CoronaHiT-Illumina_R1.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: NORW-EC35C-CoronaHiT-Illumina/host_removal/NORW-EC35C-CoronaHiT-Illumina_R1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.8
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; default (inconclusive auto-detection))
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.8). Setting -j 2
+Writing final adapter and quality trimmed output to NORW-EC35C-CoronaHiT-Illumina_R1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file NORW-EC35C-CoronaHiT-Illumina/host_removal/NORW-EC35C-CoronaHiT-Illumina_R1.fastq.gz <<< 
+This is cutadapt 4.8 with Python 3.12.3
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC NORW-EC35C-CoronaHiT-Illumina/host_removal/NORW-EC35C-CoronaHiT-Illumina_R1.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 3.910 s (7.732 µs/read; 7.76 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 505,648
+Reads with adapters:                   242,545 (48.0%)
+Reads written (passing filters):       505,648 (100.0%)
+
+Total basepairs processed:    69,553,137 bp
+Quality-trimmed:                  23,491 bp (0.0%)
+Total written (filtered):     69,198,469 bp (99.5%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 242545 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 36.8%
+  C: 23.9%
+  G: 10.8%
+  T: 28.4%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	175329	126412.0	0	175329
+2	50250	31603.0	0	50250
+3	13119	7900.8	0	13119
+4	3687	1975.2	0	3687
+5	63	493.8	0	63
+6	26	123.4	0	26
+7	4	30.9	0	4
+10	66	0.5	1	0 66
+84	1	0.0	1	0 1
+
+RUN STATISTICS FOR INPUT FILE: NORW-EC35C-CoronaHiT-Illumina/host_removal/NORW-EC35C-CoronaHiT-Illumina_R1.fastq.gz
+=============================================
+505648 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to '/workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-coronahit-routine_results_dir/NORW-EC35C-CoronaHiT-Illumina/adapter_trimmed/NORW-EC35C-CoronaHiT-Illumina_R2.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: NORW-EC35C-CoronaHiT-Illumina/host_removal/NORW-EC35C-CoronaHiT-Illumina_R2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.8
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; default (inconclusive auto-detection))
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.8). Setting -j -j 2
+Writing final adapter and quality trimmed output to NORW-EC35C-CoronaHiT-Illumina_R2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file NORW-EC35C-CoronaHiT-Illumina/host_removal/NORW-EC35C-CoronaHiT-Illumina_R2.fastq.gz <<< 
+This is cutadapt 4.8 with Python 3.12.3
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC NORW-EC35C-CoronaHiT-Illumina/host_removal/NORW-EC35C-CoronaHiT-Illumina_R2.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 4.018 s (7.947 µs/read; 7.55 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 505,648
+Reads with adapters:                   244,107 (48.3%)
+Reads written (passing filters):       505,648 (100.0%)
+
+Total basepairs processed:    69,559,769 bp
+Quality-trimmed:                  20,495 bp (0.0%)
+Total written (filtered):     69,207,799 bp (99.5%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 244107 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 36.8%
+  C: 23.3%
+  G: 11.2%
+  T: 28.7%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	177698	126412.0	0	177698
+2	49944	31603.0	0	49944
+3	12744	7900.8	0	12744
+4	3499	1975.2	0	3499
+5	79	493.8	0	79
+6	41	123.4	0	41
+10	102	0.5	1	0 102
+
+RUN STATISTICS FOR INPUT FILE: NORW-EC35C-CoronaHiT-Illumina/host_removal/NORW-EC35C-CoronaHiT-Illumina_R2.fastq.gz
+=============================================
+505648 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files NORW-EC35C-CoronaHiT-Illumina_R1_trimmed.fq.gz and NORW-EC35C-CoronaHiT-Illumina_R2_trimmed.fq.gz
+file_1: NORW-EC35C-CoronaHiT-Illumina_R1_trimmed.fq.gz, file_2: NORW-EC35C-CoronaHiT-Illumina_R2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: NORW-EC35C-CoronaHiT-Illumina_R1_trimmed.fq.gz and NORW-EC35C-CoronaHiT-Illumina_R2_trimmed.fq.gz <<<<<
+Writing validated paired-end Read 1 reads to NORW-EC35C-CoronaHiT-Illumina_R1_val_1.fq.gz
+Writing validated paired-end Read 2 reads to NORW-EC35C-CoronaHiT-Illumina_R2_val_2.fq.gz
+
+Total number of sequences analysed: 505648
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 0 (0.00%)
+
+
+  >>> Now running FastQC on the validated data NORW-EC35C-CoronaHiT-Illumina_R1_val_1.fq.gz<<<
+
+Started analysis of NORW-EC35C-CoronaHiT-Illumina_R1_val_1.fq.gz
+Approx 5% complete for NORW-EC35C-CoronaHiT-Illumina_R1_val_1.fq.gz
+Approx 10% complete for NORW-EC35C-CoronaHiT-Illumina_R1_val_1.fq.gz
+Approx 15% complete for NORW-EC35C-CoronaHiT-Illumina_R1_val_1.fq.gz
+Approx 20% complete for NORW-EC35C-CoronaHiT-Illumina_R1_val_1.fq.gz
+Approx 25% complete for NORW-EC35C-CoronaHiT-Illumina_R1_val_1.fq.gz
+Approx 30% complete for NORW-EC35C-CoronaHiT-Illumina_R1_val_1.fq.gz
+Approx 35% complete for NORW-EC35C-CoronaHiT-Illumina_R1_val_1.fq.gz
+Approx 40% complete for NORW-EC35C-CoronaHiT-Illumina_R1_val_1.fq.gz
+Approx 45% complete for NORW-EC35C-CoronaHiT-Illumina_R1_val_1.fq.gz
+Approx 50% complete for NORW-EC35C-CoronaHiT-Illumina_R1_val_1.fq.gz
+Approx 55% complete for NORW-EC35C-CoronaHiT-Illumina_R1_val_1.fq.gz
+Approx 60% complete for NORW-EC35C-CoronaHiT-Illumina_R1_val_1.fq.gz
+Approx 65% complete for NORW-EC35C-CoronaHiT-Illumina_R1_val_1.fq.gz
+Approx 70% complete for NORW-EC35C-CoronaHiT-Illumina_R1_val_1.fq.gz
+Approx 75% complete for NORW-EC35C-CoronaHiT-Illumina_R1_val_1.fq.gz
+Approx 80% complete for NORW-EC35C-CoronaHiT-Illumina_R1_val_1.fq.gz
+Approx 85% complete for NORW-EC35C-CoronaHiT-Illumina_R1_val_1.fq.gz
+Approx 90% complete for NORW-EC35C-CoronaHiT-Illumina_R1_val_1.fq.gz
+Approx 95% complete for NORW-EC35C-CoronaHiT-Illumina_R1_val_1.fq.gz
+
+  >>> Now running FastQC on the validated data NORW-EC35C-CoronaHiT-Illumina_R2_val_2.fq.gz<<<
+
+Started analysis of NORW-EC35C-CoronaHiT-Illumina_R2_val_2.fq.gz
+Approx 5% complete for NORW-EC35C-CoronaHiT-Illumina_R2_val_2.fq.gz
+Approx 10% complete for NORW-EC35C-CoronaHiT-Illumina_R2_val_2.fq.gz
+Approx 15% complete for NORW-EC35C-CoronaHiT-Illumina_R2_val_2.fq.gz
+Approx 20% complete for NORW-EC35C-CoronaHiT-Illumina_R2_val_2.fq.gz
+Approx 25% complete for NORW-EC35C-CoronaHiT-Illumina_R2_val_2.fq.gz
+Approx 30% complete for NORW-EC35C-CoronaHiT-Illumina_R2_val_2.fq.gz
+Approx 35% complete for NORW-EC35C-CoronaHiT-Illumina_R2_val_2.fq.gz
+Approx 40% complete for NORW-EC35C-CoronaHiT-Illumina_R2_val_2.fq.gz
+Approx 45% complete for NORW-EC35C-CoronaHiT-Illumina_R2_val_2.fq.gz
+Approx 50% complete for NORW-EC35C-CoronaHiT-Illumina_R2_val_2.fq.gz
+Approx 55% complete for NORW-EC35C-CoronaHiT-Illumina_R2_val_2.fq.gz
+Approx 60% complete for NORW-EC35C-CoronaHiT-Illumina_R2_val_2.fq.gz
+Approx 65% complete for NORW-EC35C-CoronaHiT-Illumina_R2_val_2.fq.gz
+Approx 70% complete for NORW-EC35C-CoronaHiT-Illumina_R2_val_2.fq.gz
+Approx 75% complete for NORW-EC35C-CoronaHiT-Illumina_R2_val_2.fq.gz
+Approx 80% complete for NORW-EC35C-CoronaHiT-Illumina_R2_val_2.fq.gz
+Approx 85% complete for NORW-EC35C-CoronaHiT-Illumina_R2_val_2.fq.gz
+Approx 90% complete for NORW-EC35C-CoronaHiT-Illumina_R2_val_2.fq.gz
+Approx 95% complete for NORW-EC35C-CoronaHiT-Illumina_R2_val_2.fq.gz
+Deleting both intermediate output files NORW-EC35C-CoronaHiT-Illumina_R1_trimmed.fq.gz and NORW-EC35C-CoronaHiT-Illumina_R2_trimmed.fq.gz
+
+====================================================================================================
+

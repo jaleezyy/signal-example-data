@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<h3>SARS-CoV-2 Illumina GeNome Assembly Line (SIGNAL), version v1.6.6&nbsp;&nbsp;(<a href="https://github.com/jaleezyy/covid-19-signal">https://github.com/jaleezyy/covid-19-signal</a>)</h3>
+<p>Note: Asterisks (*) indicates a discrepancy between iVar (default) and FreeBayes (if run)</p>
+<p><table><tr>
+<td><img src="summary_ncov2_in_reads_v_genome_fraction.png"></td>
+<td><img src="summary_average_depth_v_genome_fraction.png"></td>
+</tr>
+<td><img src="summary_highly_covered_v_genome_fraction.png"></td>
+</tr></table>
+<p><table style="border-collapse: collapse; border: 1px solid black;">
+<tr><th>Sample</th>
+<th colspan="1" style="border-left: 1px solid black;">Lineage (Pangolin)</th>
+<th colspan="1" style="border-left: 1px solid black;">Clade (Nextstrain)</th>
+<th colspan="2" style="border-left: 1px solid black;">Data Volume</th>
+<th colspan="9" style="border-left: 1px solid black;">Quality Control Flags</th>
+<th colspan="1" style="border-left: 1px solid black;">Kraken2</th>
+<th colspan="4" style="border-left: 1px solid black;">QUAST</th>
+<th colspan="1" style="border-left: 1px solid black;">Variants (iVar)</th>
+<th colspan="1" style="border-left: 1px solid black;">Unique Variants (FreeBayes)</th>
+<th colspan="1" style="border-left: 1px solid black;">Consensus Nucleotide Differences (FreeBayes as Reference)</th>
+<th colspan="1" style="border-left: 1px solid black;">Variants (BreSeq)</th>
+</tr>
+<tr><th style="border-bottom: 1px solid black;"></th>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;"></td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;"></td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;">Raw<br>Data<br>(read<br>pairs)</td>
+<td style="border-bottom: 1px solid black; ">Post<br>Trim<br>(read<br>pairs)</td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;">Genome<br>fraction<br>>90%</td>
+<td style="border-bottom: 1px solid black; ">No<br>indels</td>
+<td style="border-bottom: 1px solid black; ">Depth<br>>2000</td>
+<td style="border-bottom: 1px solid black; ">Variants<br>>90%</td>
+<td style="border-bottom: 1px solid black; ">ORF<br>Frameshifts</td>
+<td style="border-bottom: 1px solid black; ">Fastqc<br>quality</td>
+<td style="border-bottom: 1px solid black; ">Fastqc<br>adapter</td>
+<td style="border-bottom: 1px solid black; ">90%<br>cov<br>>100</td>
+<td style="border-bottom: 1px solid black; ">90%<br>cov<br>>1000</td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;">Reads<br>SARS-CoV-2<br>(%)</td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;">Genome<br>Length<br>(bp)</td>
+<td style="border-bottom: 1px solid black; ">Genome<br>Fraction<br>(%)</td>
+<td style="border-bottom: 1px solid black; ">N's per<br>100 kbp</td>
+<td style="border-bottom: 1px solid black; ">Average<br>Depth of<br>Coverage</td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;"></td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;"></td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;"></td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;"></td>
+</tr>
+<tr><td style="background-color: #dddddd;">&nbsp;<br><a href="benchmark-bad1/benchmark-bad1_sample.html">benchmark-bad1</a><br>&nbsp;</td><td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> Unassigned</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 20C</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">24287</td>
+<td style="background-color: #dddddd; ">&nbsp;24247</td>
+<td style="background-color: #dd2a2a; border-left: 1px solid black;">FAIL</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">92.37</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">29903.0</td>
+<td style="background-color: #dddddd; ">&nbsp;34.184</td>
+<td style="background-color: #dddddd; ">&nbsp;66210.75</td>
+<td style="background-color: #dddddd; ">&nbsp;178.8</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> G199A
+<p style="margin-bottom:0px; margin-top:8px">C241T
+<p style="margin-bottom:0px; margin-top:8px">G17110T
+<p style="margin-bottom:0px; margin-top:8px">G18538T</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> JC;	5,820;	Δ5 bp;	(6.6%);	'coding (5555-5559/13203nt)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	17,110;	G→T;	(100%);	'A1215S (GCT→TCT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	18,248;	C→T;	(5.2%);	'P1594L (CCT→CTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	18,538;	G→T;	(100%);	'V1691L (GTA→TTA)';	'orf1ab →'</td>
+</tr>
+<tr><td style="background-color: #ffffff;">&nbsp;<br><a href="benchmark-bad10/benchmark-bad10_sample.html">benchmark-bad10</a><br>&nbsp;</td><td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> Unassigned</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> nan</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">1481</td>
+<td style="background-color: #ffffff; ">&nbsp;1431</td>
+<td style="background-color: #ff3030; border-left: 1px solid black;">FAIL</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">0</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">29903.0</td>
+<td style="background-color: #ffffff; ">&nbsp;0.0</td>
+<td style="background-color: #ffffff; ">&nbsp;98398.15</td>
+<td style="background-color: #ffffff; ">&nbsp;0.5</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	6,775;	Δ1 bp;	(15.9%);	'coding (6510/13203nt)';	'orf1ab →'</td>
+</tr>
+<tr><td style="background-color: #dddddd;">&nbsp;<br><a href="benchmark-bad11/benchmark-bad11_sample.html">benchmark-bad11</a><br>&nbsp;</td><td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 19A</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">137886</td>
+<td style="background-color: #dddddd; ">&nbsp;137745</td>
+<td style="background-color: #dd2a2a; border-left: 1px solid black;">FAIL</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">92.82</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">29903.0</td>
+<td style="background-color: #dddddd; ">&nbsp;89.74</td>
+<td style="background-color: #dddddd; ">&nbsp;10697.92</td>
+<td style="background-color: #dddddd; ">&nbsp;1043.0</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> A16044C</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	2,725;	A→G;	(9.6%);	'P820P (CCA→CCG)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">JC;	8,364;	78 bp x 2;	(10.4%);	'duplication';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	20,564;	C→G;	(12.7%);	'S2366C (TCT→TGT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	25,168;	A→T;	(10.4%);	'E1202D (GAA→GAT)';	'S →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	27,784;	Δ1 bp;	(7.9%);	'intergenic (+25/-110)';	'ORF7a →/→ ORF8'
+<p style="margin-bottom:0px; margin-top:8px">RA;	28,801;	C→T;	(12.4%);	'S176S (AGC→AGT)';	'N →'</td>
+</tr>
+<tr><td style="background-color: #ffffff;">&nbsp;<br><a href="benchmark-bad12/benchmark-bad12_sample.html">benchmark-bad12</a><br>&nbsp;</td><td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1.1</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 19A</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">2602</td>
+<td style="background-color: #ffffff; ">&nbsp;2596</td>
+<td style="background-color: #ff3030; border-left: 1px solid black;">FAIL</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">93.06</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">29903.0</td>
+<td style="background-color: #ffffff; ">&nbsp;83.453</td>
+<td style="background-color: #ffffff; ">&nbsp;19332.51</td>
+<td style="background-color: #ffffff; ">&nbsp;21.4</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> A11476G*
+<p style="margin-bottom:0px; margin-top:8px">A11477G*
+<p style="margin-bottom:0px; margin-top:8px">C23053T
+<p style="margin-bottom:0px; margin-top:8px">A23063T*
+<p style="margin-bottom:0px; margin-top:8px">T23065C*
+<p style="margin-bottom:0px; margin-top:8px">A23403G</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> AA11476GG
+<p style="margin-bottom:0px; margin-top:8px">AAT23063TAC</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> N952C
+<p style="margin-bottom:0px; margin-top:8px">NNN19113CAA</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	8,877;	G→T;	(13.2%);	'G2871V (GGC→GTC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	23,053;	C→T;	(35.5%);	'F497F (TTC→TTT)';	'S →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	23,063;	A→T;	(100%);	'N501Y (AAT→TAC)';	'S →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	23,065;	T→C;	(100%);	'N501Y (AAT→TAC)';	'S →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	23,403;	A→G;	(100%);	'D614G (GAT→GGT)';	'S →'</td>
+</tr>
+<tr><td style="background-color: #dddddd;">&nbsp;<br><a href="benchmark-bad13/benchmark-bad13_sample.html">benchmark-bad13</a><br>&nbsp;</td><td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 20C</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">355210</td>
+<td style="background-color: #dddddd; ">&nbsp;355049</td>
+<td style="background-color: #7ca37c; border-left: 1px solid black;">PASS</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">91.85</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">29910.0</td>
+<td style="background-color: #dddddd; ">&nbsp;90.79</td>
+<td style="background-color: #dddddd; ">&nbsp;9822.8</td>
+<td style="background-color: #dddddd; ">&nbsp;2602.2</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C241T
+<p style="margin-bottom:0px; margin-top:8px">C1059T
+<p style="margin-bottom:0px; margin-top:8px">G1922+A*
+<p style="margin-bottom:0px; margin-top:8px">T1947C
+<p style="margin-bottom:0px; margin-top:8px">T2575G
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">G3065A
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 38 more)</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> G1922GA
+<p style="margin-bottom:0px; margin-top:8px">A6377ATGCGTGCGTCGG
+<p style="margin-bottom:0px; margin-top:8px">AAC8297A
+<p style="margin-bottom:0px; margin-top:8px">G15965GT
+<p style="margin-bottom:0px; margin-top:8px">GTGTTTA21987ATGT
+<p style="margin-bottom:0px; margin-top:8px">TG26315T</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C3426N
+<p style="margin-bottom:0px; margin-top:8px">TG13356NN
+<p style="margin-bottom:0px; margin-top:8px">GT15976G
+<p style="margin-bottom:0px; margin-top:8px">A19920N
+<p style="margin-bottom:0px; margin-top:8px">T22375N
+<p style="margin-bottom:0px; margin-top:8px">CCCCCAGCGCTTCAGCGTTCTT29204NNNNNNNNNNNNNNNNNNNNNN</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	1,059;	C→T;	(100%);	'T265I (ACC→ATC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	1,922:1;	+A;	(100%);	'coding (1657/13203nt)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	1,947;	T→C;	(100%);	'V561A (GTT→GCT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	2,575;	T→G;	(100%);	'T770T (ACT→ACG)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,065;	G→A;	(50.9%);	'G934S (GGT→AGT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 44 more)</td>
+</tr>
+<tr><td style="background-color: #ffffff;">&nbsp;<br><a href="benchmark-bad14/benchmark-bad14_sample.html">benchmark-bad14</a><br>&nbsp;</td><td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> A</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 19B</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">605201</td>
+<td style="background-color: #ffffff; ">&nbsp;604428</td>
+<td style="background-color: #ff3030; border-left: 1px solid black;">FAIL</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">93.77</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">29903.0</td>
+<td style="background-color: #ffffff; ">&nbsp;86.172</td>
+<td style="background-color: #ffffff; ">&nbsp;14209.28</td>
+<td style="background-color: #ffffff; ">&nbsp;4509.7</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C8782T
+<p style="margin-bottom:0px; margin-top:8px">A10703G
+<p style="margin-bottom:0px; margin-top:8px">C18060T
+<p style="margin-bottom:0px; margin-top:8px">T28144C</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	5,457;	C→T;	(5.0%);	'T1731I (ACA→ATA)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	8,782;	C→T;	(100%);	'S2839S (AGC→AGT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	14,250;	Δ1 bp;	(5.1%);	'coding (783/8088nt)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	14,464;	G→C;	(5.5%);	'V333L (GTT→CTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	16,949;	Δ1 bp;	(20.0%);	'coding (3482/8088nt)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	16,949:1;	+C;	(5.9%);	'coding (3482/8088nt)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	18,060;	C→T;	(100%);	'L1531L (CTC→CTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	28,144;	T→C;	(100%);	'L84S (TTA→TCA)';	'ORF8 →'</td>
+</tr>
+<tr><td style="background-color: #dddddd;">&nbsp;<br><a href="benchmark-bad15/benchmark-bad15_sample.html">benchmark-bad15</a><br>&nbsp;</td><td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> A</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 19B</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">221308</td>
+<td style="background-color: #dddddd; ">&nbsp;221191</td>
+<td style="background-color: #dd2a2a; border-left: 1px solid black;">FAIL</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">83.93</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">29903.0</td>
+<td style="background-color: #dddddd; ">&nbsp;85.54</td>
+<td style="background-color: #dddddd; ">&nbsp;15209.18</td>
+<td style="background-color: #dddddd; ">&nbsp;1554.8</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C1349+A*
+<p style="margin-bottom:0px; margin-top:8px">T4579-AACGATCTA*
+<p style="margin-bottom:0px; margin-top:8px">C7765T
+<p style="margin-bottom:0px; margin-top:8px">C8782T
+<p style="margin-bottom:0px; margin-top:8px">A8887G
+<p style="margin-bottom:0px; margin-top:8px">A8913T
+<p style="margin-bottom:0px; margin-top:8px">A10984G
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 3 more)</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> AACGATCTA4580NNNNNNNNN
+<p style="margin-bottom:0px; margin-top:8px">N18718K</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> JC;	1,606;	Δ3 bp;	(8.3%);	'coding (1341-1343/13203nt)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	1,666;	T→A;	(13.5%);	'F467L (TTT→TTA)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">JC;	4,582;	Δ9 bp;	(44.1%);	'coding (4317-4325/13203nt)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	5,531;	G→T;	(13.8%);	'G1756* (GGA→TGA)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	7,030;	T→C;	(15.3%);	'S2255S (TCT→TCC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	7,765;	C→T;	(45.6%);	'S2500S (TCC→TCT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	8,187;	T→C;	(8.9%);	'F2641S (TTT→TCT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 13 more)</td>
+</tr>
+<tr><td style="background-color: #ffffff;">&nbsp;<br><a href="benchmark-bad16/benchmark-bad16_sample.html">benchmark-bad16</a><br>&nbsp;</td><td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> A</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 19B</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">314516</td>
+<td style="background-color: #ffffff; ">&nbsp;314182</td>
+<td style="background-color: #8fbc8f; border-left: 1px solid black;">PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">92.62</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">29903.0</td>
+<td style="background-color: #ffffff; ">&nbsp;98.515</td>
+<td style="background-color: #ffffff; ">&nbsp;1514.9</td>
+<td style="background-color: #ffffff; ">&nbsp;2873.8</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C3874T
+<p style="margin-bottom:0px; margin-top:8px">C8782T
+<p style="margin-bottom:0px; margin-top:8px">C12452-CT*
+<p style="margin-bottom:0px; margin-top:8px">C18060T
+<p style="margin-bottom:0px; margin-top:8px">G19565T
+<p style="margin-bottom:0px; margin-top:8px">A25175T
+<p style="margin-bottom:0px; margin-top:8px">T28144C</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> G5631N
+<p style="margin-bottom:0px; margin-top:8px">CT12453NN
+<p style="margin-bottom:0px; margin-top:8px">T25398N
+<p style="margin-bottom:0px; margin-top:8px">ATT27774NNN</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> JC;	518;	Δ3 bp;	(7.3%);	'coding (253-255/13203nt)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,142;	T→C;	(5.3%);	'P959P (CCT→CCC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">JC;	3,379;	Δ75 bp;	(6.6%);	'coding (3114-3188/13203nt)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,874;	C→T;	(100%);	'I1203I (ATC→ATT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	5,631;	Δ1 bp;	(18.6%);	'coding (5366/13203nt)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">JC;	6,120;	Δ82 bp;	(16.0%);	'coding (5855-5936/13203nt)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	6,440;	A→G;	(21.3%);	'K2059E (AAA→GAA)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 21 more)</td>
+</tr>
+<tr><td style="background-color: #dddddd;">&nbsp;<br><a href="benchmark-bad17/benchmark-bad17_sample.html">benchmark-bad17</a><br>&nbsp;</td><td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> Unassigned</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> nan</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">1270</td>
+<td style="background-color: #dddddd; ">&nbsp;1154</td>
+<td style="background-color: #dd2a2a; border-left: 1px solid black;">FAIL</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">0.09</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">29903.0</td>
+<td style="background-color: #dddddd; ">&nbsp;0.0</td>
+<td style="background-color: #dddddd; ">&nbsp;99020.17</td>
+<td style="background-color: #dddddd; ">&nbsp;0.4</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> N8436T</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+</tr>
+<tr><td style="background-color: #ffffff;">&nbsp;<br><a href="benchmark-bad18/benchmark-bad18_sample.html">benchmark-bad18</a><br>&nbsp;</td><td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> Unassigned</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> nan</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">6226</td>
+<td style="background-color: #ffffff; ">&nbsp;5873</td>
+<td style="background-color: #ff3030; border-left: 1px solid black;">FAIL</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">0.12</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">29903.0</td>
+<td style="background-color: #ffffff; ">&nbsp;0.0</td>
+<td style="background-color: #ffffff; ">&nbsp;99210.78</td>
+<td style="background-color: #ffffff; ">&nbsp;1.9</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> A8436T*
+<p style="margin-bottom:0px; margin-top:8px">A8437T*</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> AA8436TT</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+</tr>
+<tr><td style="background-color: #dddddd;">&nbsp;<br><a href="benchmark-bad19/benchmark-bad19_sample.html">benchmark-bad19</a><br>&nbsp;</td><td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> Unassigned</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 20A</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">533747</td>
+<td style="background-color: #dddddd; ">&nbsp;533573</td>
+<td style="background-color: #dd2a2a; border-left: 1px solid black;">FAIL</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">94.57</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">29903.0</td>
+<td style="background-color: #dddddd; ">&nbsp;37.495</td>
+<td style="background-color: #dddddd; ">&nbsp;62428.52</td>
+<td style="background-color: #dddddd; ">&nbsp;4066.2</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> T2158C
+<p style="margin-bottom:0px; margin-top:8px">C9693T
+<p style="margin-bottom:0px; margin-top:8px">G9802T
+<p style="margin-bottom:0px; margin-top:8px">C15240T
+<p style="margin-bottom:0px; margin-top:8px">T20369C
+<p style="margin-bottom:0px; margin-top:8px">C21642T
+<p style="margin-bottom:0px; margin-top:8px">A23403G</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> A16522C
+<p style="margin-bottom:0px; margin-top:8px">A20370G</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> M16522A</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	2,158;	T→C;	(100%);	'L631L (CTT→CTC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	8,242;	Δ1 bp;	(27.3%);	'coding (7977/13203nt)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	9,693;	C→T;	(100%);	'A3143V (GCT→GTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	9,802;	G→T;	(100%);	'A3179A (GCG→GCT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	15,240;	C→T;	(81.7%);	'N591N (AAC→AAT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	21,422:1;	+C;	(70.0%);	'coding (7955/8088nt)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	21,422:2;	+A;	(70.0%);	'coding (7955/8088nt)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 3 more)</td>
+</tr>
+<tr><td style="background-color: #ffffff;">&nbsp;<br><a href="benchmark-bad2/benchmark-bad2_sample.html">benchmark-bad2</a><br>&nbsp;</td><td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> Unassigned</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> nan</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">418</td>
+<td style="background-color: #ffffff; ">&nbsp;389</td>
+<td style="background-color: #ff3030; border-left: 1px solid black;">FAIL</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">14.78</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">29903.0</td>
+<td style="background-color: #ffffff; ">&nbsp;0.0</td>
+<td style="background-color: #ffffff; ">&nbsp;99645.52</td>
+<td style="background-color: #ffffff; ">&nbsp;0.5</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> MC;	1;	Δ29,903 bp;	(100%);	'';	'orf1ab – ORF10'</td>
+</tr>
+<tr><td style="background-color: #dddddd;">&nbsp;<br><a href="benchmark-bad20/benchmark-bad20_sample.html">benchmark-bad20</a><br>&nbsp;</td><td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1.426</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 20C</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">278257</td>
+<td style="background-color: #dddddd; ">&nbsp;275444</td>
+<td style="background-color: #7ca37c; border-left: 1px solid black;">PASS</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">96.41</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">29904.0</td>
+<td style="background-color: #dddddd; ">&nbsp;93.001</td>
+<td style="background-color: #dddddd; ">&nbsp;7203.05</td>
+<td style="background-color: #dddddd; ">&nbsp;2377.1</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C241T
+<p style="margin-bottom:0px; margin-top:8px">T833C
+<p style="margin-bottom:0px; margin-top:8px">C1059T
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">G4300T
+<p style="margin-bottom:0px; margin-top:8px">C6541T
+<p style="margin-bottom:0px; margin-top:8px">C10191T
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 12 more)</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C13541CT</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	833;	T→C;	(100%);	'F190L (TTC→CTC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	1,059;	C→T;	(100%);	'T265I (ACC→ATC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,021;	A→T;	(5.5%);	'H919L (CAT→CTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,057;	Δ1 bp;	(5.1%);	'coding (2792/13203nt)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,876;	C→T;	(5.8%);	'A1204V (GCT→GTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 41 more)</td>
+</tr>
+<tr><td style="background-color: #ffffff;">&nbsp;<br><a href="benchmark-bad21/benchmark-bad21_sample.html">benchmark-bad21</a><br>&nbsp;</td><td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1.425</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 20C</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">135970</td>
+<td style="background-color: #ffffff; ">&nbsp;134994</td>
+<td style="background-color: #ff3030; border-left: 1px solid black;">FAIL</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">98.05</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">29903.0</td>
+<td style="background-color: #ffffff; ">&nbsp;85.771</td>
+<td style="background-color: #ffffff; ">&nbsp;15072.07</td>
+<td style="background-color: #ffffff; ">&nbsp;1050.2</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C241T
+<p style="margin-bottom:0px; margin-top:8px">G625A
+<p style="margin-bottom:0px; margin-top:8px">T833C
+<p style="margin-bottom:0px; margin-top:8px">A1005G
+<p style="margin-bottom:0px; margin-top:8px">C1026-T*
+<p style="margin-bottom:0px; margin-top:8px">C1059T
+<p style="margin-bottom:0px; margin-top:8px">G1235T
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 18 more)</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> TG14445T</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> T1027N
+<p style="margin-bottom:0px; margin-top:8px">T14445TN
+<p style="margin-bottom:0px; margin-top:8px">N18635G</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	625;	G→A;	(36.3%);	'K120K (AAG→AAA)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	833;	T→C;	(100%);	'F190L (TTC→CTC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	1,005;	A→G;	(20.7%);	'K247R (AAG→AGG)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	1,059;	C→T;	(100%);	'T265I (ACC→ATC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	1,235;	G→T;	(25.9%);	'D324Y (GAT→TAT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 25 more)</td>
+</tr>
+<tr><td style="background-color: #dddddd;">&nbsp;<br><a href="benchmark-bad22/benchmark-bad22_sample.html">benchmark-bad22</a><br>&nbsp;</td><td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1.426</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 20C</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">228892</td>
+<td style="background-color: #dddddd; ">&nbsp;212492</td>
+<td style="background-color: #dd2a2a; border-left: 1px solid black;">FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">97.59</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">29901.0</td>
+<td style="background-color: #dddddd; ">&nbsp;85.821</td>
+<td style="background-color: #dddddd; ">&nbsp;14645.0</td>
+<td style="background-color: #dddddd; ">&nbsp;1678.4</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C241T
+<p style="margin-bottom:0px; margin-top:8px">T833C
+<p style="margin-bottom:0px; margin-top:8px">C1059T
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">C6541T
+<p style="margin-bottom:0px; margin-top:8px">T7199C
+<p style="margin-bottom:0px; margin-top:8px">C7200T
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 12 more)</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> AC12869A
+<p style="margin-bottom:0px; margin-top:8px">TG12987T</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> A21030N
+<p style="margin-bottom:0px; margin-top:8px">A21961N</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	142;	A→T;	(8.3%);	'intergenic (–/-124)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	313;	Δ1 bp;	(8.3%);	'coding (48/13203nt)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	372;	Δ1 bp;	(15.9%);	'coding (107/13203nt)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	564;	G→T;	(19.4%);	'S100I (AGT→ATT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	833;	T→C;	(100%);	'F190L (TTC→CTC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	1,059;	C→T;	(100%);	'T265I (ACC→ATC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 129 more)</td>
+</tr>
+<tr><td style="background-color: #ffffff;">&nbsp;<br><a href="benchmark-bad23/benchmark-bad23_sample.html">benchmark-bad23</a><br>&nbsp;</td><td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1.2</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 20G</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">119423</td>
+<td style="background-color: #ffffff; ">&nbsp;116867</td>
+<td style="background-color: #8fbc8f; border-left: 1px solid black;">PASS</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">96.52</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">29902.0</td>
+<td style="background-color: #ffffff; ">&nbsp;96.325</td>
+<td style="background-color: #ffffff; ">&nbsp;3959.6</td>
+<td style="background-color: #ffffff; ">&nbsp;892.9</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C241T
+<p style="margin-bottom:0px; margin-top:8px">C1059T
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">G4201T
+<p style="margin-bottom:0px; margin-top:8px">C10319T
+<p style="margin-bottom:0px; margin-top:8px">C11606A
+<p style="margin-bottom:0px; margin-top:8px">C14408T
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 21 more)</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> TAGTTTT26491CTGTTC
+<p style="margin-bottom:0px; margin-top:8px">CT29580C</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> NN13554CA
+<p style="margin-bottom:0px; margin-top:8px">NNN16663GAG
+<p style="margin-bottom:0px; margin-top:8px">CT26491YW
+<p style="margin-bottom:0px; margin-top:8px">G26493GN
+<p style="margin-bottom:0px; margin-top:8px">C26496Y</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	1,059;	C→T;	(100%);	'T265I (ACC→ATC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	4,201;	G→T;	(100%);	'M1312I (ATG→ATT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	10,319;	C→T;	(100%);	'L3352F (CTT→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	11,606;	C→A;	(100%);	'L3781I (CTA→ATA)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	14,408;	C→T;	(100%);	'P314L (CCT→CTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 22 more)</td>
+</tr>
+<tr><td style="background-color: #dddddd;">&nbsp;<br><a href="benchmark-bad24/benchmark-bad24_sample.html">benchmark-bad24</a><br>&nbsp;</td><td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1.400</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 20A</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">97800</td>
+<td style="background-color: #dddddd; ">&nbsp;80150</td>
+<td style="background-color: #dd2a2a; border-left: 1px solid black;">FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">96.09</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">29902.0</td>
+<td style="background-color: #dddddd; ">&nbsp;82.975</td>
+<td style="background-color: #dddddd; ">&nbsp;17366.73</td>
+<td style="background-color: #dddddd; ">&nbsp;717.2</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C241T
+<p style="margin-bottom:0px; margin-top:8px">C346T*
+<p style="margin-bottom:0px; margin-top:8px">C503T
+<p style="margin-bottom:0px; margin-top:8px">T859-G*
+<p style="margin-bottom:0px; margin-top:8px">G960T
+<p style="margin-bottom:0px; margin-top:8px">G1181T
+<p style="margin-bottom:0px; margin-top:8px">G1757T
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 26 more)</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> AG24610A
+<p style="margin-bottom:0px; margin-top:8px">A29005T</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C346Y
+<p style="margin-bottom:0px; margin-top:8px">G860N
+<p style="margin-bottom:0px; margin-top:8px">A6010N
+<p style="margin-bottom:0px; margin-top:8px">G6364N
+<p style="margin-bottom:0px; margin-top:8px">A8804N
+<p style="margin-bottom:0px; margin-top:8px">A9102N
+<p style="margin-bottom:0px; margin-top:8px">A9424N
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 5 more)</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	346;	C→T;	(21.0%);	'L27L (CTC→CTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	503;	C→T;	(38.1%);	'P80S (CCT→TCT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	860;	Δ1 bp;	(33.5%);	'coding (595/13203nt)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	960;	G→T;	(14.3%);	'R232L (CGT→CTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	992;	G→T;	(8.7%);	'E243* (GAA→TAA)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	1,076;	C→T;	(9.3%);	'P271S (CCA→TCA)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 81 more)</td>
+</tr>
+<tr><td style="background-color: #ffffff;">&nbsp;<br><a href="benchmark-bad3/benchmark-bad3_sample.html">benchmark-bad3</a><br>&nbsp;</td><td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> Unassigned</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> nan</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">657</td>
+<td style="background-color: #ffffff; ">&nbsp;657</td>
+<td style="background-color: #ff3030; border-left: 1px solid black;">FAIL</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">1.22</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">29903.0</td>
+<td style="background-color: #ffffff; ">&nbsp;0.0</td>
+<td style="background-color: #ffffff; ">&nbsp;100000.0</td>
+<td style="background-color: #ffffff; ">&nbsp;0.1</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+</tr>
+<tr><td style="background-color: #dddddd;">&nbsp;<br><a href="benchmark-bad4/benchmark-bad4_sample.html">benchmark-bad4</a><br>&nbsp;</td><td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> Unassigned</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> nan</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">161</td>
+<td style="background-color: #dddddd; ">&nbsp;159</td>
+<td style="background-color: #dd2a2a; border-left: 1px solid black;">FAIL</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">90.57</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">29903.0</td>
+<td style="background-color: #dddddd; ">&nbsp;0.0</td>
+<td style="background-color: #dddddd; ">&nbsp;99812.73</td>
+<td style="background-color: #dddddd; ">&nbsp;1.1</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> MC;	1;	Δ29,903 bp;	(100%);	'';	'orf1ab – ORF10'</td>
+</tr>
+<tr><td style="background-color: #ffffff;">&nbsp;<br><a href="benchmark-bad5/benchmark-bad5_sample.html">benchmark-bad5</a><br>&nbsp;</td><td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 19A</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">12341</td>
+<td style="background-color: #ffffff; ">&nbsp;11916</td>
+<td style="background-color: #ff3030; border-left: 1px solid black;">FAIL</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">20.85</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">29903.0</td>
+<td style="background-color: #ffffff; ">&nbsp;79.49</td>
+<td style="background-color: #ffffff; ">&nbsp;26602.68</td>
+<td style="background-color: #ffffff; ">&nbsp;19.4</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C3037T
+<p style="margin-bottom:0px; margin-top:8px">A8436T*
+<p style="margin-bottom:0px; margin-top:8px">A8437T*
+<p style="margin-bottom:0px; margin-top:8px">C9207T
+<p style="margin-bottom:0px; margin-top:8px">C10341T
+<p style="margin-bottom:0px; margin-top:8px">T13244C
+<p style="margin-bottom:0px; margin-top:8px">C14408T
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 8 more)</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> T6963C
+<p style="margin-bottom:0px; margin-top:8px">AA8436TT
+<p style="margin-bottom:0px; margin-top:8px">C15960T
+<p style="margin-bottom:0px; margin-top:8px">G20996A
+<p style="margin-bottom:0px; margin-top:8px">G22813T
+<p style="margin-bottom:0px; margin-top:8px">GAA23012AAG
+<p style="margin-bottom:0px; margin-top:8px">AAT23063TAC
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 2 more)</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C123Y
+<p style="margin-bottom:0px; margin-top:8px">T6552Y
+<p style="margin-bottom:0px; margin-top:8px">A6570W
+<p style="margin-bottom:0px; margin-top:8px">NN11113GG
+<p style="margin-bottom:0px; margin-top:8px">R20996G
+<p style="margin-bottom:0px; margin-top:8px">NNNNNN23686TAATAA</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	9,207;	C→T;	(66.7%);	'S2981F (TCT→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	10,341;	C→T;	(52.9%);	'P3359L (CCT→CTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	11,939;	G→A;	(50.0%);	'V3892I (GTC→ATC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	14,408;	C→T;	(38.4%);	'P314L (CCT→CTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	18,180;	G→A;	(65.0%);	'K1571K (AAG→AAA)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	19,969;	G→A;	(35.6%);	'A2168T (GCA→ACA)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 9 more)</td>
+</tr>
+<tr><td style="background-color: #dddddd;">&nbsp;<br><a href="benchmark-bad6/benchmark-bad6_sample.html">benchmark-bad6</a><br>&nbsp;</td><td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> Unassigned</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 20G</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">129396</td>
+<td style="background-color: #dddddd; ">&nbsp;129241</td>
+<td style="background-color: #dd2a2a; border-left: 1px solid black;">FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">92.86</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">29902.0</td>
+<td style="background-color: #dddddd; ">&nbsp;60.713</td>
+<td style="background-color: #dddddd; ">&nbsp;39559.23</td>
+<td style="background-color: #dddddd; ">&nbsp;874.2</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C1059T
+<p style="margin-bottom:0px; margin-top:8px">C2523T
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">C7376T
+<p style="margin-bottom:0px; margin-top:8px">C8841T
+<p style="margin-bottom:0px; margin-top:8px">C10319T
+<p style="margin-bottom:0px; margin-top:8px">A14185-G*
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 10 more)</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> GC14188T
+<p style="margin-bottom:0px; margin-top:8px">T21015A</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> WN21014NA</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	1,059;	C→T;	(100%);	'T265I (ACC→ATC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	2,523;	C→T;	(100%);	'T753I (ACA→ATA)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,772;	T→C;	(5.3%);	'V1169V (GTT→GTC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	7,376;	C→T;	(29.6%);	'L2371F (CTT→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	8,841;	C→T;	(100%);	'T2859I (ACA→ATA)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	10,319;	C→T;	(100%);	'L3352F (CTT→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 15 more)</td>
+</tr>
+<tr><td style="background-color: #ffffff;">&nbsp;<br><a href="benchmark-bad7/benchmark-bad7_sample.html">benchmark-bad7</a><br>&nbsp;</td><td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1.243</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 20A</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">14307</td>
+<td style="background-color: #ffffff; ">&nbsp;14288</td>
+<td style="background-color: #ff3030; border-left: 1px solid black;">FAIL</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">95.22</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">29900.0</td>
+<td style="background-color: #ffffff; ">&nbsp;81.841</td>
+<td style="background-color: #ffffff; ">&nbsp;19247.49</td>
+<td style="background-color: #ffffff; ">&nbsp;112.7</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> T184C
+<p style="margin-bottom:0px; margin-top:8px">C241T
+<p style="margin-bottom:0px; margin-top:8px">T1578C
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">A7833C
+<p style="margin-bottom:0px; margin-top:8px">C14408T
+<p style="margin-bottom:0px; margin-top:8px">T18895-TTG*
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 7 more)</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> T17751G
+<p style="margin-bottom:0px; margin-top:8px">TTTG18895T</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> K17751T</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	1,578;	T→C;	(100%);	'V438A (GTT→GCT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,427;	A→T;	(5.4%);	'P1054P (CCA→CCT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	7,833;	A→C;	(100%);	'N2523T (AAC→ACC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	10,741;	C→T;	(100%);	'D3492D (GAC→GAT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	14,408;	C→T;	(100%);	'P314L (CCT→CTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 11 more)</td>
+</tr>
+<tr><td style="background-color: #dddddd;">&nbsp;<br><a href="benchmark-bad8/benchmark-bad8_sample.html">benchmark-bad8</a><br>&nbsp;</td><td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> Unassigned</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> nan</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">2737</td>
+<td style="background-color: #dddddd; ">&nbsp;2577</td>
+<td style="background-color: #dd2a2a; border-left: 1px solid black;">FAIL</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">1.86</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">29903.0</td>
+<td style="background-color: #dddddd; ">&nbsp;0.0</td>
+<td style="background-color: #dddddd; ">&nbsp;98862.99</td>
+<td style="background-color: #dddddd; ">&nbsp;1.3</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> T6966C</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+</tr>
+<tr><td style="background-color: #ffffff;">&nbsp;<br><a href="benchmark-bad9/benchmark-bad9_sample.html">benchmark-bad9</a><br>&nbsp;</td><td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> Unassigned</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 20B</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">112340</td>
+<td style="background-color: #ffffff; ">&nbsp;112087</td>
+<td style="background-color: #ff3030; border-left: 1px solid black;">FAIL</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">93.78</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">29902.0</td>
+<td style="background-color: #ffffff; ">&nbsp;22.734</td>
+<td style="background-color: #ffffff; ">&nbsp;77131.96</td>
+<td style="background-color: #ffffff; ">&nbsp;798.0</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C601T
+<p style="margin-bottom:0px; margin-top:8px">A846C
+<p style="margin-bottom:0px; margin-top:8px">C7086T
+<p style="margin-bottom:0px; margin-top:8px">G8084A
+<p style="margin-bottom:0px; margin-top:8px">C19309A
+<p style="margin-bottom:0px; margin-top:8px">A23040G
+<p style="margin-bottom:0px; margin-top:8px">A23403G
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 4 more)</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> CA24517C</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C28025Y</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	601;	C→T;	(100%);	'G112G (GGC→GGT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	846;	A→C;	(100%);	'D194A (GAT→GCT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	5,033;	T→C;	(13.8%);	'Y1590H (TAT→CAT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	19,309;	C→A;	(100%);	'H1948N (CAT→AAT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	23,040;	A→G;	(100%);	'Q493R (CAA→CGA)';	'S →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	23,403;	A→G;	(100%);	'D614G (GAT→GGT)';	'S →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	23,477;	G→A;	(100%);	'G639S (GGT→AGT)';	'S →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	27,754;	G→C;	(41.2%);	'E121Q (GAA→CAA)';	'ORF7a →'</td>
+</tr>
+</table>
+</body>
+</html>

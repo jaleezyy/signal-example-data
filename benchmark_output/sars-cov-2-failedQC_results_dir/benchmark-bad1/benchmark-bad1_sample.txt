@@ -1,0 +1,72 @@
+SARS-CoV-2 Illumina GeNome Assembly Line (SIGNAL), version v1.6.6
+https://github.com/jaleezyy/covid-19-signal
+
+Note: Asterisks (*) indicates a discrepancy between iVar (default) and FreeBayes (if run)
+
+Sample: benchmark-bad1
+
+Pangolin Lineage Assignment
+    Unassigned
+
+Nextclade Clade Assignment
+    20C
+
+Data Volume
+    Raw Data (read pairs): 24287
+    Raw Data (base pairs): 5746365
+    Post Primer Removal (read pairs): 24287
+    Post Primer Removal (base pairs): 5713191
+    Post Trim (read pairs): 24247
+
+Quality Control Flags
+    FAIL  Genome Fraction greater than 90%
+    PASS  No indels detected (maximum length 85bp)
+    FAIL  Depth of coverage >= 2000x
+    WARN  All variants with at least 90% frequency among reads
+    FAIL  Frameshifts in SARS-CoV-2 open reading frames
+    PASS  Reads per base sequence quality
+    PASS  Sequencing adapter removed
+    FAIL  At least 90% of positions have coverage >= 100x
+    WARN  At least 90% of positions have coverage >= 1000x
+
+FASTQC Flags
+    FAIL  Per base sequence content
+    WARN  Per sequence GC content
+    WARN  Sequence Length Distribution
+
+Kraken2
+    Reads SARS-CoV-2 (%): 92.37
+
+QUAST
+    Genome Length (bp): 29903.0
+    Genome Fraction (%): 34.184
+    N's per 100 kbp: 66210.75
+    Genomic Features: 2 + 11 part
+    Mismatches: 4.0
+    Mismatches per 100 kbp: 39.13
+    Indels: 0.0
+    Indels per 100 kbp: 0.0
+    Average Depth of Coverage: 178.8
+        Fraction with 0 coverage: 0.385
+        Fraction with 1x-10x coverage: 0.28
+        Fraction with 11x-100x coverage: 0.126
+        Fraction with 101x-1000x coverage: 0.148
+        Fraction with 1001x-2000x coverage: 0.046
+        Fraction with 2001x-10000x coverage: 0.014
+        Fraction with > 10000x coverage: 0.0
+    5' Ns: 54
+    3' Ns: 452
+
+Variants in Consensus Genome (iVar)
+    G199A C241T G17110T G18538T
+
+Unique Variants in Consensus Genome (FreeBayes)
+
+Nucleotide Differences in Consensus Genomes (FreeBayes as reference)
+
+Variants in Read Alignment (BreSeq)
+    JC;	5,820;	Δ5 bp;	(6.6%);	'coding (5555-5559/13203nt)';	'orf1ab →'
+    RA;	17,110;	G→T;	(100%);	'A1215S (GCT→TCT)';	'orf1ab →'
+    RA;	18,248;	C→T;	(5.2%);	'P1594L (CCT→CTT)';	'orf1ab →'
+    RA;	18,538;	G→T;	(100%);	'V1691L (GTA→TTA)';	'orf1ab →'
+

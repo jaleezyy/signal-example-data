@@ -1,0 +1,260 @@
+================================================================================
+breseq 0.35.0     http://barricklab.org/breseq
+
+Active Developers: Barrick JE, Deatherage DE
+Contact:           <jeffrey.e.barrick@gmail.com>
+
+breseq is free software; you can redistribute it and/or modify it under the
+terms the GNU General Public License as published by the Free Software 
+Foundation; either version 2, or (at your option) any later version.
+
+Copyright (c) 2008-2010 Michigan State University
+Copyright (c) 2011-2017 The University of Texas at Austin
+
+If you use breseq in your research, please cite:
+
+  Deatherage, D.E., Barrick, J.E. (2014) Identification of mutations
+  in laboratory-evolved microbes from next-generation sequencing
+  data using breseq. Methods Mol. Biol. 1151: 165–188.
+
+If you use structural variation (junction) predictions, please cite:
+
+  Barrick, J.E., Colburn, G., Deatherage D.E., Traverse, C.C.,
+  Strand, M.D., Borges, J.J., Knoester, D.B., Reba, A., Meyer, A.G. 
+  (2014) Identifying structural variation in haploid microbial genomes 
+  from short-read resequencing data using breseq. BMC Genomics 15:1039.
+================================================================================
+---> bowtie2  :: version 2.4.5 [/workspace/lab/mcarthurlab/nasirja/covid-19-signal/.snakemake/conda/b7ebc969cbb19fe5c84690f1718327cb_/bin/bowtie2]
+---> R        :: version 4.0.2 [/workspace/lab/mcarthurlab/nasirja/covid-19-signal/.snakemake/conda/b7ebc969cbb19fe5c84690f1718327cb_/bin/R]
++++   NOW PROCESSING Read and reference sequence file input
+  READ FILE::MA-MGH-00283_R1
+    Converting/filtering FASTQ file...
+    Original base quality format: SANGER New format: SANGER
+    Original reads: 15553 bases: 1520083
+    Filtered reads: none
+    Analyzed reads: 15553 bases: 1520083
+  READ FILE::MA-MGH-00283_R2
+    Converting/filtering FASTQ file...
+    Original base quality format: SANGER New format: SANGER
+    Original reads: 15553 bases: 1526065
+    Filtered reads: none
+    Analyzed reads: 15553 bases: 1526065
+  ::TOTAL::
+    Original reads: 31106 bases: 3046148
+    Analyzed reads: 31106 bases: 3046148
+[samtools] faidx MA-MGH-00283/breseq/data/reference.fasta
+  REFERENCE: MN908947
+  LENGTH: 29903
++++   NOW PROCESSING Read alignment to reference genome
+[system] bowtie2-build -q MA-MGH-00283/breseq/data/reference.fasta MA-MGH-00283/breseq/02_reference_alignment/reference
+Renaming MA-MGH-00283/breseq/02_reference_alignment/reference.3.bt2.tmp to MA-MGH-00283/breseq/02_reference_alignment/reference.3.bt2
+Renaming MA-MGH-00283/breseq/02_reference_alignment/reference.4.bt2.tmp to MA-MGH-00283/breseq/02_reference_alignment/reference.4.bt2
+Renaming MA-MGH-00283/breseq/02_reference_alignment/reference.1.bt2.tmp to MA-MGH-00283/breseq/02_reference_alignment/reference.1.bt2
+Renaming MA-MGH-00283/breseq/02_reference_alignment/reference.2.bt2.tmp to MA-MGH-00283/breseq/02_reference_alignment/reference.2.bt2
+Renaming MA-MGH-00283/breseq/02_reference_alignment/reference.rev.1.bt2.tmp to MA-MGH-00283/breseq/02_reference_alignment/reference.rev.1.bt2
+Renaming MA-MGH-00283/breseq/02_reference_alignment/reference.rev.2.bt2.tmp to MA-MGH-00283/breseq/02_reference_alignment/reference.rev.2.bt2
+[system] bowtie2 -t --no-unal -p 4 -L 31 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,1,0.9 -k 2000 --reorder -x MA-MGH-00283/breseq/02_reference_alignment/reference -U MA-MGH-00283/breseq/01_sequence_conversion/MA-MGH-00283_R1.converted.fastq -S MA-MGH-00283/breseq/02_reference_alignment/MA-MGH-00283_R1.stage1.sam --un MA-MGH-00283/breseq/02_reference_alignment/MA-MGH-00283_R1.stage1.unmatched.fastq
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:01
+15553 reads; of these:
+  15553 (100.00%) were unpaired; of these:
+    2271 (14.60%) aligned 0 times
+    13282 (85.40%) aligned exactly 1 time
+    0 (0.00%) aligned >1 times
+85.40% overall alignment rate
+Time searching: 00:00:01
+Overall time: 00:00:01
+[system] bowtie2 -t --no-unal -p 4 -L 14 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,6,0.2 -k 2000 --reorder -x MA-MGH-00283/breseq/02_reference_alignment/reference -U MA-MGH-00283/breseq/02_reference_alignment/MA-MGH-00283_R1.stage1.unmatched.fastq -S MA-MGH-00283/breseq/02_reference_alignment/MA-MGH-00283_R1.stage2.matched.sam
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:00
+2271 reads; of these:
+  2271 (100.00%) were unpaired; of these:
+    13 (0.57%) aligned 0 times
+    907 (39.94%) aligned exactly 1 time
+    1351 (59.49%) aligned >1 times
+99.43% overall alignment rate
+Time searching: 00:00:00
+Overall time: 00:00:00
+[system] bowtie2 -t --no-unal -p 4 -L 31 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,1,0.9 -k 2000 --reorder -x MA-MGH-00283/breseq/02_reference_alignment/reference -U MA-MGH-00283/breseq/01_sequence_conversion/MA-MGH-00283_R2.converted.fastq -S MA-MGH-00283/breseq/02_reference_alignment/MA-MGH-00283_R2.stage1.sam --un MA-MGH-00283/breseq/02_reference_alignment/MA-MGH-00283_R2.stage1.unmatched.fastq
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:01
+15553 reads; of these:
+  15553 (100.00%) were unpaired; of these:
+    2351 (15.12%) aligned 0 times
+    13202 (84.88%) aligned exactly 1 time
+    0 (0.00%) aligned >1 times
+84.88% overall alignment rate
+Time searching: 00:00:01
+Overall time: 00:00:01
+[system] bowtie2 -t --no-unal -p 4 -L 14 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,6,0.2 -k 2000 --reorder -x MA-MGH-00283/breseq/02_reference_alignment/reference -U MA-MGH-00283/breseq/02_reference_alignment/MA-MGH-00283_R2.stage1.unmatched.fastq -S MA-MGH-00283/breseq/02_reference_alignment/MA-MGH-00283_R2.stage2.matched.sam
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:00
+2351 reads; of these:
+  2351 (100.00%) were unpaired; of these:
+    8 (0.34%) aligned 0 times
+    968 (41.17%) aligned exactly 1 time
+    1375 (58.49%) aligned >1 times
+99.66% overall alignment rate
+Time searching: 00:00:00
+Overall time: 00:00:00
+[system] rm -f MA-MGH-00283/breseq/02_reference_alignment/reference*
+[system] rm -f MA-MGH-00283/breseq/02_reference_alignment/MA-MGH-00283_R1.stage1.unmatched.fastq
+[system] rm -f MA-MGH-00283/breseq/02_reference_alignment/MA-MGH-00283_R1.stage1.sam
+[system] rm -f MA-MGH-00283/breseq/02_reference_alignment/MA-MGH-00283_R1.stage2.matched.sam
+[system] rm -f MA-MGH-00283/breseq/02_reference_alignment/MA-MGH-00283_R2.stage1.unmatched.fastq
+[system] rm -f MA-MGH-00283/breseq/02_reference_alignment/MA-MGH-00283_R2.stage1.sam
+[system] rm -f MA-MGH-00283/breseq/02_reference_alignment/MA-MGH-00283_R2.stage2.matched.sam
++++   NOW PROCESSING Preprocessing alignments for candidate junction identification
+Preprocessing alignments.
+  READ FILE::MA-MGH-00283_R1
+  READ FILE::MA-MGH-00283_R2
+  Summary... 
+  Aligned reads:                                31085
+  Read alignments:                              33820
+  Alignments split on indels:                      15
+  Reads with alignments split on indels:           15
+  Split alignments:                              5470
+  Reads with split alignments:                   2730
++++   NOW PROCESSING Preliminary analysis of coverage distribution
+[samtools] import MA-MGH-00283/breseq/data/reference.fasta.fai MA-MGH-00283/breseq/03_candidate_junctions/best.sam MA-MGH-00283/breseq/03_candidate_junctions/best.unsorted.bam
+[samtools] sort --threads 4 -o MA-MGH-00283/breseq/03_candidate_junctions/best.bam -T MA-MGH-00283/breseq/03_candidate_junctions/best.bam MA-MGH-00283/breseq/03_candidate_junctions/best.unsorted.bam
+[samtools] index MA-MGH-00283/breseq/03_candidate_junctions/best.bam MA-MGH-00283/breseq/03_candidate_junctions/best.bam.bai
+  REFERENCE: MN908947
+  LENGTH: 29903
+    POSITION:10000
+    POSITION:20000
+[system] R --vanilla < /workspace/lab/mcarthurlab/nasirja/covid-19-signal/.snakemake/conda/b7ebc969cbb19fe5c84690f1718327cb_/bin/../share/breseq/coverage_distribution.r > MA-MGH-00283/breseq/03_candidate_junctions/0.unique_only_coverage_distribution.tab.r.log distribution_file=MA-MGH-00283/breseq/03_candidate_junctions/0.unique_only_coverage_distribution.tab plot_file=MA-MGH-00283/breseq/03_candidate_junctions/0.coverage.pdf deletion_propagation_pr_cutoff=0.000289143
+[system] rm -f MA-MGH-00283/breseq/03_candidate_junctions/best.unsorted.bam
+[system] rm -f MA-MGH-00283/breseq/03_candidate_junctions/best.sam
+[system] rm -f MA-MGH-00283/breseq/03_candidate_junctions/best.bam
+[system] rm -f MA-MGH-00283/breseq/03_candidate_junctions/best.bam.bai
+[system] rm -f MA-MGH-00283/breseq/03_candidate_junctions/0.coverage.pdf
+[system] rm -f MA-MGH-00283/breseq/03_candidate_junctions/0.unique_only_coverage_distribution.tab
+[system] rm -f MA-MGH-00283/breseq/03_candidate_junctions/0.unique_only_coverage_distribution.tab.r.log
++++   NOW PROCESSING Identifying junction candidates
+  READ FILE::MA-MGH-00283_R1
+  READ FILE::MA-MGH-00283_R2
+  Passed alignment pairs examined: 2569
+  Taking top candidate junctions...
+  Minimum number to keep:     100 
+  Maximum number to keep:    5000 
+  Maximum length to keep:    2990 bases
+    Initial: Number = 388, Cumulative Length = 79886 bases
+      Testing Pos Hash Score =    9, Num =      2, Length =    415
+      Testing Pos Hash Score =    8, Num =      3, Length =    622
+      Testing Pos Hash Score =    7, Num =      3, Length =    616
+      Testing Pos Hash Score =    6, Num =      6, Length =   1242
+      Testing Pos Hash Score =    5, Num =     18, Length =   3721
+      Testing Pos Hash Score =    4, Num =     33, Length =   6805
+      Testing Pos Hash Score =    3, Num =     70, Length =  14443
+    Accepted: Number = 65, Pos Hash Score >= 4, Cumulative Length = 13421 bases
+[samtools] faidx MA-MGH-00283/breseq/03_candidate_junctions/candidate_junction.fasta
+[system] rm -f MA-MGH-00283/breseq/03_candidate_junctions/MA-MGH-00283_R1.split.sam
+[system] rm -f MA-MGH-00283/breseq/03_candidate_junctions/MA-MGH-00283_R2.split.sam
++++   NOW PROCESSING Re-alignment to junction candidates
+[system] bowtie2-build -q MA-MGH-00283/breseq/03_candidate_junctions/candidate_junction.fasta MA-MGH-00283/breseq/04_candidate_junction_alignment/candidate_junction
+Renaming MA-MGH-00283/breseq/04_candidate_junction_alignment/candidate_junction.3.bt2.tmp to MA-MGH-00283/breseq/04_candidate_junction_alignment/candidate_junction.3.bt2
+Renaming MA-MGH-00283/breseq/04_candidate_junction_alignment/candidate_junction.4.bt2.tmp to MA-MGH-00283/breseq/04_candidate_junction_alignment/candidate_junction.4.bt2
+Renaming MA-MGH-00283/breseq/04_candidate_junction_alignment/candidate_junction.1.bt2.tmp to MA-MGH-00283/breseq/04_candidate_junction_alignment/candidate_junction.1.bt2
+Renaming MA-MGH-00283/breseq/04_candidate_junction_alignment/candidate_junction.2.bt2.tmp to MA-MGH-00283/breseq/04_candidate_junction_alignment/candidate_junction.2.bt2
+Renaming MA-MGH-00283/breseq/04_candidate_junction_alignment/candidate_junction.rev.1.bt2.tmp to MA-MGH-00283/breseq/04_candidate_junction_alignment/candidate_junction.rev.1.bt2
+Renaming MA-MGH-00283/breseq/04_candidate_junction_alignment/candidate_junction.rev.2.bt2.tmp to MA-MGH-00283/breseq/04_candidate_junction_alignment/candidate_junction.rev.2.bt2
+[system] bowtie2 -t --no-unal -p 4 --local  -L 29 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,1,0.70 -k 2000 --reorder -x MA-MGH-00283/breseq/04_candidate_junction_alignment/candidate_junction -U MA-MGH-00283/breseq/01_sequence_conversion/MA-MGH-00283_R1.converted.fastq -S MA-MGH-00283/breseq/04_candidate_junction_alignment/MA-MGH-00283_R1.candidate_junction.sam
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:01
+15553 reads; of these:
+  15553 (100.00%) were unpaired; of these:
+    11520 (74.07%) aligned 0 times
+    2161 (13.89%) aligned exactly 1 time
+    1872 (12.04%) aligned >1 times
+25.93% overall alignment rate
+Time searching: 00:00:01
+Overall time: 00:00:01
+[system] bowtie2 -t --no-unal -p 4 --local  -L 29 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,1,0.70 -k 2000 --reorder -x MA-MGH-00283/breseq/04_candidate_junction_alignment/candidate_junction -U MA-MGH-00283/breseq/01_sequence_conversion/MA-MGH-00283_R2.converted.fastq -S MA-MGH-00283/breseq/04_candidate_junction_alignment/MA-MGH-00283_R2.candidate_junction.sam
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:00
+15553 reads; of these:
+  15553 (100.00%) were unpaired; of these:
+    11585 (74.49%) aligned 0 times
+    2095 (13.47%) aligned exactly 1 time
+    1873 (12.04%) aligned >1 times
+25.51% overall alignment rate
+Time searching: 00:00:00
+Overall time: 00:00:00
+[system] rm -f MA-MGH-00283/breseq/04_candidate_junction_alignment/candidate_junction*
++++   NOW PROCESSING Resolving best read alignments
+  READ FILE:MA-MGH-00283_R1
+    READS:10000
+  READ FILE:MA-MGH-00283_R2
+    READS:20000
+    READS:30000
+[system] rm -f MA-MGH-00283/breseq/01_sequence_conversion/MA-MGH-00283_R1.converted.fastq
+[system] rm -f MA-MGH-00283/breseq/01_sequence_conversion/MA-MGH-00283_R2.converted.fastq
+[system] rm -f MA-MGH-00283/breseq/02_reference_alignment/MA-MGH-00283_R1.reference.sam
+[system] rm -f MA-MGH-00283/breseq/02_reference_alignment/MA-MGH-00283_R2.reference.sam
+[system] rm -f MA-MGH-00283/breseq/04_candidate_junction_alignment/MA-MGH-00283_R1.candidate_junction.sam*
+[system] rm -f MA-MGH-00283/breseq/04_candidate_junction_alignment/MA-MGH-00283_R2.candidate_junction.sam*
++++   NOW PROCESSING Creating BAM files
+[samtools] import MA-MGH-00283/breseq/03_candidate_junctions/candidate_junction.fasta.fai MA-MGH-00283/breseq/05_alignment_correction/junction.sam MA-MGH-00283/breseq/06_bam/junction.unsorted.bam
+[samtools] sort --threads 4 -o MA-MGH-00283/breseq/06_bam/junction.bam -T MA-MGH-00283/breseq/06_bam/junction.bam MA-MGH-00283/breseq/06_bam/junction.unsorted.bam
+[system] rm -f MA-MGH-00283/breseq/06_bam/junction.unsorted.bam
+[samtools] index MA-MGH-00283/breseq/06_bam/junction.bam MA-MGH-00283/breseq/06_bam/junction.bam.bai
+[samtools] import MA-MGH-00283/breseq/data/reference.fasta.fai MA-MGH-00283/breseq/05_alignment_correction/reference.sam MA-MGH-00283/breseq/06_bam/reference.unsorted.bam
+[samtools] sort --threads 4 -o MA-MGH-00283/breseq/data/reference.bam -T MA-MGH-00283/breseq/data/reference.bam MA-MGH-00283/breseq/06_bam/reference.unsorted.bam
+[system] rm -f MA-MGH-00283/breseq/06_bam/reference.unsorted.bam
+[samtools] index MA-MGH-00283/breseq/data/reference.bam MA-MGH-00283/breseq/data/reference.bam.bai
+[system] rm -f MA-MGH-00283/breseq/05_alignment_correction/reference.sam
+[system] rm -f MA-MGH-00283/breseq/05_alignment_correction/junction.sam
++++   NOW PROCESSING Tabulating error counts
+  REFERENCE: MN908947
+  LENGTH: 29903
+    POSITION:10000
+    POSITION:20000
++++   NOW PROCESSING Re-calibrating base error rates
+[system] R --vanilla < /workspace/lab/mcarthurlab/nasirja/covid-19-signal/.snakemake/conda/b7ebc969cbb19fe5c84690f1718327cb_/bin/../share/breseq/coverage_distribution.r > MA-MGH-00283/breseq/07_error_calibration/0.unique_only_coverage_distribution.tab.r.log distribution_file=MA-MGH-00283/breseq/07_error_calibration/0.unique_only_coverage_distribution.tab plot_file=MA-MGH-00283/breseq/output/calibration/0.unique_coverage.pdf deletion_propagation_pr_cutoff=0.000289143
+[system] R --vanilla in_file=MA-MGH-00283/breseq/07_error_calibration/base_qual_error_prob.MA-MGH-00283_R1.tab out_file=MA-MGH-00283/breseq/output/calibration/MA-MGH-00283_R1.error_rates.pdf < /workspace/lab/mcarthurlab/nasirja/covid-19-signal/.snakemake/conda/b7ebc969cbb19fe5c84690f1718327cb_/bin/../share/breseq/plot_error_rate.r > MA-MGH-00283/breseq/07_error_calibration/MA-MGH-00283_R1.plot_error_rate.log
+[system] R --vanilla in_file=MA-MGH-00283/breseq/07_error_calibration/base_qual_error_prob.MA-MGH-00283_R2.tab out_file=MA-MGH-00283/breseq/output/calibration/MA-MGH-00283_R2.error_rates.pdf < /workspace/lab/mcarthurlab/nasirja/covid-19-signal/.snakemake/conda/b7ebc969cbb19fe5c84690f1718327cb_/bin/../share/breseq/plot_error_rate.r > MA-MGH-00283/breseq/07_error_calibration/MA-MGH-00283_R2.plot_error_rate.log
++++   NOW PROCESSING Examining read alignment evidence
+  REFERENCE: MN908947
+  LENGTH: 29903
+    POSITION:10000
+    POSITION:20000
++++   NOW PROCESSING Polymorphism statistics
+[system] R --vanilla total_length=29903 in_file=MA-MGH-00283/breseq/08_mutation_identification/polymorphism_statistics_input.tab out_file=MA-MGH-00283/breseq/08_mutation_identification/polymorphism_statistics_output.tab qual_file=MA-MGH-00283/breseq/08_mutation_identification/error_counts.tab < /workspace/lab/mcarthurlab/nasirja/covid-19-signal/.snakemake/conda/b7ebc969cbb19fe5c84690f1718327cb_/bin/../share/breseq/polymorphism_statistics.r > MA-MGH-00283/breseq/08_mutation_identification/polymorphism_statistics_output.log
++++   NOW PROCESSING Output
+Creating merged genome diff evidence file...
+Predicting mutations from evidence...
+----------------------------------> WARNING <-----------------------------------
+Large number of differences detected between the sample and the reference sequence (65 evidence items, suggesting approximately 0.22% sequence divergence). If this is unexpected, check that you are using the closest available reference sequence for this sample (for example, the correct strain of a bacterial species). Mutation prediction can become less accurate with too much divergence from the reference sequence. It may also take a long time to predict mutations and generate output files.
+--------------------------------------------------------------------------------
+  Preparing junctions...
+  Predicting mobile element insertions...
+  Predicting large deletions...
+  Predicting small indels and substitutions from junctions...
+  Predicting small indels and substitutions from alignments...
+  Making final adjustments to mutations...
+  Writing final GD file...
+  Writing final VCF file...
+Annotating mutations...
+Drawing coverage plots...
+Creating coverage plot for region: MN908947:1-29903
+Creating index HTML table...
+[system] rm -f MA-MGH-00283/breseq/01_sequence_conversion/*.trims
+[system] rm -f MA-MGH-00283/breseq/03_candidate_junctions/candidate_junction.fasta
+[system] rm -f MA-MGH-00283/breseq/03_candidate_junctions/candidate_junction.fasta.fai
+[system] rm -f MA-MGH-00283/breseq/05_alignment_correction/jc_evidence.gd
+[system] rm -f MA-MGH-00283/breseq/06_bam/junction.bam
+[system] rm -f MA-MGH-00283/breseq/06_bam/junction.bam.bai
++++   SUCCESSFULLY COMPLETED

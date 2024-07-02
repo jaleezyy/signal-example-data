@@ -1,0 +1,287 @@
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 4.8
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 2 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-voivoc_results_dir/hCoV-19-USA-NV-QDX-4024-2021/adapter_trimmed/
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> hCoV-19-USA-NV-QDX-4024-2021/host_removal/hCoV-19-USA-NV-QDX-4024-2021_R1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	272	AGATCGGAAGAGC	92085	0.30
+smallRNA	0	TGGAATTCTCGG	92085	0.00
+Nextera	0	CTGTCTCTTATA	92085	0.00
+Using Illumina adapter for trimming (count: 272). Second best hit was smallRNA (count: 0)
+
+Writing report to '/workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-voivoc_results_dir/hCoV-19-USA-NV-QDX-4024-2021/adapter_trimmed/hCoV-19-USA-NV-QDX-4024-2021_R1.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: hCoV-19-USA-NV-QDX-4024-2021/host_removal/hCoV-19-USA-NV-QDX-4024-2021_R1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.8
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.8). Setting -j 2
+Writing final adapter and quality trimmed output to hCoV-19-USA-NV-QDX-4024-2021_R1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file hCoV-19-USA-NV-QDX-4024-2021/host_removal/hCoV-19-USA-NV-QDX-4024-2021_R1.fastq.gz <<< 
+This is cutadapt 4.8 with Python 3.12.3
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC hCoV-19-USA-NV-QDX-4024-2021/host_removal/hCoV-19-USA-NV-QDX-4024-2021_R1.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 3.107 s (33.741 µs/read; 1.78 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                  92,085
+Reads with adapters:                    16,577 (18.0%)
+Reads written (passing filters):        92,085 (100.0%)
+
+Total basepairs processed:    22,729,979 bp
+Quality-trimmed:                  27,411 bp (0.1%)
+Total written (filtered):     22,652,510 bp (99.7%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 16577 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 38.8%
+  C: 21.9%
+  G: 12.8%
+  T: 24.0%
+  none/other: 2.5%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	14092	23021.2	0	14092
+2	1148	5755.3	0	1148
+3	164	1438.8	0	164
+4	449	359.7	0	449
+5	13	89.9	0	13
+7	1	5.6	0	1
+15	6	0.0	1	6
+16	1	0.0	1	1
+17	2	0.0	1	2
+18	3	0.0	1	2 1
+20	3	0.0	1	3
+21	4	0.0	1	4
+24	8	0.0	1	8
+25	4	0.0	1	3 1
+26	1	0.0	1	1
+28	1	0.0	1	1
+29	1	0.0	1	1
+30	2	0.0	1	2
+31	6	0.0	1	6
+32	1	0.0	1	1
+35	5	0.0	1	4 1
+36	5	0.0	1	4 1
+37	202	0.0	1	197 5
+38	5	0.0	1	4 1
+40	1	0.0	1	1
+41	1	0.0	1	0 1
+42	5	0.0	1	1 4
+43	408	0.0	1	6 402
+44	4	0.0	1	3 1
+45	3	0.0	1	2 1
+47	1	0.0	1	1
+51	1	0.0	1	0 1
+54	1	0.0	1	1
+55	1	0.0	1	0 1
+60	1	0.0	1	1
+67	1	0.0	1	1
+71	2	0.0	1	2
+77	1	0.0	1	0 1
+78	1	0.0	1	0 1
+79	1	0.0	1	0 1
+95	1	0.0	1	1
+109	1	0.0	1	1
+110	1	0.0	1	0 1
+130	1	0.0	1	1
+140	1	0.0	1	0 1
+172	1	0.0	1	0 1
+202	1	0.0	1	0 1
+241	1	0.0	1	0 1
+245	1	0.0	1	0 1
+247	1	0.0	1	0 1
+250	4	0.0	1	0 4
+251	3	0.0	1	0 3
+
+RUN STATISTICS FOR INPUT FILE: hCoV-19-USA-NV-QDX-4024-2021/host_removal/hCoV-19-USA-NV-QDX-4024-2021_R1.fastq.gz
+=============================================
+92085 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to '/workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-voivoc_results_dir/hCoV-19-USA-NV-QDX-4024-2021/adapter_trimmed/hCoV-19-USA-NV-QDX-4024-2021_R2.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: hCoV-19-USA-NV-QDX-4024-2021/host_removal/hCoV-19-USA-NV-QDX-4024-2021_R2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.8
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.8). Setting -j -j 2
+Writing final adapter and quality trimmed output to hCoV-19-USA-NV-QDX-4024-2021_R2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file hCoV-19-USA-NV-QDX-4024-2021/host_removal/hCoV-19-USA-NV-QDX-4024-2021_R2.fastq.gz <<< 
+This is cutadapt 4.8 with Python 3.12.3
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC hCoV-19-USA-NV-QDX-4024-2021/host_removal/hCoV-19-USA-NV-QDX-4024-2021_R2.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 3.360 s (36.492 µs/read; 1.64 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                  92,085
+Reads with adapters:                    16,696 (18.1%)
+Reads written (passing filters):        92,085 (100.0%)
+
+Total basepairs processed:    22,742,830 bp
+Quality-trimmed:                 123,236 bp (0.5%)
+Total written (filtered):     22,595,858 bp (99.4%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 16696 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 41.8%
+  C: 24.1%
+  G: 14.2%
+  T: 19.8%
+  none/other: 0.1%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	14210	23021.2	0	14210
+2	1740	5755.3	0	1740
+3	279	1438.8	0	279
+4	409	359.7	0	409
+5	21	89.9	0	21
+6	1	22.5	0	1
+7	1	5.6	0	1
+10	1	0.1	1	1
+19	1	0.0	1	0 1
+32	11	0.0	1	8 3
+33	1	0.0	1	1
+34	3	0.0	1	2 1
+39	1	0.0	1	0 1
+42	1	0.0	1	1
+48	1	0.0	1	0 1
+49	1	0.0	1	0 1
+50	1	0.0	1	0 1
+64	1	0.0	1	0 1
+121	1	0.0	1	0 1
+133	1	0.0	1	0 1
+163	1	0.0	1	0 1
+228	1	0.0	1	0 1
+248	1	0.0	1	0 1
+249	1	0.0	1	0 1
+250	1	0.0	1	0 1
+251	5	0.0	1	0 5
+
+RUN STATISTICS FOR INPUT FILE: hCoV-19-USA-NV-QDX-4024-2021/host_removal/hCoV-19-USA-NV-QDX-4024-2021_R2.fastq.gz
+=============================================
+92085 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files hCoV-19-USA-NV-QDX-4024-2021_R1_trimmed.fq.gz and hCoV-19-USA-NV-QDX-4024-2021_R2_trimmed.fq.gz
+file_1: hCoV-19-USA-NV-QDX-4024-2021_R1_trimmed.fq.gz, file_2: hCoV-19-USA-NV-QDX-4024-2021_R2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: hCoV-19-USA-NV-QDX-4024-2021_R1_trimmed.fq.gz and hCoV-19-USA-NV-QDX-4024-2021_R2_trimmed.fq.gz <<<<<
+Writing validated paired-end Read 1 reads to hCoV-19-USA-NV-QDX-4024-2021_R1_val_1.fq.gz
+Writing validated paired-end Read 2 reads to hCoV-19-USA-NV-QDX-4024-2021_R2_val_2.fq.gz
+
+Total number of sequences analysed: 92085
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 514 (0.56%)
+
+
+  >>> Now running FastQC on the validated data hCoV-19-USA-NV-QDX-4024-2021_R1_val_1.fq.gz<<<
+
+Started analysis of hCoV-19-USA-NV-QDX-4024-2021_R1_val_1.fq.gz
+Approx 5% complete for hCoV-19-USA-NV-QDX-4024-2021_R1_val_1.fq.gz
+Approx 10% complete for hCoV-19-USA-NV-QDX-4024-2021_R1_val_1.fq.gz
+Approx 15% complete for hCoV-19-USA-NV-QDX-4024-2021_R1_val_1.fq.gz
+Approx 20% complete for hCoV-19-USA-NV-QDX-4024-2021_R1_val_1.fq.gz
+Approx 25% complete for hCoV-19-USA-NV-QDX-4024-2021_R1_val_1.fq.gz
+Approx 30% complete for hCoV-19-USA-NV-QDX-4024-2021_R1_val_1.fq.gz
+Approx 35% complete for hCoV-19-USA-NV-QDX-4024-2021_R1_val_1.fq.gz
+Approx 40% complete for hCoV-19-USA-NV-QDX-4024-2021_R1_val_1.fq.gz
+Approx 45% complete for hCoV-19-USA-NV-QDX-4024-2021_R1_val_1.fq.gz
+Approx 50% complete for hCoV-19-USA-NV-QDX-4024-2021_R1_val_1.fq.gz
+Approx 55% complete for hCoV-19-USA-NV-QDX-4024-2021_R1_val_1.fq.gz
+Approx 60% complete for hCoV-19-USA-NV-QDX-4024-2021_R1_val_1.fq.gz
+Approx 65% complete for hCoV-19-USA-NV-QDX-4024-2021_R1_val_1.fq.gz
+Approx 70% complete for hCoV-19-USA-NV-QDX-4024-2021_R1_val_1.fq.gz
+Approx 75% complete for hCoV-19-USA-NV-QDX-4024-2021_R1_val_1.fq.gz
+Approx 80% complete for hCoV-19-USA-NV-QDX-4024-2021_R1_val_1.fq.gz
+Approx 85% complete for hCoV-19-USA-NV-QDX-4024-2021_R1_val_1.fq.gz
+Approx 90% complete for hCoV-19-USA-NV-QDX-4024-2021_R1_val_1.fq.gz
+Approx 95% complete for hCoV-19-USA-NV-QDX-4024-2021_R1_val_1.fq.gz
+
+  >>> Now running FastQC on the validated data hCoV-19-USA-NV-QDX-4024-2021_R2_val_2.fq.gz<<<
+
+Started analysis of hCoV-19-USA-NV-QDX-4024-2021_R2_val_2.fq.gz
+Approx 5% complete for hCoV-19-USA-NV-QDX-4024-2021_R2_val_2.fq.gz
+Approx 10% complete for hCoV-19-USA-NV-QDX-4024-2021_R2_val_2.fq.gz
+Approx 15% complete for hCoV-19-USA-NV-QDX-4024-2021_R2_val_2.fq.gz
+Approx 20% complete for hCoV-19-USA-NV-QDX-4024-2021_R2_val_2.fq.gz
+Approx 25% complete for hCoV-19-USA-NV-QDX-4024-2021_R2_val_2.fq.gz
+Approx 30% complete for hCoV-19-USA-NV-QDX-4024-2021_R2_val_2.fq.gz
+Approx 35% complete for hCoV-19-USA-NV-QDX-4024-2021_R2_val_2.fq.gz
+Approx 40% complete for hCoV-19-USA-NV-QDX-4024-2021_R2_val_2.fq.gz
+Approx 45% complete for hCoV-19-USA-NV-QDX-4024-2021_R2_val_2.fq.gz
+Approx 50% complete for hCoV-19-USA-NV-QDX-4024-2021_R2_val_2.fq.gz
+Approx 55% complete for hCoV-19-USA-NV-QDX-4024-2021_R2_val_2.fq.gz
+Approx 60% complete for hCoV-19-USA-NV-QDX-4024-2021_R2_val_2.fq.gz
+Approx 65% complete for hCoV-19-USA-NV-QDX-4024-2021_R2_val_2.fq.gz
+Approx 70% complete for hCoV-19-USA-NV-QDX-4024-2021_R2_val_2.fq.gz
+Approx 75% complete for hCoV-19-USA-NV-QDX-4024-2021_R2_val_2.fq.gz
+Approx 80% complete for hCoV-19-USA-NV-QDX-4024-2021_R2_val_2.fq.gz
+Approx 85% complete for hCoV-19-USA-NV-QDX-4024-2021_R2_val_2.fq.gz
+Approx 90% complete for hCoV-19-USA-NV-QDX-4024-2021_R2_val_2.fq.gz
+Approx 95% complete for hCoV-19-USA-NV-QDX-4024-2021_R2_val_2.fq.gz
+Deleting both intermediate output files hCoV-19-USA-NV-QDX-4024-2021_R1_trimmed.fq.gz and hCoV-19-USA-NV-QDX-4024-2021_R2_trimmed.fq.gz
+
+====================================================================================================
+

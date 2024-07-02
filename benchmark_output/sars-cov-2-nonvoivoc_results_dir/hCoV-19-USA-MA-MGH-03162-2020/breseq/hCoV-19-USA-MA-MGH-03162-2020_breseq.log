@@ -1,0 +1,793 @@
+================================================================================
+breseq 0.35.0     http://barricklab.org/breseq
+
+Active Developers: Barrick JE, Deatherage DE
+Contact:           <jeffrey.e.barrick@gmail.com>
+
+breseq is free software; you can redistribute it and/or modify it under the
+terms the GNU General Public License as published by the Free Software 
+Foundation; either version 2, or (at your option) any later version.
+
+Copyright (c) 2008-2010 Michigan State University
+Copyright (c) 2011-2017 The University of Texas at Austin
+
+If you use breseq in your research, please cite:
+
+  Deatherage, D.E., Barrick, J.E. (2014) Identification of mutations
+  in laboratory-evolved microbes from next-generation sequencing
+  data using breseq. Methods Mol. Biol. 1151: 165–188.
+
+If you use structural variation (junction) predictions, please cite:
+
+  Barrick, J.E., Colburn, G., Deatherage D.E., Traverse, C.C.,
+  Strand, M.D., Borges, J.J., Knoester, D.B., Reba, A., Meyer, A.G. 
+  (2014) Identifying structural variation in haploid microbial genomes 
+  from short-read resequencing data using breseq. BMC Genomics 15:1039.
+================================================================================
+---> bowtie2  :: version 2.4.5 [/workspace/lab/mcarthurlab/nasirja/covid-19-signal/.snakemake/conda/b7ebc969cbb19fe5c84690f1718327cb_/bin/bowtie2]
+---> R        :: version 4.0.2 [/workspace/lab/mcarthurlab/nasirja/covid-19-signal/.snakemake/conda/b7ebc969cbb19fe5c84690f1718327cb_/bin/R]
++++   NOW PROCESSING Read and reference sequence file input
+  READ FILE::hCoV-19-USA-MA-MGH-03162-2020_R1
+    Converting/filtering FASTQ file...
+    Original base quality format: SANGER New format: SANGER
+    Original reads: 2330778 bases: 229678984
+    Filtered reads: none
+    Analyzed reads: 2330778 bases: 229678984
+  READ FILE::hCoV-19-USA-MA-MGH-03162-2020_R2
+    Converting/filtering FASTQ file...
+    Original base quality format: SANGER New format: SANGER
+    Original reads: 2330778 bases: 230257253
+    Filtered reads: none
+    Analyzed reads: 2330778 bases: 230257253
+  ::TOTAL::
+    Original reads: 4661556 bases: 459936237
+    Analyzed reads: 4661556 bases: 459936237
+[samtools] faidx hCoV-19-USA-MA-MGH-03162-2020/breseq/data/reference.fasta
+  REFERENCE: MN908947
+  LENGTH: 29903
++++   NOW PROCESSING Read alignment to reference genome
+[system] bowtie2-build -q hCoV-19-USA-MA-MGH-03162-2020/breseq/data/reference.fasta hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/reference
+Renaming hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/reference.3.bt2.tmp to hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/reference.3.bt2
+Renaming hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/reference.4.bt2.tmp to hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/reference.4.bt2
+Renaming hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/reference.1.bt2.tmp to hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/reference.1.bt2
+Renaming hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/reference.2.bt2.tmp to hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/reference.2.bt2
+Renaming hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/reference.rev.1.bt2.tmp to hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/reference.rev.1.bt2
+Renaming hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/reference.rev.2.bt2.tmp to hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/reference.rev.2.bt2
+[system] bowtie2 -t --no-unal -p 4 -L 31 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,1,0.9 -k 2000 --reorder -x hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/reference -U hCoV-19-USA-MA-MGH-03162-2020/breseq/01_sequence_conversion/hCoV-19-USA-MA-MGH-03162-2020_R1.converted.fastq -S hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/hCoV-19-USA-MA-MGH-03162-2020_R1.stage1.sam --un hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/hCoV-19-USA-MA-MGH-03162-2020_R1.stage1.unmatched.fastq
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:48
+2330778 reads; of these:
+  2330778 (100.00%) were unpaired; of these:
+    255067 (10.94%) aligned 0 times
+    2075711 (89.06%) aligned exactly 1 time
+    0 (0.00%) aligned >1 times
+89.06% overall alignment rate
+Time searching: 00:00:48
+Overall time: 00:00:49
+[system] bowtie2 -t --no-unal -p 4 -L 14 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,6,0.2 -k 2000 --reorder -x hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/reference -U hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/hCoV-19-USA-MA-MGH-03162-2020_R1.stage1.unmatched.fastq -S hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/hCoV-19-USA-MA-MGH-03162-2020_R1.stage2.matched.sam
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:09
+255067 reads; of these:
+  255067 (100.00%) were unpaired; of these:
+    1198 (0.47%) aligned 0 times
+    122217 (47.92%) aligned exactly 1 time
+    131652 (51.61%) aligned >1 times
+99.53% overall alignment rate
+Time searching: 00:00:09
+Overall time: 00:00:09
+[system] bowtie2 -t --no-unal -p 4 -L 31 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,1,0.9 -k 2000 --reorder -x hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/reference -U hCoV-19-USA-MA-MGH-03162-2020/breseq/01_sequence_conversion/hCoV-19-USA-MA-MGH-03162-2020_R2.converted.fastq -S hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/hCoV-19-USA-MA-MGH-03162-2020_R2.stage1.sam --un hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/hCoV-19-USA-MA-MGH-03162-2020_R2.stage1.unmatched.fastq
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:50
+2330778 reads; of these:
+  2330778 (100.00%) were unpaired; of these:
+    268684 (11.53%) aligned 0 times
+    2062094 (88.47%) aligned exactly 1 time
+    0 (0.00%) aligned >1 times
+88.47% overall alignment rate
+Time searching: 00:00:50
+Overall time: 00:00:50
+[system] bowtie2 -t --no-unal -p 4 -L 14 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,6,0.2 -k 2000 --reorder -x hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/reference -U hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/hCoV-19-USA-MA-MGH-03162-2020_R2.stage1.unmatched.fastq -S hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/hCoV-19-USA-MA-MGH-03162-2020_R2.stage2.matched.sam
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:00:10
+268684 reads; of these:
+  268684 (100.00%) were unpaired; of these:
+    1545 (0.58%) aligned 0 times
+    130932 (48.73%) aligned exactly 1 time
+    136207 (50.69%) aligned >1 times
+99.42% overall alignment rate
+Time searching: 00:00:10
+Overall time: 00:00:10
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/reference*
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/hCoV-19-USA-MA-MGH-03162-2020_R1.stage1.unmatched.fastq
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/hCoV-19-USA-MA-MGH-03162-2020_R1.stage1.sam
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/hCoV-19-USA-MA-MGH-03162-2020_R1.stage2.matched.sam
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/hCoV-19-USA-MA-MGH-03162-2020_R2.stage1.unmatched.fastq
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/hCoV-19-USA-MA-MGH-03162-2020_R2.stage1.sam
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/hCoV-19-USA-MA-MGH-03162-2020_R2.stage2.matched.sam
++++   NOW PROCESSING Preprocessing alignments for candidate junction identification
+Preprocessing alignments.
+  READ FILE::hCoV-19-USA-MA-MGH-03162-2020_R1
+    ALIGNED READ:100000
+    ALIGNED READ:200000
+    ALIGNED READ:300000
+    ALIGNED READ:400000
+    ALIGNED READ:500000
+    ALIGNED READ:600000
+    ALIGNED READ:700000
+    ALIGNED READ:800000
+    ALIGNED READ:900000
+    ALIGNED READ:1000000
+    ALIGNED READ:1100000
+    ALIGNED READ:1200000
+    ALIGNED READ:1300000
+    ALIGNED READ:1400000
+    ALIGNED READ:1500000
+    ALIGNED READ:1600000
+    ALIGNED READ:1700000
+    ALIGNED READ:1800000
+    ALIGNED READ:1900000
+    ALIGNED READ:2000000
+    ALIGNED READ:2100000
+    ALIGNED READ:2200000
+    ALIGNED READ:2300000
+  READ FILE::hCoV-19-USA-MA-MGH-03162-2020_R2
+    ALIGNED READ:2400000
+    ALIGNED READ:2500000
+    ALIGNED READ:2600000
+    ALIGNED READ:2700000
+    ALIGNED READ:2800000
+    ALIGNED READ:2900000
+    ALIGNED READ:3000000
+    ALIGNED READ:3100000
+    ALIGNED READ:3200000
+    ALIGNED READ:3300000
+    ALIGNED READ:3400000
+    ALIGNED READ:3500000
+    ALIGNED READ:3600000
+    ALIGNED READ:3700000
+    ALIGNED READ:3800000
+    ALIGNED READ:3900000
+    ALIGNED READ:4000000
+    ALIGNED READ:4100000
+    ALIGNED READ:4200000
+    ALIGNED READ:4300000
+    ALIGNED READ:4400000
+    ALIGNED READ:4500000
+    ALIGNED READ:4600000
+  Summary... 
+  Aligned reads:                              4658813
+  Read alignments:                            4928852
+  Alignments split on indels:                    1347
+  Reads with alignments split on indels:         1347
+  Split alignments:                            537940
+  Reads with split alignments:                 267802
++++   NOW PROCESSING Preliminary analysis of coverage distribution
+[samtools] import hCoV-19-USA-MA-MGH-03162-2020/breseq/data/reference.fasta.fai hCoV-19-USA-MA-MGH-03162-2020/breseq/03_candidate_junctions/best.sam hCoV-19-USA-MA-MGH-03162-2020/breseq/03_candidate_junctions/best.unsorted.bam
+[samtools] sort --threads 4 -o hCoV-19-USA-MA-MGH-03162-2020/breseq/03_candidate_junctions/best.bam -T hCoV-19-USA-MA-MGH-03162-2020/breseq/03_candidate_junctions/best.bam hCoV-19-USA-MA-MGH-03162-2020/breseq/03_candidate_junctions/best.unsorted.bam
+[samtools] index hCoV-19-USA-MA-MGH-03162-2020/breseq/03_candidate_junctions/best.bam hCoV-19-USA-MA-MGH-03162-2020/breseq/03_candidate_junctions/best.bam.bai
+  REFERENCE: MN908947
+  LENGTH: 29903
+    POSITION:10000
+    POSITION:20000
+[system] R --vanilla < /workspace/lab/mcarthurlab/nasirja/covid-19-signal/.snakemake/conda/b7ebc969cbb19fe5c84690f1718327cb_/bin/../share/breseq/coverage_distribution.r > hCoV-19-USA-MA-MGH-03162-2020/breseq/03_candidate_junctions/0.unique_only_coverage_distribution.tab.r.log distribution_file=hCoV-19-USA-MA-MGH-03162-2020/breseq/03_candidate_junctions/0.unique_only_coverage_distribution.tab plot_file=hCoV-19-USA-MA-MGH-03162-2020/breseq/03_candidate_junctions/0.coverage.pdf deletion_propagation_pr_cutoff=0.000289143
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/03_candidate_junctions/best.unsorted.bam
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/03_candidate_junctions/best.sam
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/03_candidate_junctions/best.bam
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/03_candidate_junctions/best.bam.bai
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/03_candidate_junctions/0.coverage.pdf
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/03_candidate_junctions/0.unique_only_coverage_distribution.tab
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/03_candidate_junctions/0.unique_only_coverage_distribution.tab.r.log
++++   NOW PROCESSING Identifying junction candidates
+  READ FILE::hCoV-19-USA-MA-MGH-03162-2020_R1
+    ALIGNED READ:10000 CANDIDATE JUNCTIONS:3987
+    ALIGNED READ:20000 CANDIDATE JUNCTIONS:6381
+    ALIGNED READ:30000 CANDIDATE JUNCTIONS:8259
+    ALIGNED READ:40000 CANDIDATE JUNCTIONS:9799
+    ALIGNED READ:50000 CANDIDATE JUNCTIONS:11152
+    ALIGNED READ:60000 CANDIDATE JUNCTIONS:12401
+    ALIGNED READ:70000 CANDIDATE JUNCTIONS:13559
+    ALIGNED READ:80000 CANDIDATE JUNCTIONS:14658
+    ALIGNED READ:90000 CANDIDATE JUNCTIONS:15633
+    ALIGNED READ:100000 CANDIDATE JUNCTIONS:16557
+    ALIGNED READ:110000 CANDIDATE JUNCTIONS:17407
+  Passed alignment pairs examined: 100000
+  WARNING: Reached limit of 100000 passed alignment pairs.
+  Specify a greater value for --junction-alignment-pair-limit for more thorough junction prediction.
+  Taking top candidate junctions...
+  Minimum number to keep:     100 
+  Maximum number to keep:    5000 
+  Maximum length to keep:    2990 bases
+    Initial: Number = 6477, Cumulative Length = 1331302 bases
+      Testing Pos Hash Score =   47, Num =      1, Length =    176
+      Testing Pos Hash Score =   46, Num =      2, Length =    384
+      Testing Pos Hash Score =   41, Num =      1, Length =    208
+      Testing Pos Hash Score =   38, Num =      2, Length =    352
+      Testing Pos Hash Score =   37, Num =      1, Length =    207
+      Testing Pos Hash Score =   36, Num =      1, Length =    206
+      Testing Pos Hash Score =   35, Num =      1, Length =    205
+      Testing Pos Hash Score =   34, Num =      2, Length =    415
+      Testing Pos Hash Score =   33, Num =      5, Length =   1032
+      Testing Pos Hash Score =   32, Num =      4, Length =    799
+      Testing Pos Hash Score =   31, Num =      5, Length =   1029
+      Testing Pos Hash Score =   30, Num =      3, Length =    617
+      Testing Pos Hash Score =   29, Num =      5, Length =   1028
+      Testing Pos Hash Score =   28, Num =      6, Length =   1239
+      Testing Pos Hash Score =   27, Num =      3, Length =    620
+      Testing Pos Hash Score =   26, Num =      1, Length =    205
+      Testing Pos Hash Score =   25, Num =      6, Length =   1242
+      Testing Pos Hash Score =   24, Num =      5, Length =   1000
+      Testing Pos Hash Score =   23, Num =     10, Length =   2051
+      Testing Pos Hash Score =   22, Num =     18, Length =   3715
+      Testing Pos Hash Score =   21, Num =     17, Length =   3518
+      Testing Pos Hash Score =   20, Num =     24, Length =   4952 [Omitted Similar =      2]
+    Accepted: Number = 99, Pos Hash Score >= 21, Cumulative Length = 20248 bases
+[samtools] faidx hCoV-19-USA-MA-MGH-03162-2020/breseq/03_candidate_junctions/candidate_junction.fasta
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/03_candidate_junctions/hCoV-19-USA-MA-MGH-03162-2020_R1.split.sam
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/03_candidate_junctions/hCoV-19-USA-MA-MGH-03162-2020_R2.split.sam
++++   NOW PROCESSING Re-alignment to junction candidates
+[system] bowtie2-build -q hCoV-19-USA-MA-MGH-03162-2020/breseq/03_candidate_junctions/candidate_junction.fasta hCoV-19-USA-MA-MGH-03162-2020/breseq/04_candidate_junction_alignment/candidate_junction
+Renaming hCoV-19-USA-MA-MGH-03162-2020/breseq/04_candidate_junction_alignment/candidate_junction.3.bt2.tmp to hCoV-19-USA-MA-MGH-03162-2020/breseq/04_candidate_junction_alignment/candidate_junction.3.bt2
+Renaming hCoV-19-USA-MA-MGH-03162-2020/breseq/04_candidate_junction_alignment/candidate_junction.4.bt2.tmp to hCoV-19-USA-MA-MGH-03162-2020/breseq/04_candidate_junction_alignment/candidate_junction.4.bt2
+Renaming hCoV-19-USA-MA-MGH-03162-2020/breseq/04_candidate_junction_alignment/candidate_junction.1.bt2.tmp to hCoV-19-USA-MA-MGH-03162-2020/breseq/04_candidate_junction_alignment/candidate_junction.1.bt2
+Renaming hCoV-19-USA-MA-MGH-03162-2020/breseq/04_candidate_junction_alignment/candidate_junction.2.bt2.tmp to hCoV-19-USA-MA-MGH-03162-2020/breseq/04_candidate_junction_alignment/candidate_junction.2.bt2
+Renaming hCoV-19-USA-MA-MGH-03162-2020/breseq/04_candidate_junction_alignment/candidate_junction.rev.1.bt2.tmp to hCoV-19-USA-MA-MGH-03162-2020/breseq/04_candidate_junction_alignment/candidate_junction.rev.1.bt2
+Renaming hCoV-19-USA-MA-MGH-03162-2020/breseq/04_candidate_junction_alignment/candidate_junction.rev.2.bt2.tmp to hCoV-19-USA-MA-MGH-03162-2020/breseq/04_candidate_junction_alignment/candidate_junction.rev.2.bt2
+[system] bowtie2 -t --no-unal -p 4 --local  -L 29 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,1,0.70 -k 2000 --reorder -x hCoV-19-USA-MA-MGH-03162-2020/breseq/04_candidate_junction_alignment/candidate_junction -U hCoV-19-USA-MA-MGH-03162-2020/breseq/01_sequence_conversion/hCoV-19-USA-MA-MGH-03162-2020_R1.converted.fastq -S hCoV-19-USA-MA-MGH-03162-2020/breseq/04_candidate_junction_alignment/hCoV-19-USA-MA-MGH-03162-2020_R1.candidate_junction.sam
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:01:29
+2330778 reads; of these:
+  2330778 (100.00%) were unpaired; of these:
+    1423529 (61.08%) aligned 0 times
+    201834 (8.66%) aligned exactly 1 time
+    705415 (30.27%) aligned >1 times
+38.92% overall alignment rate
+Time searching: 00:01:29
+Overall time: 00:01:29
+[system] bowtie2 -t --no-unal -p 4 --local  -L 29 --ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals --local -i S,1,0.25 --score-min L,1,0.70 -k 2000 --reorder -x hCoV-19-USA-MA-MGH-03162-2020/breseq/04_candidate_junction_alignment/candidate_junction -U hCoV-19-USA-MA-MGH-03162-2020/breseq/01_sequence_conversion/hCoV-19-USA-MA-MGH-03162-2020_R2.converted.fastq -S hCoV-19-USA-MA-MGH-03162-2020/breseq/04_candidate_junction_alignment/hCoV-19-USA-MA-MGH-03162-2020_R2.candidate_junction.sam
+Time loading reference: 00:00:00
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Multiseed full-index search: 00:01:25
+2330778 reads; of these:
+  2330778 (100.00%) were unpaired; of these:
+    1425522 (61.16%) aligned 0 times
+    202994 (8.71%) aligned exactly 1 time
+    702262 (30.13%) aligned >1 times
+38.84% overall alignment rate
+Time searching: 00:01:25
+Overall time: 00:01:25
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/04_candidate_junction_alignment/candidate_junction*
++++   NOW PROCESSING Resolving best read alignments
+  READ FILE:hCoV-19-USA-MA-MGH-03162-2020_R1
+    READS:10000
+    READS:20000
+    READS:30000
+    READS:40000
+    READS:50000
+    READS:60000
+    READS:70000
+    READS:80000
+    READS:90000
+    READS:100000
+    READS:110000
+    READS:120000
+    READS:130000
+    READS:140000
+    READS:150000
+    READS:160000
+    READS:170000
+    READS:180000
+    READS:190000
+    READS:200000
+    READS:210000
+    READS:220000
+    READS:230000
+    READS:240000
+    READS:250000
+    READS:260000
+    READS:270000
+    READS:280000
+    READS:290000
+    READS:300000
+    READS:310000
+    READS:320000
+    READS:330000
+    READS:340000
+    READS:350000
+    READS:360000
+    READS:370000
+    READS:380000
+    READS:390000
+    READS:400000
+    READS:410000
+    READS:420000
+    READS:430000
+    READS:440000
+    READS:450000
+    READS:460000
+    READS:470000
+    READS:480000
+    READS:490000
+    READS:500000
+    READS:510000
+    READS:520000
+    READS:530000
+    READS:540000
+    READS:550000
+    READS:560000
+    READS:570000
+    READS:580000
+    READS:590000
+    READS:600000
+    READS:610000
+    READS:620000
+    READS:630000
+    READS:640000
+    READS:650000
+    READS:660000
+    READS:670000
+    READS:680000
+    READS:690000
+    READS:700000
+    READS:710000
+    READS:720000
+    READS:730000
+    READS:740000
+    READS:750000
+    READS:760000
+    READS:770000
+    READS:780000
+    READS:790000
+    READS:800000
+    READS:810000
+    READS:820000
+    READS:830000
+    READS:840000
+    READS:850000
+    READS:860000
+    READS:870000
+    READS:880000
+    READS:890000
+    READS:900000
+    READS:910000
+    READS:920000
+    READS:930000
+    READS:940000
+    READS:950000
+    READS:960000
+    READS:970000
+    READS:980000
+    READS:990000
+    READS:1000000
+    READS:1010000
+    READS:1020000
+    READS:1030000
+    READS:1040000
+    READS:1050000
+    READS:1060000
+    READS:1070000
+    READS:1080000
+    READS:1090000
+    READS:1100000
+    READS:1110000
+    READS:1120000
+    READS:1130000
+    READS:1140000
+    READS:1150000
+    READS:1160000
+    READS:1170000
+    READS:1180000
+    READS:1190000
+    READS:1200000
+    READS:1210000
+    READS:1220000
+    READS:1230000
+    READS:1240000
+    READS:1250000
+    READS:1260000
+    READS:1270000
+    READS:1280000
+    READS:1290000
+    READS:1300000
+    READS:1310000
+    READS:1320000
+    READS:1330000
+    READS:1340000
+    READS:1350000
+    READS:1360000
+    READS:1370000
+    READS:1380000
+    READS:1390000
+    READS:1400000
+    READS:1410000
+    READS:1420000
+    READS:1430000
+    READS:1440000
+    READS:1450000
+    READS:1460000
+    READS:1470000
+    READS:1480000
+    READS:1490000
+    READS:1500000
+    READS:1510000
+    READS:1520000
+    READS:1530000
+    READS:1540000
+    READS:1550000
+    READS:1560000
+    READS:1570000
+    READS:1580000
+    READS:1590000
+    READS:1600000
+    READS:1610000
+    READS:1620000
+    READS:1630000
+    READS:1640000
+    READS:1650000
+    READS:1660000
+    READS:1670000
+    READS:1680000
+    READS:1690000
+    READS:1700000
+    READS:1710000
+    READS:1720000
+    READS:1730000
+    READS:1740000
+    READS:1750000
+    READS:1760000
+    READS:1770000
+    READS:1780000
+    READS:1790000
+    READS:1800000
+    READS:1810000
+    READS:1820000
+    READS:1830000
+    READS:1840000
+    READS:1850000
+    READS:1860000
+    READS:1870000
+    READS:1880000
+    READS:1890000
+    READS:1900000
+    READS:1910000
+    READS:1920000
+    READS:1930000
+    READS:1940000
+    READS:1950000
+    READS:1960000
+    READS:1970000
+    READS:1980000
+    READS:1990000
+    READS:2000000
+    READS:2010000
+    READS:2020000
+    READS:2030000
+    READS:2040000
+    READS:2050000
+    READS:2060000
+    READS:2070000
+    READS:2080000
+    READS:2090000
+    READS:2100000
+    READS:2110000
+    READS:2120000
+    READS:2130000
+    READS:2140000
+    READS:2150000
+    READS:2160000
+    READS:2170000
+    READS:2180000
+    READS:2190000
+    READS:2200000
+    READS:2210000
+    READS:2220000
+    READS:2230000
+    READS:2240000
+    READS:2250000
+    READS:2260000
+    READS:2270000
+    READS:2280000
+    READS:2290000
+    READS:2300000
+    READS:2310000
+    READS:2320000
+    READS:2330000
+  READ FILE:hCoV-19-USA-MA-MGH-03162-2020_R2
+    READS:2340000
+    READS:2350000
+    READS:2360000
+    READS:2370000
+    READS:2380000
+    READS:2390000
+    READS:2400000
+    READS:2410000
+    READS:2420000
+    READS:2430000
+    READS:2440000
+    READS:2450000
+    READS:2460000
+    READS:2470000
+    READS:2480000
+    READS:2490000
+    READS:2500000
+    READS:2510000
+    READS:2520000
+    READS:2530000
+    READS:2540000
+    READS:2550000
+    READS:2560000
+    READS:2570000
+    READS:2580000
+    READS:2590000
+    READS:2600000
+    READS:2610000
+    READS:2620000
+    READS:2630000
+    READS:2640000
+    READS:2650000
+    READS:2660000
+    READS:2670000
+    READS:2680000
+    READS:2690000
+    READS:2700000
+    READS:2710000
+    READS:2720000
+    READS:2730000
+    READS:2740000
+    READS:2750000
+    READS:2760000
+    READS:2770000
+    READS:2780000
+    READS:2790000
+    READS:2800000
+    READS:2810000
+    READS:2820000
+    READS:2830000
+    READS:2840000
+    READS:2850000
+    READS:2860000
+    READS:2870000
+    READS:2880000
+    READS:2890000
+    READS:2900000
+    READS:2910000
+    READS:2920000
+    READS:2930000
+    READS:2940000
+    READS:2950000
+    READS:2960000
+    READS:2970000
+    READS:2980000
+    READS:2990000
+    READS:3000000
+    READS:3010000
+    READS:3020000
+    READS:3030000
+    READS:3040000
+    READS:3050000
+    READS:3060000
+    READS:3070000
+    READS:3080000
+    READS:3090000
+    READS:3100000
+    READS:3110000
+    READS:3120000
+    READS:3130000
+    READS:3140000
+    READS:3150000
+    READS:3160000
+    READS:3170000
+    READS:3180000
+    READS:3190000
+    READS:3200000
+    READS:3210000
+    READS:3220000
+    READS:3230000
+    READS:3240000
+    READS:3250000
+    READS:3260000
+    READS:3270000
+    READS:3280000
+    READS:3290000
+    READS:3300000
+    READS:3310000
+    READS:3320000
+    READS:3330000
+    READS:3340000
+    READS:3350000
+    READS:3360000
+    READS:3370000
+    READS:3380000
+    READS:3390000
+    READS:3400000
+    READS:3410000
+    READS:3420000
+    READS:3430000
+    READS:3440000
+    READS:3450000
+    READS:3460000
+    READS:3470000
+    READS:3480000
+    READS:3490000
+    READS:3500000
+    READS:3510000
+    READS:3520000
+    READS:3530000
+    READS:3540000
+    READS:3550000
+    READS:3560000
+    READS:3570000
+    READS:3580000
+    READS:3590000
+    READS:3600000
+    READS:3610000
+    READS:3620000
+    READS:3630000
+    READS:3640000
+    READS:3650000
+    READS:3660000
+    READS:3670000
+    READS:3680000
+    READS:3690000
+    READS:3700000
+    READS:3710000
+    READS:3720000
+    READS:3730000
+    READS:3740000
+    READS:3750000
+    READS:3760000
+    READS:3770000
+    READS:3780000
+    READS:3790000
+    READS:3800000
+    READS:3810000
+    READS:3820000
+    READS:3830000
+    READS:3840000
+    READS:3850000
+    READS:3860000
+    READS:3870000
+    READS:3880000
+    READS:3890000
+    READS:3900000
+    READS:3910000
+    READS:3920000
+    READS:3930000
+    READS:3940000
+    READS:3950000
+    READS:3960000
+    READS:3970000
+    READS:3980000
+    READS:3990000
+    READS:4000000
+    READS:4010000
+    READS:4020000
+    READS:4030000
+    READS:4040000
+    READS:4050000
+    READS:4060000
+    READS:4070000
+    READS:4080000
+    READS:4090000
+    READS:4100000
+    READS:4110000
+    READS:4120000
+    READS:4130000
+    READS:4140000
+    READS:4150000
+    READS:4160000
+    READS:4170000
+    READS:4180000
+    READS:4190000
+    READS:4200000
+    READS:4210000
+    READS:4220000
+    READS:4230000
+    READS:4240000
+    READS:4250000
+    READS:4260000
+    READS:4270000
+    READS:4280000
+    READS:4290000
+    READS:4300000
+    READS:4310000
+    READS:4320000
+    READS:4330000
+    READS:4340000
+    READS:4350000
+    READS:4360000
+    READS:4370000
+    READS:4380000
+    READS:4390000
+    READS:4400000
+    READS:4410000
+    READS:4420000
+    READS:4430000
+    READS:4440000
+    READS:4450000
+    READS:4460000
+    READS:4470000
+    READS:4480000
+    READS:4490000
+    READS:4500000
+    READS:4510000
+    READS:4520000
+    READS:4530000
+    READS:4540000
+    READS:4550000
+    READS:4560000
+    READS:4570000
+    READS:4580000
+    READS:4590000
+    READS:4600000
+    READS:4610000
+    READS:4620000
+    READS:4630000
+    READS:4640000
+    READS:4650000
+    READS:4660000
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/01_sequence_conversion/hCoV-19-USA-MA-MGH-03162-2020_R1.converted.fastq
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/01_sequence_conversion/hCoV-19-USA-MA-MGH-03162-2020_R2.converted.fastq
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/hCoV-19-USA-MA-MGH-03162-2020_R1.reference.sam
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/02_reference_alignment/hCoV-19-USA-MA-MGH-03162-2020_R2.reference.sam
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/04_candidate_junction_alignment/hCoV-19-USA-MA-MGH-03162-2020_R1.candidate_junction.sam*
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/04_candidate_junction_alignment/hCoV-19-USA-MA-MGH-03162-2020_R2.candidate_junction.sam*
++++   NOW PROCESSING Creating BAM files
+[samtools] import hCoV-19-USA-MA-MGH-03162-2020/breseq/03_candidate_junctions/candidate_junction.fasta.fai hCoV-19-USA-MA-MGH-03162-2020/breseq/05_alignment_correction/junction.sam hCoV-19-USA-MA-MGH-03162-2020/breseq/06_bam/junction.unsorted.bam
+[samtools] sort --threads 4 -o hCoV-19-USA-MA-MGH-03162-2020/breseq/06_bam/junction.bam -T hCoV-19-USA-MA-MGH-03162-2020/breseq/06_bam/junction.bam hCoV-19-USA-MA-MGH-03162-2020/breseq/06_bam/junction.unsorted.bam
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/06_bam/junction.unsorted.bam
+[samtools] index hCoV-19-USA-MA-MGH-03162-2020/breseq/06_bam/junction.bam hCoV-19-USA-MA-MGH-03162-2020/breseq/06_bam/junction.bam.bai
+[samtools] import hCoV-19-USA-MA-MGH-03162-2020/breseq/data/reference.fasta.fai hCoV-19-USA-MA-MGH-03162-2020/breseq/05_alignment_correction/reference.sam hCoV-19-USA-MA-MGH-03162-2020/breseq/06_bam/reference.unsorted.bam
+[samtools] sort --threads 4 -o hCoV-19-USA-MA-MGH-03162-2020/breseq/data/reference.bam -T hCoV-19-USA-MA-MGH-03162-2020/breseq/data/reference.bam hCoV-19-USA-MA-MGH-03162-2020/breseq/06_bam/reference.unsorted.bam
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/06_bam/reference.unsorted.bam
+[samtools] index hCoV-19-USA-MA-MGH-03162-2020/breseq/data/reference.bam hCoV-19-USA-MA-MGH-03162-2020/breseq/data/reference.bam.bai
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/05_alignment_correction/reference.sam
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/05_alignment_correction/junction.sam
++++   NOW PROCESSING Tabulating error counts
+  REFERENCE: MN908947
+  LENGTH: 29903
+    POSITION:10000
+    POSITION:20000
++++   NOW PROCESSING Re-calibrating base error rates
+[system] R --vanilla < /workspace/lab/mcarthurlab/nasirja/covid-19-signal/.snakemake/conda/b7ebc969cbb19fe5c84690f1718327cb_/bin/../share/breseq/coverage_distribution.r > hCoV-19-USA-MA-MGH-03162-2020/breseq/07_error_calibration/0.unique_only_coverage_distribution.tab.r.log distribution_file=hCoV-19-USA-MA-MGH-03162-2020/breseq/07_error_calibration/0.unique_only_coverage_distribution.tab plot_file=hCoV-19-USA-MA-MGH-03162-2020/breseq/output/calibration/0.unique_coverage.pdf deletion_propagation_pr_cutoff=0.000289143
+[system] R --vanilla in_file=hCoV-19-USA-MA-MGH-03162-2020/breseq/07_error_calibration/base_qual_error_prob.hCoV-19-USA-MA-MGH-03162-2020_R1.tab out_file=hCoV-19-USA-MA-MGH-03162-2020/breseq/output/calibration/hCoV-19-USA-MA-MGH-03162-2020_R1.error_rates.pdf < /workspace/lab/mcarthurlab/nasirja/covid-19-signal/.snakemake/conda/b7ebc969cbb19fe5c84690f1718327cb_/bin/../share/breseq/plot_error_rate.r > hCoV-19-USA-MA-MGH-03162-2020/breseq/07_error_calibration/hCoV-19-USA-MA-MGH-03162-2020_R1.plot_error_rate.log
+[system] R --vanilla in_file=hCoV-19-USA-MA-MGH-03162-2020/breseq/07_error_calibration/base_qual_error_prob.hCoV-19-USA-MA-MGH-03162-2020_R2.tab out_file=hCoV-19-USA-MA-MGH-03162-2020/breseq/output/calibration/hCoV-19-USA-MA-MGH-03162-2020_R2.error_rates.pdf < /workspace/lab/mcarthurlab/nasirja/covid-19-signal/.snakemake/conda/b7ebc969cbb19fe5c84690f1718327cb_/bin/../share/breseq/plot_error_rate.r > hCoV-19-USA-MA-MGH-03162-2020/breseq/07_error_calibration/hCoV-19-USA-MA-MGH-03162-2020_R2.plot_error_rate.log
++++   NOW PROCESSING Examining read alignment evidence
+  REFERENCE: MN908947
+  LENGTH: 29903
+    POSITION:10000
+    POSITION:20000
++++   NOW PROCESSING Polymorphism statistics
+[system] R --vanilla total_length=29903 in_file=hCoV-19-USA-MA-MGH-03162-2020/breseq/08_mutation_identification/polymorphism_statistics_input.tab out_file=hCoV-19-USA-MA-MGH-03162-2020/breseq/08_mutation_identification/polymorphism_statistics_output.tab qual_file=hCoV-19-USA-MA-MGH-03162-2020/breseq/08_mutation_identification/error_counts.tab < /workspace/lab/mcarthurlab/nasirja/covid-19-signal/.snakemake/conda/b7ebc969cbb19fe5c84690f1718327cb_/bin/../share/breseq/polymorphism_statistics.r > hCoV-19-USA-MA-MGH-03162-2020/breseq/08_mutation_identification/polymorphism_statistics_output.log
++++   NOW PROCESSING Output
+Creating merged genome diff evidence file...
+Predicting mutations from evidence...
+  Preparing junctions...
+  Predicting mobile element insertions...
+  Predicting large deletions...
+  Predicting small indels and substitutions from junctions...
+  Predicting small indels and substitutions from alignments...
+  Making final adjustments to mutations...
+  Writing final GD file...
+  Writing final VCF file...
+Annotating mutations...
+Drawing coverage plots...
+Creating coverage plot for region: MN908947:1-29903
+Creating index HTML table...
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/01_sequence_conversion/*.trims
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/03_candidate_junctions/candidate_junction.fasta
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/03_candidate_junctions/candidate_junction.fasta.fai
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/05_alignment_correction/jc_evidence.gd
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/06_bam/junction.bam
+[system] rm -f hCoV-19-USA-MA-MGH-03162-2020/breseq/06_bam/junction.bam.bai
++++   SUCCESSFULLY COMPLETED
