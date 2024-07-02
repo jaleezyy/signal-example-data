@@ -18,10 +18,10 @@ To use the script:
 	download_bioproject.sh [-i input_bioproject} -o {output_dir}
 
 Flags:
-    -i  :  BioProject accession (PRJNA...)
-    -o  :  Directory for final output files and FASTQs (default: '${PWD}')
-    -f  :  Filter term for select sample names (partial phrases accepted)
-    -l  :  List output only (no FASTQs will be downloaded)
+	-i  :  BioProject accession (PRJNA...)
+	-o  :  Directory for final output files and FASTQs (default: '${PWD}')
+	-f  :  Filter term for select sample names (partial phrases accepted)
+	-l  :  List output only (no FASTQs will be downloaded)
 """
 
 while getopts ":i:o:f:l" option; do
@@ -46,41 +46,41 @@ fi
 # NOTE: esearch -db sra -query $input_bioproject | esummary | xtract -pattern DocumentSummary -element Experiment@acc,Run@acc,Platform@instrument_model
 
 if [ $filter != 0 ]; then 
-    esearch -db sra -query $input_bioproject | esummary | xtract -pattern DocumentSummary -element Run@acc,LIBRARY_NAME | awk -v f="$filter" '$2~f {print}' > ${output_dir}/${input_bioproject}.tsv
+	esearch -db sra -query $input_bioproject | esummary | xtract -pattern DocumentSummary -element Run@acc,LIBRARY_NAME | awk -v f="$filter" '$2~f {print}' > ${output_dir}/${input_bioproject}.tsv
 else
-    esearch -db sra -query $input_bioproject | esummary | xtract -pattern DocumentSummary -element Run@acc,LIBRARY_NAME > ${output_dir}/${input_bioproject}.tsv
+	esearch -db sra -query $input_bioproject | esummary | xtract -pattern DocumentSummary -element Run@acc,LIBRARY_NAME > ${output_dir}/${input_bioproject}.tsv
 fi
 
 echo -e "${output_dir}/${input_bioproject}.tsv created!"
 
 if [ $list_only = 1 ]; then
-    exit 0
+	exit 0
 fi
 
 while read line; do
-    accession=$(echo $line | cut -d' ' -f 1)
-    sample=$(echo $line | cut -d' ' -f 2)
-    if [[ -z $sample ]]; then
-        sample=$accession
-    fi
+	accession=$(echo $line | cut -d' ' -f 1)
+	sample=$(echo $line | cut -d' ' -f 2)
+	if [[ -z $sample ]]; then
+		sample=$accession
+	fi
 
-    echo -e "\n  Working on: ${accession}: ${sample}\n"
+	echo -e "\n  Working on: ${accession}: ${sample}\n\n"
 
-    # downloading SRA object
-    prefetch ${accession} --output-directory ${output_dir}
+	# downloading SRA object
+	prefetch ${accession} --output-directory ${output_dir}
 
-    # pulling fastq files out
-    fasterq-dump --split-files ${output_dir}/${accession}/${accession}.sra --outdir ${output_dir} --outfile ${sample}
+	# pulling fastq files out
+	fasterq-dump --split-files ${output_dir}/${accession}/${accession}.sra --outdir ${output_dir} --outfile ${sample}
 
-    # rename output
-    rename -d 's/_1\.fastq/_R1\.fastq/g' ${output_dir}/${sample}_1.fastq
-    rename -d 's/_2\.fastq/_R2\.fastq/g' ${output_dir}/${sample}_2.fastq
+	# rename output
+	rename -d 's/_1\.fastq/_R1\.fastq/g' ${output_dir}/${sample}_1.fastq
+	rename -d 's/_2\.fastq/_R2\.fastq/g' ${output_dir}/${sample}_2.fastq
 
-    # GZip
-    gzip ${output_dir}/${sample}_R1.fastq
-    gzip ${output_dir}/${sample}_R2.fastq
+	# GZip
+	gzip ${output_dir}/${sample}_R1.fastq
+	gzip ${output_dir}/${sample}_R2.fastq
 
-    # removing SRA object
-    rm -rf ${output_dir}/${accession}
+	# removing SRA object
+	rm -rf ${output_dir}/${accession}
 done < ${output_dir}/${input_bioproject}.tsv
 
