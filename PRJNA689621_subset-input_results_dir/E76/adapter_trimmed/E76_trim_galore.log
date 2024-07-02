@@ -1,0 +1,462 @@
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 4.8
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 2 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/PRJNA689621_subset-input_results_dir/E76/adapter_trimmed/
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> E76/host_removal/E76_R1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	856	AGATCGGAAGAGC	525668	0.16
+smallRNA	0	TGGAATTCTCGG	525668	0.00
+Nextera	0	CTGTCTCTTATA	525668	0.00
+Using Illumina adapter for trimming (count: 856). Second best hit was smallRNA (count: 0)
+
+Writing report to '/workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/PRJNA689621_subset-input_results_dir/E76/adapter_trimmed/E76_R1.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: E76/host_removal/E76_R1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.8
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.8). Setting -j 2
+Writing final adapter and quality trimmed output to E76_R1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file E76/host_removal/E76_R1.fastq.gz <<< 
+This is cutadapt 4.8 with Python 3.12.3
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC E76/host_removal/E76_R1.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 20.759 s (39.491 µs/read; 1.52 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 525,668
+Reads with adapters:                   171,488 (32.6%)
+Reads written (passing filters):       525,668 (100.0%)
+
+Total basepairs processed:   131,942,668 bp
+Quality-trimmed:                 279,285 bp (0.2%)
+Total written (filtered):    131,384,650 bp (99.6%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 171488 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 38.9%
+  C: 20.2%
+  G: 10.1%
+  T: 30.8%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	124243	131417.0	0	124243
+2	39924	32854.2	0	39924
+3	4311	8213.6	0	4311
+4	1821	2053.4	0	1821
+5	22	513.3	0	22
+6	13	128.3	0	13
+7	186	32.1	0	186
+8	8	8.0	0	8
+9	9	2.0	0	8 1
+10	14	0.5	1	11 3
+11	6	0.1	1	4 2
+12	13	0.0	1	13
+13	16	0.0	1	16
+14	6	0.0	1	5 1
+15	6	0.0	1	6
+16	4	0.0	1	4
+17	8	0.0	1	8
+18	10	0.0	1	9 1
+19	10	0.0	1	9 1
+20	8	0.0	1	7 1
+21	9	0.0	1	9
+22	7	0.0	1	7
+23	11	0.0	1	11
+24	95	0.0	1	93 2
+25	29	0.0	1	27 2
+26	4	0.0	1	3 1
+27	12	0.0	1	10 2
+28	8	0.0	1	6 2
+29	8	0.0	1	7 1
+30	8	0.0	1	7 1
+31	9	0.0	1	9
+32	9	0.0	1	9
+33	4	0.0	1	4
+34	16	0.0	1	13 3
+35	17	0.0	1	15 2
+36	29	0.0	1	28 1
+37	11	0.0	1	10 1
+38	5	0.0	1	5
+39	2	0.0	1	1 1
+40	6	0.0	1	6
+41	8	0.0	1	8
+42	6	0.0	1	4 2
+43	14	0.0	1	13 1
+44	6	0.0	1	6
+45	9	0.0	1	9
+46	7	0.0	1	7
+47	6	0.0	1	6
+48	4	0.0	1	4
+49	8	0.0	1	7 1
+50	5	0.0	1	3 2
+51	5	0.0	1	5
+52	5	0.0	1	3 2
+53	4	0.0	1	4
+54	16	0.0	1	14 2
+55	6	0.0	1	5 1
+56	3	0.0	1	2 1
+57	10	0.0	1	10
+58	1	0.0	1	1
+59	5	0.0	1	5
+60	4	0.0	1	4
+61	4	0.0	1	3 1
+62	5	0.0	1	3 2
+63	4	0.0	1	2 2
+64	2	0.0	1	2
+65	3	0.0	1	3
+66	7	0.0	1	5 2
+67	2	0.0	1	1 1
+68	2	0.0	1	2
+69	15	0.0	1	15
+70	9	0.0	1	8 1
+71	6	0.0	1	5 1
+72	5	0.0	1	5
+73	8	0.0	1	8
+74	11	0.0	1	10 1
+75	26	0.0	1	21 5
+76	85	0.0	1	81 4
+77	49	0.0	1	47 2
+78	36	0.0	1	35 1
+79	13	0.0	1	13
+80	10	0.0	1	8 2
+81	4	0.0	1	4
+82	3	0.0	1	3
+83	3	0.0	1	2 1
+84	1	0.0	1	1
+85	2	0.0	1	2
+86	6	0.0	1	5 1
+87	5	0.0	1	4 1
+88	1	0.0	1	1
+89	7	0.0	1	5 2
+90	2	0.0	1	2
+91	2	0.0	1	2
+93	3	0.0	1	3
+94	15	0.0	1	15
+95	2	0.0	1	2
+96	3	0.0	1	3
+98	1	0.0	1	1
+101	1	0.0	1	1
+102	4	0.0	1	4
+103	2	0.0	1	2
+104	1	0.0	1	1
+107	2	0.0	1	2
+108	1	0.0	1	1
+109	1	0.0	1	1
+110	1	0.0	1	1
+112	2	0.0	1	1 1
+115	3	0.0	1	1 2
+116	3	0.0	1	1 2
+117	1	0.0	1	1
+118	1	0.0	1	1
+121	1	0.0	1	0 1
+124	1	0.0	1	1
+127	2	0.0	1	1 1
+128	2	0.0	1	2
+131	1	0.0	1	1
+135	1	0.0	1	1
+148	1	0.0	1	1
+149	1	0.0	1	1
+152	1	0.0	1	1
+153	1	0.0	1	1
+154	2	0.0	1	2
+155	1	0.0	1	1
+156	1	0.0	1	1
+157	1	0.0	1	1
+161	1	0.0	1	1
+170	1	0.0	1	1
+173	1	0.0	1	1
+174	1	0.0	1	1
+175	1	0.0	1	1
+177	1	0.0	1	0 1
+190	1	0.0	1	0 1
+191	1	0.0	1	1
+195	1	0.0	1	1
+197	1	0.0	1	1
+199	1	0.0	1	1
+208	1	0.0	1	1
+240	1	0.0	1	0 1
+250	2	0.0	1	0 2
+251	2	0.0	1	0 2
+
+RUN STATISTICS FOR INPUT FILE: E76/host_removal/E76_R1.fastq.gz
+=============================================
+525668 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to '/workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/PRJNA689621_subset-input_results_dir/E76/adapter_trimmed/E76_R2.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: E76/host_removal/E76_R2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.8
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.8). Setting -j -j 2
+Writing final adapter and quality trimmed output to E76_R2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file E76/host_removal/E76_R2.fastq.gz <<< 
+This is cutadapt 4.8 with Python 3.12.3
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC E76/host_removal/E76_R2.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 22.595 s (42.983 µs/read; 1.40 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 525,668
+Reads with adapters:                   173,580 (33.0%)
+Reads written (passing filters):       525,668 (100.0%)
+
+Total basepairs processed:   131,942,668 bp
+Quality-trimmed:               1,436,327 bp (1.1%)
+Total written (filtered):    130,251,674 bp (98.7%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 173580 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 43.8%
+  C: 18.7%
+  G: 9.3%
+  T: 28.1%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	134965	131417.0	0	134965
+2	31236	32854.2	0	31236
+3	4997	8213.6	0	4997
+4	1363	2053.4	0	1363
+5	40	513.3	0	40
+6	14	128.3	0	14
+7	180	32.1	0	180
+8	3	8.0	0	3
+9	10	2.0	0	10
+10	15	0.5	1	10 5
+11	2	0.1	1	1 1
+12	16	0.0	1	16
+13	5	0.0	1	5
+14	14	0.0	1	13 1
+15	5	0.0	1	5
+16	6	0.0	1	6
+17	14	0.0	1	13 1
+18	3	0.0	1	2 1
+19	11	0.0	1	10 1
+20	7	0.0	1	7
+22	6	0.0	1	5 1
+23	16	0.0	1	15 1
+24	106	0.0	1	102 4
+25	3	0.0	1	3
+26	8	0.0	1	6 2
+27	16	0.0	1	16
+28	12	0.0	1	11 1
+30	13	0.0	1	13
+31	2	0.0	1	2
+32	14	0.0	1	14
+33	2	0.0	1	2
+34	28	0.0	1	26 2
+35	13	0.0	1	12 1
+36	16	0.0	1	16
+37	11	0.0	1	11
+38	11	0.0	1	9 2
+39	8	0.0	1	6 2
+40	15	0.0	1	13 2
+41	11	0.0	1	11
+42	17	0.0	1	17
+43	30	0.0	1	29 1
+44	31	0.0	1	31
+45	39	0.0	1	39
+46	10	0.0	1	10
+47	24	0.0	1	23 1
+48	13	0.0	1	13
+49	5	0.0	1	5
+50	3	0.0	1	3
+51	4	0.0	1	4
+52	2	0.0	1	1 1
+53	3	0.0	1	3
+54	10	0.0	1	9 1
+55	2	0.0	1	2
+56	7	0.0	1	7
+57	24	0.0	1	24
+58	9	0.0	1	9
+59	1	0.0	1	1
+60	4	0.0	1	4
+61	1	0.0	1	1
+62	1	0.0	1	1
+63	2	0.0	1	2
+64	1	0.0	1	0 1
+65	1	0.0	1	1
+69	1	0.0	1	1
+71	1	0.0	1	1
+72	1	0.0	1	1
+73	2	0.0	1	2
+76	2	0.0	1	2
+78	3	0.0	1	2 1
+79	5	0.0	1	3 2
+80	7	0.0	1	7
+81	9	0.0	1	8 1
+82	5	0.0	1	4 1
+83	7	0.0	1	6 1
+84	6	0.0	1	4 2
+86	2	0.0	1	1 1
+87	2	0.0	1	1 1
+88	3	0.0	1	3
+89	1	0.0	1	1
+90	1	0.0	1	1
+91	2	0.0	1	1 1
+92	1	0.0	1	0 1
+93	3	0.0	1	3
+94	14	0.0	1	14
+95	3	0.0	1	3
+96	1	0.0	1	0 1
+97	1	0.0	1	1
+98	1	0.0	1	1
+99	2	0.0	1	2
+101	1	0.0	1	1
+102	1	0.0	1	1
+103	1	0.0	1	1
+107	1	0.0	1	1
+112	1	0.0	1	1
+114	1	0.0	1	1
+115	1	0.0	1	0 1
+116	1	0.0	1	0 1
+117	1	0.0	1	1
+120	1	0.0	1	1
+121	1	0.0	1	1
+123	1	0.0	1	1
+126	2	0.0	1	2
+133	1	0.0	1	1
+134	1	0.0	1	1
+137	1	0.0	1	0 1
+143	1	0.0	1	1
+147	1	0.0	1	1
+152	1	0.0	1	1
+153	1	0.0	1	0 1
+154	1	0.0	1	0 1
+161	1	0.0	1	0 1
+200	1	0.0	1	1
+208	1	0.0	1	1
+217	1	0.0	1	0 1
+251	7	0.0	1	0 7
+
+RUN STATISTICS FOR INPUT FILE: E76/host_removal/E76_R2.fastq.gz
+=============================================
+525668 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files E76_R1_trimmed.fq.gz and E76_R2_trimmed.fq.gz
+file_1: E76_R1_trimmed.fq.gz, file_2: E76_R2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: E76_R1_trimmed.fq.gz and E76_R2_trimmed.fq.gz <<<<<
+Writing validated paired-end Read 1 reads to E76_R1_val_1.fq.gz
+Writing validated paired-end Read 2 reads to E76_R2_val_2.fq.gz
+
+Total number of sequences analysed: 525668
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 708 (0.13%)
+
+
+  >>> Now running FastQC on the validated data E76_R1_val_1.fq.gz<<<
+
+Started analysis of E76_R1_val_1.fq.gz
+Approx 5% complete for E76_R1_val_1.fq.gz
+Approx 10% complete for E76_R1_val_1.fq.gz
+Approx 15% complete for E76_R1_val_1.fq.gz
+Approx 20% complete for E76_R1_val_1.fq.gz
+Approx 25% complete for E76_R1_val_1.fq.gz
+Approx 30% complete for E76_R1_val_1.fq.gz
+Approx 35% complete for E76_R1_val_1.fq.gz
+Approx 40% complete for E76_R1_val_1.fq.gz
+Approx 45% complete for E76_R1_val_1.fq.gz
+Approx 50% complete for E76_R1_val_1.fq.gz
+Approx 55% complete for E76_R1_val_1.fq.gz
+Approx 60% complete for E76_R1_val_1.fq.gz
+Approx 65% complete for E76_R1_val_1.fq.gz
+Approx 70% complete for E76_R1_val_1.fq.gz
+Approx 75% complete for E76_R1_val_1.fq.gz
+Approx 80% complete for E76_R1_val_1.fq.gz
+Approx 85% complete for E76_R1_val_1.fq.gz
+Approx 90% complete for E76_R1_val_1.fq.gz
+Approx 95% complete for E76_R1_val_1.fq.gz
+
+  >>> Now running FastQC on the validated data E76_R2_val_2.fq.gz<<<
+
+Started analysis of E76_R2_val_2.fq.gz
+Approx 5% complete for E76_R2_val_2.fq.gz
+Approx 10% complete for E76_R2_val_2.fq.gz
+Approx 15% complete for E76_R2_val_2.fq.gz
+Approx 20% complete for E76_R2_val_2.fq.gz
+Approx 25% complete for E76_R2_val_2.fq.gz
+Approx 30% complete for E76_R2_val_2.fq.gz
+Approx 35% complete for E76_R2_val_2.fq.gz
+Approx 40% complete for E76_R2_val_2.fq.gz
+Approx 45% complete for E76_R2_val_2.fq.gz
+Approx 50% complete for E76_R2_val_2.fq.gz
+Approx 55% complete for E76_R2_val_2.fq.gz
+Approx 60% complete for E76_R2_val_2.fq.gz
+Approx 65% complete for E76_R2_val_2.fq.gz
+Approx 70% complete for E76_R2_val_2.fq.gz
+Approx 75% complete for E76_R2_val_2.fq.gz
+Approx 80% complete for E76_R2_val_2.fq.gz
+Approx 85% complete for E76_R2_val_2.fq.gz
+Approx 90% complete for E76_R2_val_2.fq.gz
+Approx 95% complete for E76_R2_val_2.fq.gz
+Deleting both intermediate output files E76_R1_trimmed.fq.gz and E76_R2_trimmed.fq.gz
+
+====================================================================================================
+

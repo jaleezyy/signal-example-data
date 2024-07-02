@@ -1,0 +1,132 @@
+IQ-TREE multicore version 1.6.12 for Linux 64-bit built Mar 16 2020
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    ascension (AVX512, FMA3, 1510 GB RAM)
+Command: iqtree -ninit 2 -n 2 -me 0.05 -nt 1 -s qc_analysis/PRJNA689621_subset-input_results_dir_aligned-delim.fasta -m GTR
+Seed:    184071 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Jun 28 16:08:03 2024
+Kernel:  AVX+FMA - 1 threads (88 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 88 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading alignment file qc_analysis/PRJNA689621_subset-input_results_dir_aligned-delim.fasta ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+Alignment has 56 sequences with 29903 columns, 279 distinct patterns
+40 parsimony-informative, 80 singleton sites, 29783 constant sites
+            Gap/Ambiguity  Composition  p-value
+   1  MN908947.3    0.00%    passed     99.25%
+   2  E73           1.01%    passed     99.75%
+   3  E15           0.32%    passed     99.99%
+   4  E77           0.31%    passed     99.99%
+   5  E14           0.26%    passed     99.98%
+   6  E34           0.32%    passed     99.99%
+   7  E30           0.32%    passed     99.99%
+   8  E28           0.32%    passed     99.99%
+   9  E9            0.32%    passed     99.97%
+  10  E18           0.32%    passed     99.98%
+  11  E75           0.32%    passed     99.98%
+  12  E7            0.32%    passed     99.98%
+  13  E20           0.23%    passed     99.99%
+  14  E6            1.50%    passed     98.56%
+  15  E24           0.32%    passed     99.97%
+  16  E47           0.32%    passed     99.99%
+  17  E37           0.33%    passed     99.99%
+  18  E16           0.31%    passed     99.98%
+  19  E58           1.14%    passed     99.76%
+  20  E22           1.18%    passed    100.00%
+  21  E13           0.27%    passed     99.94%
+  22  E76           0.32%    passed     99.97%
+  23  E41           1.34%    passed     99.96%
+  24  E65           0.68%    passed     99.97%
+  25  E50           0.33%    passed     99.99%
+  26  E67           0.32%    passed     99.99%
+  27  E53           0.68%    passed     99.99%
+  28  E60           4.16%    passed     97.96%
+  29  E62           0.60%    passed     99.99%
+  30  E3            2.21%    passed     99.80%
+  31  E39           0.28%    passed     99.98%
+  32  E72           0.51%    passed     99.85%
+  33  E26           0.32%    passed     99.99%
+  34  E29           0.32%    passed     99.98%
+  35  E33           0.35%    passed     99.97%
+  36  E12           0.32%    passed     99.98%
+  37  E10           0.32%    passed     99.99%
+  38  E11           1.28%    passed    100.00%
+  39  E31           0.23%    passed     99.99%
+  40  E40           0.40%    passed     99.99%
+  41  E59           2.51%    passed     97.98%
+  42  E36           0.32%    passed     99.99%
+  43  E78           0.33%    passed    100.00%
+  44  E51           0.71%    passed     99.98%
+  45  E71           2.39%    passed     98.15%
+  46  E74           0.32%    passed     99.98%
+  47  E70           0.32%    passed     99.98%
+  48  E64           0.26%    passed     99.99%
+  49  E66           0.26%    passed     99.98%
+  50  E68           0.32%    passed     99.99%
+  51  E19           1.25%    passed     98.48%
+  52  E55           0.54%    passed     99.99%
+  53  E57           1.42%    passed     99.56%
+  54  E52           2.47%    passed     96.32%
+  55  E35           2.17%    passed     98.64%
+  56  E46           1.19%    passed     99.97%
+****  TOTAL         0.74%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: E75 is identical to E18 but kept for subsequent analysis
+NOTE: 1 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: E7 (identical to E18) is ignored but added at the end
+
+For your convenience alignment with unique sequences printed to qc_analysis/PRJNA689621_subset-input_results_dir_aligned-delim.fasta.uniqueseq.phy
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.007 seconds
+
+NOTE: 0 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.500)
+1. Initial log-likelihood: -41991.745
+2. Current log-likelihood: -41868.932
+Optimal log-likelihood: -41868.926
+Rate parameters:  A-C: 0.35074  A-G: 0.92530  A-T: 0.22765  C-G: 0.17574  C-T: 4.00810  G-T: 1.00000
+Base frequencies:  A: 0.299  C: 0.184  G: 0.196  T: 0.322
+Parameters optimization took 2 rounds (0.086 sec)
+Computing ML distances based on estimated model parameters... 0.013 sec
+Computing BIONJ tree...
+0.004 seconds
+Log-likelihood of BIONJ tree: -41867.885
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+
+Do NNI search on 2 best initial trees
+BETTER TREE FOUND at iteration 1: -41867.871
+Finish initializing candidate tree set (4)
+Current best tree score: -41867.871 / CPU time: 0.355
+Number of iterations: 2
+TREE SEARCH COMPLETED AFTER 2 ITERATIONS / Time: 0h:0m:0s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.050)
+1. Initial log-likelihood: -41867.871
+Optimal log-likelihood: -41867.831
+Rate parameters:  A-C: 0.35249  A-G: 0.92820  A-T: 0.19056  C-G: 0.17841  C-T: 4.01062  G-T: 1.00000
+Base frequencies:  A: 0.299  C: 0.184  G: 0.196  T: 0.322
+Parameters optimization took 1 rounds (0.010 sec)
+BEST SCORE FOUND : -41867.831
+Total tree length: 0.004
+
+Total number of iterations: 2
+CPU time used for tree search: 0.082 sec (0h:0m:0s)
+Wall-clock time used for tree search: 0.356 sec (0h:0m:0s)
+Total CPU time used: 0.209 sec (0h:0m:0s)
+Total wall-clock time used: 0.510 sec (0h:0m:0s)
+
+Analysis results written to: 
+  IQ-TREE report:                qc_analysis/PRJNA689621_subset-input_results_dir_aligned-delim.fasta.iqtree
+  Maximum-likelihood tree:       qc_analysis/PRJNA689621_subset-input_results_dir_aligned-delim.fasta.treefile
+  Likelihood distances:          qc_analysis/PRJNA689621_subset-input_results_dir_aligned-delim.fasta.mldist
+  Screen log file:               qc_analysis/PRJNA689621_subset-input_results_dir_aligned-delim.fasta.log
+
+Date and Time: Fri Jun 28 16:08:04 2024
