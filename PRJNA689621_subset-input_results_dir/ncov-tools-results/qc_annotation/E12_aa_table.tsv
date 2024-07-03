@@ -1,11 +1,11 @@
 sample	chr	pos	ref	alt	Consequence	gene	protein	aa
-E12	MN908947.3	241	C	T	intergenic_region	CHR_START-ORF3a		NA
-E12	MN908947.3	1059	C	T	intergenic_region	CHR_START-ORF3a		NA
-E12	MN908947.3	3037	C	T	intergenic_region	CHR_START-ORF3a		NA
-E12	MN908947.3	11916	C	T	intergenic_region	CHR_START-ORF3a		NA
-E12	MN908947.3	14408	C	T	intergenic_region	CHR_START-ORF3a		NA
-E12	MN908947.3	18998	C	T	intergenic_region	CHR_START-ORF3a		NA
-E12	MN908947.3	23403	A	G	upstream_gene_variant	ORF3a		NA
-E12	MN908947.3	25563	G	T	missense_variant	ORF3a	Gln57His	ORF3a-Gln57His
-E12	MN908947.3	26813	T	A	upstream_gene_variant	ORF6		NA
-E12	MN908947.3	29540	G	A	downstream_gene_variant	ORF3a		NA
+E12	MN908947.3	241	C	T	upstream_gene_variant	orf1ab		NA
+E12	MN908947.3	1059	C	T	missense_variant	orf1ab	T265I	orf1ab-T265I
+E12	MN908947.3	3037	C	T	synonymous_variant	orf1ab	F924F	orf1ab-F924F
+E12	MN908947.3	11916	C	T	missense_variant	orf1ab	S3884L	orf1ab-S3884L
+E12	MN908947.3	14408	C	T	missense_variant	orf1ab	P4715L	orf1ab-P4715L
+E12	MN908947.3	18998	C	T	missense_variant	orf1ab	A6245V	orf1ab-A6245V
+E12	MN908947.3	23403	A	G	missense_variant	S	D614G	S-D614G
+E12	MN908947.3	25563	G	T	missense_variant	ORF3a	Q57H	ORF3a-Q57H
+E12	MN908947.3	26813	T	A	synonymous_variant	M	I97I	M-I97I
+E12	MN908947.3	29540	G	A	upstream_gene_variant	ORF10		NA
