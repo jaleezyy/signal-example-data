@@ -1,0 +1,404 @@
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 4.8
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 2 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-nonvoivoc_results_dir/hCoV-19-USA-CA-QDX-110-2020/adapter_trimmed/
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> hCoV-19-USA-CA-QDX-110-2020/host_removal/hCoV-19-USA-CA-QDX-110-2020_R1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	5592	AGATCGGAAGAGC	21572	25.92
+Nextera	0	CTGTCTCTTATA	21572	0.00
+smallRNA	0	TGGAATTCTCGG	21572	0.00
+Using Illumina adapter for trimming (count: 5592). Second best hit was Nextera (count: 0)
+
+Writing report to '/workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-nonvoivoc_results_dir/hCoV-19-USA-CA-QDX-110-2020/adapter_trimmed/hCoV-19-USA-CA-QDX-110-2020_R1.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: hCoV-19-USA-CA-QDX-110-2020/host_removal/hCoV-19-USA-CA-QDX-110-2020_R1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.8
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.8). Setting -j 2
+Writing final adapter and quality trimmed output to hCoV-19-USA-CA-QDX-110-2020_R1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file hCoV-19-USA-CA-QDX-110-2020/host_removal/hCoV-19-USA-CA-QDX-110-2020_R1.fastq.gz <<< 
+This is cutadapt 4.8 with Python 3.12.3
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC hCoV-19-USA-CA-QDX-110-2020/host_removal/hCoV-19-USA-CA-QDX-110-2020_R1.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 0.620 s (28.724 µs/read; 2.09 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                  21,572
+Reads with adapters:                    12,237 (56.7%)
+Reads written (passing filters):        21,572 (100.0%)
+
+Total basepairs processed:     3,214,228 bp
+Quality-trimmed:                  63,877 bp (2.0%)
+Total written (filtered):      2,909,471 bp (90.5%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 12237 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 34.3%
+  C: 23.5%
+  G: 20.3%
+  T: 21.9%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	4065	5393.0	0	4065
+2	1015	1348.2	0	1015
+3	341	337.1	0	341
+4	169	84.3	0	169
+5	97	21.1	0	97
+6	89	5.3	0	89
+7	132	1.3	0	132
+8	103	0.3	0	103
+9	142	0.1	0	142
+10	177	0.0	1	176 1
+11	81	0.0	1	77 4
+12	106	0.0	1	104 2
+13	187	0.0	1	182 5
+14	58	0.0	1	54 4
+15	180	0.0	1	177 3
+16	31	0.0	1	30 1
+17	165	0.0	1	161 4
+18	73	0.0	1	71 2
+19	83	0.0	1	81 2
+20	129	0.0	1	125 4
+21	79	0.0	1	76 3
+22	149	0.0	1	144 5
+23	99	0.0	1	96 3
+24	81	0.0	1	76 5
+25	137	0.0	1	133 4
+26	53	0.0	1	52 1
+27	86	0.0	1	83 3
+28	98	0.0	1	96 2
+29	82	0.0	1	79 3
+30	101	0.0	1	97 4
+31	92	0.0	1	92
+32	151	0.0	1	150 1
+33	56	0.0	1	56
+34	175	0.0	1	171 4
+35	32	0.0	1	30 2
+36	157	0.0	1	153 4
+37	86	0.0	1	83 3
+38	127	0.0	1	123 4
+39	120	0.0	1	115 5
+40	50	0.0	1	49 1
+41	147	0.0	1	145 2
+42	61	0.0	1	55 6
+43	219	0.0	1	215 4
+44	217	0.0	1	211 6
+45	206	0.0	1	198 8
+46	231	0.0	1	226 5
+47	75	0.0	1	72 3
+48	159	0.0	1	152 7
+49	82	0.0	1	81 1
+50	170	0.0	1	168 2
+51	262	0.0	1	259 3
+52	48	0.0	1	47 1
+53	51	0.0	1	49 2
+54	24	0.0	1	24
+55	74	0.0	1	73 1
+56	34	0.0	1	34
+57	30	0.0	1	30
+58	65	0.0	1	63 2
+59	24	0.0	1	24
+60	50	0.0	1	48 2
+61	21	0.0	1	21
+62	14	0.0	1	14
+63	29	0.0	1	29
+64	36	0.0	1	36
+65	35	0.0	1	34 1
+66	36	0.0	1	35 1
+67	22	0.0	1	21 1
+68	45	0.0	1	43 2
+69	30	0.0	1	29 1
+70	4	0.0	1	4
+71	9	0.0	1	9
+72	15	0.0	1	15
+73	28	0.0	1	27 1
+74	22	0.0	1	19 3
+75	35	0.0	1	35
+76	34	0.0	1	34
+77	12	0.0	1	12
+78	3	0.0	1	3
+80	1	0.0	1	1
+81	1	0.0	1	1
+82	11	0.0	1	11
+83	19	0.0	1	19
+84	20	0.0	1	19 1
+85	9	0.0	1	9
+86	8	0.0	1	8
+87	7	0.0	1	7
+88	13	0.0	1	12 1
+89	6	0.0	1	6
+90	8	0.0	1	8
+91	8	0.0	1	8
+92	18	0.0	1	18
+93	6	0.0	1	6
+94	2	0.0	1	2
+95	2	0.0	1	2
+96	3	0.0	1	3
+101	1	0.0	1	1
+102	1	0.0	1	1
+
+RUN STATISTICS FOR INPUT FILE: hCoV-19-USA-CA-QDX-110-2020/host_removal/hCoV-19-USA-CA-QDX-110-2020_R1.fastq.gz
+=============================================
+21572 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to '/workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-nonvoivoc_results_dir/hCoV-19-USA-CA-QDX-110-2020/adapter_trimmed/hCoV-19-USA-CA-QDX-110-2020_R2.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: hCoV-19-USA-CA-QDX-110-2020/host_removal/hCoV-19-USA-CA-QDX-110-2020_R2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.8
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.8). Setting -j -j 2
+Writing final adapter and quality trimmed output to hCoV-19-USA-CA-QDX-110-2020_R2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file hCoV-19-USA-CA-QDX-110-2020/host_removal/hCoV-19-USA-CA-QDX-110-2020_R2.fastq.gz <<< 
+This is cutadapt 4.8 with Python 3.12.3
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC hCoV-19-USA-CA-QDX-110-2020/host_removal/hCoV-19-USA-CA-QDX-110-2020_R2.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 0.593 s (27.478 µs/read; 2.18 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                  21,572
+Reads with adapters:                    11,821 (54.8%)
+Reads written (passing filters):        21,572 (100.0%)
+
+Total basepairs processed:     3,214,228 bp
+Quality-trimmed:                  56,876 bp (1.8%)
+Total written (filtered):      2,906,528 bp (90.4%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 11821 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 33.6%
+  C: 21.6%
+  G: 21.7%
+  T: 23.1%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	3815	5393.0	0	3815
+2	832	1348.2	0	832
+3	335	337.1	0	335
+4	167	84.3	0	167
+5	133	21.1	0	133
+6	89	5.3	0	89
+7	113	1.3	0	113
+8	119	0.3	0	119
+9	164	0.1	0	164
+10	182	0.0	1	181 1
+11	70	0.0	1	68 2
+12	95	0.0	1	93 2
+13	110	0.0	1	108 2
+14	160	0.0	1	153 7
+15	87	0.0	1	85 2
+16	107	0.0	1	103 4
+17	143	0.0	1	136 7
+18	68	0.0	1	63 5
+19	175	0.0	1	168 7
+20	110	0.0	1	109 1
+21	61	0.0	1	59 2
+22	57	0.0	1	56 1
+23	137	0.0	1	130 7
+24	153	0.0	1	151 2
+25	29	0.0	1	26 3
+26	108	0.0	1	106 2
+27	207	0.0	1	197 10
+28	51	0.0	1	50 1
+29	119	0.0	1	116 3
+30	83	0.0	1	81 2
+31	105	0.0	1	103 2
+32	82	0.0	1	79 3
+33	190	0.0	1	186 4
+34	119	0.0	1	118 1
+35	97	0.0	1	95 2
+36	66	0.0	1	62 4
+37	201	0.0	1	194 7
+38	40	0.0	1	38 2
+39	52	0.0	1	50 2
+40	76	0.0	1	72 4
+41	39	0.0	1	39
+42	144	0.0	1	138 6
+43	34	0.0	1	32 2
+44	68	0.0	1	67 1
+45	185	0.0	1	182 3
+46	95	0.0	1	89 6
+47	57	0.0	1	55 2
+48	100	0.0	1	94 6
+49	56	0.0	1	53 3
+50	153	0.0	1	151 2
+51	119	0.0	1	115 4
+52	79	0.0	1	77 2
+53	42	0.0	1	39 3
+54	118	0.0	1	118
+55	39	0.0	1	39
+56	111	0.0	1	108 3
+57	29	0.0	1	29
+58	128	0.0	1	125 3
+59	23	0.0	1	22 1
+60	74	0.0	1	72 2
+61	46	0.0	1	46
+62	49	0.0	1	48 1
+63	70	0.0	1	69 1
+64	55	0.0	1	54 1
+65	117	0.0	1	113 4
+66	119	0.0	1	117 2
+67	52	0.0	1	51 1
+68	8	0.0	1	5 3
+69	5	0.0	1	4 1
+70	11	0.0	1	11
+71	28	0.0	1	28
+72	35	0.0	1	35
+73	45	0.0	1	44 1
+74	23	0.0	1	23
+75	42	0.0	1	42
+76	26	0.0	1	25 1
+77	34	0.0	1	33 1
+78	24	0.0	1	23 1
+79	28	0.0	1	28
+80	22	0.0	1	22
+81	22	0.0	1	22
+82	19	0.0	1	17 2
+83	29	0.0	1	29
+84	20	0.0	1	20
+85	12	0.0	1	11 1
+86	8	0.0	1	7 1
+87	7	0.0	1	7
+88	10	0.0	1	10
+89	10	0.0	1	10
+90	8	0.0	1	8
+91	7	0.0	1	7
+92	14	0.0	1	13 1
+93	7	0.0	1	7
+94	2	0.0	1	2
+95	2	0.0	1	2
+96	3	0.0	1	3
+101	1	0.0	1	1
+102	1	0.0	1	1
+
+RUN STATISTICS FOR INPUT FILE: hCoV-19-USA-CA-QDX-110-2020/host_removal/hCoV-19-USA-CA-QDX-110-2020_R2.fastq.gz
+=============================================
+21572 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files hCoV-19-USA-CA-QDX-110-2020_R1_trimmed.fq.gz and hCoV-19-USA-CA-QDX-110-2020_R2_trimmed.fq.gz
+file_1: hCoV-19-USA-CA-QDX-110-2020_R1_trimmed.fq.gz, file_2: hCoV-19-USA-CA-QDX-110-2020_R2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: hCoV-19-USA-CA-QDX-110-2020_R1_trimmed.fq.gz and hCoV-19-USA-CA-QDX-110-2020_R2_trimmed.fq.gz <<<<<
+Writing validated paired-end Read 1 reads to hCoV-19-USA-CA-QDX-110-2020_R1_val_1.fq.gz
+Writing validated paired-end Read 2 reads to hCoV-19-USA-CA-QDX-110-2020_R2_val_2.fq.gz
+
+Total number of sequences analysed: 21572
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 275 (1.27%)
+
+
+  >>> Now running FastQC on the validated data hCoV-19-USA-CA-QDX-110-2020_R1_val_1.fq.gz<<<
+
+Started analysis of hCoV-19-USA-CA-QDX-110-2020_R1_val_1.fq.gz
+Approx 5% complete for hCoV-19-USA-CA-QDX-110-2020_R1_val_1.fq.gz
+Approx 10% complete for hCoV-19-USA-CA-QDX-110-2020_R1_val_1.fq.gz
+Approx 15% complete for hCoV-19-USA-CA-QDX-110-2020_R1_val_1.fq.gz
+Approx 20% complete for hCoV-19-USA-CA-QDX-110-2020_R1_val_1.fq.gz
+Approx 25% complete for hCoV-19-USA-CA-QDX-110-2020_R1_val_1.fq.gz
+Approx 30% complete for hCoV-19-USA-CA-QDX-110-2020_R1_val_1.fq.gz
+Approx 35% complete for hCoV-19-USA-CA-QDX-110-2020_R1_val_1.fq.gz
+Approx 40% complete for hCoV-19-USA-CA-QDX-110-2020_R1_val_1.fq.gz
+Approx 45% complete for hCoV-19-USA-CA-QDX-110-2020_R1_val_1.fq.gz
+Approx 50% complete for hCoV-19-USA-CA-QDX-110-2020_R1_val_1.fq.gz
+Approx 55% complete for hCoV-19-USA-CA-QDX-110-2020_R1_val_1.fq.gz
+Approx 60% complete for hCoV-19-USA-CA-QDX-110-2020_R1_val_1.fq.gz
+Approx 65% complete for hCoV-19-USA-CA-QDX-110-2020_R1_val_1.fq.gz
+Approx 70% complete for hCoV-19-USA-CA-QDX-110-2020_R1_val_1.fq.gz
+Approx 75% complete for hCoV-19-USA-CA-QDX-110-2020_R1_val_1.fq.gz
+Approx 80% complete for hCoV-19-USA-CA-QDX-110-2020_R1_val_1.fq.gz
+Approx 85% complete for hCoV-19-USA-CA-QDX-110-2020_R1_val_1.fq.gz
+Approx 90% complete for hCoV-19-USA-CA-QDX-110-2020_R1_val_1.fq.gz
+Approx 95% complete for hCoV-19-USA-CA-QDX-110-2020_R1_val_1.fq.gz
+
+  >>> Now running FastQC on the validated data hCoV-19-USA-CA-QDX-110-2020_R2_val_2.fq.gz<<<
+
+Started analysis of hCoV-19-USA-CA-QDX-110-2020_R2_val_2.fq.gz
+Approx 5% complete for hCoV-19-USA-CA-QDX-110-2020_R2_val_2.fq.gz
+Approx 10% complete for hCoV-19-USA-CA-QDX-110-2020_R2_val_2.fq.gz
+Approx 15% complete for hCoV-19-USA-CA-QDX-110-2020_R2_val_2.fq.gz
+Approx 20% complete for hCoV-19-USA-CA-QDX-110-2020_R2_val_2.fq.gz
+Approx 25% complete for hCoV-19-USA-CA-QDX-110-2020_R2_val_2.fq.gz
+Approx 30% complete for hCoV-19-USA-CA-QDX-110-2020_R2_val_2.fq.gz
+Approx 35% complete for hCoV-19-USA-CA-QDX-110-2020_R2_val_2.fq.gz
+Approx 40% complete for hCoV-19-USA-CA-QDX-110-2020_R2_val_2.fq.gz
+Approx 45% complete for hCoV-19-USA-CA-QDX-110-2020_R2_val_2.fq.gz
+Approx 50% complete for hCoV-19-USA-CA-QDX-110-2020_R2_val_2.fq.gz
+Approx 55% complete for hCoV-19-USA-CA-QDX-110-2020_R2_val_2.fq.gz
+Approx 60% complete for hCoV-19-USA-CA-QDX-110-2020_R2_val_2.fq.gz
+Approx 65% complete for hCoV-19-USA-CA-QDX-110-2020_R2_val_2.fq.gz
+Approx 70% complete for hCoV-19-USA-CA-QDX-110-2020_R2_val_2.fq.gz
+Approx 75% complete for hCoV-19-USA-CA-QDX-110-2020_R2_val_2.fq.gz
+Approx 80% complete for hCoV-19-USA-CA-QDX-110-2020_R2_val_2.fq.gz
+Approx 85% complete for hCoV-19-USA-CA-QDX-110-2020_R2_val_2.fq.gz
+Approx 90% complete for hCoV-19-USA-CA-QDX-110-2020_R2_val_2.fq.gz
+Approx 95% complete for hCoV-19-USA-CA-QDX-110-2020_R2_val_2.fq.gz
+Deleting both intermediate output files hCoV-19-USA-CA-QDX-110-2020_R1_trimmed.fq.gz and hCoV-19-USA-CA-QDX-110-2020_R2_trimmed.fq.gz
+
+====================================================================================================
+

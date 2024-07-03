@@ -1,0 +1,181 @@
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 4.8
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 2 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-failedQC_results_dir/benchmark-bad4/adapter_trimmed/
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> benchmark-bad4/host_removal/benchmark-bad4_R1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+smallRNA	0	TGGAATTCTCGG	161	0.00
+Nextera	0	CTGTCTCTTATA	161	0.00
+Illumina	0	AGATCGGAAGAGC	161	0.00
+Unable to auto-detect most prominent adapter from the first specified file (count smallRNA: 0, count Nextera: 0, count Illumina: 0)
+Defaulting to Illumina universal adapter ( AGATCGGAAGAGC ). Specify -a SEQUENCE to avoid this behavior).
+
+Writing report to '/workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-failedQC_results_dir/benchmark-bad4/adapter_trimmed/benchmark-bad4_R1.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: benchmark-bad4/host_removal/benchmark-bad4_R1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.8
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; default (inconclusive auto-detection))
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.8). Setting -j 2
+Writing final adapter and quality trimmed output to benchmark-bad4_R1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file benchmark-bad4/host_removal/benchmark-bad4_R1.fastq.gz <<< 
+This is cutadapt 4.8 with Python 3.12.3
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC benchmark-bad4/host_removal/benchmark-bad4_R1.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 0.034 s (213.656 µs/read; 0.28 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                     161
+Reads with adapters:                        59 (36.6%)
+Reads written (passing filters):           161 (100.0%)
+
+Total basepairs processed:        16,486 bp
+Quality-trimmed:                      86 bp (0.5%)
+Total written (filtered):         16,307 bp (98.9%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 59 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 28.8%
+  C: 25.4%
+  G: 16.9%
+  T: 28.8%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	39	40.2	0	39
+2	15	10.1	0	15
+3	2	2.5	0	2
+4	2	0.6	0	2
+10	1	0.0	1	0 1
+
+RUN STATISTICS FOR INPUT FILE: benchmark-bad4/host_removal/benchmark-bad4_R1.fastq.gz
+=============================================
+161 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to '/workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-failedQC_results_dir/benchmark-bad4/adapter_trimmed/benchmark-bad4_R2.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: benchmark-bad4/host_removal/benchmark-bad4_R2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.8
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; default (inconclusive auto-detection))
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.8). Setting -j -j 2
+Writing final adapter and quality trimmed output to benchmark-bad4_R2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file benchmark-bad4/host_removal/benchmark-bad4_R2.fastq.gz <<< 
+This is cutadapt 4.8 with Python 3.12.3
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC benchmark-bad4/host_removal/benchmark-bad4_R2.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 0.037 s (230.694 µs/read; 0.26 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                     161
+Reads with adapters:                        42 (26.1%)
+Reads written (passing filters):           161 (100.0%)
+
+Total basepairs processed:        16,480 bp
+Quality-trimmed:                     209 bp (1.3%)
+Total written (filtered):         16,203 bp (98.3%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 42 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 31.0%
+  C: 26.2%
+  G: 23.8%
+  T: 16.7%
+  none/other: 2.4%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	21	40.2	0	21
+2	17	10.1	0	17
+3	3	2.5	0	3
+4	1	0.6	0	1
+
+RUN STATISTICS FOR INPUT FILE: benchmark-bad4/host_removal/benchmark-bad4_R2.fastq.gz
+=============================================
+161 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files benchmark-bad4_R1_trimmed.fq.gz and benchmark-bad4_R2_trimmed.fq.gz
+file_1: benchmark-bad4_R1_trimmed.fq.gz, file_2: benchmark-bad4_R2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: benchmark-bad4_R1_trimmed.fq.gz and benchmark-bad4_R2_trimmed.fq.gz <<<<<
+Writing validated paired-end Read 1 reads to benchmark-bad4_R1_val_1.fq.gz
+Writing validated paired-end Read 2 reads to benchmark-bad4_R2_val_2.fq.gz
+
+Total number of sequences analysed: 161
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 2 (1.24%)
+
+
+  >>> Now running FastQC on the validated data benchmark-bad4_R1_val_1.fq.gz<<<
+
+Started analysis of benchmark-bad4_R1_val_1.fq.gz
+
+  >>> Now running FastQC on the validated data benchmark-bad4_R2_val_2.fq.gz<<<
+
+Started analysis of benchmark-bad4_R2_val_2.fq.gz
+Deleting both intermediate output files benchmark-bad4_R1_trimmed.fq.gz and benchmark-bad4_R2_trimmed.fq.gz
+
+====================================================================================================
+

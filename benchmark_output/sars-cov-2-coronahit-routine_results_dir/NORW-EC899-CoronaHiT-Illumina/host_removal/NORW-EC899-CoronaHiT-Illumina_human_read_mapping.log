@@ -1,0 +1,33 @@
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 144578 sequences (19610211 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (23, 72155, 54, 27)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (143, 212, 325)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 689)
+[M::mem_pestat] mean and std.dev: (205.84, 130.06)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 871)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (129, 185, 256)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 510)
+[M::mem_pestat] mean and std.dev: (194.66, 82.97)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 637)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (268, 371, 959)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 2341)
+[M::mem_pestat] mean and std.dev: (435.82, 380.73)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 3032)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (146, 198, 256)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 476)
+[M::mem_pestat] mean and std.dev: (170.30, 65.77)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 586)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 144578 reads in 10.277 CPU sec, 5.263 real sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa mem -t 2 /workspace/lab/mcarthurlab/nasirja/covid-19-signal/data/composite_human_viral_reference.fna NORW-EC899-CoronaHiT-Illumina/raw_fastq/NORW-EC899-CoronaHiT-Illumina_R1.fastq.gz NORW-EC899-CoronaHiT-Illumina/raw_fastq/NORW-EC899-CoronaHiT-Illumina_R2.fastq.gz
+[main] Real time: 12.853 sec; CPU: 15.059 sec
+viral read count = 144567 (99.99%)
+human read count = 11 (0.01%) 
+unmapped read count = 0 (0.00%)

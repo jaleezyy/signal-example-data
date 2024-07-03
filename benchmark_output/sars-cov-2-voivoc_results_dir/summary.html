@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<h3>SARS-CoV-2 Illumina GeNome Assembly Line (SIGNAL), version v1.6.6&nbsp;&nbsp;(<a href="https://github.com/jaleezyy/covid-19-signal">https://github.com/jaleezyy/covid-19-signal</a>)</h3>
+<p>Note: Asterisks (*) indicates a discrepancy between iVar (default) and FreeBayes (if run)</p>
+<p><table><tr>
+<td><img src="summary_ncov2_in_reads_v_genome_fraction.png"></td>
+<td><img src="summary_average_depth_v_genome_fraction.png"></td>
+</tr>
+<td><img src="summary_highly_covered_v_genome_fraction.png"></td>
+</tr></table>
+<p><table style="border-collapse: collapse; border: 1px solid black;">
+<tr><th>Sample</th>
+<th colspan="1" style="border-left: 1px solid black;">Lineage (Pangolin)</th>
+<th colspan="1" style="border-left: 1px solid black;">Clade (Nextstrain)</th>
+<th colspan="2" style="border-left: 1px solid black;">Data Volume</th>
+<th colspan="9" style="border-left: 1px solid black;">Quality Control Flags</th>
+<th colspan="1" style="border-left: 1px solid black;">Kraken2</th>
+<th colspan="4" style="border-left: 1px solid black;">QUAST</th>
+<th colspan="1" style="border-left: 1px solid black;">Variants (iVar)</th>
+<th colspan="1" style="border-left: 1px solid black;">Unique Variants (FreeBayes)</th>
+<th colspan="1" style="border-left: 1px solid black;">Consensus Nucleotide Differences (FreeBayes as Reference)</th>
+<th colspan="1" style="border-left: 1px solid black;">Variants (BreSeq)</th>
+</tr>
+<tr><th style="border-bottom: 1px solid black;"></th>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;"></td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;"></td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;">Raw<br>Data<br>(read<br>pairs)</td>
+<td style="border-bottom: 1px solid black; ">Post<br>Trim<br>(read<br>pairs)</td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;">Genome<br>fraction<br>>90%</td>
+<td style="border-bottom: 1px solid black; ">No<br>indels</td>
+<td style="border-bottom: 1px solid black; ">Depth<br>>2000</td>
+<td style="border-bottom: 1px solid black; ">Variants<br>>90%</td>
+<td style="border-bottom: 1px solid black; ">ORF<br>Frameshifts</td>
+<td style="border-bottom: 1px solid black; ">Fastqc<br>quality</td>
+<td style="border-bottom: 1px solid black; ">Fastqc<br>adapter</td>
+<td style="border-bottom: 1px solid black; ">90%<br>cov<br>>100</td>
+<td style="border-bottom: 1px solid black; ">90%<br>cov<br>>1000</td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;">Reads<br>SARS-CoV-2<br>(%)</td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;">Genome<br>Length<br>(bp)</td>
+<td style="border-bottom: 1px solid black; ">Genome<br>Fraction<br>(%)</td>
+<td style="border-bottom: 1px solid black; ">N's per<br>100 kbp</td>
+<td style="border-bottom: 1px solid black; ">Average<br>Depth of<br>Coverage</td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;"></td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;"></td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;"></td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;"></td>
+</tr>
+<tr><td style="background-color: #dddddd;">&nbsp;<br><a href="hCoV-19-England/hCoV-19-England_sample.html">hCoV-19-England</a><br>&nbsp;</td><td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1.617.2</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 21J</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">2323604</td>
+<td style="background-color: #dddddd; ">&nbsp;2323604</td>
+<td style="background-color: #7ca37c; border-left: 1px solid black;">PASS</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">94.08</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">29890.0</td>
+<td style="background-color: #dddddd; ">&nbsp;99.736</td>
+<td style="background-color: #dddddd; ">&nbsp;264.3</td>
+<td style="background-color: #dddddd; ">&nbsp;27889.0</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> G210T
+<p style="margin-bottom:0px; margin-top:8px">C241T
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">G4181T
+<p style="margin-bottom:0px; margin-top:8px">C6402T
+<p style="margin-bottom:0px; margin-top:8px">C7124T
+<p style="margin-bottom:0px; margin-top:8px">C8986T
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 29 more)</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> GAGTTCA22028G
+<p style="margin-bottom:0px; margin-top:8px">AGATTTC28247A
+<p style="margin-bottom:0px; margin-top:8px">TA28270T</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	210;	G→T;	(100%);	'intergenic (–/-56)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	4,181;	G→T;	(100%);	'A1306S (GCT→TCT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	6,402;	C→T;	(100%);	'P2046L (CCA→CTA)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	7,124;	C→T;	(100%);	'P2287S (CCT→TCT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	8,986;	C→T;	(100%);	'D2907D (GAC→GAT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 27 more)</td>
+</tr>
+<tr><td style="background-color: #ffffff;">&nbsp;<br><a href="hCoV-19-England-CAMC-13E7537-2021/hCoV-19-England-CAMC-13E7537-2021_sample.html">hCoV-19-England-CAMC-13E7537-2021</a><br>&nbsp;</td><td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> P.1</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 20J</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">216767</td>
+<td style="background-color: #ffffff; ">&nbsp;216767</td>
+<td style="background-color: #8fbc8f; border-left: 1px solid black;">PASS</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">97.86</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">29898.0</td>
+<td style="background-color: #ffffff; ">&nbsp;99.666</td>
+<td style="background-color: #ffffff; ">&nbsp;414.74</td>
+<td style="background-color: #ffffff; ">&nbsp;2608.4</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C241T
+<p style="margin-bottom:0px; margin-top:8px">T733C
+<p style="margin-bottom:0px; margin-top:8px">C2299T
+<p style="margin-bottom:0px; margin-top:8px">C2749T
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">C3828T
+<p style="margin-bottom:0px; margin-top:8px">A5648C
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 31 more)</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> GTCTGGTTTT11287G
+<p style="margin-bottom:0px; margin-top:8px">G28262GAACA
+<p style="margin-bottom:0px; margin-top:8px">AGTAGGG28877TCTAAAC</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	733;	T→C;	(100%);	'D156D (GAT→GAC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	2,299;	C→T;	(100%);	'F678F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	2,749;	C→T;	(100%);	'D828D (GAC→GAT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,828;	C→T;	(100%);	'S1188L (TCA→TTA)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	5,648;	A→C;	(100%);	'K1795Q (AAA→CAA)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 29 more)</td>
+</tr>
+<tr><td style="background-color: #dddddd;">&nbsp;<br><a href="hCoV-19-England-CAMC-14E726C-2021/hCoV-19-England-CAMC-14E726C-2021_sample.html">hCoV-19-England-CAMC-14E726C-2021</a><br>&nbsp;</td><td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1.617.1</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 21B</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">197296</td>
+<td style="background-color: #dddddd; ">&nbsp;197295</td>
+<td style="background-color: #7ca37c; border-left: 1px solid black;">PASS</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">77.12</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">29902.0</td>
+<td style="background-color: #dddddd; ">&nbsp;98.699</td>
+<td style="background-color: #dddddd; ">&nbsp;1300.92</td>
+<td style="background-color: #dddddd; ">&nbsp;1834.7</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> G210T
+<p style="margin-bottom:0px; margin-top:8px">C241T
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">C3457T
+<p style="margin-bottom:0px; margin-top:8px">C3987T
+<p style="margin-bottom:0px; margin-top:8px">C4965T
+<p style="margin-bottom:0px; margin-top:8px">A11201G
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 23 more)</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> T25202G
+<p style="margin-bottom:0px; margin-top:8px">TA28270T</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> K25202T</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,457;	C→T;	(100%);	'Y1064Y (TAC→TAT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,987;	C→T;	(100%);	'T1241I (ACA→ATA)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	4,965;	C→T;	(100%);	'T1567I (ACT→ATT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	11,201;	A→G;	(100%);	'T3646A (ACT→GCT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	14,408;	C→T;	(100%);	'P314L (CCT→CTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	16,852;	G→T;	(100%);	'G1129C (GGT→TGT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 20 more)</td>
+</tr>
+<tr><td style="background-color: #ffffff;">&nbsp;<br><a href="hCoV-19-England-CAMC-14E7A0A-2021/hCoV-19-England-CAMC-14E7A0A-2021_sample.html">hCoV-19-England-CAMC-14E7A0A-2021</a><br>&nbsp;</td><td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1.617.2</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 21J</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">1890017</td>
+<td style="background-color: #ffffff; ">&nbsp;1890014</td>
+<td style="background-color: #8fbc8f; border-left: 1px solid black;">PASS</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">94.09</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">29890.0</td>
+<td style="background-color: #ffffff; ">&nbsp;99.719</td>
+<td style="background-color: #ffffff; ">&nbsp;190.7</td>
+<td style="background-color: #ffffff; ">&nbsp;22798.1</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> G210T
+<p style="margin-bottom:0px; margin-top:8px">C241T
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">G4181T
+<p style="margin-bottom:0px; margin-top:8px">C6402T
+<p style="margin-bottom:0px; margin-top:8px">C7124T
+<p style="margin-bottom:0px; margin-top:8px">C8986T
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 30 more)</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> GAGTTCA22028G
+<p style="margin-bottom:0px; margin-top:8px">AGATTTC28247A
+<p style="margin-bottom:0px; margin-top:8px">TA28270T</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> NNNNNNNNNNNNNNNNNNNNNNNNNNNN29858AAAAAAAAAAAAAAAAAAAAAAAAAAAA</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	210;	G→T;	(100%);	'intergenic (–/-56)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	4,181;	G→T;	(100%);	'A1306S (GCT→TCT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	6,402;	C→T;	(100%);	'P2046L (CCA→CTA)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	7,124;	C→T;	(100%);	'P2287S (CCT→TCT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	8,986;	C→T;	(100%);	'D2907D (GAC→GAT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 26 more)</td>
+</tr>
+<tr><td style="background-color: #dddddd;">&nbsp;<br><a href="hCoV-19-England-CAMC-1510779-2021/hCoV-19-England-CAMC-1510779-2021_sample.html">hCoV-19-England-CAMC-1510779-2021</a><br>&nbsp;</td><td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1.617.1</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 21B</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">1111170</td>
+<td style="background-color: #dddddd; ">&nbsp;1111170</td>
+<td style="background-color: #7ca37c; border-left: 1px solid black;">PASS</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">92.54</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">29902.0</td>
+<td style="background-color: #dddddd; ">&nbsp;98.776</td>
+<td style="background-color: #dddddd; ">&nbsp;1090.23</td>
+<td style="background-color: #dddddd; ">&nbsp;13409.2</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> G210T
+<p style="margin-bottom:0px; margin-top:8px">C241T
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">C3457T
+<p style="margin-bottom:0px; margin-top:8px">C4965T
+<p style="margin-bottom:0px; margin-top:8px">A11201G
+<p style="margin-bottom:0px; margin-top:8px">C13517T
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 22 more)</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> TA28270T</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	210;	G→T;	(100%);	'intergenic (–/-56)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,457;	C→T;	(100%);	'Y1064Y (TAC→TAT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	4,965;	C→T;	(100%);	'T1567I (ACT→ATT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	11,201;	A→G;	(100%);	'T3646A (ACT→GCT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	13,517;	C→T;	(100%);	'T17I (ACT→ATT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 21 more)</td>
+</tr>
+<tr><td style="background-color: #ffffff;">&nbsp;<br><a href="hCoV-19-England-QEUH-14A3615-2021/hCoV-19-England-QEUH-14A3615-2021_sample.html">hCoV-19-England-QEUH-14A3615-2021</a><br>&nbsp;</td><td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1.351</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 20H</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">1735036</td>
+<td style="background-color: #ffffff; ">&nbsp;1735036</td>
+<td style="background-color: #8fbc8f; border-left: 1px solid black;">PASS</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">94.79</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">29885.0</td>
+<td style="background-color: #ffffff; ">&nbsp;99.304</td>
+<td style="background-color: #ffffff; ">&nbsp;696.0</td>
+<td style="background-color: #ffffff; ">&nbsp;20712.1</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> G174T
+<p style="margin-bottom:0px; margin-top:8px">C241T
+<p style="margin-bottom:0px; margin-top:8px">C1059T
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">C4897T
+<p style="margin-bottom:0px; margin-top:8px">G5230T
+<p style="margin-bottom:0px; margin-top:8px">C5512T
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 20 more)</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> GTCTGGTTTT11287G
+<p style="margin-bottom:0px; margin-top:8px">ACTTTACTTG22280A
+<p style="margin-bottom:0px; margin-top:8px">T25202G
+<p style="margin-bottom:0px; margin-top:8px">CA28253TC</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> K25184T</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	174;	G→T;	(100%);	'intergenic (–/-92)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	1,059;	C→T;	(100%);	'T265I (ACC→ATC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	4,897;	C→T;	(100%);	'F1544F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	5,230;	G→T;	(100%);	'K1655N (AAG→AAT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	5,512;	C→T;	(100%);	'N1749N (AAC→AAT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 19 more)</td>
+</tr>
+<tr><td style="background-color: #dddddd;">&nbsp;<br><a href="hCoV-19-England-QEUH-E93AAC-2021/hCoV-19-England-QEUH-E93AAC-2021_sample.html">hCoV-19-England-QEUH-E93AAC-2021</a><br>&nbsp;</td><td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1.525</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 21D</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">912548</td>
+<td style="background-color: #dddddd; ">&nbsp;912548</td>
+<td style="background-color: #7ca37c; border-left: 1px solid black;">PASS</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">93.71</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">29830.0</td>
+<td style="background-color: #dddddd; ">&nbsp;99.311</td>
+<td style="background-color: #dddddd; ">&nbsp;325.18</td>
+<td style="background-color: #dddddd; ">&nbsp;11051.5</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C241T
+<p style="margin-bottom:0px; margin-top:8px">C1498T
+<p style="margin-bottom:0px; margin-top:8px">A1807G
+<p style="margin-bottom:0px; margin-top:8px">G2659A
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">C6285T
+<p style="margin-bottom:0px; margin-top:8px">T8593C
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 30 more)</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> GTCTGGTTTT11287G
+<p style="margin-bottom:0px; margin-top:8px">CC14407TT
+<p style="margin-bottom:0px; margin-top:8px">CTATACATG21762TTA
+<p style="margin-bottom:0px; margin-top:8px">TTTA21990T
+<p style="margin-bottom:0px; margin-top:8px">GTTT27204G
+<p style="margin-bottom:0px; margin-top:8px">TCTG28277T
+<p style="margin-bottom:0px; margin-top:8px">TTTCACCGAGGCCACGCGGAGTACGATCGAGTGTACAGTGAACAATGCTA29727T</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	1,498;	C→T;	(100%);	'F411F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	1,807;	A→G;	(100%);	'G514G (GGA→GGG)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	2,659;	G→A;	(100%);	'K798K (AAG→AAA)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	6,285;	C→T;	(100%);	'T2007I (ACC→ATC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	8,593;	T→C;	(100%);	'V2776V (GTT→GTC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 25 more)</td>
+</tr>
+<tr><td style="background-color: #ffffff;">&nbsp;<br><a href="hCoV-19-England-QEUH-E948CF-2021/hCoV-19-England-QEUH-E948CF-2021_sample.html">hCoV-19-England-QEUH-E948CF-2021</a><br>&nbsp;</td><td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1.525</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 21D</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">1500428</td>
+<td style="background-color: #ffffff; ">&nbsp;1500428</td>
+<td style="background-color: #8fbc8f; border-left: 1px solid black;">PASS</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">94.39</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">29830.0</td>
+<td style="background-color: #ffffff; ">&nbsp;99.398</td>
+<td style="background-color: #ffffff; ">&nbsp;238.02</td>
+<td style="background-color: #ffffff; ">&nbsp;18029.6</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> A12T
+<p style="margin-bottom:0px; margin-top:8px">C241T
+<p style="margin-bottom:0px; margin-top:8px">C1498T
+<p style="margin-bottom:0px; margin-top:8px">A1807G
+<p style="margin-bottom:0px; margin-top:8px">G2659A
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">C6285T
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 33 more)</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> GTCTGGTTTT11287G
+<p style="margin-bottom:0px; margin-top:8px">CC14407TT
+<p style="margin-bottom:0px; margin-top:8px">CTATACATG21762TTA
+<p style="margin-bottom:0px; margin-top:8px">TTTA21990T
+<p style="margin-bottom:0px; margin-top:8px">GTTT27204G
+<p style="margin-bottom:0px; margin-top:8px">TCTG28277T
+<p style="margin-bottom:0px; margin-top:8px">TTTCACCGAGGCCACGCGGAGTACGATCGAGTGTACAGTGAACAATGCTA29727T</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	1,498;	C→T;	(100%);	'F411F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	1,807;	A→G;	(100%);	'G514G (GGA→GGG)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	2,659;	G→A;	(100%);	'K798K (AAG→AAA)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	6,285;	C→T;	(100%);	'T2007I (ACC→ATC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	8,593;	T→C;	(100%);	'V2776V (GTT→GTC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 24 more)</td>
+</tr>
+<tr><td style="background-color: #dddddd;">&nbsp;<br><a href="hCoV-19-USA-CA-QDX-2761-2020/hCoV-19-USA-CA-QDX-2761-2020_sample.html">hCoV-19-USA-CA-QDX-2761-2020</a><br>&nbsp;</td><td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1.427</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 21C</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">146505</td>
+<td style="background-color: #dddddd; ">&nbsp;145644</td>
+<td style="background-color: #7ca37c; border-left: 1px solid black;">PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">89.7</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">29903.0</td>
+<td style="background-color: #dddddd; ">&nbsp;99.328</td>
+<td style="background-color: #dddddd; ">&nbsp;672.17</td>
+<td style="background-color: #dddddd; ">&nbsp;1883.3</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C241T
+<p style="margin-bottom:0px; margin-top:8px">G495T
+<p style="margin-bottom:0px; margin-top:8px">C1059T
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">G9738C
+<p style="margin-bottom:0px; margin-top:8px">G13713A
+<p style="margin-bottom:0px; margin-top:8px">C14408T
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 12 more)</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	495;	G→T;	(100%);	'R77L (CGA→CTA)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	1,059;	C→T;	(100%);	'T265I (ACC→ATC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	1,813;	T→C;	(17.1%);	'A516A (GCT→GCC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	6,573;	C→T;	(16.0%);	'S2103F (TCT→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	9,738;	G→C;	(100%);	'S3158T (AGT→ACT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 15 more)</td>
+</tr>
+<tr><td style="background-color: #ffffff;">&nbsp;<br><a href="hCoV-19-USA-CA-QDX-2781-2020/hCoV-19-USA-CA-QDX-2781-2020_sample.html">hCoV-19-USA-CA-QDX-2781-2020</a><br>&nbsp;</td><td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1.429</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 21C</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">76068</td>
+<td style="background-color: #ffffff; ">&nbsp;75629</td>
+<td style="background-color: #8fbc8f; border-left: 1px solid black;">PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">89.45</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">29903.0</td>
+<td style="background-color: #ffffff; ">&nbsp;98.846</td>
+<td style="background-color: #ffffff; ">&nbsp;956.43</td>
+<td style="background-color: #ffffff; ">&nbsp;965.8</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C241T
+<p style="margin-bottom:0px; margin-top:8px">C1059T
+<p style="margin-bottom:0px; margin-top:8px">C1912T
+<p style="margin-bottom:0px; margin-top:8px">C2395T
+<p style="margin-bottom:0px; margin-top:8px">T2597C
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">C4683T
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 24 more)</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> TTG11632ATT</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	1,059;	C→T;	(100%);	'T265I (ACC→ATC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	1,912;	C→T;	(100%);	'S549S (TCC→TCT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	2,395;	C→T;	(100%);	'V710V (GTC→GTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	2,597;	T→C;	(100%);	'L778L (TTG→CTG)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	4,683;	C→T;	(100%);	'A1473V (GCT→GTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 25 more)</td>
+</tr>
+<tr><td style="background-color: #dddddd;">&nbsp;<br><a href="hCoV-19-USA-MA-QDX-2966-2021/hCoV-19-USA-MA-QDX-2966-2021_sample.html">hCoV-19-USA-MA-QDX-2966-2021</a><br>&nbsp;</td><td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> P.2</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 20B</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">73571</td>
+<td style="background-color: #dddddd; ">&nbsp;72065</td>
+<td style="background-color: #7ca37c; border-left: 1px solid black;">PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">86.15</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">29903.0</td>
+<td style="background-color: #dddddd; ">&nbsp;99.689</td>
+<td style="background-color: #dddddd; ">&nbsp;311.01</td>
+<td style="background-color: #dddddd; ">&nbsp;967.6</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C100T
+<p style="margin-bottom:0px; margin-top:8px">C241T
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">T3766C
+<p style="margin-bottom:0px; margin-top:8px">C6347T
+<p style="margin-bottom:0px; margin-top:8px">T10667G
+<p style="margin-bottom:0px; margin-top:8px">C11824T
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 15 more)</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> GGG28881AAC</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	100;	C→T;	(100%);	'intergenic (–/-166)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,766;	T→C;	(100%);	'D1167D (GAT→GAC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	6,347;	C→T;	(100%);	'L2028L (CTG→TTG)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	10,667;	T→G;	(100%);	'L3468V (TTA→GTA)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	11,824;	C→T;	(100%);	'I3853I (ATC→ATT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 16 more)</td>
+</tr>
+<tr><td style="background-color: #ffffff;">&nbsp;<br><a href="hCoV-19-USA-NV-QDX-4024-2021/hCoV-19-USA-NV-QDX-4024-2021_sample.html">hCoV-19-USA-NV-QDX-4024-2021</a><br>&nbsp;</td><td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> P.2</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 20B</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">92085</td>
+<td style="background-color: #ffffff; ">&nbsp;91571</td>
+<td style="background-color: #8fbc8f; border-left: 1px solid black;">PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">88.1</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">29903.0</td>
+<td style="background-color: #ffffff; ">&nbsp;99.676</td>
+<td style="background-color: #ffffff; ">&nbsp;324.38</td>
+<td style="background-color: #ffffff; ">&nbsp;1224.0</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C100T
+<p style="margin-bottom:0px; margin-top:8px">C241T
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">T10667G
+<p style="margin-bottom:0px; margin-top:8px">C11824T
+<p style="margin-bottom:0px; margin-top:8px">C12053T
+<p style="margin-bottom:0px; margin-top:8px">A12964G
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 13 more)</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> GGG28881AAC</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	100;	C→T;	(100%);	'intergenic (–/-166)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	10,667;	T→G;	(100%);	'L3468V (TTA→GTA)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	11,824;	C→T;	(100%);	'I3853I (ATC→ATT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	12,053;	C→T;	(100%);	'L3930F (CTT→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	12,964;	A→G;	(100%);	'G4233G (GGA→GGG)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 9 more)</td>
+</tr>
+<tr><td style="background-color: #dddddd;">&nbsp;<br><a href="hCoV-19-USA-RI-QDX-3232-2021/hCoV-19-USA-RI-QDX-3232-2021_sample.html">hCoV-19-USA-RI-QDX-3232-2021</a><br>&nbsp;</td><td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1.526</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 21F</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">102896</td>
+<td style="background-color: #dddddd; ">&nbsp;101873</td>
+<td style="background-color: #7ca37c; border-left: 1px solid black;">PASS</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">90.0</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">29893.0</td>
+<td style="background-color: #dddddd; ">&nbsp;99.676</td>
+<td style="background-color: #dddddd; ">&nbsp;324.49</td>
+<td style="background-color: #dddddd; ">&nbsp;1374.5</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C241T
+<p style="margin-bottom:0px; margin-top:8px">C1059T
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">C5575T
+<p style="margin-bottom:0px; margin-top:8px">T9867C
+<p style="margin-bottom:0px; margin-top:8px">G11287-TCTGGTTTT*
+<p style="margin-bottom:0px; margin-top:8px">C14408T
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 15 more)</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> GTCTGGTTTT11287G
+<p style="margin-bottom:0px; margin-top:8px">TA28270T</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	1,059;	C→T;	(100%);	'T265I (ACC→ATC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	5,575;	C→T;	(45.9%);	'Y1770Y (TAC→TAT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	9,867;	T→C;	(100%);	'L3201P (CTT→CCT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">JC;	11,288;	Δ9 bp;	(100%);	'coding (11023-11031/13203nt)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	14,408;	C→T;	(100%);	'P314L (CCT→CTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 16 more)</td>
+</tr>
+<tr><td style="background-color: #ffffff;">&nbsp;<br><a href="hCoV-19-USA-TX-DSHS-2263-2021/hCoV-19-USA-TX-DSHS-2263-2021_sample.html">hCoV-19-USA-TX-DSHS-2263-2021</a><br>&nbsp;</td><td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1.427</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 21C</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">35442</td>
+<td style="background-color: #ffffff; ">&nbsp;35019</td>
+<td style="background-color: #8fbc8f; border-left: 1px solid black;">PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">95.67</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">29903.0</td>
+<td style="background-color: #ffffff; ">&nbsp;96.699</td>
+<td style="background-color: #ffffff; ">&nbsp;3501.32</td>
+<td style="background-color: #ffffff; ">&nbsp;322.9</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C241T
+<p style="margin-bottom:0px; margin-top:8px">C1059T
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">T6945C
+<p style="margin-bottom:0px; margin-top:8px">G9738C
+<p style="margin-bottom:0px; margin-top:8px">G13713A
+<p style="margin-bottom:0px; margin-top:8px">C14408T
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 15 more)</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	1,059;	C→T;	(100%);	'T265I (ACC→ATC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	6,945;	T→C;	(100%);	'I2227T (ATA→ACA)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	9,738;	G→C;	(100%);	'S3158T (AGT→ACT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	13,713;	G→A;	(100%);	'K82K (AAG→AAA)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	14,408;	C→T;	(100%);	'P314L (CCT→CTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 15 more)</td>
+</tr>
+<tr><td style="background-color: #dddddd;">&nbsp;<br><a href="hCoV-19-USA-TX-UTA-000313-2021/hCoV-19-USA-TX-UTA-000313-2021_sample.html">hCoV-19-USA-TX-UTA-000313-2021</a><br>&nbsp;</td><td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1.526</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 21F</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">221194</td>
+<td style="background-color: #dddddd; ">&nbsp;202043</td>
+<td style="background-color: #7ca37c; border-left: 1px solid black;">PASS</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">91.8</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">29893.0</td>
+<td style="background-color: #dddddd; ">&nbsp;99.676</td>
+<td style="background-color: #dddddd; ">&nbsp;381.36</td>
+<td style="background-color: #dddddd; ">&nbsp;2855.9</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C241T
+<p style="margin-bottom:0px; margin-top:8px">C1059T
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">T3649C
+<p style="margin-bottom:0px; margin-top:8px">C4276T
+<p style="margin-bottom:0px; margin-top:8px">A9052G
+<p style="margin-bottom:0px; margin-top:8px">T9867C
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 19 more)</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> GTCTGGTTTT11287G
+<p style="margin-bottom:0px; margin-top:8px">TA28270T</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> NNNNNN23136AAAAGT</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	683;	C→T;	(6.7%);	'L140L (CTA→TTA)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	1,059;	C→T;	(100%);	'T265I (ACC→ATC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,649;	T→C;	(100%);	'I1128I (ATT→ATC)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	4,276;	C→T;	(100%);	'Y1337Y (TAC→TAT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	4,989:1;	+C;	(9.3%);	'coding (4724/13203nt)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 28 more)</td>
+</tr>
+<tr><td style="background-color: #ffffff;">&nbsp;<br><a href="hCoV-19-Wales-PHWC-4C8F5E-2021/hCoV-19-Wales-PHWC-4C8F5E-2021_sample.html">hCoV-19-Wales-PHWC-4C8F5E-2021</a><br>&nbsp;</td><td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1.1.7</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 20I</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">154538</td>
+<td style="background-color: #ffffff; ">&nbsp;154537</td>
+<td style="background-color: #8fbc8f; border-left: 1px solid black;">PASS</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">95.22</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">29884.0</td>
+<td style="background-color: #ffffff; ">&nbsp;99.027</td>
+<td style="background-color: #ffffff; ">&nbsp;1315.08</td>
+<td style="background-color: #ffffff; ">&nbsp;1275.5</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C241T
+<p style="margin-bottom:0px; margin-top:8px">C913T
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">C3267T
+<p style="margin-bottom:0px; margin-top:8px">C5388A
+<p style="margin-bottom:0px; margin-top:8px">C5986T
+<p style="margin-bottom:0px; margin-top:8px">T6954C
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 33 more)</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> GTCTGGTTTT11287G
+<p style="margin-bottom:0px; margin-top:8px">ATACATG21764A
+<p style="margin-bottom:0px; margin-top:8px">TTTA21990T
+<p style="margin-bottom:0px; margin-top:8px">TA28270T
+<p style="margin-bottom:0px; margin-top:8px">GAT28280CTA
+<p style="margin-bottom:0px; margin-top:8px">GGG28881AAC</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	913;	C→T;	(100%);	'S216S (TCC→TCT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,267;	C→T;	(100%);	'T1001I (ACT→ATT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	5,388;	C→A;	(100%);	'A1708D (GCT→GAT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	5,986;	C→T;	(100%);	'F1907F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">RA;	6,954;	T→C;	(100%);	'I2230T (ATA→ACA)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 30 more)</td>
+</tr>
+</table>
+</body>
+</html>

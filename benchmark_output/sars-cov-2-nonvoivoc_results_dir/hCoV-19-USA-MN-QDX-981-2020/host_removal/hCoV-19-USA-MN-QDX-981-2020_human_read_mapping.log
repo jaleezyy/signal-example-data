@@ -1,0 +1,33 @@
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 41436 sequences (10244421 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (29, 19410, 45, 38)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (1566, 3646, 6814)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 17310)
+[M::mem_pestat] mean and std.dev: (4025.00, 2540.80)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 22558)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (380, 387, 395)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (350, 425)
+[M::mem_pestat] mean and std.dev: (389.27, 11.92)
+[M::mem_pestat] low and high boundaries for proper pairs: (335, 440)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (1711, 4724, 6857)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 17149)
+[M::mem_pestat] mean and std.dev: (4280.11, 2905.62)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 22295)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (1559, 4521, 5784)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 14234)
+[M::mem_pestat] mean and std.dev: (4239.03, 2580.83)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 18459)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 41436 reads in 10.861 CPU sec, 5.598 real sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa mem -t 2 /workspace/lab/mcarthurlab/nasirja/covid-19-signal/data/composite_human_viral_reference.fna hCoV-19-USA-MN-QDX-981-2020/raw_fastq/hCoV-19-USA-MN-QDX-981-2020_R1.fastq.gz hCoV-19-USA-MN-QDX-981-2020/raw_fastq/hCoV-19-USA-MN-QDX-981-2020_R2.fastq.gz
+[main] Real time: 12.207 sec; CPU: 16.576 sec
+viral read count = 39341 (94.94%)
+human read count = 7 (0.02%) 
+unmapped read count = 2088 (5.04%)

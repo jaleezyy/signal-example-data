@@ -1,0 +1,105 @@
+SARS-CoV-2 Illumina GeNome Assembly Line (SIGNAL), version v1.6.6
+https://github.com/jaleezyy/covid-19-signal
+
+Note: Asterisks (*) indicates a discrepancy between iVar (default) and FreeBayes (if run)
+
+Sample: E19
+
+Pangolin Lineage Assignment
+    B.1.147
+
+Nextclade Clade Assignment
+    20A
+
+Data Volume
+    Raw Data (read pairs): 477170
+    Raw Data (base pairs): 239539340
+    Post Primer Removal (read pairs): 477170
+    Post Primer Removal (base pairs): 234061530
+    Post Trim (read pairs): 476498
+
+Quality Control Flags
+    PASS  Genome Fraction greater than 90%
+    PASS  No indels detected (maximum length 85bp)
+    PASS  Depth of coverage >= 2000x
+    WARN  All variants with at least 90% frequency among reads
+    FAIL  Frameshifts in SARS-CoV-2 open reading frames
+    PASS  Reads per base sequence quality
+    PASS  Sequencing adapter removed
+    PASS  At least 90% of positions have coverage >= 100x
+    WARN  At least 90% of positions have coverage >= 1000x
+
+FASTQC Flags
+    FAIL  Per base sequence content
+    FAIL  Per sequence GC content
+    WARN  Sequence Length Distribution
+
+Kraken2
+    Reads SARS-CoV-2 (%): 90.42
+
+QUAST
+    Genome Length (bp): 29903.0
+    Genome Fraction (%): 98.756
+    N's per 100 kbp: 1247.37
+    Genomic Features: 19 + 5 part
+    Mismatches: 8.0
+    Mismatches per 100 kbp: 27.09
+    Indels: 0.0
+    Indels per 100 kbp: 0.0
+    Average Depth of Coverage: 6394.3
+        Fraction with 0 coverage: 0.006
+        Fraction with 1x-10x coverage: 0.006
+        Fraction with 11x-100x coverage: 0.056
+        Fraction with 101x-1000x coverage: 0.145
+        Fraction with 1001x-2000x coverage: 0.112
+        Fraction with 2001x-10000x coverage: 0.44
+        Fraction with > 10000x coverage: 0.234
+    5' Ns: 30
+    3' Ns: 67
+
+Variants in Consensus Genome (iVar)
+    C241T C3037T C9733T C14408T C15324T G16639T A23403G C25433T C29358A
+
+Unique Variants in Consensus Genome (FreeBayes)
+
+Nucleotide Differences in Consensus Genomes (FreeBayes as reference)
+
+Variants in Read Alignment (BreSeq)
+    RA;	203;	C→T;	(8.4%);	'intergenic (–/-63)';	'– /→ orf1ab'
+    RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+    RA;	815;	C→T;	(7.1%);	'R184C (CGC→TGC)';	'orf1ab →'
+    RA;	1,484;	G→T;	(5.9%);	'G407* (GGA→TGA)';	'orf1ab →'
+    JC;	2,414;	Δ25 bp;	(6.8%);	'coding (2149-2173/13203nt)';	'orf1ab →'
+    RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+    RA;	3,714;	C→T;	(13.4%);	'S1150L (TCA→TTA)';	'orf1ab →'
+    RA;	3,954:1;	+T;	(5.3%);	'coding (3689/13203nt)';	'orf1ab →'
+    RA;	4,257;	G→C;	(7.6%);	'G1331A (GGT→GCT)';	'orf1ab →'
+    RA;	4,331;	C→T;	(10.7%);	'L1356L (CTA→TTA)';	'orf1ab →'
+    RA;	5,513;	Δ1 bp;	(37.0%);	'coding (5248/13203nt)';	'orf1ab →'
+    RA;	5,514;	T→A;	(34.8%);	'V1750E (GTG→GAG)';	'orf1ab →'
+    RA;	5,777;	C→T;	(7.1%);	'H1838Y (CAT→TAT)';	'orf1ab →'
+    JC;	6,630;	Δ3 bp;	(8.7%);	'coding (6365-6367/13203nt)';	'orf1ab →'
+    RA;	12,285;	Δ1 bp;	(5.1%);	'coding (12020/13203nt)';	'orf1ab →'
+    RA;	12,554;	G→A;	(5.8%);	'E4097K (GAA→AAA)';	'orf1ab →'
+    RA;	13,458;	C→T;	(11.1%);	'S4398L (TCG→TTG)';	'orf1ab →'
+    RA;	13,546;	G→T;	(5.5%);	'D27Y (GAC→TAC)';	'orf1ab →'
+    RA;	14,408;	C→T;	(100%);	'P314L (CCT→CTT)';	'orf1ab →'
+    RA;	15,324;	C→T;	(100%);	'N619N (AAC→AAT)';	'orf1ab →'
+    RA;	15,738;	C→T;	(5.5%);	'F757F (TTC→TTT)';	'orf1ab →'
+    RA;	16,639;	G→T;	(100%);	'A1058S (GCA→TCA)';	'orf1ab →'
+    RA;	16,926;	T→C;	(6.7%);	'H1153H (CAT→CAC)';	'orf1ab →'
+    RA;	18,136;	T→C;	(6.0%);	'F1557L (TTC→CTC)';	'orf1ab →'
+    RA;	21,305;	G→T;	(5.4%);	'R2613L (CGC→CTC)';	'orf1ab →'
+    JC;	21,481;	71 bp→13 bp;	(38.2%);	'coding (8014-8084/8088nt)';	'orf1ab →'
+    RA;	23,403;	A→G;	(100%);	'D614G (GAT→GGT)';	'S →'
+    RA;	24,213;	C→T;	(8.0%);	'S884F (TCT→TTT)';	'S →'
+    RA;	25,350;	C→T;	(7.6%);	'P1263L (CCA→CTA)';	'S →'
+    RA;	25,429;	G→T;	(6.1%);	'V13L (GTA→TTA)';	'ORF3a →'
+    RA;	25,433;	C→T;	(100%);	'T14I (ACT→ATT)';	'ORF3a →'
+    RA;	25,803;	C→T;	(7.4%);	'N137N (AAC→AAT)';	'ORF3a →'
+    RA;	28,253;	C→T;	(16.7%);	'F120F (TTC→TTT)';	'ORF8 →'
+    RA;	28,254;	Δ1 bp;	(13.2%);	'coding (361/366nt)';	'ORF8 →'
+    RA;	29,358;	C→A;	(100%);	'T362K (ACA→AAA)';	'N →'
+    RA;	29,651;	Δ1 bp;	(6.2%);	'coding (94/117nt)';	'ORF10 →'
+    RA;	29,743;	C→T;	(23.0%);	'intergenic (+69/–)';	'ORF10 →/ –'
+

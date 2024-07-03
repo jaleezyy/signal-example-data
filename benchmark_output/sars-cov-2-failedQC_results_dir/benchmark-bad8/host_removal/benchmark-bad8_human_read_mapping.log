@@ -1,0 +1,26 @@
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 54262 sequences (5289377 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (2799, 3108, 2, 2753)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (21, 47, 95)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 243)
+[M::mem_pestat] mean and std.dev: (61.20, 54.14)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 317)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (38, 47, 60)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 104)
+[M::mem_pestat] mean and std.dev: (48.94, 16.47)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 126)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (18, 48, 98)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 258)
+[M::mem_pestat] mean and std.dev: (62.34, 56.79)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 338)
+[M::mem_process_seqs] Processed 54262 reads in 34.313 CPU sec, 17.443 real sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa mem -t 2 /workspace/lab/mcarthurlab/nasirja/covid-19-signal/data/composite_human_viral_reference.fna benchmark-bad8/raw_fastq/benchmark-bad8_R1.fastq.gz benchmark-bad8/raw_fastq/benchmark-bad8_R2.fastq.gz
+[main] Real time: 23.694 sec; CPU: 40.489 sec
+viral read count = 2366 (4.36%)
+human read count = 48655 (89.67%) 
+unmapped read count = 3241 (5.97%)

@@ -1,0 +1,593 @@
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 4.8
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 2 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/PRJNA689621_subset-input_results_dir/E65/adapter_trimmed/
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> E65/host_removal/E65_R1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	6646	AGATCGGAAGAGC	840593	0.79
+smallRNA	0	TGGAATTCTCGG	840593	0.00
+Nextera	0	CTGTCTCTTATA	840593	0.00
+Using Illumina adapter for trimming (count: 6646). Second best hit was smallRNA (count: 0)
+
+Writing report to '/workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/PRJNA689621_subset-input_results_dir/E65/adapter_trimmed/E65_R1.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: E65/host_removal/E65_R1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.8
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.8). Setting -j 2
+Writing final adapter and quality trimmed output to E65_R1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file E65/host_removal/E65_R1.fastq.gz <<< 
+This is cutadapt 4.8 with Python 3.12.3
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC E65/host_removal/E65_R1.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 31.686 s (37.695 µs/read; 1.59 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 840,593
+Reads with adapters:                   295,642 (35.2%)
+Reads written (passing filters):       840,593 (100.0%)
+
+Total basepairs processed:   210,988,843 bp
+Quality-trimmed:               1,378,616 bp (0.7%)
+Total written (filtered):    208,822,087 bp (99.0%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 295642 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 34.7%
+  C: 17.8%
+  G: 10.7%
+  T: 36.8%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	202581	210148.2	0	202581
+2	77033	52537.1	0	77033
+3	4068	13134.3	0	4068
+4	799	3283.6	0	799
+5	145	820.9	0	145
+6	199	205.2	0	199
+7	3145	51.3	0	3145
+8	161	12.8	0	161
+9	126	3.2	0	126
+10	89	0.8	1	80 9
+11	40	0.2	1	33 7
+12	68	0.1	1	61 7
+13	30	0.0	1	23 7
+14	86	0.0	1	77 9
+15	293	0.0	1	281 12
+16	167	0.0	1	160 7
+17	89	0.0	1	80 9
+18	324	0.0	1	318 6
+19	83	0.0	1	74 9
+20	68	0.0	1	61 7
+21	28	0.0	1	25 3
+22	66	0.0	1	62 4
+23	99	0.0	1	92 7
+24	641	0.0	1	621 20
+25	114	0.0	1	94 20
+26	50	0.0	1	37 13
+27	49	0.0	1	32 17
+28	83	0.0	1	55 28
+29	41	0.0	1	26 15
+30	41	0.0	1	35 6
+31	44	0.0	1	31 13
+32	114	0.0	1	103 11
+33	63	0.0	1	55 8
+34	67	0.0	1	51 16
+35	31	0.0	1	22 9
+36	64	0.0	1	52 12
+37	241	0.0	1	228 13
+38	81	0.0	1	62 19
+39	103	0.0	1	91 12
+40	93	0.0	1	82 11
+41	55	0.0	1	45 10
+42	69	0.0	1	54 15
+43	108	0.0	1	92 16
+44	36	0.0	1	34 2
+45	38	0.0	1	33 5
+46	30	0.0	1	25 5
+47	77	0.0	1	66 11
+48	60	0.0	1	48 12
+49	56	0.0	1	48 8
+50	29	0.0	1	27 2
+51	23	0.0	1	22 1
+52	40	0.0	1	29 11
+53	30	0.0	1	20 10
+54	89	0.0	1	63 26
+55	38	0.0	1	33 5
+56	15	0.0	1	12 3
+57	23	0.0	1	21 2
+58	11	0.0	1	11
+59	40	0.0	1	37 3
+60	27	0.0	1	25 2
+61	29	0.0	1	28 1
+62	22	0.0	1	21 1
+63	40	0.0	1	36 4
+64	24	0.0	1	18 6
+65	24	0.0	1	21 3
+66	48	0.0	1	43 5
+67	24	0.0	1	19 5
+68	29	0.0	1	24 5
+69	46	0.0	1	34 12
+70	29	0.0	1	22 7
+71	39	0.0	1	35 4
+72	49	0.0	1	44 5
+73	86	0.0	1	71 15
+74	113	0.0	1	101 12
+75	171	0.0	1	154 17
+76	602	0.0	1	567 35
+77	396	0.0	1	384 12
+78	194	0.0	1	183 11
+79	92	0.0	1	88 4
+80	69	0.0	1	67 2
+81	48	0.0	1	45 3
+82	41	0.0	1	40 1
+83	23	0.0	1	21 2
+84	32	0.0	1	32
+85	16	0.0	1	15 1
+86	27	0.0	1	26 1
+87	30	0.0	1	28 2
+88	21	0.0	1	19 2
+89	27	0.0	1	24 3
+90	9	0.0	1	7 2
+91	9	0.0	1	8 1
+92	7	0.0	1	7
+93	19	0.0	1	17 2
+94	157	0.0	1	148 9
+95	16	0.0	1	15 1
+96	24	0.0	1	22 2
+97	11	0.0	1	10 1
+98	12	0.0	1	11 1
+99	8	0.0	1	8
+100	5	0.0	1	4 1
+101	6	0.0	1	4 2
+102	2	0.0	1	2
+103	2	0.0	1	2
+104	7	0.0	1	6 1
+105	2	0.0	1	1 1
+106	8	0.0	1	8
+107	11	0.0	1	9 2
+108	9	0.0	1	9
+109	7	0.0	1	7
+110	3	0.0	1	3
+111	6	0.0	1	5 1
+112	1	0.0	1	1
+113	11	0.0	1	10 1
+114	12	0.0	1	11 1
+115	2	0.0	1	2
+116	10	0.0	1	8 2
+117	3	0.0	1	3
+119	2	0.0	1	1 1
+120	5	0.0	1	5
+122	3	0.0	1	3
+123	2	0.0	1	2
+124	1	0.0	1	1
+125	6	0.0	1	5 1
+126	2	0.0	1	2
+127	16	0.0	1	16
+128	4	0.0	1	4
+129	5	0.0	1	5
+130	4	0.0	1	4
+131	3	0.0	1	3
+132	6	0.0	1	3 3
+133	4	0.0	1	3 1
+134	5	0.0	1	3 2
+135	3	0.0	1	3
+136	23	0.0	1	21 2
+137	2	0.0	1	2
+139	1	0.0	1	1
+140	2	0.0	1	2
+141	3	0.0	1	3
+142	1	0.0	1	0 1
+143	3	0.0	1	3
+145	1	0.0	1	1
+146	3	0.0	1	3
+147	9	0.0	1	8 1
+148	7	0.0	1	7
+149	4	0.0	1	4
+150	2	0.0	1	2
+152	2	0.0	1	2
+153	3	0.0	1	1 2
+154	4	0.0	1	4
+155	4	0.0	1	3 1
+156	6	0.0	1	5 1
+157	1	0.0	1	1
+159	3	0.0	1	3
+160	1	0.0	1	1
+161	5	0.0	1	4 1
+163	1	0.0	1	1
+164	1	0.0	1	1
+165	1	0.0	1	1
+166	4	0.0	1	4
+167	5	0.0	1	4 1
+168	8	0.0	1	8
+169	1	0.0	1	1
+170	2	0.0	1	2
+172	2	0.0	1	2
+173	1	0.0	1	1
+174	3	0.0	1	3
+175	2	0.0	1	2
+176	3	0.0	1	2 1
+177	3	0.0	1	3
+182	2	0.0	1	2
+184	3	0.0	1	2 1
+187	1	0.0	1	1
+188	4	0.0	1	4
+190	1	0.0	1	1
+191	2	0.0	1	0 2
+192	1	0.0	1	1
+193	3	0.0	1	3
+194	2	0.0	1	2
+195	2	0.0	1	2
+198	2	0.0	1	2
+199	2	0.0	1	2
+200	1	0.0	1	1
+203	2	0.0	1	2
+205	1	0.0	1	1
+206	2	0.0	1	2
+207	1	0.0	1	1
+208	4	0.0	1	4
+209	2	0.0	1	2
+210	2	0.0	1	2
+211	3	0.0	1	3
+213	3	0.0	1	2 1
+214	1	0.0	1	1
+215	4	0.0	1	3 1
+217	1	0.0	1	1
+228	1	0.0	1	0 1
+242	1	0.0	1	1
+248	2	0.0	1	0 2
+250	1	0.0	1	0 1
+251	16	0.0	1	0 16
+
+RUN STATISTICS FOR INPUT FILE: E65/host_removal/E65_R1.fastq.gz
+=============================================
+840593 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to '/workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/PRJNA689621_subset-input_results_dir/E65/adapter_trimmed/E65_R2.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: E65/host_removal/E65_R2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.8
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.8). Setting -j -j 2
+Writing final adapter and quality trimmed output to E65_R2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file E65/host_removal/E65_R2.fastq.gz <<< 
+This is cutadapt 4.8 with Python 3.12.3
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC E65/host_removal/E65_R2.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 34.195 s (40.680 µs/read; 1.47 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 840,593
+Reads with adapters:                   291,670 (34.7%)
+Reads written (passing filters):       840,593 (100.0%)
+
+Total basepairs processed:   210,988,843 bp
+Quality-trimmed:               3,774,394 bp (1.8%)
+Total written (filtered):    206,571,394 bp (97.9%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 291670 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 40.9%
+  C: 15.9%
+  G: 10.1%
+  T: 33.1%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	217931	210148.2	0	217931
+2	58628	52537.1	0	58628
+3	5042	13134.3	0	5042
+4	1011	3283.6	0	1011
+5	170	820.9	0	170
+6	164	205.2	0	164
+7	3023	51.3	0	3023
+8	50	12.8	0	50
+9	103	3.2	0	102 1
+10	96	0.8	1	87 9
+11	24	0.2	1	15 9
+12	77	0.1	1	69 8
+13	29	0.0	1	25 4
+14	257	0.0	1	241 16
+15	97	0.0	1	90 7
+16	148	0.0	1	135 13
+17	214	0.0	1	203 11
+18	64	0.0	1	61 3
+19	165	0.0	1	156 9
+20	22	0.0	1	20 2
+21	12	0.0	1	8 4
+22	29	0.0	1	26 3
+23	129	0.0	1	114 15
+24	689	0.0	1	655 34
+25	11	0.0	1	10 1
+26	53	0.0	1	48 5
+27	31	0.0	1	28 3
+28	52	0.0	1	45 7
+29	32	0.0	1	28 4
+30	110	0.0	1	102 8
+31	22	0.0	1	18 4
+32	148	0.0	1	140 8
+33	43	0.0	1	39 4
+34	65	0.0	1	61 4
+35	49	0.0	1	48 1
+36	31	0.0	1	30 1
+37	159	0.0	1	151 8
+38	21	0.0	1	20 1
+39	28	0.0	1	23 5
+40	157	0.0	1	151 6
+41	16	0.0	1	16
+42	31	0.0	1	28 3
+43	43	0.0	1	39 4
+44	42	0.0	1	40 2
+45	63	0.0	1	60 3
+46	54	0.0	1	48 6
+47	95	0.0	1	90 5
+48	42	0.0	1	41 1
+49	33	0.0	1	31 2
+50	30	0.0	1	29 1
+51	20	0.0	1	16 4
+52	14	0.0	1	13 1
+53	22	0.0	1	20 2
+54	62	0.0	1	60 2
+55	18	0.0	1	14 4
+56	32	0.0	1	30 2
+57	78	0.0	1	75 3
+58	56	0.0	1	56
+59	13	0.0	1	12 1
+60	25	0.0	1	25
+61	27	0.0	1	26 1
+62	17	0.0	1	17
+63	41	0.0	1	40 1
+64	20	0.0	1	19 1
+65	15	0.0	1	14 1
+66	5	0.0	1	5
+67	9	0.0	1	9
+68	9	0.0	1	8 1
+69	14	0.0	1	14
+70	9	0.0	1	9
+71	9	0.0	1	9
+72	14	0.0	1	13 1
+73	23	0.0	1	23
+74	26	0.0	1	25 1
+75	47	0.0	1	43 4
+76	32	0.0	1	30 2
+77	69	0.0	1	65 4
+78	104	0.0	1	101 3
+79	124	0.0	1	111 13
+80	339	0.0	1	324 15
+81	145	0.0	1	138 7
+82	56	0.0	1	51 5
+83	37	0.0	1	32 5
+84	32	0.0	1	30 2
+85	11	0.0	1	9 2
+86	10	0.0	1	7 3
+87	8	0.0	1	6 2
+88	8	0.0	1	7 1
+89	9	0.0	1	5 4
+90	4	0.0	1	4
+91	7	0.0	1	7
+92	7	0.0	1	7
+93	4	0.0	1	2 2
+94	137	0.0	1	134 3
+95	12	0.0	1	11 1
+96	10	0.0	1	6 4
+97	8	0.0	1	8
+98	7	0.0	1	6 1
+99	2	0.0	1	1 1
+100	2	0.0	1	2
+101	1	0.0	1	1
+102	2	0.0	1	2
+103	3	0.0	1	3
+105	2	0.0	1	2
+106	4	0.0	1	3 1
+107	2	0.0	1	1 1
+108	2	0.0	1	2
+109	5	0.0	1	5
+110	5	0.0	1	4 1
+112	3	0.0	1	2 1
+113	5	0.0	1	4 1
+114	4	0.0	1	3 1
+115	3	0.0	1	2 1
+116	1	0.0	1	0 1
+117	3	0.0	1	3
+120	2	0.0	1	2
+121	2	0.0	1	2
+123	2	0.0	1	1 1
+124	1	0.0	1	0 1
+125	1	0.0	1	1
+126	2	0.0	1	2
+127	11	0.0	1	9 2
+128	2	0.0	1	2
+130	6	0.0	1	5 1
+131	2	0.0	1	1 1
+132	1	0.0	1	1
+133	2	0.0	1	2
+134	7	0.0	1	5 2
+135	2	0.0	1	2
+136	10	0.0	1	7 3
+137	2	0.0	1	1 1
+138	2	0.0	1	2
+139	1	0.0	1	1
+140	2	0.0	1	1 1
+143	2	0.0	1	2
+144	1	0.0	1	1
+145	2	0.0	1	2
+147	8	0.0	1	8
+148	2	0.0	1	1 1
+149	6	0.0	1	5 1
+150	3	0.0	1	3
+151	2	0.0	1	2
+153	3	0.0	1	3
+154	3	0.0	1	3
+155	2	0.0	1	1 1
+156	11	0.0	1	10 1
+157	2	0.0	1	2
+160	3	0.0	1	3
+161	2	0.0	1	2
+162	1	0.0	1	1
+164	1	0.0	1	1
+165	3	0.0	1	3
+166	3	0.0	1	3
+167	2	0.0	1	2
+169	3	0.0	1	3
+172	1	0.0	1	1
+175	2	0.0	1	2
+176	2	0.0	1	2
+177	1	0.0	1	1
+178	1	0.0	1	1
+180	1	0.0	1	1
+182	1	0.0	1	1
+184	1	0.0	1	1
+185	1	0.0	1	1
+186	1	0.0	1	1
+188	1	0.0	1	1
+193	1	0.0	1	1
+195	2	0.0	1	2
+197	1	0.0	1	1
+198	1	0.0	1	1
+199	1	0.0	1	1
+203	1	0.0	1	1
+205	2	0.0	1	2
+207	1	0.0	1	1
+208	1	0.0	1	1
+209	1	0.0	1	1
+210	7	0.0	1	5 2
+212	1	0.0	1	1
+213	2	0.0	1	2
+214	1	0.0	1	1
+215	1	0.0	1	1
+217	2	0.0	1	0 2
+223	1	0.0	1	1
+250	1	0.0	1	0 1
+251	15	0.0	1	0 15
+
+RUN STATISTICS FOR INPUT FILE: E65/host_removal/E65_R2.fastq.gz
+=============================================
+840593 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files E65_R1_trimmed.fq.gz and E65_R2_trimmed.fq.gz
+file_1: E65_R1_trimmed.fq.gz, file_2: E65_R2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: E65_R1_trimmed.fq.gz and E65_R2_trimmed.fq.gz <<<<<
+Writing validated paired-end Read 1 reads to E65_R1_val_1.fq.gz
+Writing validated paired-end Read 2 reads to E65_R2_val_2.fq.gz
+
+Total number of sequences analysed: 840593
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 996 (0.12%)
+
+
+  >>> Now running FastQC on the validated data E65_R1_val_1.fq.gz<<<
+
+Started analysis of E65_R1_val_1.fq.gz
+Approx 5% complete for E65_R1_val_1.fq.gz
+Approx 10% complete for E65_R1_val_1.fq.gz
+Approx 15% complete for E65_R1_val_1.fq.gz
+Approx 20% complete for E65_R1_val_1.fq.gz
+Approx 25% complete for E65_R1_val_1.fq.gz
+Approx 30% complete for E65_R1_val_1.fq.gz
+Approx 35% complete for E65_R1_val_1.fq.gz
+Approx 40% complete for E65_R1_val_1.fq.gz
+Approx 45% complete for E65_R1_val_1.fq.gz
+Approx 50% complete for E65_R1_val_1.fq.gz
+Approx 55% complete for E65_R1_val_1.fq.gz
+Approx 60% complete for E65_R1_val_1.fq.gz
+Approx 65% complete for E65_R1_val_1.fq.gz
+Approx 70% complete for E65_R1_val_1.fq.gz
+Approx 75% complete for E65_R1_val_1.fq.gz
+Approx 80% complete for E65_R1_val_1.fq.gz
+Approx 85% complete for E65_R1_val_1.fq.gz
+Approx 90% complete for E65_R1_val_1.fq.gz
+Approx 95% complete for E65_R1_val_1.fq.gz
+
+  >>> Now running FastQC on the validated data E65_R2_val_2.fq.gz<<<
+
+Started analysis of E65_R2_val_2.fq.gz
+Approx 5% complete for E65_R2_val_2.fq.gz
+Approx 10% complete for E65_R2_val_2.fq.gz
+Approx 15% complete for E65_R2_val_2.fq.gz
+Approx 20% complete for E65_R2_val_2.fq.gz
+Approx 25% complete for E65_R2_val_2.fq.gz
+Approx 30% complete for E65_R2_val_2.fq.gz
+Approx 35% complete for E65_R2_val_2.fq.gz
+Approx 40% complete for E65_R2_val_2.fq.gz
+Approx 45% complete for E65_R2_val_2.fq.gz
+Approx 50% complete for E65_R2_val_2.fq.gz
+Approx 55% complete for E65_R2_val_2.fq.gz
+Approx 60% complete for E65_R2_val_2.fq.gz
+Approx 65% complete for E65_R2_val_2.fq.gz
+Approx 70% complete for E65_R2_val_2.fq.gz
+Approx 75% complete for E65_R2_val_2.fq.gz
+Approx 80% complete for E65_R2_val_2.fq.gz
+Approx 85% complete for E65_R2_val_2.fq.gz
+Approx 90% complete for E65_R2_val_2.fq.gz
+Approx 95% complete for E65_R2_val_2.fq.gz
+Deleting both intermediate output files E65_R1_trimmed.fq.gz and E65_R2_trimmed.fq.gz
+
+====================================================================================================
+

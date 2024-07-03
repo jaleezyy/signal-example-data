@@ -1,0 +1,7 @@
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[W::bseq_read] the 2nd file has fewer sequences.
+[W::bseq_read] the 2nd file has fewer sequences.
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa mem -t 2 /workspace/lab/mcarthurlab/nasirja/covid-19-signal/data/composite_human_viral_reference.fna NORW-F0452-ARTIC-LoCost/raw_fastq/NORW-F0452-ARTIC-LoCost_R1.fastq.gz NORW-F0452-ARTIC-LoCost/raw_fastq/NORW-F0452-ARTIC-LoCost_R2.fastq.gz
+[main] Real time: 5.762 sec; CPU: 5.703 sec
+No reads found during host filtering

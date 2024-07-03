@@ -1,0 +1,58 @@
+SARS-CoV-2 Illumina GeNome Assembly Line (SIGNAL), version v1.6.6
+https://github.com/jaleezyy/covid-19-signal
+
+Note: Asterisks (*) indicates a discrepancy between iVar (default) and FreeBayes (if run)
+
+Sample: NORW-EC69F-ARTIC-LoCost
+
+Pangolin Lineage Assignment
+    Unassigned
+
+Nextclade Clade Assignment
+    nan
+
+Data Volume
+    Raw Data (read pairs): 0
+    Raw Data (base pairs): 0
+    Post Primer Removal (read pairs): 0
+    Post Primer Removal (base pairs): 0
+    Post Trim (read pairs): 
+
+Quality Control Flags
+    FAIL  Genome Fraction greater than 90%
+    FAIL  No indels detected (maximum length 85bp)
+    FAIL  Depth of coverage >= 2000x
+    FAIL  Reads per base sequence quality
+    FAIL  Sequencing adapter removed
+    FAIL  At least 90% of positions have coverage >= 100x
+    WARN  At least 90% of positions have coverage >= 1000x
+
+FASTQC Flags
+
+Kraken2
+    Reads SARS-CoV-2 (%): 0
+
+QUAST
+    Genome Length (bp): 0.0
+    Genome Fraction (%): 0.0
+    N's per 100 kbp: 0.0
+    Genomic Features: Failure to align to reference
+    Mismatches: Failure to align to reference
+    Mismatches per 100 kbp: Failure to align to reference
+    Indels: Failure to align to reference
+    Indels per 100 kbp: Failure to align to reference
+    Average Depth of Coverage: 0.0
+        Fraction with 0 coverage: 1.0
+        Fraction with 1x-10x coverage: 0.0
+        Fraction with 11x-100x coverage: 0.0
+        Fraction with 101x-1000x coverage: 0.0
+        Fraction with 1001x-2000x coverage: 0.0
+        Fraction with 2001x-10000x coverage: 0.0
+        Fraction with > 10000x coverage: 0.0
+    5' Ns: 0
+    3' Ns: 0
+
+Variants in Consensus Genome (iVar)
+
+Unique Variants in Consensus Genome (FreeBayes)
+

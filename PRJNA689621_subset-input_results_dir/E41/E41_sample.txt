@@ -1,0 +1,97 @@
+SARS-CoV-2 Illumina GeNome Assembly Line (SIGNAL), version v1.6.6
+https://github.com/jaleezyy/covid-19-signal
+
+Note: Asterisks (*) indicates a discrepancy between iVar (default) and FreeBayes (if run)
+
+Sample: E41
+
+Pangolin Lineage Assignment
+    B.1.147
+
+Nextclade Clade Assignment
+    20A
+
+Data Volume
+    Raw Data (read pairs): 841282
+    Raw Data (base pairs): 422323564
+    Post Primer Removal (read pairs): 841282
+    Post Primer Removal (base pairs): 409560736
+    Post Trim (read pairs): 840252
+
+Quality Control Flags
+    PASS  Genome Fraction greater than 90%
+    PASS  No indels detected (maximum length 85bp)
+    PASS  Depth of coverage >= 2000x
+    WARN  All variants with at least 90% frequency among reads
+    WARN  Frameshifts in SARS-CoV-2 open reading frames
+    PASS  Reads per base sequence quality
+    PASS  Sequencing adapter removed
+    PASS  At least 90% of positions have coverage >= 100x
+    WARN  At least 90% of positions have coverage >= 1000x
+
+FASTQC Flags
+    FAIL  Per base sequence content
+    FAIL  Per sequence GC content
+    WARN  Sequence Length Distribution
+
+Kraken2
+    Reads SARS-CoV-2 (%): 89.62
+
+QUAST
+    Genome Length (bp): 29903.0
+    Genome Fraction (%): 99.241
+    N's per 100 kbp: 1337.66
+    Genomic Features: 21 + 3 part
+    Mismatches: 11.0
+    Mismatches per 100 kbp: 37.07
+    Indels: 0.0
+    Indels per 100 kbp: 0.0
+    Average Depth of Coverage: 11157.4
+        Fraction with 0 coverage: 0.003
+        Fraction with 1x-10x coverage: 0.016
+        Fraction with 11x-100x coverage: 0.061
+        Fraction with 101x-1000x coverage: 0.124
+        Fraction with 1001x-2000x coverage: 0.088
+        Fraction with 2001x-10000x coverage: 0.314
+        Fraction with > 10000x coverage: 0.393
+    5' Ns: 29
+    3' Ns: 67
+
+Variants in Consensus Genome (iVar)
+    C635T C3037T C10605T C14408T T14551C C15324T C17690T C21057T A23403G C25433T
+    G28183T G28621T
+
+Unique Variants in Consensus Genome (FreeBayes)
+    C241T
+
+Nucleotide Differences in Consensus Genomes (FreeBayes as reference)
+
+Variants in Read Alignment (BreSeq)
+    RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+    RA;	635;	C→T;	(29.7%);	'R124C (CGT→TGT)';	'orf1ab →'
+    RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+    RA;	4,752;	C→T;	(8.9%);	'T1496I (ACA→ATA)';	'orf1ab →'
+    RA;	7,430;	T→C;	(10.2%);	'S2389P (TCA→CCA)';	'orf1ab →'
+    RA;	7,609:1;	+A;	(5.8%);	'coding (7344/13203nt)';	'orf1ab →'
+    RA;	10,605;	C→T;	(100%);	'P3447L (CCT→CTT)';	'orf1ab →'
+    RA;	11,152;	C→T;	(7.4%);	'V3629V (GTC→GTT)';	'orf1ab →'
+    RA;	12,367;	C→T;	(16.5%);	'F4034F (TTC→TTT)';	'orf1ab →'
+    RA;	12,778;	C→A;	(5.6%);	'Y4171* (TAC→TAA)';	'orf1ab →'
+    RA;	13,174;	T→C;	(5.9%);	'G4303G (GGT→GGC)';	'orf1ab →'
+    RA;	13,541;	C→T;	(20.8%);	'A25V (GCT→GTT)';	'orf1ab →'
+    RA;	14,408;	C→T;	(100%);	'P314L (CCT→CTT)';	'orf1ab →'
+    RA;	14,551;	T→C;	(13.5%);	'L362L (TTA→CTA)';	'orf1ab →'
+    RA;	15,324;	C→T;	(100%);	'N619N (AAC→AAT)';	'orf1ab →'
+    RA;	17,690;	C→T;	(100%);	'S1408L (TCA→TTA)';	'orf1ab →'
+    JC;	19,143;	Δ5 bp;	(57.3%);	'coding (5676-5680/8088nt)';	'orf1ab →'
+    RA;	21,057;	C→T;	(100%);	'D2530D (GAC→GAT)';	'orf1ab →'
+    RA;	22,294;	Δ1 bp;	(7.5%);	'coding (732/3822nt)';	'S →'
+    RA;	22,676;	G→A;	(7.4%);	'A372T (GCA→ACA)';	'S →'
+    RA;	23,403;	A→G;	(100%);	'D614G (GAT→GGT)';	'S →'
+    RA;	25,433;	C→T;	(100%);	'T14I (ACT→ATT)';	'ORF3a →'
+    RA;	25,521;	C→T;	(6.7%);	'F43F (TTC→TTT)';	'ORF3a →'
+    JC;	26,779;	Δ42 bp;	(7.7%);	'coding (257-298/669nt)';	'M →'
+    RA;	28,183;	G→T;	(100%);	'S97I (AGT→ATT)';	'ORF8 →'
+    RA;	28,253;	C→T;	(19.4%);	'F120F (TTC→TTT)';	'ORF8 →'
+    RA;	28,621;	G→T;	(100%);	'G116G (GGG→GGT)';	'N →'
+

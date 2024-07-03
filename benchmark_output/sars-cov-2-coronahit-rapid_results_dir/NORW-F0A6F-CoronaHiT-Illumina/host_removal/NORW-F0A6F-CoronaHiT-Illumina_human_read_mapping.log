@@ -1,0 +1,28 @@
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 113656 sequences (15920026 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (22, 56752, 5, 30)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (158, 213, 260)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 464)
+[M::mem_pestat] mean and std.dev: (204.59, 67.13)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 566)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (151, 219, 296)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 586)
+[M::mem_pestat] mean and std.dev: (221.95, 87.84)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 731)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (96, 170, 298)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 702)
+[M::mem_pestat] mean and std.dev: (180.39, 96.78)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 904)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 113656 reads in 7.866 CPU sec, 3.954 real sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa mem -t 2 /workspace/lab/mcarthurlab/nasirja/covid-19-signal/data/composite_human_viral_reference.fna NORW-F0A6F-CoronaHiT-Illumina/raw_fastq/NORW-F0A6F-CoronaHiT-Illumina_R1.fastq.gz NORW-F0A6F-CoronaHiT-Illumina/raw_fastq/NORW-F0A6F-CoronaHiT-Illumina_R2.fastq.gz
+[main] Real time: 10.544 sec; CPU: 12.687 sec
+viral read count = 113645 (99.99%)
+human read count = 11 (0.01%) 
+unmapped read count = 0 (0.00%)

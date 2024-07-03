@@ -1,0 +1,240 @@
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 4.8
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 2 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-voivoc_results_dir/hCoV-19-England-CAMC-14E7A0A-2021/adapter_trimmed/
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> hCoV-19-England-CAMC-14E7A0A-2021/host_removal/hCoV-19-England-CAMC-14E7A0A-2021_R1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Nextera	1	CTGTCTCTTATA	1000000	0.00
+smallRNA	0	TGGAATTCTCGG	1000000	0.00
+Illumina	0	AGATCGGAAGAGC	1000000	0.00
+Using Nextera adapter for trimming (count: 1). Second best hit was smallRNA (count: 0)
+
+Writing report to '/workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-voivoc_results_dir/hCoV-19-England-CAMC-14E7A0A-2021/adapter_trimmed/hCoV-19-England-CAMC-14E7A0A-2021_R1.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: hCoV-19-England-CAMC-14E7A0A-2021/host_removal/hCoV-19-England-CAMC-14E7A0A-2021_R1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.8
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.8). Setting -j 2
+Writing final adapter and quality trimmed output to hCoV-19-England-CAMC-14E7A0A-2021_R1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file hCoV-19-England-CAMC-14E7A0A-2021/host_removal/hCoV-19-England-CAMC-14E7A0A-2021_R1.fastq.gz <<< 
+This is cutadapt 4.8 with Python 3.12.3
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA hCoV-19-England-CAMC-14E7A0A-2021/host_removal/hCoV-19-England-CAMC-14E7A0A-2021_R1.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 11.320 s (5.989 µs/read; 10.02 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:               1,890,017
+Reads with adapters:                   776,679 (41.1%)
+Reads written (passing filters):     1,890,017 (100.0%)
+
+Total basepairs processed:   416,641,196 bp
+Quality-trimmed:                  36,348 bp (0.0%)
+Total written (filtered):    415,518,766 bp (99.7%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 776679 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 27.1%
+  C: 21.7%
+  G: 26.9%
+  T: 24.3%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	566158	472504.2	0	566158
+2	145699	118126.1	0	145699
+3	33484	29531.5	0	33484
+4	31252	7382.9	0	31252
+5	60	1845.7	0	60
+6	6	461.4	0	6
+8	1	28.8	0	1
+16	1	0.1	1	1
+24	1	0.1	1	0 1
+29	1	0.1	1	0 1
+56	1	0.1	1	0 1
+64	1	0.1	1	0 1
+75	1	0.1	1	0 1
+125	1	0.1	1	0 1
+134	1	0.1	1	0 1
+195	1	0.1	1	0 1
+197	2	0.1	1	0 2
+199	1	0.1	1	0 1
+201	6	0.1	1	0 6
+205	1	0.1	1	0 1
+
+RUN STATISTICS FOR INPUT FILE: hCoV-19-England-CAMC-14E7A0A-2021/host_removal/hCoV-19-England-CAMC-14E7A0A-2021_R1.fastq.gz
+=============================================
+1890017 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to '/workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-voivoc_results_dir/hCoV-19-England-CAMC-14E7A0A-2021/adapter_trimmed/hCoV-19-England-CAMC-14E7A0A-2021_R2.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: hCoV-19-England-CAMC-14E7A0A-2021/host_removal/hCoV-19-England-CAMC-14E7A0A-2021_R2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.8
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.8). Setting -j -j 2
+Writing final adapter and quality trimmed output to hCoV-19-England-CAMC-14E7A0A-2021_R2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file hCoV-19-England-CAMC-14E7A0A-2021/host_removal/hCoV-19-England-CAMC-14E7A0A-2021_R2.fastq.gz <<< 
+This is cutadapt 4.8 with Python 3.12.3
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA hCoV-19-England-CAMC-14E7A0A-2021/host_removal/hCoV-19-England-CAMC-14E7A0A-2021_R2.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 11.964 s (6.330 µs/read; 9.48 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:               1,890,017
+Reads with adapters:                   768,684 (40.7%)
+Reads written (passing filters):     1,890,017 (100.0%)
+
+Total basepairs processed:   378,826,947 bp
+Quality-trimmed:                  46,475 bp (0.0%)
+Total written (filtered):    377,735,288 bp (99.7%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 768684 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 20.8%
+  C: 23.2%
+  G: 24.2%
+  T: 31.7%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	551516	472504.2	0	551516
+2	159297	118126.1	0	159297
+3	57265	29531.5	0	57265
+4	571	7382.9	0	571
+5	26	1845.7	0	26
+6	4	461.4	0	4
+147	1	0.1	1	0 1
+156	1	0.1	1	0 1
+158	1	0.1	1	0 1
+190	2	0.1	1	0 2
+
+RUN STATISTICS FOR INPUT FILE: hCoV-19-England-CAMC-14E7A0A-2021/host_removal/hCoV-19-England-CAMC-14E7A0A-2021_R2.fastq.gz
+=============================================
+1890017 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files hCoV-19-England-CAMC-14E7A0A-2021_R1_trimmed.fq.gz and hCoV-19-England-CAMC-14E7A0A-2021_R2_trimmed.fq.gz
+file_1: hCoV-19-England-CAMC-14E7A0A-2021_R1_trimmed.fq.gz, file_2: hCoV-19-England-CAMC-14E7A0A-2021_R2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: hCoV-19-England-CAMC-14E7A0A-2021_R1_trimmed.fq.gz and hCoV-19-England-CAMC-14E7A0A-2021_R2_trimmed.fq.gz <<<<<
+Writing validated paired-end Read 1 reads to hCoV-19-England-CAMC-14E7A0A-2021_R1_val_1.fq.gz
+Writing validated paired-end Read 2 reads to hCoV-19-England-CAMC-14E7A0A-2021_R2_val_2.fq.gz
+
+Total number of sequences analysed: 1890017
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 3 (0.00%)
+
+
+  >>> Now running FastQC on the validated data hCoV-19-England-CAMC-14E7A0A-2021_R1_val_1.fq.gz<<<
+
+Started analysis of hCoV-19-England-CAMC-14E7A0A-2021_R1_val_1.fq.gz
+Approx 5% complete for hCoV-19-England-CAMC-14E7A0A-2021_R1_val_1.fq.gz
+Approx 10% complete for hCoV-19-England-CAMC-14E7A0A-2021_R1_val_1.fq.gz
+Approx 15% complete for hCoV-19-England-CAMC-14E7A0A-2021_R1_val_1.fq.gz
+Approx 20% complete for hCoV-19-England-CAMC-14E7A0A-2021_R1_val_1.fq.gz
+Approx 25% complete for hCoV-19-England-CAMC-14E7A0A-2021_R1_val_1.fq.gz
+Approx 30% complete for hCoV-19-England-CAMC-14E7A0A-2021_R1_val_1.fq.gz
+Approx 35% complete for hCoV-19-England-CAMC-14E7A0A-2021_R1_val_1.fq.gz
+Approx 40% complete for hCoV-19-England-CAMC-14E7A0A-2021_R1_val_1.fq.gz
+Approx 45% complete for hCoV-19-England-CAMC-14E7A0A-2021_R1_val_1.fq.gz
+Approx 50% complete for hCoV-19-England-CAMC-14E7A0A-2021_R1_val_1.fq.gz
+Approx 55% complete for hCoV-19-England-CAMC-14E7A0A-2021_R1_val_1.fq.gz
+Approx 60% complete for hCoV-19-England-CAMC-14E7A0A-2021_R1_val_1.fq.gz
+Approx 65% complete for hCoV-19-England-CAMC-14E7A0A-2021_R1_val_1.fq.gz
+Approx 70% complete for hCoV-19-England-CAMC-14E7A0A-2021_R1_val_1.fq.gz
+Approx 75% complete for hCoV-19-England-CAMC-14E7A0A-2021_R1_val_1.fq.gz
+Approx 80% complete for hCoV-19-England-CAMC-14E7A0A-2021_R1_val_1.fq.gz
+Approx 85% complete for hCoV-19-England-CAMC-14E7A0A-2021_R1_val_1.fq.gz
+Approx 90% complete for hCoV-19-England-CAMC-14E7A0A-2021_R1_val_1.fq.gz
+Approx 95% complete for hCoV-19-England-CAMC-14E7A0A-2021_R1_val_1.fq.gz
+
+  >>> Now running FastQC on the validated data hCoV-19-England-CAMC-14E7A0A-2021_R2_val_2.fq.gz<<<
+
+Started analysis of hCoV-19-England-CAMC-14E7A0A-2021_R2_val_2.fq.gz
+Approx 5% complete for hCoV-19-England-CAMC-14E7A0A-2021_R2_val_2.fq.gz
+Approx 10% complete for hCoV-19-England-CAMC-14E7A0A-2021_R2_val_2.fq.gz
+Approx 15% complete for hCoV-19-England-CAMC-14E7A0A-2021_R2_val_2.fq.gz
+Approx 20% complete for hCoV-19-England-CAMC-14E7A0A-2021_R2_val_2.fq.gz
+Approx 25% complete for hCoV-19-England-CAMC-14E7A0A-2021_R2_val_2.fq.gz
+Approx 30% complete for hCoV-19-England-CAMC-14E7A0A-2021_R2_val_2.fq.gz
+Approx 35% complete for hCoV-19-England-CAMC-14E7A0A-2021_R2_val_2.fq.gz
+Approx 40% complete for hCoV-19-England-CAMC-14E7A0A-2021_R2_val_2.fq.gz
+Approx 45% complete for hCoV-19-England-CAMC-14E7A0A-2021_R2_val_2.fq.gz
+Approx 50% complete for hCoV-19-England-CAMC-14E7A0A-2021_R2_val_2.fq.gz
+Approx 55% complete for hCoV-19-England-CAMC-14E7A0A-2021_R2_val_2.fq.gz
+Approx 60% complete for hCoV-19-England-CAMC-14E7A0A-2021_R2_val_2.fq.gz
+Approx 65% complete for hCoV-19-England-CAMC-14E7A0A-2021_R2_val_2.fq.gz
+Approx 70% complete for hCoV-19-England-CAMC-14E7A0A-2021_R2_val_2.fq.gz
+Approx 75% complete for hCoV-19-England-CAMC-14E7A0A-2021_R2_val_2.fq.gz
+Approx 80% complete for hCoV-19-England-CAMC-14E7A0A-2021_R2_val_2.fq.gz
+Approx 85% complete for hCoV-19-England-CAMC-14E7A0A-2021_R2_val_2.fq.gz
+Approx 90% complete for hCoV-19-England-CAMC-14E7A0A-2021_R2_val_2.fq.gz
+Approx 95% complete for hCoV-19-England-CAMC-14E7A0A-2021_R2_val_2.fq.gz
+Approx 100% complete for hCoV-19-England-CAMC-14E7A0A-2021_R2_val_2.fq.gz
+Deleting both intermediate output files hCoV-19-England-CAMC-14E7A0A-2021_R1_trimmed.fq.gz and hCoV-19-England-CAMC-14E7A0A-2021_R2_trimmed.fq.gz
+
+====================================================================================================
+

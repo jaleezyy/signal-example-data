@@ -1,0 +1,73 @@
+SARS-CoV-2 Illumina GeNome Assembly Line (SIGNAL), version v1.6.6
+https://github.com/jaleezyy/covid-19-signal
+
+Note: Asterisks (*) indicates a discrepancy between iVar (default) and FreeBayes (if run)
+
+Sample: benchmark-bad11
+
+Pangolin Lineage Assignment
+    B
+
+Nextclade Clade Assignment
+    19A
+
+Data Volume
+    Raw Data (read pairs): 137886
+    Raw Data (base pairs): 32754685
+    Post Primer Removal (read pairs): 137886
+    Post Primer Removal (base pairs): 32577309
+    Post Trim (read pairs): 137745
+
+Quality Control Flags
+    FAIL  Genome Fraction greater than 90%
+    PASS  No indels detected (maximum length 85bp)
+    FAIL  Depth of coverage >= 2000x
+    WARN  All variants with at least 90% frequency among reads
+    PASS  Frameshifts in SARS-CoV-2 open reading frames
+    PASS  Reads per base sequence quality
+    PASS  Sequencing adapter removed
+    FAIL  At least 90% of positions have coverage >= 100x
+    WARN  At least 90% of positions have coverage >= 1000x
+
+FASTQC Flags
+    FAIL  Per base sequence content
+    WARN  Sequence Length Distribution
+
+Kraken2
+    Reads SARS-CoV-2 (%): 92.82
+
+QUAST
+    Genome Length (bp): 29903.0
+    Genome Fraction (%): 89.74
+    N's per 100 kbp: 10697.92
+    Genomic Features: 10 + 10 part
+    Mismatches: 0.0
+    Mismatches per 100 kbp: 0.0
+    Indels: 0.0
+    Indels per 100 kbp: 0.0
+    Average Depth of Coverage: 1043.0
+        Fraction with 0 coverage: 0.065
+        Fraction with 1x-10x coverage: 0.044
+        Fraction with 11x-100x coverage: 0.049
+        Fraction with 101x-1000x coverage: 0.358
+        Fraction with 1001x-2000x coverage: 0.386
+        Fraction with 2001x-10000x coverage: 0.098
+        Fraction with > 10000x coverage: 0.0
+    5' Ns: 44
+    3' Ns: 67
+
+Variants in Consensus Genome (iVar)
+    A16044C
+
+Unique Variants in Consensus Genome (FreeBayes)
+
+Nucleotide Differences in Consensus Genomes (FreeBayes as reference)
+
+Variants in Read Alignment (BreSeq)
+    RA;	2,725;	A→G;	(9.6%);	'P820P (CCA→CCG)';	'orf1ab →'
+    JC;	8,364;	78 bp x 2;	(10.4%);	'duplication';	'orf1ab →'
+    RA;	20,564;	C→G;	(12.7%);	'S2366C (TCT→TGT)';	'orf1ab →'
+    RA;	25,168;	A→T;	(10.4%);	'E1202D (GAA→GAT)';	'S →'
+    RA;	27,784;	Δ1 bp;	(7.9%);	'intergenic (+25/-110)';	'ORF7a →/→ ORF8'
+    RA;	28,801;	C→T;	(12.4%);	'S176S (AGC→AGT)';	'N →'
+

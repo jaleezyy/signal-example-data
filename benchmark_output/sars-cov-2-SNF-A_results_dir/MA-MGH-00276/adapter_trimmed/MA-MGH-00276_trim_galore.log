@@ -1,0 +1,385 @@
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 4.8
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 2 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-SNF-A_results_dir/MA-MGH-00276/adapter_trimmed/
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> MA-MGH-00276/host_removal/MA-MGH-00276_R1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Nextera	77597	CTGTCTCTTATA	1000000	7.76
+Illumina	0	AGATCGGAAGAGC	1000000	0.00
+smallRNA	0	TGGAATTCTCGG	1000000	0.00
+Using Nextera adapter for trimming (count: 77597). Second best hit was Illumina (count: 0)
+
+Writing report to '/workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-SNF-A_results_dir/MA-MGH-00276/adapter_trimmed/MA-MGH-00276_R1.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: MA-MGH-00276/host_removal/MA-MGH-00276_R1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.8
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.8). Setting -j 2
+Writing final adapter and quality trimmed output to MA-MGH-00276_R1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file MA-MGH-00276/host_removal/MA-MGH-00276_R1.fastq.gz <<< 
+This is cutadapt 4.8 with Python 3.12.3
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA MA-MGH-00276/host_removal/MA-MGH-00276_R1.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 11.442 s (10.261 µs/read; 5.85 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:               1,115,070
+Reads with adapters:                   405,652 (36.4%)
+Reads written (passing filters):     1,115,070 (100.0%)
+
+Total basepairs processed:   112,622,070 bp
+Quality-trimmed:               2,198,362 bp (2.0%)
+Total written (filtered):    106,503,865 bp (94.6%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 405652 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 19.8%
+  C: 28.6%
+  G: 28.6%
+  T: 23.0%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	218930	278767.5	0	218930
+2	57034	69691.9	0	57034
+3	18390	17423.0	0	18390
+4	5794	4355.7	0	5794
+5	3496	1088.9	0	3496
+6	2246	272.2	0	2246
+7	2121	68.1	0	2121
+8	2047	17.0	0	2047
+9	1962	4.3	0	1959 3
+10	2228	1.1	1	2053 175
+11	1927	0.3	1	1832 95
+12	2232	0.1	1	2076 156
+13	1897	0.1	1	1821 76
+14	1999	0.1	1	1871 128
+15	1966	0.1	1	1861 105
+16	2255	0.1	1	2078 177
+17	1775	0.1	1	1708 67
+18	1899	0.1	1	1800 99
+19	1786	0.1	1	1702 84
+20	2031	0.1	1	1934 97
+21	1934	0.1	1	1825 109
+22	1653	0.1	1	1599 54
+23	1997	0.1	1	1891 106
+24	1634	0.1	1	1587 47
+25	1754	0.1	1	1681 73
+26	1661	0.1	1	1581 80
+27	1730	0.1	1	1667 63
+28	1719	0.1	1	1655 64
+29	1866	0.1	1	1766 100
+30	1544	0.1	1	1500 44
+31	1819	0.1	1	1724 95
+32	1489	0.1	1	1443 46
+33	1673	0.1	1	1618 55
+34	1652	0.1	1	1583 69
+35	1450	0.1	1	1420 30
+36	1659	0.1	1	1587 72
+37	1454	0.1	1	1405 49
+38	1492	0.1	1	1429 63
+39	1495	0.1	1	1434 61
+40	1423	0.1	1	1362 61
+41	1600	0.1	1	1531 69
+42	1516	0.1	1	1457 59
+43	1667	0.1	1	1577 90
+44	1322	0.1	1	1272 50
+45	2417	0.1	1	2354 63
+46	399	0.1	1	379 20
+47	1149	0.1	1	1132 17
+48	1698	0.1	1	1645 53
+49	1353	0.1	1	1315 38
+50	1066	0.1	1	1016 50
+51	1591	0.1	1	1548 43
+52	1264	0.1	1	1230 34
+53	1200	0.1	1	1160 40
+54	1578	0.1	1	1542 36
+55	1674	0.1	1	1641 33
+56	1060	0.1	1	1030 30
+57	1325	0.1	1	1309 16
+58	1060	0.1	1	1037 23
+59	1594	0.1	1	1562 32
+60	906	0.1	1	892 14
+61	612	0.1	1	601 11
+62	1864	0.1	1	1842 22
+63	1339	0.1	1	1322 17
+64	839	0.1	1	825 14
+65	1021	0.1	1	1012 9
+66	1039	0.1	1	1021 18
+67	493	0.1	1	488 5
+68	868	0.1	1	854 14
+69	1013	0.1	1	992 21
+70	1283	0.1	1	1265 18
+71	39	0.1	1	35 4
+72	76	0.1	1	74 2
+73	275	0.1	1	269 6
+74	240	0.1	1	237 3
+75	52	0.1	1	51 1
+76	8	0.1	1	8
+77	8	0.1	1	7 1
+78	10	0.1	1	8 2
+79	4	0.1	1	3 1
+80	5	0.1	1	3 2
+81	2	0.1	1	1 1
+82	5	0.1	1	5
+83	1	0.1	1	1
+88	2	0.1	1	1 1
+89	1	0.1	1	1
+91	1	0.1	1	1
+
+RUN STATISTICS FOR INPUT FILE: MA-MGH-00276/host_removal/MA-MGH-00276_R1.fastq.gz
+=============================================
+1115070 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to '/workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-SNF-A_results_dir/MA-MGH-00276/adapter_trimmed/MA-MGH-00276_R2.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: MA-MGH-00276/host_removal/MA-MGH-00276_R2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.8
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.8). Setting -j -j 2
+Writing final adapter and quality trimmed output to MA-MGH-00276_R2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file MA-MGH-00276/host_removal/MA-MGH-00276_R2.fastq.gz <<< 
+This is cutadapt 4.8 with Python 3.12.3
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA MA-MGH-00276/host_removal/MA-MGH-00276_R2.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 13.119 s (11.765 µs/read; 5.10 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:               1,115,070
+Reads with adapters:                   410,803 (36.8%)
+Reads written (passing filters):     1,115,070 (100.0%)
+
+Total basepairs processed:   112,622,070 bp
+Quality-trimmed:               1,930,882 bp (1.7%)
+Total written (filtered):    106,840,654 bp (94.9%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 410803 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 20.1%
+  C: 28.8%
+  G: 28.5%
+  T: 22.7%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	224601	278767.5	0	224601
+2	58603	69691.9	0	58603
+3	18160	17423.0	0	18160
+4	6034	4355.7	0	6034
+5	3340	1088.9	0	3340
+6	2193	272.2	0	2193
+7	2078	68.1	0	2078
+8	2021	17.0	0	2021
+9	1905	4.3	0	1899 6
+10	2164	1.1	1	1966 198
+11	1890	0.3	1	1800 90
+12	2075	0.1	1	1924 151
+13	1876	0.1	1	1802 74
+14	1935	0.1	1	1808 127
+15	1903	0.1	1	1808 95
+16	2061	0.1	1	1908 153
+17	1803	0.1	1	1697 106
+18	1870	0.1	1	1759 111
+19	1894	0.1	1	1761 133
+20	1838	0.1	1	1773 65
+21	1792	0.1	1	1661 131
+22	1856	0.1	1	1724 132
+23	1749	0.1	1	1677 72
+24	1761	0.1	1	1662 99
+25	1717	0.1	1	1629 88
+26	1542	0.1	1	1489 53
+27	1732	0.1	1	1650 82
+28	1732	0.1	1	1642 90
+29	1615	0.1	1	1548 67
+30	1667	0.1	1	1564 103
+31	1713	0.1	1	1616 97
+32	1573	0.1	1	1514 59
+33	1893	0.1	1	1787 106
+34	1362	0.1	1	1278 84
+35	1515	0.1	1	1473 42
+36	1583	0.1	1	1517 66
+37	1523	0.1	1	1479 44
+38	1335	0.1	1	1272 63
+39	1462	0.1	1	1413 49
+40	1764	0.1	1	1706 58
+41	1202	0.1	1	1139 63
+42	1651	0.1	1	1589 62
+43	1257	0.1	1	1201 56
+44	1479	0.1	1	1416 63
+45	1425	0.1	1	1380 45
+46	1378	0.1	1	1303 75
+47	2803	0.1	1	2754 49
+48	657	0.1	1	605 52
+49	1254	0.1	1	1198 56
+50	908	0.1	1	874 34
+51	982	0.1	1	950 32
+52	1039	0.1	1	1008 31
+53	1257	0.1	1	1211 46
+54	1970	0.1	1	1920 50
+55	522	0.1	1	498 24
+56	1252	0.1	1	1218 34
+57	4022	0.1	1	3953 69
+58	791	0.1	1	760 31
+59	572	0.1	1	539 33
+60	2595	0.1	1	2544 51
+61	632	0.1	1	611 21
+62	565	0.1	1	549 16
+63	2789	0.1	1	2739 50
+64	1043	0.1	1	1009 34
+65	351	0.1	1	335 16
+66	477	0.1	1	464 13
+67	447	0.1	1	433 14
+68	371	0.1	1	359 12
+69	494	0.1	1	485 9
+70	519	0.1	1	510 9
+71	380	0.1	1	374 6
+72	240	0.1	1	235 5
+73	208	0.1	1	205 3
+74	79	0.1	1	76 3
+75	17	0.1	1	17
+76	4	0.1	1	3 1
+77	10	0.1	1	9 1
+78	4	0.1	1	3 1
+79	6	0.1	1	3 3
+80	2	0.1	1	1 1
+81	1	0.1	1	1
+82	6	0.1	1	4 2
+83	2	0.1	1	1 1
+85	1	0.1	1	0 1
+86	1	0.1	1	0 1
+87	2	0.1	1	0 2
+88	1	0.1	1	1
+89	2	0.1	1	1 1
+91	1	0.1	1	0 1
+93	2	0.1	1	0 2
+
+RUN STATISTICS FOR INPUT FILE: MA-MGH-00276/host_removal/MA-MGH-00276_R2.fastq.gz
+=============================================
+1115070 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files MA-MGH-00276_R1_trimmed.fq.gz and MA-MGH-00276_R2_trimmed.fq.gz
+file_1: MA-MGH-00276_R1_trimmed.fq.gz, file_2: MA-MGH-00276_R2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: MA-MGH-00276_R1_trimmed.fq.gz and MA-MGH-00276_R2_trimmed.fq.gz <<<<<
+Writing validated paired-end Read 1 reads to MA-MGH-00276_R1_val_1.fq.gz
+Writing validated paired-end Read 2 reads to MA-MGH-00276_R2_val_2.fq.gz
+
+Total number of sequences analysed: 1115070
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 7307 (0.66%)
+
+
+  >>> Now running FastQC on the validated data MA-MGH-00276_R1_val_1.fq.gz<<<
+
+Started analysis of MA-MGH-00276_R1_val_1.fq.gz
+Approx 5% complete for MA-MGH-00276_R1_val_1.fq.gz
+Approx 10% complete for MA-MGH-00276_R1_val_1.fq.gz
+Approx 15% complete for MA-MGH-00276_R1_val_1.fq.gz
+Approx 20% complete for MA-MGH-00276_R1_val_1.fq.gz
+Approx 25% complete for MA-MGH-00276_R1_val_1.fq.gz
+Approx 30% complete for MA-MGH-00276_R1_val_1.fq.gz
+Approx 35% complete for MA-MGH-00276_R1_val_1.fq.gz
+Approx 40% complete for MA-MGH-00276_R1_val_1.fq.gz
+Approx 45% complete for MA-MGH-00276_R1_val_1.fq.gz
+Approx 50% complete for MA-MGH-00276_R1_val_1.fq.gz
+Approx 55% complete for MA-MGH-00276_R1_val_1.fq.gz
+Approx 60% complete for MA-MGH-00276_R1_val_1.fq.gz
+Approx 65% complete for MA-MGH-00276_R1_val_1.fq.gz
+Approx 70% complete for MA-MGH-00276_R1_val_1.fq.gz
+Approx 75% complete for MA-MGH-00276_R1_val_1.fq.gz
+Approx 80% complete for MA-MGH-00276_R1_val_1.fq.gz
+Approx 85% complete for MA-MGH-00276_R1_val_1.fq.gz
+Approx 90% complete for MA-MGH-00276_R1_val_1.fq.gz
+Approx 95% complete for MA-MGH-00276_R1_val_1.fq.gz
+
+  >>> Now running FastQC on the validated data MA-MGH-00276_R2_val_2.fq.gz<<<
+
+Started analysis of MA-MGH-00276_R2_val_2.fq.gz
+Approx 5% complete for MA-MGH-00276_R2_val_2.fq.gz
+Approx 10% complete for MA-MGH-00276_R2_val_2.fq.gz
+Approx 15% complete for MA-MGH-00276_R2_val_2.fq.gz
+Approx 20% complete for MA-MGH-00276_R2_val_2.fq.gz
+Approx 25% complete for MA-MGH-00276_R2_val_2.fq.gz
+Approx 30% complete for MA-MGH-00276_R2_val_2.fq.gz
+Approx 35% complete for MA-MGH-00276_R2_val_2.fq.gz
+Approx 40% complete for MA-MGH-00276_R2_val_2.fq.gz
+Approx 45% complete for MA-MGH-00276_R2_val_2.fq.gz
+Approx 50% complete for MA-MGH-00276_R2_val_2.fq.gz
+Approx 55% complete for MA-MGH-00276_R2_val_2.fq.gz
+Approx 60% complete for MA-MGH-00276_R2_val_2.fq.gz
+Approx 65% complete for MA-MGH-00276_R2_val_2.fq.gz
+Approx 70% complete for MA-MGH-00276_R2_val_2.fq.gz
+Approx 75% complete for MA-MGH-00276_R2_val_2.fq.gz
+Approx 80% complete for MA-MGH-00276_R2_val_2.fq.gz
+Approx 85% complete for MA-MGH-00276_R2_val_2.fq.gz
+Approx 90% complete for MA-MGH-00276_R2_val_2.fq.gz
+Approx 95% complete for MA-MGH-00276_R2_val_2.fq.gz
+Deleting both intermediate output files MA-MGH-00276_R1_trimmed.fq.gz and MA-MGH-00276_R2_trimmed.fq.gz
+
+====================================================================================================
+

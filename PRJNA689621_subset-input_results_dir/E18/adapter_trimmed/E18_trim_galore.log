@@ -1,0 +1,472 @@
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 4.8
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 2 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/PRJNA689621_subset-input_results_dir/E18/adapter_trimmed/
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> E18/host_removal/E18_R1.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	782	AGATCGGAAGAGC	401858	0.19
+Nextera	0	CTGTCTCTTATA	401858	0.00
+smallRNA	0	TGGAATTCTCGG	401858	0.00
+Using Illumina adapter for trimming (count: 782). Second best hit was Nextera (count: 0)
+
+Writing report to '/workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/PRJNA689621_subset-input_results_dir/E18/adapter_trimmed/E18_R1.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: E18/host_removal/E18_R1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.8
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.8). Setting -j 2
+Writing final adapter and quality trimmed output to E18_R1_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file E18/host_removal/E18_R1.fastq.gz <<< 
+This is cutadapt 4.8 with Python 3.12.3
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC E18/host_removal/E18_R1.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 29.661 s (73.810 µs/read; 0.81 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 401,858
+Reads with adapters:                   135,898 (33.8%)
+Reads written (passing filters):       401,858 (100.0%)
+
+Total basepairs processed:   100,866,358 bp
+Quality-trimmed:                 197,736 bp (0.2%)
+Total written (filtered):    100,437,825 bp (99.6%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 135898 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 37.9%
+  C: 19.7%
+  G: 10.4%
+  T: 32.0%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	95650	100464.5	0	95650
+2	34068	25116.1	0	34068
+3	3868	6279.0	0	3868
+4	1302	1569.8	0	1302
+5	17	392.4	0	17
+6	11	98.1	0	11
+7	97	24.5	0	97
+8	5	6.1	0	5
+9	19	1.5	0	19
+10	10	0.4	1	8 2
+11	4	0.1	1	4
+12	11	0.0	1	10 1
+13	12	0.0	1	11 1
+14	9	0.0	1	9
+15	7	0.0	1	6 1
+16	5	0.0	1	5
+17	3	0.0	1	3
+18	8	0.0	1	7 1
+19	3	0.0	1	3
+20	6	0.0	1	5 1
+21	6	0.0	1	6
+22	5	0.0	1	4 1
+23	12	0.0	1	11 1
+24	113	0.0	1	110 3
+25	29	0.0	1	28 1
+26	8	0.0	1	8
+27	15	0.0	1	14 1
+28	12	0.0	1	11 1
+29	2	0.0	1	2
+30	7	0.0	1	6 1
+31	8	0.0	1	8
+32	6	0.0	1	6
+33	5	0.0	1	4 1
+34	5	0.0	1	5
+35	10	0.0	1	10
+36	2	0.0	1	2
+37	16	0.0	1	15 1
+39	8	0.0	1	8
+40	5	0.0	1	5
+41	5	0.0	1	5
+42	15	0.0	1	15
+43	9	0.0	1	9
+44	3	0.0	1	3
+45	11	0.0	1	10 1
+46	12	0.0	1	11 1
+47	3	0.0	1	3
+48	1	0.0	1	0 1
+49	6	0.0	1	6
+50	7	0.0	1	7
+51	5	0.0	1	4 1
+52	6	0.0	1	5 1
+53	2	0.0	1	2
+54	11	0.0	1	10 1
+55	5	0.0	1	5
+57	10	0.0	1	10
+58	3	0.0	1	3
+59	6	0.0	1	6
+60	4	0.0	1	4
+61	6	0.0	1	6
+62	2	0.0	1	2
+63	6	0.0	1	6
+64	2	0.0	1	2
+65	6	0.0	1	6
+66	3	0.0	1	3
+67	2	0.0	1	2
+68	2	0.0	1	2
+69	14	0.0	1	14
+70	4	0.0	1	4
+71	3	0.0	1	3
+72	2	0.0	1	1 1
+73	7	0.0	1	7
+74	8	0.0	1	7 1
+75	30	0.0	1	25 5
+76	79	0.0	1	75 4
+77	34	0.0	1	30 4
+78	29	0.0	1	26 3
+79	17	0.0	1	16 1
+80	7	0.0	1	4 3
+81	5	0.0	1	3 2
+82	5	0.0	1	5
+83	5	0.0	1	5
+84	1	0.0	1	1
+85	2	0.0	1	1 1
+86	4	0.0	1	4
+87	3	0.0	1	3
+88	2	0.0	1	1 1
+89	4	0.0	1	4
+90	1	0.0	1	1
+93	1	0.0	1	1
+94	14	0.0	1	12 2
+95	1	0.0	1	1
+96	1	0.0	1	1
+97	4	0.0	1	4
+98	1	0.0	1	1
+100	2	0.0	1	2
+101	1	0.0	1	1
+102	1	0.0	1	1
+103	1	0.0	1	1
+105	1	0.0	1	0 1
+106	3	0.0	1	2 1
+107	1	0.0	1	1
+108	1	0.0	1	1
+109	1	0.0	1	1
+110	1	0.0	1	1
+111	1	0.0	1	1
+113	1	0.0	1	1
+115	1	0.0	1	1
+116	3	0.0	1	2 1
+118	2	0.0	1	2
+121	1	0.0	1	0 1
+123	1	0.0	1	1
+124	1	0.0	1	1
+125	1	0.0	1	1
+126	2	0.0	1	2
+127	11	0.0	1	11
+128	1	0.0	1	1
+130	1	0.0	1	1
+131	1	0.0	1	1
+134	1	0.0	1	1
+135	1	0.0	1	0 1
+140	1	0.0	1	0 1
+149	2	0.0	1	1 1
+153	1	0.0	1	0 1
+156	2	0.0	1	2
+157	1	0.0	1	1
+160	1	0.0	1	1
+169	1	0.0	1	1
+173	1	0.0	1	1
+182	1	0.0	1	1
+189	1	0.0	1	1
+197	1	0.0	1	1
+208	1	0.0	1	1
+210	1	0.0	1	1
+213	1	0.0	1	1
+219	1	0.0	1	0 1
+245	1	0.0	1	0 1
+251	7	0.0	1	0 7
+
+RUN STATISTICS FOR INPUT FILE: E18/host_removal/E18_R1.fastq.gz
+=============================================
+401858 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to '/workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/PRJNA689621_subset-input_results_dir/E18/adapter_trimmed/E18_R2.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: E18/host_removal/E18_R2.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 4.8
+Python version: could not detect
+Number of cores used for trimming: 2
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Output file(s) will be GZIP compressed
+
+Cutadapt seems to be fairly up-to-date (version 4.8). Setting -j -j 2
+Writing final adapter and quality trimmed output to E18_R2_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file E18/host_removal/E18_R2.fastq.gz <<< 
+This is cutadapt 4.8 with Python 3.12.3
+Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC E18/host_removal/E18_R2.fastq.gz
+Processing single-end reads on 2 cores ...
+Finished in 19.365 s (48.188 µs/read; 1.25 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 401,858
+Reads with adapters:                   135,383 (33.7%)
+Reads written (passing filters):       401,858 (100.0%)
+
+Total basepairs processed:   100,866,358 bp
+Quality-trimmed:                 965,904 bp (1.0%)
+Total written (filtered):     99,683,765 bp (98.8%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 135383 times
+
+Minimum overlap: 1
+No. of allowed errors:
+1-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 42.8%
+  C: 18.4%
+  G: 9.6%
+  T: 29.1%
+  none/other: 0.1%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	101774	100464.5	0	101774
+2	27112	25116.1	0	27112
+3	4544	6279.0	0	4544
+4	1020	1569.8	0	1020
+5	18	392.4	0	18
+6	16	98.1	0	16
+7	92	24.5	0	92
+8	5	6.1	0	5
+9	19	1.5	0	19
+10	8	0.4	1	5 3
+11	7	0.1	1	4 3
+12	10	0.0	1	8 2
+13	3	0.0	1	3
+14	13	0.0	1	11 2
+15	2	0.0	1	2
+16	3	0.0	1	2 1
+17	13	0.0	1	11 2
+18	1	0.0	1	1
+19	4	0.0	1	3 1
+20	9	0.0	1	7 2
+21	2	0.0	1	2
+22	6	0.0	1	6
+23	12	0.0	1	10 2
+24	129	0.0	1	123 6
+25	2	0.0	1	1 1
+26	14	0.0	1	14
+27	18	0.0	1	18
+28	4	0.0	1	4
+30	11	0.0	1	11
+31	2	0.0	1	2
+32	10	0.0	1	9 1
+33	5	0.0	1	5
+34	14	0.0	1	13 1
+35	3	0.0	1	1 2
+36	11	0.0	1	11
+37	3	0.0	1	3
+38	9	0.0	1	8 1
+39	5	0.0	1	4 1
+40	13	0.0	1	13
+41	3	0.0	1	3
+42	16	0.0	1	16
+43	7	0.0	1	6 1
+44	14	0.0	1	13 1
+45	17	0.0	1	17
+46	9	0.0	1	8 1
+47	11	0.0	1	11
+48	7	0.0	1	7
+49	4	0.0	1	4
+50	3	0.0	1	3
+51	3	0.0	1	3
+52	2	0.0	1	2
+53	8	0.0	1	8
+54	19	0.0	1	19
+55	4	0.0	1	4
+56	11	0.0	1	11
+57	16	0.0	1	16
+58	11	0.0	1	11
+60	14	0.0	1	14
+61	4	0.0	1	4
+62	1	0.0	1	1
+63	7	0.0	1	7
+64	6	0.0	1	6
+65	3	0.0	1	3
+66	3	0.0	1	3
+67	1	0.0	1	1
+68	2	0.0	1	1 1
+69	3	0.0	1	3
+70	2	0.0	1	1 1
+72	1	0.0	1	1
+73	5	0.0	1	5
+74	4	0.0	1	4
+75	4	0.0	1	4
+76	5	0.0	1	5
+77	14	0.0	1	13 1
+78	11	0.0	1	9 2
+79	34	0.0	1	24 10
+80	45	0.0	1	41 4
+81	14	0.0	1	12 2
+82	6	0.0	1	6
+83	5	0.0	1	2 3
+84	1	0.0	1	0 1
+85	5	0.0	1	4 1
+86	3	0.0	1	2 1
+88	1	0.0	1	1
+89	2	0.0	1	2
+90	2	0.0	1	1 1
+91	1	0.0	1	1
+93	3	0.0	1	3
+94	7	0.0	1	7
+95	2	0.0	1	1 1
+97	1	0.0	1	0 1
+98	1	0.0	1	1
+100	2	0.0	1	2
+101	1	0.0	1	0 1
+102	2	0.0	1	2
+103	1	0.0	1	0 1
+104	1	0.0	1	1
+106	1	0.0	1	1
+107	1	0.0	1	1
+111	1	0.0	1	1
+122	1	0.0	1	0 1
+124	1	0.0	1	1
+126	2	0.0	1	2
+127	2	0.0	1	2
+131	1	0.0	1	0 1
+133	1	0.0	1	1
+135	2	0.0	1	1 1
+141	1	0.0	1	0 1
+142	1	0.0	1	0 1
+148	1	0.0	1	0 1
+154	2	0.0	1	2
+156	2	0.0	1	2
+157	2	0.0	1	2
+159	1	0.0	1	1
+161	1	0.0	1	0 1
+164	1	0.0	1	1
+173	1	0.0	1	1
+176	1	0.0	1	1
+177	1	0.0	1	1
+178	1	0.0	1	1
+185	1	0.0	1	1
+189	1	0.0	1	1
+206	1	0.0	1	1
+210	1	0.0	1	1
+215	1	0.0	1	1
+251	8	0.0	1	0 8
+
+RUN STATISTICS FOR INPUT FILE: E18/host_removal/E18_R2.fastq.gz
+=============================================
+401858 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files E18_R1_trimmed.fq.gz and E18_R2_trimmed.fq.gz
+file_1: E18_R1_trimmed.fq.gz, file_2: E18_R2_trimmed.fq.gz
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: E18_R1_trimmed.fq.gz and E18_R2_trimmed.fq.gz <<<<<
+Writing validated paired-end Read 1 reads to E18_R1_val_1.fq.gz
+Writing validated paired-end Read 2 reads to E18_R2_val_2.fq.gz
+
+Total number of sequences analysed: 401858
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 506 (0.13%)
+
+
+  >>> Now running FastQC on the validated data E18_R1_val_1.fq.gz<<<
+
+Started analysis of E18_R1_val_1.fq.gz
+Approx 5% complete for E18_R1_val_1.fq.gz
+Approx 10% complete for E18_R1_val_1.fq.gz
+Approx 15% complete for E18_R1_val_1.fq.gz
+Approx 20% complete for E18_R1_val_1.fq.gz
+Approx 25% complete for E18_R1_val_1.fq.gz
+Approx 30% complete for E18_R1_val_1.fq.gz
+Approx 35% complete for E18_R1_val_1.fq.gz
+Approx 40% complete for E18_R1_val_1.fq.gz
+Approx 45% complete for E18_R1_val_1.fq.gz
+Approx 50% complete for E18_R1_val_1.fq.gz
+Approx 55% complete for E18_R1_val_1.fq.gz
+Approx 60% complete for E18_R1_val_1.fq.gz
+Approx 65% complete for E18_R1_val_1.fq.gz
+Approx 70% complete for E18_R1_val_1.fq.gz
+Approx 75% complete for E18_R1_val_1.fq.gz
+Approx 80% complete for E18_R1_val_1.fq.gz
+Approx 85% complete for E18_R1_val_1.fq.gz
+Approx 90% complete for E18_R1_val_1.fq.gz
+Approx 95% complete for E18_R1_val_1.fq.gz
+
+  >>> Now running FastQC on the validated data E18_R2_val_2.fq.gz<<<
+
+Started analysis of E18_R2_val_2.fq.gz
+Approx 5% complete for E18_R2_val_2.fq.gz
+Approx 10% complete for E18_R2_val_2.fq.gz
+Approx 15% complete for E18_R2_val_2.fq.gz
+Approx 20% complete for E18_R2_val_2.fq.gz
+Approx 25% complete for E18_R2_val_2.fq.gz
+Approx 30% complete for E18_R2_val_2.fq.gz
+Approx 35% complete for E18_R2_val_2.fq.gz
+Approx 40% complete for E18_R2_val_2.fq.gz
+Approx 45% complete for E18_R2_val_2.fq.gz
+Approx 50% complete for E18_R2_val_2.fq.gz
+Approx 55% complete for E18_R2_val_2.fq.gz
+Approx 60% complete for E18_R2_val_2.fq.gz
+Approx 65% complete for E18_R2_val_2.fq.gz
+Approx 70% complete for E18_R2_val_2.fq.gz
+Approx 75% complete for E18_R2_val_2.fq.gz
+Approx 80% complete for E18_R2_val_2.fq.gz
+Approx 85% complete for E18_R2_val_2.fq.gz
+Approx 90% complete for E18_R2_val_2.fq.gz
+Approx 95% complete for E18_R2_val_2.fq.gz
+Deleting both intermediate output files E18_R1_trimmed.fq.gz and E18_R2_trimmed.fq.gz
+
+====================================================================================================
+

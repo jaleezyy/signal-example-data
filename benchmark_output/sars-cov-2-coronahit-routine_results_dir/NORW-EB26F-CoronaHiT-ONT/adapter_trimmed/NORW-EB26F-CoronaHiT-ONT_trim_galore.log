@@ -1,0 +1,16 @@
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 4.8
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 2 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /workspace/lab/mcarthurlab/nasirja/covid-19-signal/benchmark_output/sars-cov-2-coronahit-routine_results_dir/NORW-EB26F-CoronaHiT-ONT/adapter_trimmed/
+Input file 'NORW-EB26F-CoronaHiT-ONT/host_removal/NORW-EB26F-CoronaHiT-ONT_R1.fastq.gz' seems to be completely empty. Consider respecifying!
+
+Total reads processed:  0
+Reads written (passing filters):  0 (0.0%)
+Total basepairs processed:  0 bp
+Total written (filtered):  0 bp (0.0%)
