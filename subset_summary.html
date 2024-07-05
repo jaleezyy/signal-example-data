@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<h3>SARS-CoV-2 Illumina GeNome Assembly Line (SIGNAL), version v1.6.6&nbsp;&nbsp;(<a href="https://github.com/jaleezyy/covid-19-signal">https://github.com/jaleezyy/covid-19-signal</a>)</h3>
+<p>Note: Asterisks (*) indicates a discrepancy between iVar (default) and FreeBayes (if run)</p>
+<p><table style="border-collapse: collapse; border: 1px solid black;">
+<tr><th>Sample</th>
+<th colspan="1" style="border-left: 1px solid black;">Lineage (Pangolin)</th>
+<th colspan="1" style="border-left: 1px solid black;">Clade (Nextstrain)</th>
+<th colspan="2" style="border-left: 1px solid black;">Data Volume</th>
+<th colspan="9" style="border-left: 1px solid black;">Quality Control Flags</th>
+<th colspan="1" style="border-left: 1px solid black;">Kraken2</th>
+<th colspan="4" style="border-left: 1px solid black;">QUAST</th>
+<th colspan="1" style="border-left: 1px solid black;">Variants (iVar)</th>
+<th colspan="1" style="border-left: 1px solid black;">Unique Variants (FreeBayes)</th>
+<th colspan="1" style="border-left: 1px solid black;">Consensus Nucleotide Differences (FreeBayes as Reference)</th>
+<th colspan="1" style="border-left: 1px solid black;">Variants (BreSeq)</th>
+</tr>
+<tr><th style="border-bottom: 1px solid black;"></th>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;"></td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;"></td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;">Raw<br>Data<br>(read<br>pairs)</td>
+<td style="border-bottom: 1px solid black; ">Post<br>Trim<br>(read<br>pairs)</td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;">Genome<br>fraction<br>>90%</td>
+<td style="border-bottom: 1px solid black; ">No<br>indels</td>
+<td style="border-bottom: 1px solid black; ">Depth<br>>2000</td>
+<td style="border-bottom: 1px solid black; ">Variants<br>>90%</td>
+<td style="border-bottom: 1px solid black; ">ORF<br>Frameshifts</td>
+<td style="border-bottom: 1px solid black; ">Fastqc<br>quality</td>
+<td style="border-bottom: 1px solid black; ">Fastqc<br>adapter</td>
+<td style="border-bottom: 1px solid black; ">90%<br>cov<br>>100</td>
+<td style="border-bottom: 1px solid black; ">90%<br>cov<br>>1000</td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;">Reads<br>SARS-CoV-2<br>(%)</td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;">Genome<br>Length<br>(bp)</td>
+<td style="border-bottom: 1px solid black; ">Genome<br>Fraction<br>(%)</td>
+<td style="border-bottom: 1px solid black; ">N's per<br>100 kbp</td>
+<td style="border-bottom: 1px solid black; ">Average<br>Depth of<br>Coverage</td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;"></td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;"></td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;"></td>
+<td style="border-bottom: 1px solid black; border-left: 1px solid black;"></td>
+</tr>
+<tr><td style="background-color: #dddddd;">&nbsp;<br><a href="E22/E22_sample.html">E22</a><br>&nbsp;</td><td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1.147</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 20A</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">350446</td>
+<td style="background-color: #dddddd; ">&nbsp;349957</td>
+<td style="background-color: #7ca37c; border-left: 1px solid black;">PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #dd2a2a; ">&nbsp;FAIL</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">92.56</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">29903.0</td>
+<td style="background-color: #dddddd; ">&nbsp;99.676</td>
+<td style="background-color: #dddddd; ">&nbsp;1160.42</td>
+<td style="background-color: #dddddd; ">&nbsp;4713.3</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C241T
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">C14408T
+<p style="margin-bottom:0px; margin-top:8px">C15324T
+<p style="margin-bottom:0px; margin-top:8px">G23126T
+<p style="margin-bottom:0px; margin-top:8px">A23403G
+<p style="margin-bottom:0px; margin-top:8px">C25433T</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C10833T
+<p style="margin-bottom:0px; margin-top:8px">C20936T</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> Y10833C
+<p style="margin-bottom:0px; margin-top:8px">Y20936C
+<p style="margin-bottom:0px; margin-top:8px">NNNNNN23145AAAAGT
+<p style="margin-bottom:0px; margin-top:8px">T27164N</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	884;	C→T;	(7.0%);	'R207C (CGT→TGT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 62 more)</td>
+</tr>
+<tr><td style="background-color: #ffffff;">&nbsp;<br><a href="E28/E28_sample.html">E28</a><br>&nbsp;</td><td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1.147</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 20A</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">323051</td>
+<td style="background-color: #ffffff; ">&nbsp;322535</td>
+<td style="background-color: #8fbc8f; border-left: 1px solid black;">PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">93.01</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">29903.0</td>
+<td style="background-color: #ffffff; ">&nbsp;99.676</td>
+<td style="background-color: #ffffff; ">&nbsp;324.38</td>
+<td style="background-color: #ffffff; ">&nbsp;4459.8</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> G61T
+<p style="margin-bottom:0px; margin-top:8px">C241T
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">C14408T
+<p style="margin-bottom:0px; margin-top:8px">C15324T
+<p style="margin-bottom:0px; margin-top:8px">G15906A
+<p style="margin-bottom:0px; margin-top:8px">C17690T
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 5 more)</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 11 more)</td>
+</tr>
+<tr><td style="background-color: #dddddd;">&nbsp;<br><a href="E55/E55_sample.html">E55</a><br>&nbsp;</td><td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1.1.176</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 20B</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">594831</td>
+<td style="background-color: #dddddd; ">&nbsp;594089</td>
+<td style="background-color: #7ca37c; border-left: 1px solid black;">PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">91.42</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">29903.0</td>
+<td style="background-color: #dddddd; ">&nbsp;99.679</td>
+<td style="background-color: #dddddd; ">&nbsp;538.41</td>
+<td style="background-color: #dddddd; ">&nbsp;8097.6</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C321T
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">C8208T
+<p style="margin-bottom:0px; margin-top:8px">G9267A
+<p style="margin-bottom:0px; margin-top:8px">T9667C
+<p style="margin-bottom:0px; margin-top:8px">C14408T
+<p style="margin-bottom:0px; margin-top:8px">C17746T
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 10 more)</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C241T
+<p style="margin-bottom:0px; margin-top:8px">GGG28881AAC</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	3,037;	C→T;	(100%);	'F924F (TTC→TTT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 11 more)</td>
+</tr>
+<tr><td style="background-color: #ffffff;">&nbsp;<br><a href="E72/E72_sample.html">E72</a><br>&nbsp;</td><td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 20A</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">842763</td>
+<td style="background-color: #ffffff; ">&nbsp;841641</td>
+<td style="background-color: #8fbc8f; border-left: 1px solid black;">PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ff3030; ">&nbsp;FAIL</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #8fbc8f; ">&nbsp;PASS</td>
+<td style="background-color: #ffd700; ">&nbsp;WARN</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">92.24</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;">29903.0</td>
+<td style="background-color: #ffffff; ">&nbsp;99.679</td>
+<td style="background-color: #ffffff; ">&nbsp;481.56</td>
+<td style="background-color: #ffffff; ">&nbsp;11489.9</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> C241T
+<p style="margin-bottom:0px; margin-top:8px">C2416T
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">A10764T
+<p style="margin-bottom:0px; margin-top:8px">C14408T
+<p style="margin-bottom:0px; margin-top:8px">A22904T
+<p style="margin-bottom:0px; margin-top:8px">A23122C
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 2 more)</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> W10764A
+<p style="margin-bottom:0px; margin-top:8px">M23122A
+<p style="margin-bottom:0px; margin-top:8px">NNNNNN23145AAAAGT</td>
+<td style="background-color: #ffffff; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	2,416;	C→T;	(100%);	'Y717Y (TAC→TAT)';	'orf1ab →'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 10 more)</td>
+</tr>
+<tr><td style="background-color: #dddddd;">&nbsp;<br><a href="E77/E77_sample.html">E77</a><br>&nbsp;</td><td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> B.1.147</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> 20A</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">1406360</td>
+<td style="background-color: #dddddd; ">&nbsp;1404721</td>
+<td style="background-color: #7ca37c; border-left: 1px solid black;">PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #ddba00; ">&nbsp;WARN</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #7ca37c; ">&nbsp;PASS</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">91.93</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;">29903.0</td>
+<td style="background-color: #dddddd; ">&nbsp;99.686</td>
+<td style="background-color: #dddddd; ">&nbsp;314.35</td>
+<td style="background-color: #dddddd; ">&nbsp;19672.9</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> G61T
+<p style="margin-bottom:0px; margin-top:8px">C241T
+<p style="margin-bottom:0px; margin-top:8px">C3037T
+<p style="margin-bottom:0px; margin-top:8px">C14408T
+<p style="margin-bottom:0px; margin-top:8px">C15324T
+<p style="margin-bottom:0px; margin-top:8px">G15906A
+<p style="margin-bottom:0px; margin-top:8px">C17690T
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 3 more)</td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> </td>
+<td style="background-color: #dddddd; border-left: 1px solid black;"><p style="margin-bottom:0px; margin-top:0px"> RA;	61;	G→T;	(100%);	'intergenic (–/-205)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">RA;	241;	C→T;	(100%);	'intergenic (–/-25)';	'– /→ orf1ab'
+<p style="margin-bottom:0px; margin-top:8px">&nbsp;&nbsp;&nbsp; (+ 11 more)</td>
+</tr>

@@ -35,7 +35,7 @@ Replace the value for `-c` as needed. If the `ncov-tools` directory can be found
 Additional benchmarking datasets and their outputs are provided here covering a wide array of scenarios. General description and downloading instructions of datasets can be found on the [CDCGov Repository](https://github.com/CDCgov/datasets-sars-cov-2/tree/master).
 
 ## Software
-* SARS-CoV-2 Illumina GeNome Assembly Line (SIGNAL) [version v1.6.5](https://github.com/jaleezyy/covid-19-signal/releases/tag/v1.6.5)
+* SARS-CoV-2 Illumina GeNome Assembly Line (SIGNAL) [version v1.6.6](https://github.com/jaleezyy/covid-19-signal/releases/tag/v1.6.6)
 * [PANGOLIN versions](/PRJNA689621_subset-input_results_dir/final_pangolin_versions.txt) 
 * [NextClade versions](/PRJNA689621_subset-input_results_dir/final_nextclade_versions.txt)
 
